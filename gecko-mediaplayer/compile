@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-export CPPFLAGS=-std=c++11
-ub_compile

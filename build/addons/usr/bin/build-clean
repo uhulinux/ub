@@ -16,9 +16,11 @@ KVT=" könyvtár kiürítése."
 
 case ${BASENAME} in
 	build-clean)
-		export DISTR=2.2;;
+		export DISTR=3;;
 	build-clean-2.2)
 		export DISTR=2.2;;
+	build-clean-2.2)
+		export DISTR=3;;
 	build-clean-dev)
 		export DISTR=dev;;
 esac

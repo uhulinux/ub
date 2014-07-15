@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-export PERL_MM_USE_DEFAULT=1
-perl Makefile.PL INSTALLDIRS=vendor
-ub_compile

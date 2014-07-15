@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-./configure -prefix ${UB_INSTALLDIR}/usr \
-  -languages hu \
-  -modules multimedia
-make

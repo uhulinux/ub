@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--enable-geolocation \
-	--enable-introspection \
-	--with-gtk=3.0 \
-	--enable-web-sockets \
-	--disable-webkit2 \
-	--enable-dependency-tracking

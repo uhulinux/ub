@@ -1,1 +1,0 @@
-sflist musicpd libmpdclient | sort -V | tail -n 1

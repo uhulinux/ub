@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_install
-
-install -m644 debian/qucs.desktop "$UB_INSTALLDIR"/usr/share/applications/
-convert qucs/bitmaps/big.qucs.xpm qucs/bitmaps/qucs.png
-install -m644 qucs/bitmaps/qucs.png "$UB_INSTALLDIR"/usr/share/pixmaps/

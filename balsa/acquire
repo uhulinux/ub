@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-balsa-${UB_VERSION}.tar.bz2 balsa-${UB_VERSION}/
-	http://pawsa.fedorapeople.org/balsa/

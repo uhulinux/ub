@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Mirror Magic
-Comment=A game with a magic ray and many, many mirrors...
-Exec=mirrormagic
-Icon=mirrormagic
-Terminal=false
-Categories=Game;LogicGame;

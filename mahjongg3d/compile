@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-cp src/OpenGLWidget.h src/openglwidget.h
-make -f Makefile.doit PREFIX=/usr GAMEDATA_PREFIX=/usr/share/games

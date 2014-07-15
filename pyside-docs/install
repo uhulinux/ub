@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-mkdir -p "$UB_INSTALLDIR"/usr/share/doc/pyside
-cp -a . "$UB_INSTALLDIR"/usr/share/doc/pyside/
-

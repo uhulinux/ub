@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-export WX_CONFIG_PATH='/usr/bin/wx-config'
-export WXRC='/usr/bin/wxrc'
-./autogen.sh
-ub_compile \
-	--disable-manualupdatecheck \
-	--disable-autoupdatecheck
-

@@ -1,8 +1,0 @@
-#!/bin/sh
-
-. /etc/init.d/common
-
-DAEMON=/usr/sbin/slapd
-PIDFILE="/var/run/slapd.pid"
-
-startstop "$@"

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-v${UB_VERSION}.tar.gz ffdecsawrapper-oldstable/
-	https://github.com/bas-t/ffdecsawrapper/archive/oldstable/

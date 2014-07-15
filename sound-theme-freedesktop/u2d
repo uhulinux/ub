@@ -1,1 +1,0 @@
-urllist http://cgit.freedesktop.org/sound-theme-freedesktop/ | parsever | sort -V | tail -n 1

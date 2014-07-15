@@ -24,9 +24,11 @@ PACKAGER="UBK <ubk@ubk.hu>"
 
 case `basename $0` in
 	build)
-		export UHUBUILD_DISTR=2.2;;
+		export UHUBUILD_DISTR=3;;
 	build-2.2)
 		export UHUBUILD_DISTR=2.2;;
+	build-3)
+		export UHUBUILD_DISTR=3;;
 	build-dev)
 		export UHUBUILD_DISTR=dev;;
 esac

@@ -1,3 +1,0 @@
-#!/usr/bin/env dl
-sopwith-${UB_VERSION}.tar.gz sopwith-${UB_VERSION}/
-	http://downloads.sourceforge.net/sdl-sopwith/

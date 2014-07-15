@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-
-NOTERM=1 SYSTEM_BUILD=1 ./compile_unix 0

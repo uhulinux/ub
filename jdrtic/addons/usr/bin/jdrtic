@@ -1,3 +1,0 @@
-#!/bin/bash
-
-java -Xms16m -Xmx128m -jar /usr/share/jDrtic/jdrtic.jar -g

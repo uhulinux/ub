@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-cd src
-make DESTDIR=${UB_INSTALLDIR} install

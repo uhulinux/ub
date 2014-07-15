@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-# ./autogen.sh
-ub_compile \
-	--enable-ipv6 \
-	--enable-openssl \
-	--enable-textfe \
-	--enable-python=python3 \
-	--enable-shm

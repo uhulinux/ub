@@ -1,1 +1,0 @@
-urllist http://projects.vdr-developer.org/projects/plg-streamdev/files/ | splitver '^vdr-streamdev-([0-9.]+).tgz$' | sort -V | tail -n 1

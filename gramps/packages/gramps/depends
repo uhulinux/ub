@@ -1,9 +1,0 @@
-graphviz >=
-gtk3 >=
-librsvg2 >=
-pyexiv2 >=
-pygobject3 >=
-pyicu >=
-python >=
-python-bsddb3 >=
-xdg-utils

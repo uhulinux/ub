@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-xdipo-${UB_VERSION}.tgz xdipo-${UB_VERSION}/
-	http://panteltje.com/panteltje/satellite/

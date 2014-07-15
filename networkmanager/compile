@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-sed -i '/AM_GNU_GETTEXT/d' configure.ac
-autoreconf -vif
-ub_compile \
-	--with-distro=Slackware \
-	--enable-more-warnings=no

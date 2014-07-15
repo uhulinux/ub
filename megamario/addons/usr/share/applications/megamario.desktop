@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=megamario
-GenericName=Mario Bros clone
-GenericName[hu]=Mario Bros klón
-Exec=megamario
-Icon=megamario
-StartupNotify=false
-Categories=Game;ArcadeGame;

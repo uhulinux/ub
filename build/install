@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-for i in 2.2 dev; do
+for i in 2.2 3 dev; do
 	for a in 1 2 3 4 5 ; do
 		mkdir -p "$UB_INSTALLDIR"/var/uhubuild/$i/chroot${a}
 	done

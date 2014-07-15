@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-make DOC_PATH=/usr/share/doc/smplayer \
-    DESTDIR="$UB_INSTALLDIR" PREFIX="/usr" install
-    

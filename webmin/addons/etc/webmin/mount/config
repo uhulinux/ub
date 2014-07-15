@@ -1,4 +1,0 @@
-smbclient_path=smbclient
-fstab_file=/etc/fstab
-nmblookup_path=nmblookup
-long_fstypes=1

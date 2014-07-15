@@ -1,1 +1,0 @@
-urllist http://ftp.gnu.org/pub/gnu/gettext/ | parsever | sort -V | tail -n 1

@@ -1,5 +1,0 @@
-&"Wolfenstein &enemy &territory &FPS csapatjáték.
-Ha nincs hang, akkor rendszeres játékhoz az &et-sound-daemon
-indítása rendszerindításhoz ütemezhető az uhu vezérlőpultból.
-Egyszeri használathoz a &"service &et-sound &start"
-valódi rendszergazdai paranccsal hangosítható.

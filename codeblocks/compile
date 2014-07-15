@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-export CPPFLAGS+=-fpermissive
-ub_compile

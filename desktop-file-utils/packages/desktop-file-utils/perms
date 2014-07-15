@@ -1,3 +1,0 @@
-root      root       755  /usr/lib/uhu-pkg/postinst/desktop-file-utils
-root      root       755  /usr/lib/uhu-pkg/postrm/desktop-file-utils
-root      root       755  /usr/lib/uhu-pkg/prerm/desktop-file-utils

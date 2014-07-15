@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libwpg-${UB_VERSION/~/-}.tar.xz libwpg-${UB_VERSION/~/-}/
-	http://downloads.sourceforge.net/libwpg/

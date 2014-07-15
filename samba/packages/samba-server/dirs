@@ -1,5 +1,0 @@
-/srv/smb
-/var/cache/samba
-/var/log/samba
-/var/run/samba
-/var/spool/samba

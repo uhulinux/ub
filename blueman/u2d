@@ -1,2 +1,0 @@
-urllist http://download.tuxfamily.org/blueman/ | splitver '^blueman-([0-9.]+).tar.gz$' #| sort -V | tail -n 1
-

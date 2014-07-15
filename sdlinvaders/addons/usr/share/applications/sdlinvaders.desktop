@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=SDL Invaders
-Exec=SDLInvaders
-Comment=Shooter Game
-Comment[hu]=Lövöldöző játék
-Icon=fighter
-Categories=Game;ArcadeGame;
-Type=Application

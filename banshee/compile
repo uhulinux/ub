@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--disable-docs \
-	--enable-clutter \
-	--disable-appledevice

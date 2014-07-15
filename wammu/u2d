@@ -1,1 +1,0 @@
-urllist http://dl.cihar.com/wammu/v0/ | parsever | sort -V | tail -n 1

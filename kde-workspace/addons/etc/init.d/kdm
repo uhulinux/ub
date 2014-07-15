@@ -1,8 +1,0 @@
-#!/bin/sh
-
-. /etc/init.d/common
-
-DAEMON=/usr/bin/kdm
-PIDFILE="/var/run/kdm.pid"
-
-startstop "$@"

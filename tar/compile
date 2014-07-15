@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--enable-backup-scripts \
-	--disable-silent-rules \
-	--bindir=/bin \
-	--libexecdir=/usr/bin

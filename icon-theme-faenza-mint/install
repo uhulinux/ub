@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-tar zxvf 132681-Faenza-Mint.tar.gz
-mkdir ${UB_INSTALLDIR}/usr/share/icons
-mv Faenza-Mint ${UB_INSTALLDIR}/usr/share/icons
-

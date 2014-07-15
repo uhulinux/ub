@@ -1,8 +1,0 @@
-gettext
-intltool
-libnotify-dev
-pycrypto
-pygtk-dev
-python-dev
-python-paramiko
-python-setuptools

@@ -1,5 +1,0 @@
-#!/usr/bin/env dl
-
-libgsasl-${UB_VERSION}.tar.gz libgsasl-${UB_VERSION}/
-	ftp://ftp.gnu.org/gnu/gsasl/
-

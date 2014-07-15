@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-export USE_WEBGL=true
-
-qmake-qt5 QUPZILLA_PREFIX=/usr/
-make

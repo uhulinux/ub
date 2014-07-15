@@ -1,1 +1,0 @@
-urllist http://dl.lm-sensors.org/lm-sensors/releases/ | parsever | sort -V | tail -n 1

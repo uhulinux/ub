@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-/usr/lib/qt5/bin/qmake pokerth.pro
-make

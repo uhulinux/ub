@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-itstool-${UB_VERSION}.tar.bz2 itstool-${UB_VERSION}/
-	http://files.itstool.org/itstool/

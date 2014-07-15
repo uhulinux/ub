@@ -1,7 +1,0 @@
-#!/bin/bash -eux
-
-# note: nincs gettext support (bugos), ezért a
-# 19-translations.patch törölve
-
-yes "" | make config
-make

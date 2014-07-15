@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-compizconfig-python-${UB_VERSION}.tar.bz2 compizconfig-python-${UB_VERSION}/
-	http://releases.compiz.org/components/compizconfig-python/

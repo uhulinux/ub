@@ -1,8 +1,0 @@
-dosfstools
-e2fsprogs
-mdadm
-mtools
-ntfsprogs
-smp-utils
-util-linux
-xfsprogs

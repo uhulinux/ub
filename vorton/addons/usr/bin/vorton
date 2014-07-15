@@ -1,7 +1,0 @@
-#!/bin/bash
-cd /usr/share/games/vorton
-if [ -f /usr/bin/padsp ] ; then
-  padsp ./vorton "$@"
-  else
-  ./vorton "$@"
-fi

@@ -1,1 +1,0 @@
-urllist http://people.freedesktop.org/~aplattner/vdpau/ | parsever | sort -V | tail -n 1

@@ -1,1 +1,0 @@
-urllist ftp://ftp.samba.org/pub/ppp/ | parsever | sort -V | tail -n 1

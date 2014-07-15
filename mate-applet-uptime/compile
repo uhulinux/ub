@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-msgfmt -o po/hu_HU.gmo po/hu_HU.po
-
-ub_compile \
-	--libexecdir=/usr/libexec/mate

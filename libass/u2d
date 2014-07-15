@@ -1,1 +1,0 @@
-urllist http://libass.googlecode.com/ | splitver '^libass-([0-9.]+).tar.xz$' | sort -V | tail -n 1

@@ -1,1 +1,0 @@
-urllist http://libimobiledevice.org/ | splitver '^libimobiledevice-([0-9.]+).tar.bz2$' | sort -V | tail -n 1

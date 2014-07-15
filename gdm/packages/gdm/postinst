@@ -1,4 +1,0 @@
-#!/bin/sh -e
-
-chown gdm.gdm /var/lib/gdm
-chmod 750 /var/lib/gdm

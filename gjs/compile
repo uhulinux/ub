@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--disable-systemtap \
-	--disable-dtrace \
-	--disable-coverage

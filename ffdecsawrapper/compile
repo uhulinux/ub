@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-export FLAGS="-march=native -fexpensive-optimizations -fomit-frame-pointer -funroll-loops"
-export PARALLEL_MODE=PARALLEL_64_MMX
-export COMPILER=g++
-./configure \
-	--optimize=no
-make
-make module

@@ -1,8 +1,0 @@
-cmake
-freetype2-dev
-libogg-dev
-libpng-dev
-libvorbis-dev
-mpg123
-python-dev
-sdl-dev

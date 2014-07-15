@@ -1,5 +1,0 @@
-gettext-tools
-psyco
-python >= 2.3
-python-levenshtein
-python-utidylib

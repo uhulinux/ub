@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-openjpeg-${UB_VERSION}.tar.gz openjpeg-${UB_VERSION}/
-	http://openjpeg.googlecode.com/files/

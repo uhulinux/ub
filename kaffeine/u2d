@@ -1,1 +1,0 @@
-sflist kaffeine current | parsever | sort -V | tail -n1

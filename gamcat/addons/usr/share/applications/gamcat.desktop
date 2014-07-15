@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=GamCat
-Exec=GamCat.gambas
-Icon=gamcat
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=Utility;Archiving;

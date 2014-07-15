@@ -1,5 +1,0 @@
-#!/bin/bash -eux
-
-ub_make
-
-

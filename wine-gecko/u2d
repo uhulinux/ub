@@ -1,1 +1,0 @@
-sflist wine Wine%20Gecko | grep -E '^([0-9.]+)$' | sort -V | tail -n 1

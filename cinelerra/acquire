@@ -1,5 +1,0 @@
-#!/usr/bin/env dl
-
-cinelerra-${UB_VERSION}-src.tar.xz cinelerra-${UB_VERSION}/
-	https://sourceforge.net/projects/heroines/files/
-

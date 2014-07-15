@@ -1,8 +1,0 @@
-#!/bin/sh -eux
-
-#autoreconf
-ub_compile \
-	--with-libquicktime \
-	--with-libdv \
-	--with-dv-yv12 \
-	--with-libpng

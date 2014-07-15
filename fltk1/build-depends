@@ -1,7 +1,0 @@
-alsa-lib-dev
-cmake
-libICE-dev
-libSM-dev
-libXext-dev
-man
-mesa-dev

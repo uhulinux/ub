@@ -1,9 +1,0 @@
-#!/bin/bash
-cd /usr/share/games/boondog
-if [ -f /usr/bin/padsp ] ; then
-  padsp ./boondog "$@"
-  else
-  ./boondog "$@"
-fi
-
-

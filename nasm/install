@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-make \
-	INSTALLROOT="$UB_INSTALLDIR" \
-	install

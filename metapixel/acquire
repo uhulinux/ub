@@ -1,5 +1,0 @@
-#!/usr/bin/env dl
-
-metapixel-${UB_VERSION}.tar.gz metapixel-${UB_VERSION}/
-    http://www.complang.tuwien.ac.at/schani/metapixel/files/
-    

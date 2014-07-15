@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=castle editor
-Name[hu]=castle pályaszerkesztő
-Icon=holotz
-Exec=holotz-castle-editor
-Terminal=false
-StartupNotify=true
-Categories=Game;ArcadeGame;

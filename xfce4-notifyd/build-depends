@@ -1,8 +1,0 @@
-dbus-dev
-dbus-glib-dev
-gtk2-dev
-intltool
-libnotify-dev
-libxfce4ui-dev
-libxfce4util-dev
-xfconf-dev

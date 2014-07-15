@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-
-make QMAKE=/usr/lib/qt4/bin/qmake LRELEASE=/usr/lib/qt4/bin/lrelease PREFIX="/usr"

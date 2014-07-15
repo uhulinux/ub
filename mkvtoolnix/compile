@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-export ZLIB_LIBS=-L/usr/lib
-export ZLIB_CFLAGS=-I/usr/include
-ub_configure
-./drake

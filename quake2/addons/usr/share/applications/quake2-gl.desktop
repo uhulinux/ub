@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Quake2-OpenGl
-Icon=q2
-Exec=quake2 +set basedir /usr/share/games/quake2
-Terminal=true
-StartupNotify=true
-Categories=Game;ActionGame;

@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-autoreconf -vif
-ub_compile \
-	--disable-manual \
-	--enable-video \
-	--disable-strict \
-	--enable-external-ortp \
-	--enable-external-mediastreamer

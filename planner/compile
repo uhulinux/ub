@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--enable-python \
-	--enable-python-plugin \
-	--disable-eds-backend \
-	--disable-eds

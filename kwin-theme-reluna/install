@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-cd Reluna-DeKorator-${UB_VERSION}
-mkdir -p ${UB_INSTALLDIR}/usr/share/color-schemes
-cp *.colors ${UB_INSTALLDIR}/usr/share/color-schemes
-mkdir -p ${UB_INSTALLDIR}/usr/share/deKorator/themes
-tar -xf Reluna-Alunamin-theme.tar.gz -C ${UB_INSTALLDIR}/usr/share/deKorator/themes
-tar -xf Reluna-Bluetiful-theme.tar.gz -C ${UB_INSTALLDIR}/usr/share/deKorator/themes
-tar -xf Reluna-Olove-theme.tar.gz -C ${UB_INSTALLDIR}/usr/share/deKorator/themes

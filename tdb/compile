@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-./autogen.sh
-./configure \
-	--prefix=/usr
-ub_make

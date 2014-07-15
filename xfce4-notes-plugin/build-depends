@@ -1,9 +1,0 @@
-dbus-glib-dev
-gtk2-dev
-intltool
-libsm-dev
-libunique-dev
-libxfcegui4-dev
-startup-notification-dev
-xfce4-panel-dev
-xfconf-dev

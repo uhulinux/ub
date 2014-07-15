@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libXrender-${UB_VERSION}.tar.bz2 libXrender-${UB_VERSION}/
-	http://xorg.freedesktop.org/releases/individual/lib/

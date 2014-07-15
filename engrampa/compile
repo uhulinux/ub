@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--with-gtk=2.0 \
-	--disable-run-in-place
-

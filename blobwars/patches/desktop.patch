@@ -1,9 +1,0 @@
-diff -Naur orig/icons/blobwars.desktop mod/icons/blobwars.desktop
---- orig/icons/blobwars.desktop	2011-04-17 16:56:56.000000000 +0200
-+++ mod/icons/blobwars.desktop	2014-05-07 13:25:30.466834431 +0200
-@@ -1,5 +1,4 @@
- [Desktop Entry]
--Encoding=UTF-8
- Categories=Game;ActionGame;
- Name=Blob Wars : Metal Blob Solid
- Comment=Mission and Objective based 2D Platform Game

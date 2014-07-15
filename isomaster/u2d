@@ -1,1 +1,0 @@
-urllist http://littlesvr.ca/isomaster/releases/ | splitver '^isomaster-([0-9.]+).tar.bz2$' | sort -V | tail -n 1

@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--enable-static \
-	--disable-shared \
-	--with-dpkg-deb-compressor=xz \
-	--enable-dselect \
-	--enable-start-stop-daemon \
-	--enable-update-alternatives 

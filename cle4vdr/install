@@ -1,2 +1,0 @@
-#!/bin/sh -eux
-install -m 755 cle4vdr $UB_INSTALLDIR/usr/bin/

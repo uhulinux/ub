@@ -1,1 +1,0 @@
-urllist http://www.musicpd.org/download/mpd/stable/ | parsever | sort -V | tail -n1

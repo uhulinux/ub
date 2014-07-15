@@ -1,6 +1,0 @@
-#!/usr/bin/env dl
-
-ffmpegthumbnailer-${UB_VERSION}.tar.gz ffmpegthumbnailer-${UB_VERSION}/
-	http://ffmpegthumbnailer.googlecode.com/files/
-
-

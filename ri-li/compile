@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-autoreconf -vif
-export SUBDIRS="src data Sounds"
-	ub_configure \
-	--datadir=/usr/share/games \
-ub_make

@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-export LIBS="-lboost_system"
-ub_compile

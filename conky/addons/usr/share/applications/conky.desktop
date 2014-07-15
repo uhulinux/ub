@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Conky
-Comment=System monitor
-Comment[hu]=rendszer monitor
-Exec=conky
-Terminal=false
-Type=Application
-Icon=
-Categories=System;Monitor;

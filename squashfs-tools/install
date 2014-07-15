@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-
-cp squashfs-tools/{mk,un}squashfs "$UB_INSTALLDIR"/sbin/

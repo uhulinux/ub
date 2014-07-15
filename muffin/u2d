@@ -1,1 +1,0 @@
-urllist https://github.com/linuxmint/muffin | grep -E '^([0-9.]+)$' | sort -V | tail -n 1

@@ -1,1 +1,0 @@
-urllist http://nmap.org/dist/ | splitver 'nmap-([0-9.]+).tar.bz2$' | sort -V | tail -n 1

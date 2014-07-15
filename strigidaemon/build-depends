@@ -1,8 +1,0 @@
-cmake
-cppunit-dev
-dbus-dev
-dbus-launch
-java-jdk
-libstreamanalyzer-dev
-libxml2-dev
-qt4-dev

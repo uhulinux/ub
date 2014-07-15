@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-qmake -project
-qmake -o Makefile f4l.pro
-make LFLAGS="-lz"

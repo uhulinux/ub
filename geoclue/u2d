@@ -1,1 +1,0 @@
-urllist http://cgit.freedesktop.org/geoclue/ | splitver '^geoclue-([0-9.]+).tar.gz$' | sort -V | tail -n 1

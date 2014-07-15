@@ -1,4 +1,0 @@
-deny_file=/etc/at.deny
-at_style=linux
-allow_file=/etc/at.allow
-at_dir=/var/spool/atjobs

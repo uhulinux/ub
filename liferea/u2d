@@ -1,1 +1,0 @@
-sflist liferea Liferea%20Stable | sort -V | tail -n 1

@@ -1,6 +1,0 @@
-#!/usr/bin/env dl
-
-makeself.run
-	http://www.megastep.org/makeself/
-
-

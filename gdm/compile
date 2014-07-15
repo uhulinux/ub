@@ -1,8 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--localstatedir=/var/lib \
-	--enable-console-helper=no \
-	--enable-authentication-scheme=pam \
-	--enable-gtk-doc=no \
-	--disable-scrollkeeper

@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-
-cp -R ${UB_COMPILEDIR} ${UB_INSTALLDIR}/usr/share/jDrtic

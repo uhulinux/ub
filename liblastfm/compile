@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-cd lastfm-liblastfm*
-mv COPYING README.md ../
-ub_compile

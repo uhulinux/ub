@@ -1,9 +1,0 @@
-#!/bin/bash
-sharedir=/usr/share/xdipo
-if [ -d ~/.xdipo ] ; then
-  "$sharedir"/xdipo.bin "$@"
-else
-  cd ~
-  tar --keep-old-files  -zxvf "$sharedir"/xdipouser.tgz
-  "$sharedir"/xdipo.bin "$@"
-fi

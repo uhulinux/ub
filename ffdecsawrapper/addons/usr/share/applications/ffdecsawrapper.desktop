@@ -1,8 +1,0 @@
-[Desktop Entry]
-Comment=Virtual CI-CAM
-Exec=ffdecsawrapper -j 0:1 --cam-budget --sid-allpid --cam-dir /etc/camdir
-Icon=ffdecsawrapper
-Name=ffdecsawrapper
-Terminal=true
-Type=Application
-Categories=AudioVideo;Video;TV;

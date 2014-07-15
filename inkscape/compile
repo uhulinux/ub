@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-sed -i 's/\r$//' share/extensions/*.py # CRLF sucks
-
-autoreconf -vif
-
-ub_compile \
-	--with-perl \
-	--with-python

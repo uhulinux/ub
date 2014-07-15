@@ -1,3 +1,0 @@
-<IfModule !mod_gnutls.c>
-LoadModule gnutls_module /usr/lib/apache/mod_gnutls.so
-</IfModule>

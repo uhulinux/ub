@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-sed -i -e 's:$(CC):$(CC) $(OTHERLDFLAGS):' src/Makefile
-export UB_MAKEPROCS=1
-ub_compile

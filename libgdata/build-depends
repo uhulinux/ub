@@ -1,8 +1,0 @@
-dbus-dev
-gobject-introspection-dev
-intltool
-libgcrypt-dev
-liboauth-dev
-libsoup-dev
-libxml2-dev
-sqlite-dev

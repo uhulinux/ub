@@ -1,8 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=gexif
-Comment=Show Exif information
-Comment[hu]=Exif információk megjelenítése
-Exec=gexif
-Type=Application
-Categories=Graphics;

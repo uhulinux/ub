@@ -1,1 +1,0 @@
-urllist http://openbox.org/dist/openbox/ | parsever | sort -V | tail -n 1

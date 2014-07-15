@@ -1,8 +1,0 @@
-#!/bin/sh
-
-. /etc/init.d/common
-
-DAEMON=/usr/sbin/syslog-ng
-PIDFILE="/var/run/syslog-ng.pid"
-
-startstop "$@"

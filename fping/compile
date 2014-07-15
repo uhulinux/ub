@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--enable-ipv4 \
-	--enable-ipv6
-	

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-udev-${UB_VERSION}.tar.gz udev-${UB_VERSION}/
-	ftp://ftp.kernel.org/pub/linux/utils/kernel/hotplug/

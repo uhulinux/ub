@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-cp -R atunes-${UB_VERSION} ${UB_INSTALLDIR}/usr/lib/atunes
-cp  ${UB_INSTALLDIR}/usr/lib/atunes/atunes.png ${UB_INSTALLDIR}/usr/share/pixmaps/atunes.png

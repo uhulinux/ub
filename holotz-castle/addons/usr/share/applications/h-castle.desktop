@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=holotz-castle
-Icon=holotz
-Exec=holotz-castle
-Terminal=false
-StartupNotify=true
-Categories=Game;ArcadeGame;

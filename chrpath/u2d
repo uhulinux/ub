@@ -1,1 +1,0 @@
-urllist http://ftp.tux.org/pub/X-Windows/ftp.hungry.com/chrpath/ | parsever | sort -V | tail -n 1

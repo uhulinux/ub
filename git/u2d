@@ -1,1 +1,0 @@
-urllist http://code.google.com/p/git-core/downloads/list | splitver '^git-([0-9.]+).tar.gz' | sort -V | tail -n 1

@@ -1,5 +1,0 @@
-#!/usr/bin/env dl
-
-html2ps-${UB_VERSION/~/}.tar.gz html2ps-${UB_VERSION/~/}/
-	http://user.it.uu.se/~jan/
-

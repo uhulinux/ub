@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-cp util/av7110_loadkeys/README ./av7110-readme
-ub_compile

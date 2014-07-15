@@ -1,8 +1,0 @@
-#!/bin/sh -eux
-
-libtoolize
-gtkdocize
-autoreconf -fi
-ub_configure
-ub_replace "-Wall -Werror" "" configure
-ub_make

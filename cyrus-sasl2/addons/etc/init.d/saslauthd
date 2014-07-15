@@ -1,9 +1,0 @@
-#!/bin/sh
-
-. /etc/init.d/common
-
-DAEMON=/usr/sbin/saslauthd
-PIDFILE="/var/state/saslauthd/saslauthd.pid"
-DAEMONARGS=(-a pam)
-
-startstop "$@"

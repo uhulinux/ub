@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-export LDFLAGS+=-Wl,--as-needed
-
-ub_compile

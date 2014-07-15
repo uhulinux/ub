@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_install
-
-# install preconfigured conffiles
-mkdir -p "$UB_INSTALLDIR"/usr/share/lirc/remotes
-cp -a remotes/. "$UB_INSTALLDIR"/usr/share/lirc/remotes/

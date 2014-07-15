@@ -1,9 +1,0 @@
-dbus-glib-dev
-docbook-dtds
-docbook-xsl
-eggdbus-dev
-expat-dev
-gobject-introspection-dev
-intltool
-libffi-dev
-libxslt

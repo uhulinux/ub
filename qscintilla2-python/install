@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-cd Python
-make install INSTALL_ROOT="$UB_INSTALLDIR"
-
-cp ../qsci/api/python/Python-2*.api "$UB_INSTALLDIR"/usr/lib/qt4/api/python

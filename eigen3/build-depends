@@ -1,8 +1,0 @@
-cmake
-fftw3-dev
-freeglut-dev
-gmp-dev
-gsl-dev
-mesa-dev
-mpfr-dev
-qt4-dev

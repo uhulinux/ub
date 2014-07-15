@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-alsa-plugins-${UB_VERSION}.tar.bz2 alsa-plugins-${UB_VERSION}/
-	ftp://ftp.alsa-project.org/pub/plugins/

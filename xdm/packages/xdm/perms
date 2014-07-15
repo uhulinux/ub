@@ -1,4 +1,0 @@
-root      root       755  /etc/X11/xdm/Xsession
-root      root       755  /etc/X11/xdm/Xsetup
-root      root       755  /etc/init.d/xdm
-root      root       755  /var/lib/xdm

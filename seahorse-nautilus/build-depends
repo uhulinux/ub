@@ -1,9 +1,0 @@
-gconf2-dev
-gpg
-gpgme-dev
-intltool
-libassuan-dev
-libcryptui-dev
-libgnome-keyring-dev
-libnotify-dev
-nautilus-dev
