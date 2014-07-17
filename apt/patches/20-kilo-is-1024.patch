@@ -1,0 +1,21 @@
+diff -Naur orig/apt-pkg/contrib/strutl.cc patched/apt-pkg/contrib/strutl.cc
+--- orig/apt-pkg/contrib/strutl.cc	2014-07-10 10:50:30.000000000 +0200
++++ patched/apt-pkg/contrib/strutl.cc	2014-07-17 04:27:57.702285136 +0200
+@@ -369,7 +369,7 @@
+    
+    /* bytes, KiloBytes, MegaBytes, GigaBytes, TeraBytes, PetaBytes, 
+       ExaBytes, ZettaBytes, YottaBytes */
+-   char Ext[] = {'\0','k','M','G','T','P','E','Z','Y'};
++   char Ext[] = {'\0','K','M','G','T','P','E','Z','Y'};
+    int I = 0;
+    while (I <= 8)
+    {
+@@ -384,7 +384,7 @@
+          sprintf(S,"%'.0f %c",ASize,Ext[I]);
+ 	 break;
+       }
+-      ASize /= 1000.0;
++      ASize /= 1024.0;
+       I++;
+    }
+    
