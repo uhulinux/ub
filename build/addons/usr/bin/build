@@ -400,7 +400,7 @@ echo
 		sed -i -e "s/^.*$/$PACKAGER/g" "$UHUBUILD_PATH"/UB-${UHUBUILD_DISTR}/"$i"/maintainer
 		fi
 	else
-	echo "$PACKAGER" > "$UHUBUILD_PATH"/UB-${UHUBUILD_DISTR}/"$i"/vendor
+	echo "$PACKAGER" > "$UHUBUILD_PATH"/UB-${UHUBUILD_DISTR}/"$i"/maintainer
 	fi
 	
 	# Közös vendor fájl használata
