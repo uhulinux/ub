@@ -1,0 +1,15 @@
+caja-dev
+dbus-dev
+djvulibre-dev
+gobject-introspection-dev
+gtk-doc
+gtk2-dev
+intltool
+itstool
+libsm-dev
+libspectre-dev
+libtiff-dev
+libxml2-dev
+mate-icon-theme
+poppler-glib-dev
+yelp-tools
