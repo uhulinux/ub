@@ -1,0 +1,11 @@
+avahi-dev
+dbus-glib-dev
+intltool
+itstool
+libatasmart-dev
+libnotify-dev
+libxslt-dev
+lmsensors-dev
+mate-panel-dev
+openssl-dev
+yelp-tools

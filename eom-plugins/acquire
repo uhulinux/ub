@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz eom-plugins-${UB_VERSION}/
+	https://github.com/rezso/eom-plugins/archive/

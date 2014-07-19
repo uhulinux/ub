@@ -1,0 +1,16 @@
+dbus-glib-dev
+exempi-dev
+gtk-doc
+gtk2-dev
+intltool
+itstool
+lcms2-dev
+libexif-dev
+libjpeg-dev
+librsvg-dev
+libsm-dev
+mate-desktop-dev
+mate-icon-theme
+pygtk-dev
+util-linux-dev
+xcb-util-dev

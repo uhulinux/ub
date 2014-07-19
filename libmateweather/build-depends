@@ -1,0 +1,8 @@
+gtk-doc
+gtk2-dev
+intltool
+libsoup-dev
+libxml2-dev
+pygtk-dev
+python-dev
+tzdata

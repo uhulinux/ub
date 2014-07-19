@@ -1,0 +1,8 @@
+dconf-dev
+gtk2-dev
+intltool
+itstool
+libsm-dev
+libxslt-dev
+vte2-dev
+yelp-tools

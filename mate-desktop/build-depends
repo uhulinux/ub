@@ -1,0 +1,11 @@
+dbus-glib-dev
+dconf-dev
+gtk-doc
+gtk2-dev
+intltool
+itstool
+libsm-dev
+libunique1-dev
+rarian-dev
+startup-notification-dev
+xcb-util-dev

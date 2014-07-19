@@ -1,0 +1,9 @@
+dbus-glib-dev
+gdk-pixbuf-dev
+gtk-doc
+intltool
+libcanberra-dev
+libnotify-dev
+libsm-dev
+libwnck2-dev
+xcb-util-dev
