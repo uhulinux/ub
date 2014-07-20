@@ -1,0 +1,68 @@
+diff -Naur orig/autogen.sh patched/autogen.sh
+--- orig/autogen.sh	1970-01-01 01:00:00.000000000 +0100
++++ patched/autogen.sh	2014-06-22 17:33:21.676360411 +0200
+@@ -0,0 +1,14 @@
++#! /bin/sh
++
++srcdir=`dirname $0`
++test -z "$srcdir" && srcdir=.
++
++ORIGDIR=`pwd`
++cd $srcdir
++
++autoreconf -v --install || exit 1
++cd $ORIGDIR || exit $?
++
++if test -z "$NOCONFIGURE"; then
++    $srcdir/configure "$@"
++fi
+diff -Naur orig/configure.ac patched/configure.ac
+--- orig/configure.ac	2013-05-31 02:41:02.000000000 +0200
++++ patched/configure.ac	2014-06-22 17:31:38.243251254 +0200
+@@ -31,7 +31,6 @@
+ 
+ # Initialize Automake
+ AM_INIT_AUTOMAKE([foreign dist-bzip2])
+-AM_MAINTAINER_MODE
+ 
+ # Require X.Org macros 1.8 or later for MAN_SUBSTS set by XORG_MANPAGE_SECTIONS
+ m4_ifndef([XORG_MACROS_VERSION],
+@@ -43,13 +42,7 @@
+ AC_PROG_LIBTOOL
+ 
+ # Check for X and print proto
+-PKG_CHECK_MODULES(XPRINT, x11 xext xextproto xau printproto)
+-
+-# Check for _XEatDataWords function that may be patched into older Xlib release
+-SAVE_LIBS="$LIBS"
+-LIBS="$XPRINT_LIBS"
+-AC_CHECK_FUNCS([_XEatDataWords])
+-LIBS="$SAVE_LIBS"
++PKG_CHECK_MODULES(XPRINT, [x11 >= 1.6] xext xextproto xau printproto)
+ 
+ AC_CONFIG_FILES([Makefile
+ 		 src/Makefile
+diff -Naur orig/src/XpExtUtil.h patched/src/XpExtUtil.h
+--- orig/src/XpExtUtil.h	2013-05-31 02:41:02.000000000 +0200
++++ patched/src/XpExtUtil.h	2014-06-22 17:29:36.517945896 +0200
+@@ -48,20 +48,6 @@
+     const char * /* str */
+ );
+ 
+-#ifndef HAVE__XEATDATAWORDS
+-#include <X11/Xmd.h>  /* for LONG64 on 64-bit platforms */
+-#include <limits.h>
+-
+-static inline void _XEatDataWords(Display *dpy, unsigned long n)
+-{
+-# ifndef LONG64
+-    if (n >= (ULONG_MAX >> 2))
+-        _XIOError(dpy);
+-# endif
+-    _XEatData (dpy, n << 2);
+-}
+-#endif
+-
+ _XFUNCPROTOEND
+ 
+ #endif /* _XPEXTUTIL_H */
