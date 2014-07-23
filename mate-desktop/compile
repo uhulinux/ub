@@ -2,6 +2,6 @@
 
 ub_compile \
 	--with-gtk=2.0 \
-	--with-omf-dir=/usr/share/omf/mate-desktop \
 	--enable-mpaste \
-	--enable-deprecation-flags
+	--enable-deprecation-flags \
+	--disable-desktop-docs # csak licensz szöveg: fdl, gpl, lgpl
