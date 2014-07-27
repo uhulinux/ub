@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mv /usr/lib/xorg/modules/extensions/libglx.so /usr/lib/xorg/modules/extensions/libglx.so.xorg
+ln -sf /usr/lib/nvidia/libglx.so.* /usr/lib/xorg/modules/extensions/libglx.so
+ldconfig
