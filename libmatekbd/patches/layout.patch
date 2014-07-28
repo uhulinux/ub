@@ -1,0 +1,18 @@
+diff -Naur orig/libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.in patched/libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.in
+--- orig/libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.in	2014-01-01 14:12:59.000000000 +0100
++++ patched/libmatekbd/org.mate.peripherals-keyboard-xkb.gschema.xml.in.in	2014-07-27 23:06:53.651957392 +0200
+@@ -12,12 +12,12 @@
+       <_description>keyboard model</_description>
+     </key>
+     <key name="layouts" type="as">
+-      <default>[]</default>
++      <default>['hu']</default>
+       <_summary>Keyboard layout</_summary>
+       <_description>keyboard layout</_description>
+     </key>
+     <key name="options" type="as">
+-      <default>[]</default>
++      <default>['grp:alt_shift_toggle']</default>
+       <_summary>Keyboard options</_summary>
+       <_description>Keyboard options</_description>
+     </key>
