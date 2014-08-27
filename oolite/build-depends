@@ -1,0 +1,15 @@
+curl-dev
+espeak-dev
+glu-dev
+gnustep-base
+gnutls-dev
+icu-dev
+libpng.dev
+libvorbis-dev
+libxslt-dev
+nspr-dev
+objc
+openal-dev
+python-dev
+sdl-mixer-dev
+zip
