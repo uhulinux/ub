@@ -1,0 +1,5 @@
+#!/usr/bin/env dl
+
+smc-${UB_VERSION}.tar.gz SMC-a0405c9/smc/
+#    http://downloads.sourceforge.net/smclone/
+    git://github.com/FluXy/SMC.git@a0405c9
