@@ -1,0 +1,7 @@
+fvwm << 2.7
+fvwm >= 2.6.5
+hsetroot
+imagemagick
+python
+trayer
+xdg-user-dirs

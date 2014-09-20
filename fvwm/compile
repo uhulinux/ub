@@ -1,0 +1,15 @@
+#!/bin/sh -eux
+
+ub_compile \
+	--enable-multibyte \
+	--enable-nls \
+	--enable-iconv \
+	--disable-gtk \
+	--enable-perllib \
+	--enable-rsvg \
+	--enable-xft \
+	--enable-bidi \
+	--with-stroke-library \
+	--enable-package-subdirs \
+	--without-gnome \
+	--with-png-library
