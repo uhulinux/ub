@@ -1,0 +1,7 @@
+#!/usr/bin/env dl
+
+#xfburn-$UB_VERSION.tar.bz2 xfburn-$UB_VERSION/
+#	http://archive.xfce.org/src/apps/xfburn/${UB_VERSION_HEAD2}/
+	
+xfburn-$UB_VERSION.tar.gz xfburn-da37a9c/
+	git://git.xfce.org/apps/xfburn@da37a9c

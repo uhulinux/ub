@@ -1,7 +1,7 @@
 alsa-lib-dev
 curl-dev
 dbus-glib-dev
-gst0.10-plugins-base-dev
+gst-plugins-base-dev
 gtk2-dev
 icu-dev
 libidl2-dev
