@@ -1,1 +1,0 @@
-lxdm      121  121  -d /var/lib/lxdm -s /usr/sbin/nologin
