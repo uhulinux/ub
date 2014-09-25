@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+WikidPad-${UB_VERSION}-src.zip .
+	http://download.sourceforge.net/wikidpad/${UB_VERSION}/
