@@ -19,6 +19,7 @@ networkmanager-dev
 openssl-dev
 polkit-dev
 pygobject-dev
+systemd-dev
 upower-dev
 xcb-util-dev
 yelp-tools
