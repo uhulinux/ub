@@ -12,7 +12,6 @@ ac_add_options --target='i686-uhu-linux'
 ac_add_options --prefix=/usr
 ac_add_options --enable-application=browser
 ac_add_options --enable-official-branding
-ac_add_options --disable-optimize
 ac_add_options --without-system-jpeg
 ac_add_options --with-system-zlib
 ac_add_options --with-pthreads
@@ -40,6 +39,8 @@ ac_add_options --disable-mochitest
 ac_add_options --enable-default-toolkit=cairo-gtk2
 ac_add_options --disable-necko-wifi
 _EOF_
+
+# ac_add_options --disable-optimize
 
 cd "$UB_OBJECTDIR"
 "$UB_COMPILEDIR"/configure
