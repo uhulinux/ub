@@ -1,0 +1,14 @@
+chmlib-dev
+icu-dev
+imagemagick-dev
+libmtp-dev
+libusb-dev
+podofo-dev
+python-dateutil
+python-dev
+python-lxml
+python-pillow
+pyqt5-python2
+qt5-dev
+sip
+xdg-utils
