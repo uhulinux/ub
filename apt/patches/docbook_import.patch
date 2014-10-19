@@ -1,7 +1,7 @@
 diff -Naur orig/buildlib/docbook.mak patched/buildlib/docbook.mak
---- orig/buildlib/docbook.mak	2014-07-10 10:50:32.000000000 +0200
-+++ patched/buildlib/docbook.mak	2014-07-17 05:57:30.675655813 +0200
-@@ -51,24 +51,24 @@
+--- orig/buildlib/docbook.mak	2014-10-15 19:55:49.000000000 +0200
++++ patched/buildlib/docbook.mak	2014-10-18 22:28:27.926807003 +0200
+@@ -52,24 +52,24 @@
  # Rules to build Text documentations
  ifdef XSLTPROC
  
@@ -15,9 +15,9 @@ diff -Naur orig/buildlib/docbook.mak patched/buildlib/docbook.mak
  
  vpath %.dbk $(SUBDIRS)
 -vpath $(DOCBOOK_TEXT_STYLESHEET) $(SUBDIRS)
--$(DOC)/%.text: %.dbk $(DOCBOOK_TEXT_STYLESHEET)
+-$(DOC)/%.text: %.dbk $(DOCBOOK_TEXT_STYLESHEET) $(INCLUDES)
 +vpath $(DOCBOOK_HTML_STYLESHEET) $(SUBDIRS)
-+$(DOC)/%.text: %.dbk $(DOCBOOK_HTML_STYLESHEET)
++$(DOC)/%.text: %.dbk $(DOCBOOK_HTML_STYLESHEET) $(INCLUDES)
  	echo Creating text for $< to $@
  	$(DOCBOOK) \
  		--stringparam l10n.gentext.default.language $(LC) \
@@ -33,8 +33,8 @@ diff -Naur orig/buildlib/docbook.mak patched/buildlib/docbook.mak
  
  endif
 diff -Naur orig/doc/docbook-html-style.xsl patched/doc/docbook-html-style.xsl
---- orig/doc/docbook-html-style.xsl	2014-07-10 10:50:32.000000000 +0200
-+++ patched/doc/docbook-html-style.xsl	2014-07-17 06:03:27.279463488 +0200
+--- orig/doc/docbook-html-style.xsl	2014-10-15 19:55:49.000000000 +0200
++++ patched/doc/docbook-html-style.xsl	2014-10-18 22:24:50.353728116 +0200
 @@ -2,7 +2,7 @@
  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
  
@@ -45,8 +45,8 @@ diff -Naur orig/doc/docbook-html-style.xsl patched/doc/docbook-html-style.xsl
    <!-- Since we use xsltproc (not saxon), add a workaround to ensure UTF-8 -->
    <xsl:template xmlns="http://www.w3.org/1999/xhtml" name="head.content.generator">
 diff -Naur orig/doc/docbook-text-style.xsl patched/doc/docbook-text-style.xsl
---- orig/doc/docbook-text-style.xsl	2014-07-10 10:50:32.000000000 +0200
-+++ patched/doc/docbook-text-style.xsl	2014-07-17 06:03:37.043567736 +0200
+--- orig/doc/docbook-text-style.xsl	2014-10-15 19:55:49.000000000 +0200
++++ patched/doc/docbook-text-style.xsl	2014-10-18 22:24:50.353728116 +0200
 @@ -1,7 +1,7 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -57,8 +57,8 @@ diff -Naur orig/doc/docbook-text-style.xsl patched/doc/docbook-text-style.xsl
    <!-- Parameters for optimal text output. -->
    <xsl:param name="callout.graphics" select="0"/>
 diff -Naur orig/doc/manpage-style.xsl patched/doc/manpage-style.xsl
---- orig/doc/manpage-style.xsl	2014-07-10 10:50:32.000000000 +0200
-+++ patched/doc/manpage-style.xsl	2014-07-17 04:39:54.201935656 +0200
+--- orig/doc/manpage-style.xsl	2014-10-15 19:55:49.000000000 +0200
++++ patched/doc/manpage-style.xsl	2014-10-18 22:24:50.353728116 +0200
 @@ -2,7 +2,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   version="1.0">
@@ -69,8 +69,8 @@ diff -Naur orig/doc/manpage-style.xsl patched/doc/manpage-style.xsl
  <xsl:param name="man.output.encoding" select="'UTF-8'" />
  
 diff -Naur orig/doc/po4a.conf patched/doc/po4a.conf
---- orig/doc/po4a.conf	2014-07-10 10:50:32.000000000 +0200
-+++ patched/doc/po4a.conf	2014-07-17 05:24:18.758387057 +0200
+--- orig/doc/po4a.conf	2014-10-15 19:55:49.000000000 +0200
++++ patched/doc/po4a.conf	2014-10-18 22:24:50.353728116 +0200
 @@ -3,7 +3,7 @@
  
  # Entities need to be present, even if not translated

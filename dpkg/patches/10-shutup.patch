@@ -1,7 +1,7 @@
 diff -Naur orig/dpkg-deb/build.c patched/dpkg-deb/build.c
---- orig/dpkg-deb/build.c	2012-07-20 00:38:55.000000000 +0200
-+++ patched/dpkg-deb/build.c	2012-10-12 15:10:18.585940335 +0200
-@@ -438,8 +440,10 @@
+--- orig/dpkg-deb/build.c	2014-10-12 05:16:47.000000000 +0200
++++ patched/dpkg-deb/build.c	2014-10-18 22:03:39.627426924 +0200
+@@ -441,8 +441,10 @@
      pkg = check_new_pkg(dir);
      if (subdir)
        debar = pkg_get_pathname(debar, pkg);
