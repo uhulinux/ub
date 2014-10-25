@@ -1,0 +1,15 @@
+#!/bin/sh -eux
+
+ub_install
+
+mkdir -p "${UB_INSTALLDIR}/etc"
+
+. /etc/os-release
+
+cat > "${UB_INSTALLDIR}/etc/lsb-release" <<- EOF
+	LSB_VERSION=1.4
+	DISTRIB_ID=$ID
+	DISTRIB_RELEASE=$VERSION_ID
+	DISTRIB_DESCRIPTION=$NAME
+	DISTRIB_CODENAME=`echo $VERSION | cut -d' ' -f2`
+	EOF
