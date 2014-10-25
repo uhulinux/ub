@@ -4,6 +4,7 @@
 sed -i -e 's/indicate-0.5/indicate-0.6/g' configure.ac
 
 autoreconf -vif
+intltoolize --force
 
 ub_compile \
     --enable-crash-dialog \
