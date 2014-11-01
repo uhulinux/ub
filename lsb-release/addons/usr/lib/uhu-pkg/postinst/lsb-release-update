@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+if [ -f /var/lib/uhu-pkg/lsb-release-update -a /var/lib/uhu-pkg/lsb-release-update -nt /var/lib/dpkg/info ]; then
+	exit 0
+fi
+
+if [ "$1" = "lsb-release" -o "$1" = "+" ]; then
+	exec /usr/sbin/lsb-release-update
+fi
