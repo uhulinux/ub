@@ -1,5 +1,8 @@
 ---------------
 Kiss Attila 2014-11-17
+depends: pyinotify
+---------------
+Kiss Attila 2014-11-17
 2.4.2 -> 2.4.3
 ---------------
 Kiss Attila 2014-11-10
