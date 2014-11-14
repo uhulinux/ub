@@ -1,0 +1,13 @@
+cinnamon-desktop-dev
+dbus-glib-dev
+gnome-common
+gnome-doc-utils
+gsettings-desktop-schemas
+gtk-dev
+intltool
+libgnomekbd-dev
+libsm-dev
+libxkbfile-dev
+libxscrnsaver-dev
+libxxf86vm-dev
+systemd-dev

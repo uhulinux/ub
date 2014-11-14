@@ -1,0 +1,46 @@
+diff -Naur orig/files/usr/bin/cinnamon-settings mod/files/usr/bin/cinnamon-settings
+--- orig/files/usr/bin/cinnamon-settings	2014-10-31 23:21:43.000000000 +0100
++++ mod/files/usr/bin/cinnamon-settings	2014-11-08 19:18:17.000000000 +0100
+@@ -7,7 +7,7 @@
+ 	if os.path.exists("/usr/lib/cinnamon-settings/modules/cs_%s.py" % module):
+ 		print "Python module"
+ 		os.execvp("/usr/lib/cinnamon-settings/cinnamon-settings.py", ("",) + tuple(sys.argv[1:]))
+-	elif os.path.exists("/usr/bin/cinnamon-control-center"):
++	elif os.path.exists("/usr/lib/cinnamon-control-center-1/panels"):
+ 		print "Unknown module %s, using cinnamon-control-center" % module
+ 		os.execvp("/usr/lib/cinnamon-settings/cinnamon-settings.py", ("",) + tuple(sys.argv[1:]))
+ 	elif os.path.exists("/usr/bin/gnome-control-center"):
+diff -Naur orig/files/usr/bin/cinnamon-settings-users mod/files/usr/bin/cinnamon-settings-users
+--- orig/files/usr/bin/cinnamon-settings-users	2014-10-31 23:21:43.000000000 +0100
++++ mod/files/usr/bin/cinnamon-settings-users	2014-11-08 19:17:09.000000000 +0100
+@@ -2,5 +2,5 @@
+ 
+ import os
+ 
+-os.system("gksu /usr/lib/cinnamon-settings-users/cinnamon-settings-users.py")
++os.system("pkexec /usr/lib/cinnamon-settings-users/cinnamon-settings-users.py")
+ 
+diff -Naur orig/files/usr/lib/cinnamon-settings/modules/cs_backgrounds.py mod/files/usr/lib/cinnamon-settings/modules/cs_backgrounds.py
+--- orig/files/usr/lib/cinnamon-settings/modules/cs_backgrounds.py	2014-11-10 11:01:15.000000000 +0100
++++ mod/files/usr/lib/cinnamon-settings/modules/cs_backgrounds.py	2014-11-10 16:54:41.784060156 +0100
+@@ -198,7 +198,7 @@
+     def get_system_backgrounds(self):
+         picture_list = []
+         folder_list = []
+-        properties_dir = "/usr/share/cinnamon-background-properties"
++        properties_dir = "/usr/share/gnome-background-properties"
+         backgrounds = []
+         if os.path.exists(properties_dir):
+             for i in os.listdir(properties_dir):
+diff -Naur orig/files/usr/lib/cinnamon-settings/modules/cs_user.py mod/files/usr/lib/cinnamon-settings/modules/cs_user.py
+--- orig/files/usr/lib/cinnamon-settings/modules/cs_user.py	2014-11-10 11:01:15.000000000 +0100
++++ mod/files/usr/lib/cinnamon-settings/modules/cs_user.py	2014-11-10 16:53:25.808061326 +0100
+@@ -2,7 +2,7 @@
+ 
+ from SettingsWidgets import *
+ from gi.repository import AccountsService, GLib
+-import PAM
++import pam
+ import pexpect
+ import time
+ from random import randint
