@@ -1,0 +1,18 @@
+#!/bin/sh -eux
+
+cp opt/google/chrome/product_logo_48.png "$UB_INSTALLDIR"/usr/share/pixmaps/google-chrome.png
+mv opt/google/chrome/PepperFlash/ "$UB_INSTALLDIR"/usr/lib/PepperFlash/
+mv opt/google "$UB_INSTALLDIR"/usr/lib
+
+sed -i -e 's|/opt|/usr/lib|g' "$UB_INSTALLDIR"/usr/lib/google/chrome/default-app-block
+
+rm -Rf "$UB_INSTALLDIR"/usr/lib/google/chrome/cron
+rm -Rf "$UB_INSTALLDIR"/usr/share/applications/google-chrome.desktop
+
+mkdir -p "$UB_INSTALLDIR"/opt/google/chrome
+chmod 4755 "$UB_INSTALLDIR"/usr/lib/google/chrome/chrome-sandbox
+ln -s "$UB_INSTALLDIR"/usr/lib/google/chrome/chrome-sandbox "$UB_INSTALLDIR"/opt/google/chrome/chrome-sandbox
+
+ln -s "$UB_INSTALLDIR"/usr/lib/PepperFlash "$UB_INSTALLDIR"/usr/lib/google/chrome/PepperFlash
+
+ln -snf /usr/lib/libudev.so.1 "$UB_INSTALLDIR"/usr/lib/google/chrome/libudev.so.0

@@ -26,8 +26,8 @@ yes yes | ./configure \
 	-xmlpatterns        \
 	-multimedia         \
 	-audio-backend      \
-	-phonon          \
-	-phonon-backend  \
+	-no-phonon          \
+	-no-phonon-backend  \
 	\
 	-svg                \
 	-webkit             \
@@ -83,6 +83,10 @@ yes yes | ./configure \
 ub_make
 
 #some options we may want to use in the future
+#	-phonon-backend     \
+#	-phonon             \
+#	-multimedia         \
+#	-audio-backend      \
 #	-nomake demos       \
 #	-nomake examples    \
 #	-nomake docs
