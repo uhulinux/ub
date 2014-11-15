@@ -1,6 +1,6 @@
 diff -Naur orig/browser/components/nsBrowserContentHandler.js patched/browser/components/nsBrowserContentHandler.js
 --- orig/browser/components/nsBrowserContentHandler.js	2014-11-06 21:20:04.000000000 +0100
-+++ patched/browser/components/nsBrowserContentHandler.js	2014-11-13 17:41:52.297269015 +0100
++++ patched/browser/components/nsBrowserContentHandler.js	2014-11-15 16:21:50.185616246 +0100
 @@ -577,7 +577,6 @@
          switch (override) {
            case OVERRIDE_NEW_PROFILE:
@@ -9,3 +9,16 @@ diff -Naur orig/browser/components/nsBrowserContentHandler.js patched/browser/co
              break;
            case OVERRIDE_NEW_MSTONE:
              // Check whether we will restore a session. If we will, we assume
+@@ -607,10 +606,8 @@
+               // Note we don't pass %OLD_VERSION to formatURL - while it will
+               // not replace it with anything, it will complain about the
+               // unknown value.
+-              overridePage = Services.urlFormatter.formatURL(
+-                "https://www.mozilla.org/%LOCALE%/firefox/%VERSION%/whatsnew/"
+-              ) + "?oldversion=%OLD_VERSION%";
+-            }
++              // overridePage = Services.urlFormatter.formatURL(
++             }
+             // End of temporary 33.x anniversary code.
+ 
+ // The override page being specified in startup.homepage_override_url is
