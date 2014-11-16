@@ -1,4 +1,5 @@
 #!/bin/sh -eux
 
 python setup.py install --root="$UB_INSTALLDIR"/usr
-#ub_install
+
+cp -a icons/calibre.png "$UB_INSTALLDIR"/usr/share/pixmaps/
