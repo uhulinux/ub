@@ -1,1 +1,1 @@
-lightdm   620  620  -d /var/lib/lightdm -s /usr/sbin/nologin
+lightdm   302  302  -d /var/lib/lightdm -s /usr/sbin/nologin

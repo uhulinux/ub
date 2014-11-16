@@ -1,0 +1,4 @@
+-         -          755  /usr/lib/uhu-pkg/postinst/lsb-release-update
+-         -          755  /usr/lib/uhu-pkg/postrm/lsb-release-update
+-         -          755  /usr/lib/uhu-pkg/prerm/lsb-release-update
+-         -          755  /usr/sbin/lsb-release-update
