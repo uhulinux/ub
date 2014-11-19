@@ -1,7 +1,7 @@
-diff -Naurdp a/dpkg-deb/build.c b/dpkg-deb/build.c
---- a/dpkg-deb/build.c	2011-11-25 11:18:08.000000000 +0100
-+++ b/dpkg-deb/build.c	2011-12-23 15:47:01.342469022 +0100
-@@ -455,7 +455,7 @@ do_build(const char *const *argv)
+diff -Naur orig/dpkg-deb/build.c patched/dpkg-deb/build.c
+--- orig/dpkg-deb/build.c	2014-10-18 22:03:39.627426924 +0200
++++ patched/dpkg-deb/build.c	2014-10-18 22:04:50.703779373 +0200
+@@ -463,7 +463,7 @@
        ohshite(_("failed to chdir to `%.255s'"), dir);
      if (chdir(BUILDCONTROLDIR))
        ohshite(_("failed to chdir to `%.255s'"), ".../DEBIAN");

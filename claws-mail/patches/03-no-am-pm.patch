@@ -1,7 +1,7 @@
 diff -Naur orig/src/common/utils.c patched/src/common/utils.c
---- orig/src/common/utils.c	2014-05-23 11:37:26.000000000 +0200
-+++ patched/src/common/utils.c	2014-05-24 13:31:40.345515653 +0200
-@@ -5173,7 +5173,7 @@
+--- orig/src/common/utils.c	2014-10-20 22:05:35.000000000 +0200
++++ patched/src/common/utils.c	2014-10-23 19:37:38.355183478 +0200
+@@ -5215,7 +5215,7 @@
  				}
  				break;
  			case 'r':

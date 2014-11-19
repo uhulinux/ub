@@ -1,0 +1,11 @@
+diff -Naur orig/configure.in mod/configure.in
+--- orig/configure.in	2014-10-31 16:24:30.000000000 +0100
++++ mod/configure.in	2014-11-07 18:01:58.277876912 +0100
+@@ -295,7 +295,6 @@
+ AC_SUBST(NEMO_CFLAGS)
+ AC_SUBST(NEMO_LIBS)
+ 
+-AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
+ 
+ dnl Multimedia keys
+ AC_CHECK_HEADERS([X11/XF86keysym.h])

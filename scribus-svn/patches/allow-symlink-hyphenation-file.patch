@@ -1,0 +1,12 @@
+diff -Naur orig/scribus/scribus.cpp mod/scribus/scribus.cpp
+--- orig/scribus/scribus.cpp	2014-09-27 18:38:36.000000000 +0200
++++ mod/scribus/scribus.cpp	2014-09-27 18:48:34.923242682 +0200
+@@ -8821,7 +8821,7 @@
+ 	//Grab the language abbreviation from it, get the full language text
+ 	//Insert the name as key and a new string list into the map
+ 	QString hyphDirName = QDir::toNativeSeparators(ScPaths::instance().dictDir());
+-	QDir hyphDir(hyphDirName, "hyph*.dic", QDir::Name, QDir::Files | QDir::NoSymLinks);
++	QDir hyphDir(hyphDirName, "*.dic", QDir::Name, QDir::Files);
+ //IL	if ((hyphDir.exists()) && (hyphDir.count() != 0))
+ //IL	{
+ // 		LanguageManager langmgr;
