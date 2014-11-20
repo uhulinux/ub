@@ -1,4 +1,4 @@
-gstreamer-plugins-good
+gst-plugins-good
 gtk
 py3cairo
 py3gobject
