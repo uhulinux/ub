@@ -4,8 +4,8 @@ diff -Naur orig/files/usr/share/cinnamon-session/sessions/cinnamon2d.session mod
 @@ -1,6 +1,6 @@
  [Cinnamon Session]
  Name=Cinnamon (Software Rendering)
--RequiredComponents=cinnamon;cinnamon-settings-daemon;cinnamon-screensaver;nemo-autostart;nm-applet;
-+RequiredComponents=cinnamon;cinnamon-settings-daemon;cinnamon-screensaver;nemo-autostart;nm-applet;polkit-cinnamon-authentication-agent-1;
+-RequiredComponents=cinnamon2d;cinnamon-settings-daemon;cinnamon-screensaver;nemo-autostart;nm-applet;
++RequiredComponents=cinnamon2d;cinnamon-settings-daemon;cinnamon-screensaver;nemo-autostart;nm-applet;polkit-cinnamon-authentication-agent-1;
  DesktopName=X-Cinnamon
  
  
