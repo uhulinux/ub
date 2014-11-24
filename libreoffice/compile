@@ -30,7 +30,6 @@ export QT4DIR=/usr/lib/qt4
 	--with-system-libs \
 	--with-system-headers \
 	--without-java \
-	--without-ppds \
 	--without-system-npapi-headers \
 	--without-system-jars \
 	--without-system-altlinuxhyph \
@@ -46,6 +45,7 @@ export QT4DIR=/usr/lib/qt4
   	--without-system-libfreehand \
   	--without-system-libmspub \
   	--without-system-libmwaw \
+  	--without-system-libpagemaker \
   	--without-system-lpsolve \
   	--without-system-mdds \
   	--without-system-mysql-cppconn \
@@ -69,7 +69,7 @@ export QT4DIR=/usr/lib/qt4
 	--disable-firebird-sdbc \
 	--enable-postgresql-sdbc \
 	--enable-crashdump \
-	--enable-gstreamer \
+	--enable-gstreamer-1-0 \
 	--enable-python \
 	--enable-extra-font \
 	--enable-ext-mariadb-connector \
