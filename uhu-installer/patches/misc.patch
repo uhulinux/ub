@@ -1,0 +1,62 @@
+diff -Naur orig/hu.po patched/hu.po
+--- orig/hu.po	2014-06-03 17:44:51.000000000 +0200
++++ patched/hu.po	2014-11-17 16:01:53.029146817 +0100
+@@ -315,7 +315,7 @@
+ 
+ #: uhu-installer.glade:898
+ msgid "passwords"
+-msgstr ""
++msgstr "jelszavak"
+ 
+ #: uhu-installer.glade:943
+ msgid "<b>Install steps</b>"
+@@ -327,14 +327,5 @@
+ 
+ #: uhu-installer.glade:1035
+ msgid "install"
+-msgstr ""
++msgstr "telepítés"
+ 
+-#~ msgid "Error occured See log! (/var/log/uhu-installer.log) "
+-#~ msgstr ""
+-#~ "Hiba történt, ellenőrizze a hibanaplót! (/var/log/uhu-installer.log) "
+-
+-#~ msgid "Add new partition"
+-#~ msgstr "Új partíció hozzáadása"
+-
+-#~ msgid "Log"
+-#~ msgstr "Napló"
+diff -Naur orig/uhu-installer patched/uhu-installer
+--- orig/uhu-installer	2014-06-19 13:10:49.000000000 +0200
++++ patched/uhu-installer	2014-11-26 21:14:57.922855630 +0100
+@@ -926,7 +926,8 @@
+ 						_system 'umount', '/tmp/boot';
+ 						_system 'mount', $params->{bootdev}, '/boot';
+ 					}
+-					write_grub_boot_device_config($params->{rootdev}, "/etc/grub.d/39_1_uhu_boot");
++
++					# write_grub_boot_device_config($params->{rootdev}, "/etc/grub.d/39_1_uhu_boot");
+ 					_system 'grub2-mkconfig', '-o', '/boot/grub2/grub.cfg';
+ 					_system 'grub2-install', $params->{bootdsk};
+ 					_system 'sync';
+@@ -1084,7 +1085,8 @@
+ 					_system "mount", "--bind", "/dev/", "/mnt/dev/";
+ 					_system "mount", "--bind", "/proc/", "/mnt/proc/";
+ 					_system "mount", "--bind", "/sys/", "/mnt/sys/";
+-					write_grub_boot_device_config($rootdev, "/mnt/etc/grub.d/39_1_uhu_boot");
++					
++					# write_grub_boot_device_config($rootdev, "/mnt/etc/grub.d/39_1_uhu_boot");
+ 					_system "chroot", "/mnt", "grub2-mkconfig", "-o", "/boot/grub2/grub.cfg";
+ 					_system "chroot", "/mnt", "grub2-install", $bootdsk;
+ 					_system "umount", "/mnt/dev";
+@@ -1105,8 +1107,8 @@
+ 				_system "chroot", "/mnt", "useradd", "-m", w('username')->get_text, "-c", w('fullname')->get_text;
+ 				_system("chroot /mnt bash -c \"echo 'root:".w('rootpass1')->get_text."' | chpasswd -m\"");
+ 				_system("chroot /mnt bash -c \"echo '".w('username')->get_text.":".w('userpass1')->get_text."' | chpasswd -m\"");
+-				_system 'sed', '-r', '-e', 's/^AutomaticLogin=.*/AutomaticLogin='.w('username')->get_text.'/', '-i', '/etc/gdm/custom.conf';
+-				_system("chown", "-R", w('username')->get_text, "/home/".w('username')->get_text);
++				_system("chroot", "/mnt", "sed", "-r", "-e", "s/^AutomaticLogin=.*/AutomaticLogin=".w('username')->get_text."/", "-i", "/etc/gdm/custom.conf");
++				_system("chroot", "/mnt", "chown", "-R", w('username')->get_text, "/home/".w('username')->get_text);
+ 				_system "umount", "/mnt/dev";
+ 				_system "umount", "/mnt/proc";
+ 				_system "umount", "/mnt/sys";
