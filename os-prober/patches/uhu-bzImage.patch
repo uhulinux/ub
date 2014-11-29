@@ -1,0 +1,25 @@
+diff -Naur orig/linux-boot-probes/mounted/common/90fallback patched/linux-boot-probes/mounted/common/90fallback
+--- orig/linux-boot-probes/mounted/common/90fallback	2011-02-11 20:42:24.000000000 +0100
++++ patched/linux-boot-probes/mounted/common/90fallback	2014-11-25 23:48:15.870534543 +0100
+@@ -13,7 +13,8 @@
+ 
+ exitcode=1
+ for kernpat in /vmlinuz /vmlinux /boot/vmlinuz /boot/vmlinux "/boot/vmlinuz*" \
+-	        "/boot/vmlinux*" "/vmlinuz*" "/vmlinux*" "/kernel-*" "/boot/kernel-*"; do
++	        "/boot/vmlinux*" "/vmlinuz*" "/vmlinux*" "/kernel-*" "/boot/kernel-*" \
++	        "/bzImage-*" "/boot/bzImage-*"; do
+ 	if echo "$kernpat" | grep -q boot/; then
+ 		kernbootpart="$bootpart"
+ 	else
+@@ -34,8 +35,10 @@
+ 			initrdname3=$(echo "$kernfile" | sed "s/vmlinu[zx]/initramfs\*/" | sed 's/$/.img/')
+ 			# And Gentoo's also
+ 			initrdname4=$(echo "$kernfile" | sed "s/kernel/initramfs\*/")
++			# And UHU's also
++			initrdname5=$(echo "$kernfile" | sed "s/bzImage/initramfs\*/" | sed 's/$/.gz/')
+ 			foundinitrd=0
+-			for initrd in $(eval ls "$initrdname" "$initrdname1" "$initrdname2" "$initrdname3" "$initrdname4" 2>/dev/null); do
++			for initrd in $(eval ls "$initrdname" "$initrdname1" "$initrdname2" "$initrdname3" "$initrdname4" "$initrdname5" 2>/dev/null); do
+ 				if [ "$initrd" != "$kernfile" ] && [ -f "$initrd" ] && [ ! -L "$initrd" ]; then
+ 					initrd=$(echo "$initrd" | sed "s!^$mpoint!!")
+ 					result "$partition:$kernbootpart::$kernbasefile:$initrd:root=$mappedpartition"
