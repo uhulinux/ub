@@ -4,5 +4,7 @@ intltool
 itstool
 libsm-dev
 libxslt-dev
+mate-desktop-dev
 vte2-dev
+xcb-util-dev
 yelp-tools

@@ -1,10 +1,8 @@
 atril
 caja
-caja-dropbox
 caja-extensions
 engrampa
 eom
-gvfs
 marco
 mate-applets
 mate-backgrounds
@@ -17,6 +15,7 @@ mate-menus
 mate-netspeed
 mate-notification-daemon
 mate-panel
+mate-polkit
 mate-power-manager
 mate-screensaver
 mate-sensors-applet
@@ -27,6 +26,4 @@ mate-terminal
 mate-themes
 mate-user-share
 mate-utils
-mozo
 pluma
-udisks

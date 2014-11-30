@@ -4,6 +4,7 @@ gtk2-dev
 intltool
 libcanberra-dev
 libmatekbd-dev
+libmatemixer-dev
 libnotify-dev
 libxkbfile-dev
 mate-desktop-dev

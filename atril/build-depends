@@ -10,6 +10,8 @@ libsm-dev
 libspectre-dev
 libtiff-dev
 libxml2-dev
+mate-desktop-dev
 mate-icon-theme
 poppler-glib-dev
+webkitgtk2-dev
 yelp-tools

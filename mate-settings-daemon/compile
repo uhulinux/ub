@@ -3,5 +3,5 @@
 ub_compile \
 	--with-gtk=2.0 \
 	--enable-pulse \
-	--disable-gstreamer
+	--with-libmatemixer
 

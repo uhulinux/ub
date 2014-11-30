@@ -1,6 +1,5 @@
 #!/bin/sh -eux
 
-autoreconf -vif
 ub_compile \
 	--with-gtk=2.0 \
 	--with-default-wm=marco \

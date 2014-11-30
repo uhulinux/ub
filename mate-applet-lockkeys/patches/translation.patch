@@ -1,0 +1,12 @@
+diff -Naur orig/src/main.c patched/src/main.c
+--- orig/src/main.c	2014-11-23 15:30:59.156001584 +0100
++++ patched/src/main.c	2013-12-02 19:53:13.000000000 +0100
+@@ -460,7 +460,7 @@
+ 	//{ "Settings", GTK_STOCK_PROPERTIES, N_("_Settings"), NULL, NULL, G_CALLBACK (settings_cb) },
+ 	//{ "Help", GTK_STOCK_HELP, N_("_Help"), NULL, NULL, G_CALLBACK (help_cb) },
+ 	//{ "About", GTK_STOCK_ABOUT, N_("_About"), NULL, NULL, G_CALLBACK (about_cb) }
+-	{ "Settings", GTK_STOCK_PROPERTIES, "_Settings", NULL, NULL, G_CALLBACK (settings_cb) },
++	{ "Settings", GTK_STOCK_PROPERTIES, NULL, "_Settings", NULL, G_CALLBACK (settings_cb) },
+ 	//{ "Help", GTK_STOCK_HELP, "_Help", NULL, NULL, G_CALLBACK (help_cb) },
+ 	{ "About", GTK_STOCK_ABOUT, NULL, "_About", NULL, G_CALLBACK (about_cb) }
+ };
