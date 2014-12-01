@@ -1,6 +1,6 @@
 diff -Naur orig/config/lxqt-config-notificationd.desktop.in mod/config/lxqt-config-notificationd.desktop.in
---- orig/config/lxqt-config-notificationd.desktop.in	2014-05-07 09:32:57.000000000 +0200
-+++ mod/config/lxqt-config-notificationd.desktop.in	2014-07-12 17:07:28.220363533 +0200
+--- orig/config/lxqt-config-notificationd.desktop.in	2014-10-13 16:59:23.000000000 +0200
++++ mod/config/lxqt-config-notificationd.desktop.in	2014-12-01 21:31:14.439965555 +0100
 @@ -5,7 +5,6 @@
  Comment=Configure desktop notifications
  Exec=lxqt-config-notificationd
@@ -10,3 +10,12 @@ diff -Naur orig/config/lxqt-config-notificationd.desktop.in mod/config/lxqt-conf
 +Categories=Settings;DesktopSettings;Qt;
  
  #TRANSLATIONS_DIR=translations
+diff -Naur orig/config/translations/lxqt-config-notificationd_hu.desktop mod/config/translations/lxqt-config-notificationd_hu.desktop
+--- orig/config/translations/lxqt-config-notificationd_hu.desktop	2014-10-13 16:59:23.000000000 +0200
++++ mod/config/translations/lxqt-config-notificationd_hu.desktop	2014-12-01 21:33:13.727963719 +0100
+@@ -1,4 +1,4 @@
+ # Translations
+ GenericName[hu]=Alkalmazásmenü
+-Name[hu]=LxQt beállítóközpont
++Name[hu]=LxQt hitelesítés beállító
+ Comment[hu]=A Freedesktop értesítések beállítása

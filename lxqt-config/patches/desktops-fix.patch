@@ -1,6 +1,6 @@
 diff -Naur orig/lxqt-config-appearance/lxqt-config-appearance.desktop.in mod/lxqt-config-appearance/lxqt-config-appearance.desktop.in
 --- orig/lxqt-config-appearance/lxqt-config-appearance.desktop.in	2014-05-07 10:13:55.000000000 +0200
-+++ mod/lxqt-config-appearance/lxqt-config-appearance.desktop.in	2014-10-01 17:32:56.296373059 +0200
++++ mod/lxqt-config-appearance/lxqt-config-appearance.desktop.in	2014-12-01 20:56:25.255997715 +0100
 @@ -5,7 +5,6 @@
  Comment=Appearance settings for LXQt
  Exec=lxqt-config-appearance
@@ -12,8 +12,13 @@ diff -Naur orig/lxqt-config-appearance/lxqt-config-appearance.desktop.in mod/lxq
  #TRANSLATIONS_DIR=translations
 diff -Naur orig/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in mod/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in
 --- orig/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in	2014-05-07 10:13:55.000000000 +0200
-+++ mod/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in	2014-10-01 17:32:40.544373685 +0200
-@@ -5,7 +5,6 @@
++++ mod/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in	2014-12-01 20:48:18.616005206 +0100
+@@ -1,11 +1,11 @@
+ [Desktop Entry]
+ Type=Application
+ Name=File Associations
++Name[hu]=LXQt fájlhozzárendelések
+ GenericName=File Association Settings
  Comment=Configure applications associated with known file types
  Exec=lxqt-config-file-associations
  Icon=preferences-desktop-filetype-association
@@ -24,8 +29,13 @@ diff -Naur orig/lxqt-config-file-associations/lxqt-config-file-associations.desk
  #TRANSLATIONS_DIR=translations
 diff -Naur orig/lxqt-config-input/lxqt-config-input.desktop.in mod/lxqt-config-input/lxqt-config-input.desktop.in
 --- orig/lxqt-config-input/lxqt-config-input.desktop.in	2014-05-07 10:13:55.000000000 +0200
-+++ mod/lxqt-config-input/lxqt-config-input.desktop.in	2014-10-01 17:32:22.208374413 +0200
-@@ -5,7 +5,6 @@
++++ mod/lxqt-config-input/lxqt-config-input.desktop.in	2014-12-01 20:49:41.208003935 +0100
+@@ -1,11 +1,11 @@
+ [Desktop Entry]
+ Type=Application
+ Name=Keyboard and Mouse
++Name[hu]=LXQt beviteli eszközök
+ GenericName=Input settings
  Comment=Configure keyboard, mouse, and other input devices
  Exec=lxqt-config-input
  Icon=input-keyboard
@@ -36,8 +46,13 @@ diff -Naur orig/lxqt-config-input/lxqt-config-input.desktop.in mod/lxqt-config-i
  #TRANSLATIONS_DIR=translations
 diff -Naur orig/lxqt-config-monitor/lxqt-config-monitor.desktop.in mod/lxqt-config-monitor/lxqt-config-monitor.desktop.in
 --- orig/lxqt-config-monitor/lxqt-config-monitor.desktop.in	2014-09-19 10:44:50.000000000 +0200
-+++ mod/lxqt-config-monitor/lxqt-config-monitor.desktop.in	2014-10-01 17:31:44.200375923 +0200
-@@ -5,7 +5,6 @@
++++ mod/lxqt-config-monitor/lxqt-config-monitor.desktop.in	2014-12-01 20:51:29.304002271 +0100
+@@ -1,11 +1,11 @@
+ [Desktop Entry]
+ Type=Application
+ Name=Monitor settings
++Name[hu]=LXQT monitor beállítás
+ GenericName=Monitor settings
  Comment=Configure monitors
  Exec=lxqt-config-monitor
  Icon=preferences-desktop-display
@@ -48,8 +63,14 @@ diff -Naur orig/lxqt-config-monitor/lxqt-config-monitor.desktop.in mod/lxqt-conf
  #TRANSLATIONS_DIR=translations
 diff -Naur orig/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in mod/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in
 --- orig/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in	2014-05-07 10:13:55.000000000 +0200
-+++ mod/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in	2014-10-01 17:32:03.600375153 +0200
-@@ -6,7 +6,6 @@
++++ mod/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in	2014-12-01 20:50:45.816002941 +0100
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+ Type=Application
+ Name=Qt Configuration
++Name[hu]=LXQT Qt beállítás
+ GenericName=Qt Configuration
+ Comment=Configure Qt
  Exec=qtconfig
  TryExec=qtconfig
  Icon=preferences-system
@@ -60,7 +81,7 @@ diff -Naur orig/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in mod/lxqt-co
  #TRANSLATIONS_DIR=translations
 diff -Naur orig/src/lxqt-config.desktop.in mod/src/lxqt-config.desktop.in
 --- orig/src/lxqt-config.desktop.in	2014-09-19 10:44:50.000000000 +0200
-+++ mod/src/lxqt-config.desktop.in	2014-10-01 17:31:13.408377147 +0200
++++ mod/src/lxqt-config.desktop.in	2014-12-01 20:59:50.855994550 +0100
 @@ -5,7 +5,6 @@
  Comment=Configure your system
  Exec=lxqt-config
