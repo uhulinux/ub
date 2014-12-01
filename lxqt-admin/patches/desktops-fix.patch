@@ -1,0 +1,24 @@
+diff -Naur orig/lxqt-admin-time/lxqt-admin-time.desktop.in mod/lxqt-admin-time/lxqt-admin-time.desktop.in
+--- orig/lxqt-admin-time/lxqt-admin-time.desktop.in	2014-06-21 17:31:02.000000000 +0200
++++ mod/lxqt-admin-time/lxqt-admin-time.desktop.in	2014-12-01 14:46:05.266466595 +0100
+@@ -5,7 +5,6 @@
+ Comment=Configure the date and time of your system
+ Exec=lxqt-admin-time
+ Icon=preferences-system
+-Categories=Settings;System;DesktopSettings;Qt;LXQt;
+-OnlyShowIn=LXQt;
++Categories=Settings;System;DesktopSettings;Qt;
+ 
+ #TRANSLATIONS_DIR=translations
+diff -Naur orig/lxqt-admin-user/lxqt-admin-user.desktop.in mod/lxqt-admin-user/lxqt-admin-user.desktop.in
+--- orig/lxqt-admin-user/lxqt-admin-user.desktop.in	2014-06-21 17:31:02.000000000 +0200
++++ mod/lxqt-admin-user/lxqt-admin-user.desktop.in	2014-12-01 14:46:21.838466914 +0100
+@@ -5,7 +5,6 @@
+ Comment=Configure the users and groups of your system
+ Exec=lxqt-admin-user
+ Icon=preferences-system
+-Categories=Settings;System;DesktopSettings;Qt;LXQt;
+-OnlyShowIn=LXQt;
++Categories=Settings;System;DesktopSettings;Qt;
+ 
+ #TRANSLATIONS_DIR=translations

@@ -1,4 +1,5 @@
 cmake
+dbus-dev
 libX11-dev
 libXcomposite-dev
 libXcursor-dev
@@ -6,4 +7,3 @@ libXdamage-dev
 libXfixes-dev
 libXrender-dev
 libqtxdg-dev
-qt4-dev

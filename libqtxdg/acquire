@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-libqtxdg-${UB_VERSION}.tar.xz .
+libqtxdg.tar.xz libqtxdg/
 	http://lxqt.org/downloads/libqtxdg/${UB_VERSION}/

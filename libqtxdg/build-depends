@@ -1,4 +1,5 @@
 cmake
 file-dev
-qt4-dev
+icu-dev
+qt5-dev
 xdg-utils
