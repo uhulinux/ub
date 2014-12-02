@@ -1,12 +1,12 @@
 diff -Naur orig/lxqt-config-session/lxqt-config-session.desktop.in mod/lxqt-config-session/lxqt-config-session.desktop.in
---- orig/lxqt-config-session/lxqt-config-session.desktop.in	2014-05-07 10:30:04.000000000 +0200
-+++ mod/lxqt-config-session/lxqt-config-session.desktop.in	2014-07-12 20:15:17.000000000 +0200
-@@ -5,7 +5,6 @@
+--- orig/lxqt-config-session/lxqt-config-session.desktop.in	2014-10-10 19:28:04.000000000 +0200
++++ mod/lxqt-config-session/lxqt-config-session.desktop.in	2014-12-02 10:56:07.484215566 +0100
+@@ -5,7 +5,7 @@
  Comment=Configuration for LXQt sessions
  Exec=lxqt-config-session
  Icon=preferences-system-session-services
 -Categories=Settings;DesktopSettings;Qt;LXQt;
--OnlyShowIn=LXQt;
 +Categories=Settings;DesktopSettings;Qt;
+ OnlyShowIn=LXQt;
  
  #TRANSLATIONS_DIR=translations

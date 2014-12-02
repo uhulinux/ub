@@ -1,13 +1,12 @@
 diff -Naur orig/config/lxqt-config-globalkeyshortcuts.desktop.in mod/config/lxqt-config-globalkeyshortcuts.desktop.in
---- orig/config/lxqt-config-globalkeyshortcuts.desktop.in	2014-05-07 05:38:03.000000000 +0200
-+++ mod/config/lxqt-config-globalkeyshortcuts.desktop.in	2014-07-11 22:57:13.000000000 +0200
+--- orig/config/lxqt-config-globalkeyshortcuts.desktop.in	2014-10-11 01:41:14.000000000 +0200
++++ mod/config/lxqt-config-globalkeyshortcuts.desktop.in	2014-12-02 10:27:06.585552600 +0100
 @@ -5,7 +5,7 @@
  Comment=Configure shortcut keys in LXQt
  Exec=lxqt-config-globalkeyshortcuts
  Icon=preferences-desktop-keyboard
 -Categories=Settings;DesktopSettings;Qt;LXQt;
--OnlyShowIn=LXQt;LXDE;
 +Categories=Settings;DesktopSettings;Qt;
-+
+ OnlyShowIn=LXQt;LXDE;
  
  #TRANSLATIONS_DIR=translations

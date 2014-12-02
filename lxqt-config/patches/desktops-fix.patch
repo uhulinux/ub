@@ -1,19 +1,19 @@
 diff -Naur orig/lxqt-config-appearance/lxqt-config-appearance.desktop.in mod/lxqt-config-appearance/lxqt-config-appearance.desktop.in
---- orig/lxqt-config-appearance/lxqt-config-appearance.desktop.in	2014-05-07 10:13:55.000000000 +0200
-+++ mod/lxqt-config-appearance/lxqt-config-appearance.desktop.in	2014-12-01 20:56:25.255997715 +0100
-@@ -5,7 +5,6 @@
+--- orig/lxqt-config-appearance/lxqt-config-appearance.desktop.in	2014-10-10 21:29:18.000000000 +0200
++++ mod/lxqt-config-appearance/lxqt-config-appearance.desktop.in	2014-12-02 09:52:46.391868155 +0100
+@@ -5,7 +5,7 @@
  Comment=Appearance settings for LXQt
  Exec=lxqt-config-appearance
  Icon=preferences-desktop-theme
 -Categories=Settings;DesktopSettings;Qt;LXQt;
--OnlyShowIn=LXDE;LXQt;
 +Categories=Settings;DesktopSettings;Qt;
+ OnlyShowIn=LXDE;LXQt;
  
  #TRANSLATIONS_DIR=translations
 diff -Naur orig/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in mod/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in
---- orig/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in	2014-05-07 10:13:55.000000000 +0200
-+++ mod/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in	2014-12-01 20:48:18.616005206 +0100
-@@ -1,11 +1,11 @@
+--- orig/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in	2014-10-10 21:29:18.000000000 +0200
++++ mod/lxqt-config-file-associations/lxqt-config-file-associations.desktop.in	2014-12-02 09:53:43.655693080 +0100
+@@ -1,11 +1,12 @@
  [Desktop Entry]
  Type=Application
  Name=File Associations
@@ -23,14 +23,14 @@ diff -Naur orig/lxqt-config-file-associations/lxqt-config-file-associations.desk
  Exec=lxqt-config-file-associations
  Icon=preferences-desktop-filetype-association
 -Categories=Settings;DesktopSettings;Qt;LXQt;
--OnlyShowIn=LXDE;LXQt;
 +Categories=Settings;DesktopSettings;Qt;
+ OnlyShowIn=LXDE;LXQt;
  
  #TRANSLATIONS_DIR=translations
 diff -Naur orig/lxqt-config-input/lxqt-config-input.desktop.in mod/lxqt-config-input/lxqt-config-input.desktop.in
---- orig/lxqt-config-input/lxqt-config-input.desktop.in	2014-05-07 10:13:55.000000000 +0200
-+++ mod/lxqt-config-input/lxqt-config-input.desktop.in	2014-12-01 20:49:41.208003935 +0100
-@@ -1,11 +1,11 @@
+--- orig/lxqt-config-input/lxqt-config-input.desktop.in	2014-10-10 21:29:18.000000000 +0200
++++ mod/lxqt-config-input/lxqt-config-input.desktop.in	2014-12-02 09:54:38.799523674 +0100
+@@ -1,11 +1,12 @@
  [Desktop Entry]
  Type=Application
  Name=Keyboard and Mouse
@@ -40,14 +40,14 @@ diff -Naur orig/lxqt-config-input/lxqt-config-input.desktop.in mod/lxqt-config-i
  Exec=lxqt-config-input
  Icon=input-keyboard
 -Categories=Qt;Settings;HardwareSettings;DesktopSettings;LXQt;
--OnlyShowIn=LXDE;LXQt;
 +Categories=Qt;Settings;HardwareSettings;DesktopSettings;
+ OnlyShowIn=LXDE;LXQt;
  
  #TRANSLATIONS_DIR=translations
 diff -Naur orig/lxqt-config-monitor/lxqt-config-monitor.desktop.in mod/lxqt-config-monitor/lxqt-config-monitor.desktop.in
---- orig/lxqt-config-monitor/lxqt-config-monitor.desktop.in	2014-09-19 10:44:50.000000000 +0200
-+++ mod/lxqt-config-monitor/lxqt-config-monitor.desktop.in	2014-12-01 20:51:29.304002271 +0100
-@@ -1,11 +1,11 @@
+--- orig/lxqt-config-monitor/lxqt-config-monitor.desktop.in	2014-10-10 21:29:18.000000000 +0200
++++ mod/lxqt-config-monitor/lxqt-config-monitor.desktop.in	2014-12-02 09:55:21.815391758 +0100
+@@ -1,11 +1,12 @@
  [Desktop Entry]
  Type=Application
  Name=Monitor settings
@@ -57,14 +57,14 @@ diff -Naur orig/lxqt-config-monitor/lxqt-config-monitor.desktop.in mod/lxqt-conf
  Exec=lxqt-config-monitor
  Icon=preferences-desktop-display
 -Categories=Settings;DesktopSettings;Qt;LXQt;;HardwareSettings;
--OnlyShowIn=LXQt;
 +Categories=Settings;DesktopSettings;Qt;HardwareSettings;
+ OnlyShowIn=LXQt;
  
  #TRANSLATIONS_DIR=translations
 diff -Naur orig/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in mod/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in
---- orig/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in	2014-05-07 10:13:55.000000000 +0200
-+++ mod/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in	2014-12-01 20:50:45.816002941 +0100
-@@ -1,12 +1,12 @@
+--- orig/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in	2014-10-10 21:29:18.000000000 +0200
++++ mod/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in	2014-12-02 09:56:05.343258261 +0100
+@@ -1,12 +1,13 @@
  [Desktop Entry]
  Type=Application
  Name=Qt Configuration
@@ -75,19 +75,19 @@ diff -Naur orig/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in mod/lxqt-co
  TryExec=qtconfig
  Icon=preferences-system
 -Categories=Settings;DesktopSettings;Qt;LXQt;
--OnlyShowIn=LXQt;
 +Categories=Settings;DesktopSettings;Qt;
+ OnlyShowIn=LXQt;
  
  #TRANSLATIONS_DIR=translations
 diff -Naur orig/src/lxqt-config.desktop.in mod/src/lxqt-config.desktop.in
---- orig/src/lxqt-config.desktop.in	2014-09-19 10:44:50.000000000 +0200
-+++ mod/src/lxqt-config.desktop.in	2014-12-01 20:59:50.855994550 +0100
-@@ -5,7 +5,6 @@
+--- orig/src/lxqt-config.desktop.in	2014-10-10 21:29:18.000000000 +0200
++++ mod/src/lxqt-config.desktop.in	2014-12-02 09:56:36.699162109 +0100
+@@ -5,7 +5,7 @@
  Comment=Configure your system
  Exec=lxqt-config
  Icon=preferences-system
 -Categories=Settings;DesktopSettings;Qt;LXQt;
--OnlyShowIn=LXDE;LXQt;
 +Categories=Settings;DesktopSettings;Qt;
+ OnlyShowIn=LXDE;LXQt;
  
  #TRANSLATIONS_DIR=translations
