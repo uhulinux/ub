@@ -1,2 +1,5 @@
-gettext
+atk-dev
 glib-dev
+gtk-doc
+gtk2-dev
+pango-dev
