@@ -1,0 +1,14 @@
+diff -Naur orig/uhu-installer patched/uhu-installer
+--- orig/uhu-installer	2014-06-19 13:10:49.000000000 +0200
++++ patched/uhu-installer	2014-12-05 23:36:10.017670486 +0100
+@@ -1105,8 +1115,8 @@
+ 				_system "chroot", "/mnt", "useradd", "-m", w('username')->get_text, "-c", w('fullname')->get_text;
+ 				_system("chroot /mnt bash -c \"echo 'root:".w('rootpass1')->get_text."' | chpasswd -m\"");
+ 				_system("chroot /mnt bash -c \"echo '".w('username')->get_text.":".w('userpass1')->get_text."' | chpasswd -m\"");
+-				_system 'sed', '-r', '-e', 's/^AutomaticLogin=.*/AutomaticLogin='.w('username')->get_text.'/', '-i', '/etc/gdm/custom.conf';
+-				_system("chown", "-R", w('username')->get_text, "/home/".w('username')->get_text);
++				_system("chroot", "/mnt", "sed", "-r", "-e", "s/^AutomaticLogin=.*/AutomaticLogin=".w('username')->get_text."/", "-i", "/etc/gdm/custom.conf");
++				_system("chroot", "/mnt", "chown", "-R", w('username')->get_text, "/home/".w('username')->get_text);
+ 				_system "umount", "/mnt/dev";
+ 				_system "umount", "/mnt/proc";
+ 				_system "umount", "/mnt/sys";
