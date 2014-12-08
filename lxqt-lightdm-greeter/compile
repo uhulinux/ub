@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-export LDFLAGS="-L /usr/lib/qt4/lib"
-ub_compile	--libexecdir="/usr/lib/lightdm"
