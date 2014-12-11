@@ -8,6 +8,7 @@ libnotify-dev
 libsm-dev
 libunique1-dev
 libxslt-dev
+mate-desktop-dev
 mate-panel-dev
 openssl-dev
 upower-dev

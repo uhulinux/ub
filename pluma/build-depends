@@ -4,7 +4,9 @@ intltool
 iso-codes
 itstool
 libsm-dev
+mate-desktop-dev
 pygtk-dev
 pygtksourceview
 pygtksourceview-dev
+xcb-util-dev
 yelp-tools

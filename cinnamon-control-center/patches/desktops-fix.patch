@@ -1,0 +1,146 @@
+diff -Naur orig/panels/color/cinnamon-color-panel.desktop.in.in mod/panels/color/cinnamon-color-panel.desktop.in.in
+--- orig/panels/color/cinnamon-color-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/color/cinnamon-color-panel.desktop.in.in	2014-12-08 13:21:53.007579131 +0100
+@@ -4,8 +4,8 @@
+ Terminal=false
+ Type=Application
+ StartupNotify=true
+-Categories=GTK;Settings;X-Cinnamon-Settings-Panel;HardwareSettings
+-OnlyShowIn=X-Cinnamon;
++Categories=GTK;Settings;X-Cinnamon-Settings-Panel;HardwareSettings;
++OnlyShowIn=Cinnamon;
+ X-Cinnamon-Settings-Panel=color
+ # Translators: those are keywords for the color control-center panel
+ _Keywords=Color;ICC;Profile;Calibrate;Printer;Display;
+diff -Naur orig/panels/datetime/cinnamon-datetime-panel.desktop.in.in mod/panels/datetime/cinnamon-datetime-panel.desktop.in.in
+--- orig/panels/datetime/cinnamon-datetime-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/datetime/cinnamon-datetime-panel.desktop.in.in	2014-12-08 13:22:22.075570272 +0100
+@@ -7,7 +7,7 @@
+ Type=Application
+ StartupNotify=true
+ Categories=GTK;Settings;X-cinnamon-SystemSettings;X-Cinnamon-Settings-Panel;
+-OnlyShowIn=GNOME;
++OnlyShowIn=Cinnamon;
+ X-Cinnamon-Settings-Panel=datetime
+ # Translators: those are keywords for the date and time control-center panel
+ _Keywords=Clock;Timezone;Location;
+diff -Naur orig/panels/display/cinnamon-display-panel.desktop.in.in mod/panels/display/cinnamon-display-panel.desktop.in.in
+--- orig/panels/display/cinnamon-display-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/display/cinnamon-display-panel.desktop.in.in	2014-12-08 13:22:41.655562812 +0100
+@@ -5,7 +5,7 @@
+ Type=Application
+ StartupNotify=true
+ Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
+-OnlyShowIn=X-Cinnamon;
++OnlyShowIn=Cinnamon;
+ X-Cinnamon-Settings-Panel=display
+ # Translators: those are keywords for the display control-center panel
+ _Keywords=Panel;Projector;xrandr;Screen;Resolution;Refresh;
+diff -Naur orig/panels/network/cinnamon-network-panel.desktop.in.in mod/panels/network/cinnamon-network-panel.desktop.in.in
+--- orig/panels/network/cinnamon-network-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/network/cinnamon-network-panel.desktop.in.in	2014-12-08 13:22:55.379558598 +0100
+@@ -5,7 +5,7 @@
+ Type=Application
+ StartupNotify=true
+ Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
+-OnlyShowIn=X-Cinnamon;
++OnlyShowIn=Cinnamon;
+ X-Cinnamon-Settings-Panel=network
+ # Translators: those are keywords for the network control-center panel
+ _Keywords=Network;Wireless;IP;LAN;Proxy;
+diff -Naur orig/panels/power/cinnamon-power-panel.desktop.in.in mod/panels/power/cinnamon-power-panel.desktop.in.in
+--- orig/panels/power/cinnamon-power-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/power/cinnamon-power-panel.desktop.in.in	2014-12-08 13:26:06.971509155 +0100
+@@ -5,7 +5,7 @@
+ Type=Application
+ StartupNotify=true
+ Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;HardwareSettings
+-OnlyShowIn=X-Cinnamon;
++OnlyShowIn=Cinnamon;
+ X-Cinnamon-Settings-Panel=power
+ NoDisplay=true
+ # Translators: those are keywords for the power control-center panel
+diff -Naur orig/panels/region/cinnamon-region-panel.desktop.in.in mod/panels/region/cinnamon-region-panel.desktop.in.in
+--- orig/panels/region/cinnamon-region-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/region/cinnamon-region-panel.desktop.in.in	2014-12-08 13:23:38.555545721 +0100
+@@ -5,7 +5,7 @@
+ Type=Application
+ StartupNotify=true
+ Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;X-Cinnamon-PersonalSettings
+-OnlyShowIn=X-Cinnamon;
++OnlyShowIn=Cinnamon;
+ X-Cinnamon-Settings-Panel=region
+ # Translators: those are keywords for the region control-center panel
+ _Keywords=Language;Layout;Keyboard;
+diff -Naur orig/panels/screen/cinnamon-screen-panel.desktop.in.in mod/panels/screen/cinnamon-screen-panel.desktop.in.in
+--- orig/panels/screen/cinnamon-screen-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/screen/cinnamon-screen-panel.desktop.in.in	2014-12-08 13:23:57.295540502 +0100
+@@ -5,7 +5,7 @@
+ Type=Application
+ StartupNotify=true
+ Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;X-Cinnamon-PersonalSettings
+-OnlyShowIn=X-Cinnamon;
++OnlyShowIn=Cinnamon;
+ X-Cinnamon-Settings-Panel=screen
+ # Translators: those are keywords for the brightness and lock control-center panel
+ _Keywords=Brightness;Lock;Dim;Blank;Monitor;
+diff -Naur orig/panels/sound/data/cinnamon-sound-applet.desktop.in mod/panels/sound/data/cinnamon-sound-applet.desktop.in
+--- orig/panels/sound/data/cinnamon-sound-applet.desktop.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/sound/data/cinnamon-sound-applet.desktop.in	2014-12-08 13:24:37.083530053 +0100
+@@ -7,7 +7,7 @@
+ NoDisplay=true
+ X-GNOME-Autostart-Notify=true
+ AutostartCondition=GNOME3 if-session gnome-fallback
+-OnlyShowIn=X-Cinnamon;
++OnlyShowIn=Cinnamon;
+ Name=Volume Control
+ Name[am]=ድምፅ መቆጣጠሪያ
+ Name[be]=Кіраванне гукам
+diff -Naur orig/panels/sound/data/cinnamon-sound-panel.desktop.in.in mod/panels/sound/data/cinnamon-sound-panel.desktop.in.in
+--- orig/panels/sound/data/cinnamon-sound-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/sound/data/cinnamon-sound-panel.desktop.in.in	2014-12-08 13:24:49.703526871 +0100
+@@ -5,7 +5,7 @@
+ Type=Application
+ StartupNotify=true
+ Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
+-OnlyShowIn=X-Cinnamon;
++OnlyShowIn=Cinnamon;
+ NoDisplay=true
+ X-Cinnamon-Settings-Panel=sound
+ # Translators: those are keywords for the sound control-center panel
+diff -Naur orig/panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in.in mod/panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in.in
+--- orig/panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in.in	2014-12-08 13:27:26.943493443 +0100
+@@ -5,7 +5,7 @@
+ Type=Application
+ StartupNotify=true
+ Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
+-OnlyShowIn=X-Cinnamon;
++OnlyShowIn=Cinnamon;
+ X-Cinnamon-Settings-Panel=sound-nua
+ # Translators: those are keywords for the sound control-center panel
+ _Keywords=Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;
+diff -Naur orig/panels/universal-access/cinnamon-universal-access-panel.desktop.in.in mod/panels/universal-access/cinnamon-universal-access-panel.desktop.in.in
+--- orig/panels/universal-access/cinnamon-universal-access-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/universal-access/cinnamon-universal-access-panel.desktop.in.in	2014-12-08 13:27:40.379491032 +0100
+@@ -5,7 +5,7 @@
+ Type=Application
+ StartupNotify=true
+ Categories=GTK;Settings;X-Cinnamon-SystemSettings;X-Cinnamon-Settings-Panel;
+-OnlyShowIn=X-Cinnamon;
++OnlyShowIn=Cinnamon;
+ X-Cinnamon-Settings-Panel=universal-access
+ # Translators: those are keywords for the universal access control-center panel
+ _Keywords=Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;
+diff -Naur orig/panels/wacom/cinnamon-wacom-panel.desktop.in.in mod/panels/wacom/cinnamon-wacom-panel.desktop.in.in
+--- orig/panels/wacom/cinnamon-wacom-panel.desktop.in.in	2014-11-26 22:11:51.000000000 +0100
++++ mod/panels/wacom/cinnamon-wacom-panel.desktop.in.in	2014-12-08 13:27:54.647488400 +0100
+@@ -6,7 +6,7 @@
+ StartupNotify=true
+ Categories=GNOME;GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
+ X-Cinnamon-Settings-Panel=wacom
+-OnlyShowIn=X-Cinnamon;
++OnlyShowIn=Cinnamon;
+ # Translators: those are keywords for the wacom tablet control-center panel
+ _Keywords=Tablet;Wacom;Stylus;Eraser;Mouse;
+ Name=Graphics Tablet

@@ -7,6 +7,7 @@ cinnamon-session
 cinnamon-settings-daemon
 cinnamon-translations
 cjs
+gksu
 gnome-backgrounds
 gnome-keyring
 gnome-power-manager

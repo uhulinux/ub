@@ -1,26 +1,26 @@
 diff -Naur orig/src/Makefile.am patched/src/Makefile.am
---- orig/src/Makefile.am	2013-03-24 15:56:56.000000000 +0100
-+++ patched/src/Makefile.am	2014-07-17 00:17:54.670088323 +0200
-@@ -194,7 +194,8 @@
- 	$(LIBJPEG)			\
+--- orig/src/Makefile.am	2014-07-29 18:42:01.000000000 +0200
++++ patched/src/Makefile.am	2014-11-22 18:52:08.151414037 +0100
+@@ -201,7 +201,8 @@
  	$(toolbar_LIB)			\
  	$(screensaver_LIB)		\
--	$(jpeg_LIB)
-+	$(jpeg_LIB)			\
+ 	$(jpeg_LIB)			\
+-	$(INTROSPECTION_LIBS)
++	$(INTROSPECTION_LIBS) \
 +	-lutil
  
- eom_LDFLAGS = -export-dynamic -no-undefined -export-symbols-regex "^[[^_]].*"
- 
+ BUILT_SOURCES = 			\
+ 	eom-enum-types.c		\
 diff -Naur orig/src/Makefile.in patched/src/Makefile.in
---- orig/src/Makefile.in	2014-03-01 13:18:29.000000000 +0100
-+++ patched/src/Makefile.in	2014-07-17 00:18:31.846485157 +0200
-@@ -606,7 +606,8 @@
- 	$(LIBJPEG)			\
+--- orig/src/Makefile.in	2014-10-24 10:42:52.000000000 +0200
++++ patched/src/Makefile.in	2014-11-22 18:53:15.095745996 +0100
+@@ -629,7 +629,8 @@
  	$(toolbar_LIB)			\
  	$(screensaver_LIB)		\
--	$(jpeg_LIB)
-+	$(jpeg_LIB)			\
+ 	$(jpeg_LIB)			\
+-	$(INTROSPECTION_LIBS)
++	$(INTROSPECTION_LIBS) \
 +	-lutil
  
- eom_LDFLAGS = -export-dynamic -no-undefined -export-symbols-regex "^[[^_]].*"
  BUILT_SOURCES = eom-enum-types.c eom-enum-types.h $(MARSHAL_OUTPUT) \
+ 	$(am__append_11)

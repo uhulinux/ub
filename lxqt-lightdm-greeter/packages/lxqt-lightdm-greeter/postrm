@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sed s/greeter-session=lxqt-lightdm-greeter/#greeter-session=example-gtk-gnome/ -i /etc/lightdm/lightdm.conf

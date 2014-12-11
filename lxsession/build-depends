@@ -1,0 +1,17 @@
+alsa-lib-dev
+dbus-glib-dev
+docbook-dtds
+docbook-xsl
+docbook2man
+gamin-dev
+intltool
+libgee06-dev
+libglade2-dev
+libjpeg-dev
+libsm-dev
+libunique1-dev
+polkit-dev
+startup-notification-dev
+systemd-dev
+vala
+vte-dev

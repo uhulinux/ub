@@ -3,5 +3,4 @@
 ub_compile \
 	--with-gtk=2.0 \
 	--enable-mpaste \
-	--enable-deprecation-flags \
-	--disable-desktop-docs # csak licensz szöveg: fdl, gpl, lgpl
+	--enable-deprecation-flags

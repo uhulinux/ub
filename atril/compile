@@ -2,7 +2,7 @@
 
 ub_compile \
 	--with-gtk=2.0 \
-	--with-smclient-backend=xsmp \
+	--with-platform=mate \
 	--without-keyring \
 	--enable-pixbuf \
 	--disable-introspection \

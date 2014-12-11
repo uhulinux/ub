@@ -2,7 +2,4 @@
 
 ub_compile \
 	--with-gtk=2.0 \
-	--libexecdir=/usr/libexec/mate \
-	--enable-pulseaudio \
-	--enable-gstmix \
-	--enable-gst-mixer-applet
+	--libexecdir=/usr/libexec/mate

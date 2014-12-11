@@ -3,6 +3,7 @@ gst0.10-plugins-base-dev
 intltool
 itstool
 libcanberra-dev
+libmatemixer-dev
 libunique1-dev
 libxslt-dev
 mate-desktop-dev

@@ -1,6 +1,5 @@
 cmake
 libX11-dev
 liblxqt-dev
-qt4-dev
 systemd-dev
 udisks2-dev

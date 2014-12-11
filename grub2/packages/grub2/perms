@@ -1,0 +1,2 @@
+root      root       755  /etc/grub.d/11_uhu_nosubmenu
+root      root       755  /etc/grub.d/12_memtest
