@@ -14,4 +14,5 @@ mate-desktop-dev
 mate-icon-theme
 poppler-glib-dev
 webkitgtk2-dev
+xcb-util-dev
 yelp-tools

@@ -84,13 +84,16 @@ a8c2c5b8f09e7ede322d5c602ff6a4b6-mythes-1.2.4.tar.gz
 1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz
 	http://dev-www.libreoffice.org/src/
 
+clcc-0.3.0-25-src.zip
+	http://dev-www.libreoffice.org/src/
+
 graphite2-1.2.4.tgz
 	http://dev-www.libreoffice.org/src/
 
 libabw-0.1.0.tar.bz2
 	http://dev-www.libreoffice.org/src/
 
-libcdr-0.1.0.tar.bz2
+libcdr-0.1.1.tar.bz2
 	http://dev-www.libreoffice.org/src/
 
 libe-book-0.1.1.tar.bz2
@@ -105,6 +108,6 @@ libmspub-0.1.1.tar.bz2
 libmwaw-0.3.3.tar.bz2
 	http://dev-www.libreoffice.org/src/
 
-libpagemaker-0.0.1.tar.bz2
+libpagemaker-0.0.2.tar.bz2
 	http://dev-www.libreoffice.org/src/
 
