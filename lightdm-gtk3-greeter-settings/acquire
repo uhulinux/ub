@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+lightdm-gtk-greeter-settings-${UB_VERSION}.tar.gz lightdm-gtk-greeter-settings-${UB_VERSION}/
+	https://launchpad.net/lightdm-gtk-greeter-settings/${UB_VERSION}/${UB_VERSION}.0/+download/
