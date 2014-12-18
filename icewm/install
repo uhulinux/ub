@@ -3,5 +3,5 @@
 ub_install
 
 # Ezeket itt keresi magától az icewm.
-mkdir "$UB_INSTALLDIR"/usr/share/doc/icewm-"$UB_VERSION"
-cp -a doc/*.html "$UB_INSTALLDIR"/usr/share/doc/icewm-"$UB_VERSION"/
+mkdir "$UB_INSTALLDIR"/usr/share/doc/icewm-common
+cp -a doc/*.html "$UB_INSTALLDIR"/usr/share/doc/icewm-common/
