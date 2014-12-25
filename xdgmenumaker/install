@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-export DESTDIR=$UB_INSTALLDIR
-sh install.sh
