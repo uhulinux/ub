@@ -1,0 +1,8 @@
+#!/usr/bin/env dl
+
+${UB_VERSION/~/-}-Helix.tar.gz xbmc-${UB_VERSION/~/-}-Helix/
+	http://mirrors.xbmc.org/releases/source/
+	https://github.com/xbmc/xbmc/archive/
+	
+ffmpeg-2.4.4-Helix.tar.gz :/tools/depends/target/ffmpeg/
+	https://github.com/xbmc/FFmpeg/archive/2.4.4-Helix.tar.gz
