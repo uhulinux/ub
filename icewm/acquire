@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-icewm-${UB_VERSION}.tar.gz icewm-${UB_VERSION}/
-	http://downloads.sourceforge.net/sourceforge/icewm/
+${UB_VERSION}.tar.gz icewm-${UB_VERSION}/
+	https://github.com/bbidulock/icewm/archive/
