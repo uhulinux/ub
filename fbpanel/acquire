@@ -1,0 +1,5 @@
+#!/usr/bin/env dl
+
+fbpanel-${UB_VERSION}.tbz2 fbpanel-${UB_VERSION}/
+	http://downloads.sourceforge.net/fbpanel/
+
