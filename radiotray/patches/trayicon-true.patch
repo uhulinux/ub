@@ -1,0 +1,12 @@
+diff -Naur orig/data/config.xml mod/data/config.xml
+--- orig/data/config.xml	2012-08-09 23:23:51.000000000 +0200
++++ mod/data/config.xml	2015-01-06 10:02:47.608912624 +0100
+@@ -2,7 +2,7 @@
+   <option name="volume_increment" value="0.05"/>
+   <option name="volume_level" value="1.0"/>
+   <option name="url_timeout" value="100"/>
+-  <option name="enable_application_indicator_support" value="false"/>
++  <option name="enable_application_indicator_support" value="true"/>
+   <!-- valid options are 'appindicator', 'systray' and 'chooser' -->
+   <option name="gui_engine" value="chooser"/>
+   <option name="active_plugins"><item>Notifications</item></option>
