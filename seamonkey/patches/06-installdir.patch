@@ -1,0 +1,14 @@
+diff -Naur orig/mozilla/config/baseconfig.mk patched/mozilla/config/baseconfig.mk
+--- orig/mozilla/config/baseconfig.mk	2015-01-13 05:35:48.000000000 +0100
++++ patched/mozilla/config/baseconfig.mk	2015-01-14 20:27:56.643268813 +0100
+@@ -4,8 +4,8 @@
+ # whether a normal build is happening or whether the check is running.
+ includedir := $(includedir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
+ idldir = $(datadir)/idl/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
+-installdir = $(libdir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
+-sdkdir = $(libdir)/$(MOZ_APP_NAME)-devel-$(MOZ_APP_VERSION)
++installdir = $(libdir)/$(MOZ_APP_NAME)
++sdkdir = $(libdir)/$(MOZ_APP_NAME)-devel
+ ifndef TOP_DIST
+ TOP_DIST = dist
+ endif
