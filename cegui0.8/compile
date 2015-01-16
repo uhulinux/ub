@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+sed -i "s/lib64/lib/g" CMakeLists.txt
+ub_compile \
+	-DCEGUI_LIB_INSTALL_DIR=lib \
+	-DCEGUI_BUILD_PYTHON_MODULES=ON 
