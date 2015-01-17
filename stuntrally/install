@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+cd tracks
+ub_install
+
+cd ..
+ub_install
+rm -rf ${UB_INSTALLDIR}/usr/include
