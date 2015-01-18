@@ -1,0 +1,10 @@
+#!/bin/sh -eux
+
+
+cp -f /usr/include/GL/{glext.h,glxext.h,wglext.h} lib/irrlicht/source/Irrlicht/
+
+ub_compile \
+	-DSTK_INSTALL_BINARY_DIR=/usr/bin \
+	-DSTK_INSTALL_DATA_DIR=/usr/share/supertuxkart \
+	-DUSE_WIIUSE=no \
+	-DCMAKE_CXX_FLAGS="-lpthread -lm -ldl"
