@@ -5,7 +5,6 @@
 	/usr/include
 	/usr/lib/*/include
 	/usr/lib/*Conf.sh
-@	/usr/lib/OGRE/*.so
 	/usr/lib/OGRE/cmake
 	/usr/lib/pkgconfig
 	/usr/share/OGRE/CMake*
