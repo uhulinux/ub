@@ -1,11 +1,11 @@
 alsa-lib-dev
 cmake
-libX11-dev
 liblxqt-dev
 liblxqt-mount-dev
 libqtxdg-dev
 libstatgrab-dev
 libsysstat-dev
+libx11-dev
 libxcomposite-dev
 lmsensors-dev
 lxqt-globalkeys-dev

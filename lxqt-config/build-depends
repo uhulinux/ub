@@ -1,5 +1,5 @@
 cmake
-libXcursor-dev
-libXfixes-dev
 liblxqt-dev
 libqtxdg-dev
+libxcursor-dev
+libxfixes-dev

@@ -5,6 +5,7 @@ fontconfig-dev
 freetds
 freetype2-dev
 gperf
+gst0.10-plugins-base-dev
 gtk-dev
 gtk2-dev
 icu-dev
@@ -27,7 +28,9 @@ libxslt-dev
 libxv-dev
 mesa-dev
 mysql-dev
+nss-dev
 openssl-dev
+pciutils-dev
 postgresql-dev
 pulseaudio-dev
 ruby-dev
