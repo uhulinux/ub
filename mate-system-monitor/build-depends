@@ -8,5 +8,6 @@ libsm-dev
 libwnck2-dev
 libxslt-dev
 mate-icon-theme
+systemd-dev
 xcb-util-dev
 yelp-tools
