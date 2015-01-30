@@ -1,0 +1,12 @@
+diff -Naur orig/slim.conf mod/slim.conf
+--- orig/slim.conf	2013-10-02 00:38:05.000000000 +0200
++++ mod/slim.conf	2015-01-30 18:27:38.368746753 +0100
+@@ -33,7 +33,7 @@
+ # to adjust the command according to your preferred shell,
+ # i.e. for freebsd use:
+ # login_cmd           exec /bin/sh - ~/.xinitrc %session
+-login_cmd           exec /bin/bash -login ~/.xinitrc %session
++login_cmd           exec %session
+ 
+ # Commands executed when starting and exiting a session.
+ # They can be used for registering a X11 session with

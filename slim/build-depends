@@ -1,0 +1,7 @@
+cmake
+freeglut-dev
+libjpeg-dev
+libxft-dev
+libxmu-dev
+pam-dev
+xauth
