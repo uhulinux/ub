@@ -3,4 +3,4 @@
 ub_install
 mkdir -p ${UB_INSTALLDIR}/etc/pam.d/
 cp slimlock.conf ${UB_INSTALLDIR}/etc/
-ln -s graphic-login ${UB_INSTALLDIR}/etc/pam.d/slim
+
