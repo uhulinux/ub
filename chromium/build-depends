@@ -1,4 +1,5 @@
 alsa-lib-dev
+clang
 cups-dev
 dbus-dev
 gperf
