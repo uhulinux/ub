@@ -1,9 +1,11 @@
 diff -Naur orig/slim.conf mod/slim.conf
 --- orig/slim.conf	2013-10-02 00:38:05.000000000 +0200
-+++ mod/slim.conf	2015-02-01 16:57:07.000000000 +0100
-@@ -2,11 +2,11 @@
++++ mod/slim.conf	2015-02-02 20:12:42.198557409 +0100
+@@ -1,12 +1,12 @@
+ # Path, X server and arguments (if needed)
  # Note: -xauth $authfile is automatically appended
- default_path        /bin:/usr/bin:/usr/local/bin
+-default_path        /bin:/usr/bin:/usr/local/bin
++default_path  /usr/local/bin:/bin:/usr/bin:/usr/lib/ccache:/usr/lib/java/bin:/usr/lib/java/jre/bin:~/bin
  default_xserver     /usr/bin/X
 -#xserver_arguments   -dpi 75
 +xserver_arguments   -nolisten tcp -br -deferglyphs 16 vt07
