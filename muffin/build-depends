@@ -1,11 +1,9 @@
 cinnamon-desktop-dev
 clutter-dev
-cogl-dev
 glu-dev
 gnome-common
 gnome-doc-utils
 gobject-introspection-dev
-gtk-dev
 intltool
 libcanberra-dev
 libsm-dev
