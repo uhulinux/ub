@@ -1,0 +1,7 @@
+-         users      664  /var/vdr/config/*
+-         users      664  /var/vdr/config/plugins/setup/*
+-         users      775  /var/cache/vdr
+-         users      775  /var/vdr/config
+-         users      775  /var/vdr/config/plugins
+-         users      775  /var/vdr/config/plugins/setup
+-         users      775  /var/vdr/video
