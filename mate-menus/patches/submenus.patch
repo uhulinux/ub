@@ -281,9 +281,9 @@ diff -Naur orig/desktop-directories/mate-game-sub-blocks.directory.in patched/de
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Blocks
-+Name[hu]=Blocks
++Name[hu]=Blokkok
 +_Comment=Falling blocks game
-+Comment[hu]=Falling blocks game
++Comment[hu]=Potyogó blokkok játék (pl. tetris)
 +Icon=gnome-gnometris
 +Type=Directory
 diff -Naur orig/desktop-directories/mate-game-sub-board.directory.in patched/desktop-directories/mate-game-sub-board.directory.in
@@ -435,7 +435,7 @@ diff -Naur orig/desktop-directories/mate-network-sub-hamradio.directory.in patch
 +_Name=HAM radio
 +Name[hu]=Amatőr rádió
 +_Comment=HAM radio software
-+Comment[hu]=Amatőr rádió program
++Comment[hu]=Programok amatőr rádiózáshoz
 +Icon=applications-internet
 +Type=Directory
 diff -Naur orig/desktop-directories/mate-network-sub-instantmessaging.directory.in patched/desktop-directories/mate-network-sub-instantmessaging.directory.in
@@ -550,7 +550,7 @@ diff -Naur orig/desktop-directories/mate-system-tools-sub-filesystem.directory.i
 +_Name=Filesystem
 +Name[hu]=Fájlrendszer
 +_Comment=Filesystem tool
-+Comment[hu]=Fájlrendszer-eszköz
++Comment[hu]=Fájlrendszer-kezelő eszköz
 +Icon=applications-system
 +Type=Directory
 diff -Naur orig/desktop-directories/mate-system-tools-sub-monitor.directory.in patched/desktop-directories/mate-system-tools-sub-monitor.directory.in

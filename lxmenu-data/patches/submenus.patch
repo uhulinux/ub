@@ -1,447 +1,529 @@
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in patched/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in	2015-02-23 18:46:54.417709638 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Sound & Video editing
++Name[hu]=Hang és videó szerkesztés
 +_Comment=Applications to edit audio/video files
++Comment[hu]=Hang/videó fájlokat szerkesztő alkalmazások
 +Icon=video-x-generic
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-discburning.directory.in patched/desktop-directories/lxde-audio-video-sub-discburning.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-discburning.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-discburning.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-audio-video-sub-discburning.directory.in	2015-02-23 18:38:47.987297560 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Disc burning
++Name[hu]=Optikai lemez írás
 +_Comment=Applications to burn a disc
++Comment[hu]=Optikai lemez író alkalmazások
 +Icon=drive-optical
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-midi.directory.in patched/desktop-directories/lxde-audio-video-sub-midi.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-midi.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-midi.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-audio-video-sub-midi.directory.in	2015-02-23 18:39:33.107521299 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=MIDI
++Name[hu]=Midi
 +_Comment=MIDI applications
++Comment[hu]=MIDI kezelő alkalmazások
 +Icon=applications-multimedia
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-mixer.directory.in patched/desktop-directories/lxde-audio-video-sub-mixer.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-mixer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-mixer.directory.in	2014-08-12 09:40:56.970802409 +0200
++++ patched/desktop-directories/lxde-audio-video-sub-mixer.directory.in	2015-02-23 18:40:20.111754381 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Mixer
-+_Comment=Mixer
++Name[hu]=Mixer
 +Icon=multimedia-volume-control
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-music.directory.in patched/desktop-directories/lxde-audio-video-sub-music.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-music.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-music.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-audio-video-sub-music.directory.in	2015-02-23 18:47:18.677829938 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Music
++Name[hu]=Zene
 +_Comment=Musical software
++Comment[hu]=Zenei programok
 +Icon=audio-x-generic
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-player.directory.in patched/desktop-directories/lxde-audio-video-sub-player.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-player.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-player.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-audio-video-sub-player.directory.in	2015-02-23 18:42:39.772446921 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Player
++Name[hu]=Lejátszó
 +_Comment=Play audio/video files
++Comment[hu]=Hang/videó fájlok lejátszása
 +Icon=video-x-generic
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-recorder.directory.in patched/desktop-directories/lxde-audio-video-sub-recorder.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-recorder.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-recorder.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-audio-video-sub-recorder.directory.in	2015-02-23 18:44:01.280851099 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Recorder
++Name[hu]=Felvevő
 +_Comment=Record audio/video files
++Comment[hu]=Hang/videó fájlokat felvevő alkalmazás
 +Icon=media-record
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-sequencer.directory.in patched/desktop-directories/lxde-audio-video-sub-sequencer.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-sequencer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-sequencer.directory.in	2014-08-12 09:40:56.970802409 +0200
++++ patched/desktop-directories/lxde-audio-video-sub-sequencer.directory.in	2015-02-23 18:44:37.569031042 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Sequencer
-+_Comment=Sequencer
++Name[hu]=Sequencer
 +Icon=applications-multimedia
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-tuner.directory.in patched/desktop-directories/lxde-audio-video-sub-tuner.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-tuner.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-tuner.directory.in	2014-08-12 09:40:56.970802409 +0200
++++ patched/desktop-directories/lxde-audio-video-sub-tuner.directory.in	2015-02-23 18:44:55.401119467 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Tuner
-+_Comment=Tuner
++Name[hu]=Tuner
 +Icon=applications-multimedia
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-tv.directory.in patched/desktop-directories/lxde-audio-video-sub-tv.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-tv.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-tv.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-audio-video-sub-tv.directory.in	2015-02-23 18:45:39.769339477 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=TV
++Name[hu]=TV
 +_Comment=TV applications
++Comment[hu]=TV alkalmazások
 +Icon=video-display
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-action.directory.in patched/desktop-directories/lxde-game-sub-action.directory.in
 --- orig/desktop-directories/lxde-game-sub-action.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-action.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-action.directory.in	2015-02-23 18:50:19.438726283 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Action
++Name[hu]=Akció
 +_Comment=Action game
++Comment[hu]=Akciójáték
 +Icon=weather-storm
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-adventure.directory.in patched/desktop-directories/lxde-game-sub-adventure.directory.in
 --- orig/desktop-directories/lxde-game-sub-adventure.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-adventure.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-adventure.directory.in	2015-02-23 18:53:44.527743264 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Adventure
++Name[hu]=Kaland
 +_Comment=Adventure style game
++Comment[hu]=Kalandjáték
 +Icon=applications-games
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-arcade.directory.in patched/desktop-directories/lxde-game-sub-arcade.directory.in
 --- orig/desktop-directories/lxde-game-sub-arcade.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-arcade.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-arcade.directory.in	2015-02-23 18:54:13.807888457 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Arcade
++Name[hu]=Ügyességi
 +_Comment=Arcade style game
++Comment[hu]=Ügyességi játék
 +Icon=gnome-joystick
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-blocks.directory.in patched/desktop-directories/lxde-game-sub-blocks.directory.in
 --- orig/desktop-directories/lxde-game-sub-blocks.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-blocks.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-blocks.directory.in	2015-02-23 18:55:01.972127290 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Blocks
-+_Comment=Falling blocks game
++Name[hu]=Blokkok
++_Comment=Potyogó blokkok játék (pl. tetris)
++Comment[hu]=Akciójáték
 +Icon=gnome-gnometris
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-board.directory.in patched/desktop-directories/lxde-game-sub-board.directory.in
 --- orig/desktop-directories/lxde-game-sub-board.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-board.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-board.directory.in	2015-02-23 19:15:08.734111300 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Board
++Name[hu]=Táblás
 +_Comment=Board game
++Comment[hu]=Táblajáték
 +Icon=applications-boardgames
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-card.directory.in patched/desktop-directories/lxde-game-sub-card.directory.in
 --- orig/desktop-directories/lxde-game-sub-card.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-card.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-card.directory.in	2015-02-23 19:15:26.714200458 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Card
++Name[hu]=Kártya
 +_Comment=Card game
++Comment[hu]=Kártyajáték
 +Icon=applications-cardgames
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-kids.directory.in patched/desktop-directories/lxde-game-sub-kids.directory.in
 --- orig/desktop-directories/lxde-game-sub-kids.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-kids.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-kids.directory.in	2015-02-23 19:16:05.514392858 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Kids
++Name[hu]=Gyerekeknek
 +_Comment=Game for kids
++Comment[hu]=Játék gyerekeknek
 +Icon=gnome-amusements
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-logic.directory.in patched/desktop-directories/lxde-game-sub-logic.directory.in
 --- orig/desktop-directories/lxde-game-sub-logic.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-logic.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-logic.directory.in	2015-02-23 19:16:26.594497388 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Logic
++Name[hu]=Logikai
 +_Comment=Logic game
++Comment[hu]=Logikai játék
 +Icon=system-run
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-roleplaying.directory.in patched/desktop-directories/lxde-game-sub-roleplaying.directory.in
 --- orig/desktop-directories/lxde-game-sub-roleplaying.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-roleplaying.directory.in	2014-08-12 09:40:56.970802409 +0200
++++ patched/desktop-directories/lxde-game-sub-roleplaying.directory.in	2015-02-23 19:20:08.599598252 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Role playing
-+_Comment=Role playing game
++Name[hu]=Name[hu]=Szerepjáték
 +Icon=stock_person
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-simulation.directory.in patched/desktop-directories/lxde-game-sub-simulation.directory.in
 --- orig/desktop-directories/lxde-game-sub-simulation.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-simulation.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-simulation.directory.in	2015-02-23 19:16:56.690646627 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Simulation
++Name[hu]=Szimulációs
 +_Comment=Simulation game
++Comment[hu]=Szimulációs játék
 +Icon=applications-games
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-sports.directory.in patched/desktop-directories/lxde-game-sub-sports.directory.in
 --- orig/desktop-directories/lxde-game-sub-sports.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-sports.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-sports.directory.in	2015-02-23 19:17:16.106742906 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Sports
++Name[hu]=Sport
 +_Comment=Sports game
++Comment[hu]=Sport játék
 +Icon=stock_scores
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-strategy.directory.in patched/desktop-directories/lxde-game-sub-strategy.directory.in
 --- orig/desktop-directories/lxde-game-sub-strategy.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-strategy.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-game-sub-strategy.directory.in	2015-02-23 19:17:40.290862829 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Strategy
++Name[hu]=Stratégia
 +_Comment=Strategy game
++Comment[hu]=Stratégiai játék
 +Icon=applications-games
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-chat.directory.in patched/desktop-directories/lxde-internet-and-network-sub-chat.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-chat.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-chat.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-chat.directory.in	2015-02-23 19:22:11.300206692 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Chat
++Name[hu]=Chat
 +_Comment=Chat client
++Comment[hu]=Chat kliens
 +Icon=user-available
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-dialup.directory.in patched/desktop-directories/lxde-internet-and-network-sub-dialup.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-dialup.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-dialup.directory.in	2014-08-12 09:40:56.970802409 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-dialup.directory.in	2015-02-23 20:33:21.313380544 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Dial-up
++Name[hu]=Tárcsázó
 +_Comment=Dial-up program
++Comment[hu]=Tárcsázó program
 +Icon=modem
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-email.directory.in patched/desktop-directories/lxde-internet-and-network-sub-email.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-email.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-email.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-email.directory.in	2015-02-23 20:33:49.413519885 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Email
++Name[hu]=E-mail
 +_Comment=Email client
++Comment[hu]=Email kliens
 +Icon=mail-send
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-feed.directory.in patched/desktop-directories/lxde-internet-and-network-sub-feed.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-feed.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-feed.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-feed.directory.in	2015-02-23 20:34:26.101701812 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Feed
++Name[hu]=Hírforrások
 +_Comment=RSS, podcast and other subscription based contents
++Comment[hu]=RSS, podcast és más, feliratkozás-alapú tartalom
 +Icon=applications-internet
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in patched/desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in	2015-02-23 20:35:01.037875051 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=File transfer
++Name[hu]=Fájlátvitel
 +_Comment=File transfer tool (e.g. FTP)
++Comment[hu]=Eszköz fájlátvitelhez (pl. FTP)
 +Icon=emblem-downloads
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in patched/desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in	2015-02-23 20:39:43.755276971 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=HAM radio
++Name[hu]=Amatőr rádiózás
 +_Comment=HAM radio software
++Comment[hu]=Programok amatőr rádiózáshoz
 +Icon=applications-internet
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in patched/desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in	2015-02-23 20:36:49.666413711 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Instant messaging
++Name[hu]=Azonnali üzenetküldő
 +_Comment=Instant messaging client
++Comment[hu]=Azonnali üzenetküldő kliens
 +Icon=user-available
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in patched/desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in	2015-02-23 20:37:22.194575009 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=IRC client
++Name[hu]=IRC kliens
 +_Comment=IRC client
++Comment[hu]=IRC kliens program
 +Icon=user-available
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-news.directory.in patched/desktop-directories/lxde-internet-and-network-sub-news.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-news.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-news.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-news.directory.in	2015-02-23 20:37:59.070757868 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=News
++Name[hu]=Hírek
 +_Comment=News reader or news ticker
++Comment[hu]=Hírolvasó
 +Icon=internet-news-reader
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-p2p.directory.in patched/desktop-directories/lxde-internet-and-network-sub-p2p.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-p2p.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-p2p.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-p2p.directory.in	2015-02-23 20:32:59.869274208 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=P2P
++Name[hu]=P2P
 +_Comment=P2P program
++Comment[hu]=P2P program
 +Icon=emblem-downloads
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in patched/desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in	2015-02-23 20:38:52.943025006 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Remote access
++Name[hu]=Távoli elérés
 +_Comment=Tool to remotely manage your PC
++Comment[hu]=A számítógép távoli elérése
 +Icon=preferences-desktop-remote-desktop
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-telephony.directory.in patched/desktop-directories/lxde-internet-and-network-sub-telephony.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-telephony.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-telephony.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-telephony.directory.in	2015-02-23 20:39:34.463230894 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Telephony
++Name[hu]=Telefonálás
 +_Comment=Telephony via PC
++Comment[hu]=Telefonálás számítógépen keresztül
 +Icon=call-start
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in patched/desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in	2015-02-23 20:40:08.831401316 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Video conference
++Name[hu]=Videókonferencia
 +_Comment=Video conference software
++Comment[hu]=Videókonferencia program
 +Icon=camera-web
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in patched/desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in
 --- orig/desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in	2014-08-12 09:40:56.974802429 +0200
++++ patched/desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in	2015-02-23 20:40:40.679559243 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Web browser
-+_Comment=Web browser
++Name[hu]=Webböngésző
 +Icon=web-browser
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-system-tools-sub-emulator.directory.in patched/desktop-directories/lxde-system-tools-sub-emulator.directory.in
 --- orig/desktop-directories/lxde-system-tools-sub-emulator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-emulator.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-system-tools-sub-emulator.directory.in	2015-02-23 20:56:35.740295133 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Emulator
++Name[hu]=Emulátor
 +_Comment=Emulator of another platform
++Comment[hu]=Más platform emulátora
 +Icon=applications-system
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-system-tools-sub-filemanager.directory.in patched/desktop-directories/lxde-system-tools-sub-filemanager.directory.in
 --- orig/desktop-directories/lxde-system-tools-sub-filemanager.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-filemanager.directory.in	2014-08-12 09:40:56.974802429 +0200
++++ patched/desktop-directories/lxde-system-tools-sub-filemanager.directory.in	2015-02-23 20:58:38.120901986 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=File manager
-+_Comment=File manager
++Name[hu]=Fájlkezelő
 +Icon=system-file-manager
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-system-tools-sub-filesystem.directory.in patched/desktop-directories/lxde-system-tools-sub-filesystem.directory.in
 --- orig/desktop-directories/lxde-system-tools-sub-filesystem.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-filesystem.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-system-tools-sub-filesystem.directory.in	2015-02-23 21:06:40.331293138 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Filesystem
++Name[hu]=Fájlrendszer
 +_Comment=Filesystem tool
++Comment[hu]=Fájlrendszer-kezelő eszköz
 +Icon=applications-system
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-system-tools-sub-monitor.directory.in patched/desktop-directories/lxde-system-tools-sub-monitor.directory.in
 --- orig/desktop-directories/lxde-system-tools-sub-monitor.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-monitor.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-system-tools-sub-monitor.directory.in	2015-02-23 20:59:54.093278713 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Monitor
++Name[hu]=Monitor
 +_Comment=Monitor application/applet that monitors some resource or activity
++Comment[hu]=Erőforrás vagy aktivitás figyelő alkalmazás
 +Icon=utilities-system-monitor
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in patched/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in
 --- orig/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in	2015-02-23 21:00:21.513414682 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Terminal emulator
++Name[hu]=Terminálemulátor
 +_Comment=Terminal emulator application
++Comment[hu]=Terminálemulátor alkalmazás
 +Icon=utilities-terminal
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-archiving.directory.in patched/desktop-directories/lxde-utility-sub-archiving.directory.in
 --- orig/desktop-directories/lxde-utility-sub-archiving.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-archiving.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-utility-sub-archiving.directory.in	2015-02-23 21:01:11.625663175 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Archiving
++Name[hu]=Archiválás
 +_Comment=Tool to archive/backup data
++Comment[hu]=Adat archiváló/visszaállító eszköz
 +Icon=package-x-generic
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-calculator.directory.in patched/desktop-directories/lxde-utility-sub-calculator.directory.in
 --- orig/desktop-directories/lxde-utility-sub-calculator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-calculator.directory.in	2014-08-12 09:40:56.974802429 +0200
++++ patched/desktop-directories/lxde-utility-sub-calculator.directory.in	2015-02-23 20:58:11.412769548 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Calculator
-+_Comment=Calculators
++Name[hu]=Számológép
 +Icon=accessories-calculator
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-clock.directory.in patched/desktop-directories/lxde-utility-sub-clock.directory.in
 --- orig/desktop-directories/lxde-utility-sub-clock.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-clock.directory.in	2014-08-12 09:40:56.974802429 +0200
++++ patched/desktop-directories/lxde-utility-sub-clock.directory.in	2015-02-23 20:57:53.428680369 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Clock
-+_Comment=Clock
++Name[hu]=Óra
 +Icon=mate-panel-clock
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-compression.directory.in patched/desktop-directories/lxde-utility-sub-compression.directory.in
 --- orig/desktop-directories/lxde-utility-sub-compression.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-compression.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-utility-sub-compression.directory.in	2015-02-23 21:01:55.961883026 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Compression
++Name[hu]=Tömörítés
 +_Comment=Tool to manage compressed data/archives
++Comment[hu]=Tömörített adatokat/archívumokat kezelő eszköz
 +Icon=package-x-generic
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-filetool.directory.in patched/desktop-directories/lxde-utility-sub-filetool.directory.in
 --- orig/desktop-directories/lxde-utility-sub-filetool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-filetool.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-utility-sub-filetool.directory.in	2015-02-23 21:02:24.050022308 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=File tool
++Name[hu]=Fájlkezelő
 +_Comment=File tool utility
++Comment[hu]=Fájlkezelő eszköz
 +Icon=system-file-manager
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-telephonytool.directory.in patched/desktop-directories/lxde-utility-sub-telephonytool.directory.in
 --- orig/desktop-directories/lxde-utility-sub-telephonytool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-telephonytool.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-utility-sub-telephonytool.directory.in	2015-02-23 21:03:20.242300950 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Telephony tool
++Name[hu]=Segédeszköz telefonáláshoz
 +_Comment=Telephony tool, to dial a number, manage PBX, ...
++Comment[hu]=Segédeszköz telefonáláshoz; tárcsázás, PBX kezelése, ...
 +Icon=call-start
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-texteditor.directory.in patched/desktop-directories/lxde-utility-sub-texteditor.directory.in
 --- orig/desktop-directories/lxde-utility-sub-texteditor.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-texteditor.directory.in	2014-08-12 09:40:56.974802429 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-utility-sub-texteditor.directory.in	2015-02-23 21:03:48.906443088 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Text editor
++Name[hu]=Szövegszerkesztő
 +_Comment=Text editing
++Comment[hu]=Szöveg szerkesztése
 +Icon=accessories-text-editor
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-texttool.directory.in patched/desktop-directories/lxde-utility-sub-texttool.directory.in
 --- orig/desktop-directories/lxde-utility-sub-texttool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-texttool.directory.in	2014-08-12 09:40:56.978802449 +0200
-@@ -0,0 +1,5 @@
++++ patched/desktop-directories/lxde-utility-sub-texttool.directory.in	2015-02-23 21:04:20.146598000 +0100
+@@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Text tool
++Name[hu]=Szövegkezelő
 +_Comment=Text tool utility
++Comment[hu]=Szövegkezelő eszköz
 +Icon=accessories-text-editor
 +Type=Directory
 diff -Naur orig/desktop-directories/Makefile.am patched/desktop-directories/Makefile.am
 --- orig/desktop-directories/Makefile.am	2011-07-23 22:05:34.000000000 +0200
-+++ patched/desktop-directories/Makefile.am	2014-08-12 09:40:56.978802449 +0200
++++ patched/desktop-directories/Makefile.am	2015-02-23 18:34:14.857943185 +0100
 @@ -4,12 +4,48 @@
  directorydir = $(datadir)/desktop-directories
  directory_in_files =				\
@@ -515,7 +597,7 @@ diff -Naur orig/desktop-directories/Makefile.am patched/desktop-directories/Make
  directory_DATA = $(directory_in_files:.directory.in=.directory)
 diff -Naur orig/desktop-directories/Makefile.in patched/desktop-directories/Makefile.in
 --- orig/desktop-directories/Makefile.in	2011-07-23 22:05:51.000000000 +0200
-+++ patched/desktop-directories/Makefile.in	2014-08-12 09:40:56.978802449 +0200
++++ patched/desktop-directories/Makefile.in	2015-02-23 18:34:14.857943185 +0100
 @@ -180,12 +180,48 @@
  directorydir = $(datadir)/desktop-directories
  directory_in_files = \
@@ -589,7 +671,7 @@ diff -Naur orig/desktop-directories/Makefile.in patched/desktop-directories/Make
  directory_DATA = $(directory_in_files:.directory.in=.directory)
 diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.menu
 --- orig/layout/lxde-applications.menu	2011-07-23 22:05:34.000000000 +0200
-+++ patched/layout/lxde-applications.menu	2014-08-12 10:52:35.108115721 +0200
++++ patched/layout/lxde-applications.menu	2015-02-23 18:34:14.857943185 +0100
 @@ -26,8 +26,73 @@
  			 applications here -->
  				<Not><Category>Accessibility</Category></Not>
@@ -1039,8 +1121,8 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
  	<!-- Other -->
 diff -Naur orig/po/hu.po patched/po/hu.po
 --- orig/po/hu.po	2011-07-23 22:05:34.000000000 +0200
-+++ patched/po/hu.po	2014-08-12 09:40:56.978802449 +0200
-@@ -9,22 +9,91 @@
++++ patched/po/hu.po	2015-02-23 21:19:00.002960972 +0100
+@@ -9,23 +9,24 @@
  msgstr ""
  "Project-Id-Version: lxmenu-data\n"
  "Report-Msgid-Bugs-To: \n"
@@ -1058,301 +1140,21 @@ diff -Naur orig/po/hu.po patched/po/hu.po
 +"X-Generator: Poedit 1.6.5\n"
  
  #: ../desktop-directories/lxde-audio-video.directory.in.h:1
-+msgid "Sound & Video"
-+msgstr "Hang és videó"
-+
-+#: ../desktop-directories/lxde-audio-video.directory.in.h:2
- msgid "Multimedia menu"
- msgstr "Multimédia menü"
- 
+-msgid "Multimedia menu"
+-msgstr "Multimédia menü"
+-
 -#: ../desktop-directories/lxde-audio-video.directory.in.h:2
--msgid "Sound & Video"
--msgstr "Hang és videó"
-+#: ../desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in.h:1
-+msgid "Sound & Video editing"
-+msgstr "Hang és videó szerkesztés"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in.h:2
-+msgid "Applications to edit audio/video files"
-+msgstr "Hang/videó fájlokat szerkesztő alkalmazások"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-discburning.directory.in.h:1
-+msgid "Disc burning"
-+msgstr "Optikai lemez írás"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-discburning.directory.in.h:2
-+msgid "Applications to burn a disc"
-+msgstr "Optikai lemez író alkalmazások"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-midi.directory.in.h:1
-+msgid "MIDI"
-+msgstr "Midi"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-midi.directory.in.h:2
-+msgid "MIDI applications"
-+msgstr "MIDI kezelő alkalmazások"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-mixer.directory.in.h:1
-+msgid "Mixer"
-+msgstr "Mixer"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-music.directory.in.h:1
-+msgid "Music"
-+msgstr "Zene"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-music.directory.in.h:2
-+msgid "Musical software"
-+msgstr "Zenei program"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-player.directory.in.h:1
-+msgid "Player"
-+msgstr "Lejátszó"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-player.directory.in.h:2
-+msgid "Play audio/video files"
-+msgstr "Hang/videó fájlok lejátszása"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-recorder.directory.in.h:1
-+msgid "Recorder"
-+msgstr "Felvevő"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-recorder.directory.in.h:2
-+msgid "Record audio/video files"
-+msgstr "Hang/videó fájlokat felvevő alkalmazás"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-sequencer.directory.in.h:1
-+msgid "Sequencer"
-+msgstr "Sequencer"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-tuner.directory.in.h:1
-+msgid "Tuner"
-+msgstr "Tuner"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-tv.directory.in.h:1
-+msgid "TV"
-+msgstr "TV"
-+
-+#: ../desktop-directories/lxde-audio-video-sub-tv.directory.in.h:2
-+msgid "TV applications"
-+msgstr "TV alkalmazások"
+ msgid "Sound & Video"
+ msgstr "Hang és videó"
  
++#: ../desktop-directories/lxde-audio-video.directory.in.h:2
++msgid "Multimedia menu"
++msgstr "Multimédia menü"
++
  #: ../desktop-directories/lxde-development.directory.in.h:1
  msgid "Programming"
-@@ -46,6 +115,102 @@
- msgid "Games and amusements"
- msgstr "Játék és szórakozás"
- 
-+#: ../desktop-directories/lxde-game-sub-action.directory.in.h:1
-+msgid "Action"
-+msgstr "Akció"
-+
-+#: ../desktop-directories/lxde-game-sub-action.directory.in.h:2
-+msgid "Action game"
-+msgstr "Akciójáték"
-+
-+#: ../desktop-directories/lxde-game-sub-adventure.directory.in.h:1
-+msgid "Adventure"
-+msgstr "Kaland"
-+
-+#: ../desktop-directories/lxde-game-sub-adventure.directory.in.h:2
-+msgid "Adventure style game"
-+msgstr "Kalandjáték"
-+
-+#: ../desktop-directories/lxde-game-sub-arcade.directory.in.h:1
-+msgid "Arcade"
-+msgstr "Ügyességi"
-+
-+#: ../desktop-directories/lxde-game-sub-arcade.directory.in.h:2
-+msgid "Arcade style game"
-+msgstr "Ügyességi játék"
-+
-+#: ../desktop-directories/lxde-game-sub-blocks.directory.in.h:1
-+msgid "Blocks"
-+msgstr ""
-+
-+#: ../desktop-directories/lxde-game-sub-blocks.directory.in.h:2
-+msgid "Falling blocks game"
-+msgstr ""
-+
-+#: ../desktop-directories/lxde-game-sub-board.directory.in.h:1
-+msgid "Board"
-+msgstr "Táblás"
-+
-+#: ../desktop-directories/lxde-game-sub-board.directory.in.h:2
-+msgid "Board game"
-+msgstr "Táblajáték"
-+
-+#: ../desktop-directories/lxde-game-sub-card.directory.in.h:1
-+msgid "Card"
-+msgstr "Kártya"
-+
-+#: ../desktop-directories/lxde-game-sub-card.directory.in.h:2
-+msgid "Card game"
-+msgstr "Kártyajáték"
-+
-+#: ../desktop-directories/lxde-game-sub-kids.directory.in.h:1
-+msgid "Kids"
-+msgstr "Gyerekeknek"
-+
-+#: ../desktop-directories/lxde-game-sub-kids.directory.in.h:2
-+msgid "Game for kids"
-+msgstr "Játék gyerekeknek"
-+
-+#: ../desktop-directories/lxde-game-sub-logic.directory.in.h:1
-+msgid "Logic"
-+msgstr "Logikai"
-+
-+#: ../desktop-directories/lxde-game-sub-logic.directory.in.h:2
-+msgid "Logic game"
-+msgstr "Logikai játék"
-+
-+#: ../desktop-directories/lxde-game-sub-roleplaying.directory.in.h:1
-+msgid "Role playing"
-+msgstr ""
-+
-+#: ../desktop-directories/lxde-game-sub-roleplaying.directory.in.h:2
-+msgid "Role playing game"
-+msgstr ""
-+
-+#: ../desktop-directories/lxde-game-sub-simulation.directory.in.h:1
-+msgid "Simulation"
-+msgstr "Szimulációs"
-+
-+#: ../desktop-directories/lxde-game-sub-simulation.directory.in.h:2
-+msgid "Simulation game"
-+msgstr "Szimulációs játék"
-+
-+#: ../desktop-directories/lxde-game-sub-sports.directory.in.h:1
-+msgid "Sports"
-+msgstr "Sport"
-+
-+#: ../desktop-directories/lxde-game-sub-sports.directory.in.h:2
-+msgid "Sports game"
-+msgstr "Sport játék"
-+
-+#: ../desktop-directories/lxde-game-sub-strategy.directory.in.h:1
-+msgid "Strategy"
-+msgstr "Stratégia"
-+
-+#: ../desktop-directories/lxde-game-sub-strategy.directory.in.h:2
-+msgid "Strategy game"
-+msgstr "Stratégiai játék"
-+
- #: ../desktop-directories/lxde-graphics.directory.in.h:1
- msgid "Graphics"
- msgstr "Grafika"
-@@ -70,6 +235,110 @@
- msgid "Network-related settings"
- msgstr "Hálózattal kapcsolatos beállítások"
- 
-+#: ../desktop-directories/lxde-internet-and-network-sub-chat.directory.in.h:1
-+msgid "Chat"
-+msgstr "Chat"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-chat.directory.in.h:2
-+msgid "Chat client"
-+msgstr "Chat kliens"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-dialup.directory.in.h:1
-+msgid "Dial-up"
-+msgstr "Tárcsázó"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-dialup.directory.in.h:2
-+msgid "Dial-up program"
-+msgstr "Tárcsázó program"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-email.directory.in.h:1
-+msgid "Email"
-+msgstr "E-mail"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-email.directory.in.h:2
-+msgid "Email client"
-+msgstr "E-mail kliens"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-feed.directory.in.h:1
-+msgid "Feed"
-+msgstr "Hírforrások"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-feed.directory.in.h:2
-+msgid "RSS, podcast and other subscription based contents"
-+msgstr "RSS, podcast és más, feliratkozás-alapú tartalom"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in.h:1
-+msgid "File transfer"
-+msgstr "Fájlátvitel"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in.h:2
-+msgid "File transfer tool (e.g. FTP)"
-+msgstr "Eszköz fájlátvitelhez (pl. FTP)"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in.h:1
-+msgid "HAM radio"
-+msgstr "HAM rádió"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in.h:2
-+msgid "HAM radio software"
-+msgstr "HAM rádió programok"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in.h:1
-+msgid "Instant messaging"
-+msgstr "Azonnali üzenetküldő"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in.h:2
-+msgid "Instant messaging client"
-+msgstr "Azonnali üzenetküldő kliens"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in.h:1
-+msgid "IRC client"
-+msgstr "IRC kliens"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-news.directory.in.h:1
-+msgid "News"
-+msgstr "Hírek"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-news.directory.in.h:2
-+msgid "News reader or news ticker"
-+msgstr "Hírolvasó"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-p2p.directory.in.h:1
-+msgid "P2P"
-+msgstr "P2P"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-p2p.directory.in.h:2
-+msgid "P2P program"
-+msgstr "P2P program"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in.h:1
-+msgid "Remote access"
-+msgstr "Távoli elérés"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in.h:2
-+msgid "Tool to remotely manage your PC"
-+msgstr "A számítógép távoli elérése"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-telephony.directory.in.h:1
-+msgid "Telephony"
-+msgstr "Telefonálás"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-telephony.directory.in.h:2
-+msgid "Telephony via PC"
-+msgstr "Telefonálás számítógépen keresztül"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in.h:1
-+msgid "Video conference"
-+msgstr "Videókonferencia"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in.h:2
-+msgid "Video conference software"
-+msgstr "Videókonferencia program"
-+
-+#: ../desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in.h:1
-+msgid "Web browser"
-+msgstr "Webböngésző"
-+
- #: ../desktop-directories/lxde-look-and-feel.directory.in.h:1
- msgid "Look and Feel"
- msgstr "Megjelenés"
-@@ -83,14 +352,14 @@
+ msgstr "Fejlesztés"
+@@ -83,14 +84,14 @@
  msgstr "Alkalmazások"
  
  #: ../desktop-directories/lxde-menu-system.directory.in.h:1
@@ -1371,7 +1173,7 @@ diff -Naur orig/po/hu.po patched/po/hu.po
  #: ../desktop-directories/lxde-network.directory.in.h:1
  msgid "Internet"
  msgstr "Internet"
-@@ -108,13 +377,13 @@
+@@ -108,13 +109,13 @@
  msgstr "Irodai alkalmazások"
  
  #: ../desktop-directories/lxde-other.directory.in.h:1
@@ -1389,7 +1191,7 @@ diff -Naur orig/po/hu.po patched/po/hu.po
  #: ../desktop-directories/lxde-personal.directory.in.h:1
  msgid "Personal"
  msgstr "Személyes"
-@@ -124,13 +393,13 @@
+@@ -124,13 +125,13 @@
  msgstr "Személyes beállítások"
  
  #: ../desktop-directories/lxde-settings.directory.in.h:1
@@ -1407,116 +1209,9 @@ diff -Naur orig/po/hu.po patched/po/hu.po
  #: ../desktop-directories/lxde-settings-system.directory.in.h:1
  msgid "Administration"
  msgstr "Adminisztráció"
-@@ -151,6 +420,42 @@
- msgid "System configuration and monitoring"
- msgstr "Rendszerbeállítás és megfigyelés"
- 
-+#: ../desktop-directories/lxde-system-tools-sub-emulator.directory.in.h:1
-+msgid "Emulator"
-+msgstr "Emulátor"
-+
-+#: ../desktop-directories/lxde-system-tools-sub-emulator.directory.in.h:2
-+msgid "Emulator of another platform"
-+msgstr "Más platform emulátora"
-+
-+#: ../desktop-directories/lxde-system-tools-sub-filemanager.directory.in.h:1
-+msgid "File manager"
-+msgstr "Fájlkezelő"
-+
-+#: ../desktop-directories/lxde-system-tools-sub-filesystem.directory.in.h:1
-+msgid "Filesystem"
-+msgstr "Fájlrendszer"
-+
-+#: ../desktop-directories/lxde-system-tools-sub-filesystem.directory.in.h:2
-+msgid "Filesystem tool"
-+msgstr "Fájlrendszer-eszköz"
-+
-+#: ../desktop-directories/lxde-system-tools-sub-monitor.directory.in.h:1
-+msgid "Monitor"
-+msgstr "Monitor"
-+
-+#: ../desktop-directories/lxde-system-tools-sub-monitor.directory.in.h:2
-+msgid "Monitor application/applet that monitors some resource or activity"
-+msgstr "Erőforrás vagy aktivitás figyelő alkalmazás"
-+
-+#: ../desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in.h:1
-+msgid "Terminal emulator"
-+msgstr "Terminálemulátor"
-+
-+#: ../desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in.h:2
-+msgid "Terminal emulator application"
-+msgstr "Terminálemulátor alkalmazás"
-+
- #: ../desktop-directories/lxde-utility-accessibility.directory.in.h:1
- msgid "Universal Access"
- msgstr "Akadálymentesítés"
-@@ -166,3 +471,63 @@
- #: ../desktop-directories/lxde-utility.directory.in.h:2
- msgid "Desktop accessories"
- msgstr "Asztali kellékek"
-+
-+#: ../desktop-directories/lxde-utility-sub-archiving.directory.in.h:1
-+msgid "Archiving"
-+msgstr "Archiválás"
-+
-+#: ../desktop-directories/lxde-utility-sub-archiving.directory.in.h:2
-+msgid "Tool to archive/backup data"
-+msgstr "Adat archiváló/visszaállító eszköz"
-+
-+#: ../desktop-directories/lxde-utility-sub-calculator.directory.in.h:1
-+msgid "Calculator"
-+msgstr "Számológép"
-+
-+#: ../desktop-directories/lxde-utility-sub-calculator.directory.in.h:2
-+msgid "Calculators"
-+msgstr "Számológépek"
-+
-+#: ../desktop-directories/lxde-utility-sub-clock.directory.in.h:1
-+msgid "Clock"
-+msgstr "Óra"
-+
-+#: ../desktop-directories/lxde-utility-sub-compression.directory.in.h:1
-+msgid "Compression"
-+msgstr "Tömörítés"
-+
-+#: ../desktop-directories/lxde-utility-sub-compression.directory.in.h:2
-+msgid "Tool to manage compressed data/archives"
-+msgstr "Tömörített adatokat/archívumokat kezelő eszköz"
-+
-+#: ../desktop-directories/lxde-utility-sub-filetool.directory.in.h:1
-+msgid "File tool"
-+msgstr "Fájlkezelő"
-+
-+#: ../desktop-directories/lxde-utility-sub-filetool.directory.in.h:2
-+msgid "File tool utility"
-+msgstr "Fájlkezelő eszköz"
-+
-+#: ../desktop-directories/lxde-utility-sub-telephonytool.directory.in.h:1
-+msgid "Telephony tool"
-+msgstr "Segédeszköz telefonáláshoz"
-+
-+#: ../desktop-directories/lxde-utility-sub-telephonytool.directory.in.h:2
-+msgid "Telephony tool, to dial a number, manage PBX, ..."
-+msgstr "Segédeszköz telefonáláshoz; tárcsázás, PBX kezelése, ..."
-+
-+#: ../desktop-directories/lxde-utility-sub-texteditor.directory.in.h:1
-+msgid "Text editor"
-+msgstr "Szövegszerkesztő"
-+
-+#: ../desktop-directories/lxde-utility-sub-texteditor.directory.in.h:2
-+msgid "Text editing"
-+msgstr "Szöveg szerkesztése"
-+
-+#: ../desktop-directories/lxde-utility-sub-texttool.directory.in.h:1
-+msgid "Text tool"
-+msgstr "Szövegkezelő"
-+
-+#: ../desktop-directories/lxde-utility-sub-texttool.directory.in.h:2
-+msgid "Text tool utility"
-+msgstr "Szövegkezelő eszköz"
 diff -Naur orig/po/POTFILES.in patched/po/POTFILES.in
 --- orig/po/POTFILES.in	2011-07-23 22:05:34.000000000 +0200
-+++ patched/po/POTFILES.in	2014-08-12 09:40:56.978802449 +0200
++++ patched/po/POTFILES.in	2015-02-23 18:34:14.861943205 +0100
 @@ -1,12 +1,48 @@
  # List of source files containing translatable strings.
  # Please keep this file sorted alphabetically.
