@@ -196,7 +196,7 @@ diff -Naur orig/desktop-directories/lxde-game-sub-roleplaying.directory.in patch
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Role playing
-+Name[hu]=Name[hu]=Szerepjáték
++Name[hu]=Szerepjáték
 +Icon=stock_person
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-simulation.directory.in patched/desktop-directories/lxde-game-sub-simulation.directory.in
