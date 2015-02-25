@@ -1,0 +1,4 @@
+-         users      775  /etc/vdr/plugins/skinnopacity
+-         users      775  /etc/vdr/plugins/skinnopacity/epgimages
+-         users      775  /etc/vdr/plugins/skinnopacity/logos
+-         users     664/etc/vdr/conf.d/03-softhddevice.conf  /
