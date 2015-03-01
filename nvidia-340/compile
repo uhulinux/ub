@@ -13,5 +13,5 @@ rm $forras.run
 patch -i "$UB_SRCDIR"/patches/menu.patch.skip
 cd kernel
 make SYSSRC=/usr/src/linux KERNEL_UNAME="$KVER" MODULE_ROOT=$moduldir module
-#cd uvm
-#make SYSSRC=/usr/src/linux KERNEL_UNAME="$KVER" MODULE_ROOT=$moduldir/uvm module
+cd uvm
+make SYSSRC=/usr/src/linux KERNEL_UNAME="$KVER" MODULE_ROOT=$moduldir/uvm module
