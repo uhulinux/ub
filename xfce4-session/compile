@@ -1,6 +1,4 @@
 #!/bin/sh -eux
 
 ub_compile \
-	--disable-legacy-sm \
-	--enable-systemd
-	
+	--disable-legacy-sm	
