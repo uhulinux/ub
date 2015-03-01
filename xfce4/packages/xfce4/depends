@@ -1,7 +1,7 @@
 garcon
 gigolo
-gtk2-engine-xfce
-gtk2-theme-xfce
+gtk-engine-xfce
+gtk-theme-xfce
 gvfs
 icon-theme-xfce
 libexo
@@ -13,6 +13,7 @@ orage
 parole
 ristretto
 thunar
+thunar-archive-plugin
 thunar-shares-plugin
 thunar-thumbnailers
 thunar-volman
@@ -29,6 +30,7 @@ xfce4-dict-plugin
 xfce4-mixer
 xfce4-netload-plugin
 xfce4-notes-plugin
+xfce4-notifyd
 xfce4-panel
 xfce4-power-manager
 xfce4-screenshooter
@@ -39,6 +41,7 @@ xfce4-taskmanager
 xfce4-terminal
 xfce4-wavelan-plugin
 xfce4-weather-plugin
+xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
 xfconf
 xfdesktop

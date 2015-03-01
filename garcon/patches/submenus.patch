@@ -737,9 +737,9 @@ diff -Naur orig/data/xfce/xfce-games-sub-blocks.directory.in patched/data/xfce/x
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Blocks
-+Name[hu]=Blokkok
++Name[hu]=Blocks
 +_Comment=Falling blocks game
-+Comment[hu]=Potyogó blokkok játék (pl. tetris)
++Comment[hu]=Falling blocks game
 +Icon=gnome-gnometris
 +Type=Directory
 diff -Naur orig/data/xfce/xfce-games-sub-board.directory.in patched/data/xfce/xfce-games-sub-board.directory.in
@@ -995,7 +995,7 @@ diff -Naur orig/data/xfce/xfce-network-sub-hamradio.directory.in patched/data/xf
 +_Name=HAM radio
 +Name[hu]=Amatőr rádió
 +_Comment=HAM radio software
-+Comment[hu]=Programok amatőr rádiózáshoz
++Comment[hu]=Amatőr rádió program
 +Icon=applications-internet
 +Type=Directory
 diff -Naur orig/data/xfce/xfce-network-sub-instantmessaging.directory.in patched/data/xfce/xfce-network-sub-instantmessaging.directory.in
@@ -1110,7 +1110,7 @@ diff -Naur orig/data/xfce/xfce-system-sub-filesystem.directory.in patched/data/x
 +_Name=Filesystem
 +Name[hu]=Fájlrendszer
 +_Comment=Filesystem tool
-+Comment[hu]=Fájlrendszer-kezelő eszköz
++Comment[hu]=Fájlrendszer-eszköz
 +Icon=applications-system
 +Type=Directory
 diff -Naur orig/data/xfce/xfce-system-sub-monitor.directory.in patched/data/xfce/xfce-system-sub-monitor.directory.in
