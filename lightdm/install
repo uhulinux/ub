@@ -9,3 +9,7 @@ install -dm 711 "${UB_INSTALLDIR}"/var/log/lightdm
 # ubuntu cucc felesleges
 rm -rf "${UB_INSTALLDIR}"/etc/apparmor.d
 rm -rf "${UB_INSTALLDIR}"/etc/init
+
+# ezeket addons-ból tesszük fel
+rm -f "${UB_INSTALLDIR}"/etc/pam.d/lightdm
+rm -f "${UB_INSTALLDIR}"/etc/pam.d/lightdm-autologin
