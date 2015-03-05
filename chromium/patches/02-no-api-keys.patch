@@ -1,16 +1,16 @@
 diff -Naur orig/chrome/browser/ui/startup/startup_browser_creator_impl.cc patched/chrome/browser/ui/startup/startup_browser_creator_impl.cc
---- orig/chrome/browser/ui/startup/startup_browser_creator_impl.cc	2014-07-15 21:01:28.000000000 +0200
-+++ patched/chrome/browser/ui/startup/startup_browser_creator_impl.cc	2014-07-23 02:04:15.984226485 +0200
-@@ -64,8 +64,6 @@
+--- orig/chrome/browser/ui/startup/startup_browser_creator_impl.cc	2015-03-03 23:09:19.000000000 +0100
++++ patched/chrome/browser/ui/startup/startup_browser_creator_impl.cc	2015-03-04 16:22:46.766095440 +0100
+@@ -63,8 +63,6 @@
  #include "chrome/browser/ui/startup/autolaunch_prompt.h"
  #include "chrome/browser/ui/startup/bad_flags_prompt.h"
  #include "chrome/browser/ui/startup/default_browser_prompt.h"
 -#include "chrome/browser/ui/startup/google_api_keys_infobar_delegate.h"
 -#include "chrome/browser/ui/startup/obsolete_system_infobar_delegate.h"
- #include "chrome/browser/ui/startup/session_crashed_bubble.h"
  #include "chrome/browser/ui/startup/session_crashed_infobar_delegate.h"
  #include "chrome/browser/ui/startup/startup_browser_creator.h"
-@@ -856,10 +854,6 @@
+ #include "chrome/browser/ui/tabs/pinned_tab_codec.h"
+@@ -827,10 +825,6 @@
    if (is_process_startup == chrome::startup::IS_PROCESS_STARTUP &&
        !command_line_.HasSwitch(switches::kTestType)) {
      chrome::ShowBadFlagsPrompt(browser);
