@@ -1,0 +1,11 @@
+#!/bin/sh -eux
+
+autoreconf -vif
+ub_compile
+
+# emiatt akad ki a gtk-update-icon-cache
+mv matefaenza/apps/16/"numpty physics.png" matefaenza/apps/16/numpty-physics.png
+mv matefaenza/apps/22/"numpty physics.png" matefaenza/apps/22/numpty-physics.png
+mv matefaenza/apps/24/"numpty physics.png" matefaenza/apps/24/numpty-physics.png
+mv matefaenza/apps/32/"numpty physics.png" matefaenza/apps/32/numpty-physics.png
+mv matefaenza/apps/48/"numpty physics.png" matefaenza/apps/48/numpty-physics.png

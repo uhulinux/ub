@@ -1,0 +1,7 @@
+#!/usr/bin/env dl
+
+#mate-icon-theme-faenza-${UB_VERSION}.tar.xz mate-icon-theme-faenza-${UB_VERSION}/
+#	http://pub.mate-desktop.org/releases/${UB_VERSION_HEAD2}/
+	
+mate-icon-theme-faenza-${UB_VERSION}.tar.gz mate-icon-theme-faenza-52a555a/
+	git://github.com/mate-desktop/mate-icon-theme-faenza.git@52a555a
