@@ -1,5 +1,0 @@
-#!/usr/bin/env dl
-
-scribus-${UB_VERSION}.tar.gz trunk-r${UB_VERSION}/Scribus/
-	svn://scribus.net/trunk@${UB_VERSION}
-
