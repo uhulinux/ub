@@ -1,0 +1,8 @@
+cppunit-dev
+dbus-dev
+gnutls-dev
+gtk-dev
+libidn-dev
+sqlite-dev
+wxwidgets-dev
+xdg-utils
