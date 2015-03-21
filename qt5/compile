@@ -12,6 +12,7 @@ yes yes | ./configure \
 	-largefile          \
 	-c++11              \
 	-no-qml-debug       \
+	-no-journald		\
 	\
 	-accessibility      \
 	\
@@ -40,6 +41,7 @@ yes yes | ./configure \
 	-iconv              \
 	-no-pch             \
 	-dbus-linked        \
+	-mtdev				\
 	\
 	-reduce-relocations \
 	-no-separate-debug-info \

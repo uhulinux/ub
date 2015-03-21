@@ -27,6 +27,7 @@ libxrender-dev
 libxslt-dev
 libxv-dev
 mesa-dev
+mtdev-dev
 mysql-dev
 nss-dev
 openssl-dev
