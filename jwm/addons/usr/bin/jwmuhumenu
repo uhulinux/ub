@@ -4,9 +4,5 @@ if [ ! -f ~/.jwmrc ]; then
 cp /etc/system.jwmrc ~/.jwmrc
 fi
 mjwm --iconize=gnome --language hu -c /usr/share/mjwm/default.mjwm
-vv=$(cat .jwmrc | grep mjwm)
-if [ -z "${vv// }" ]; then
-sed  -i 's/.*RootMenu .*/&\n\<Include\>$HOME\/\.jwmrc-mjwm\<\/Include\>/' ~/.jwmrc
-fi
 
 jwm -restart
