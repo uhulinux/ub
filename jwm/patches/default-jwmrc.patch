@@ -1,7 +1,7 @@
 diff -Naur orig/example.jwmrc mod/example.jwmrc
 --- orig/example.jwmrc	2014-03-15 20:00:14.000000000 +0100
-+++ mod/example.jwmrc	2015-03-27 14:04:20.000000000 +0100
-@@ -4,12 +4,12 @@
++++ mod/example.jwmrc	2015-03-28 09:56:07.000000000 +0100
+@@ -4,15 +4,16 @@
  
      <!-- The root menu. -->
      <RootMenu onroot="12">
@@ -16,8 +16,13 @@ diff -Naur orig/example.jwmrc mod/example.jwmrc
 +            <Program icon="www.png" label="Firefox">firefox</Program>
              <Program icon="editor.png" label="XEdit">xedit</Program>
          </Menu>
-         <Menu icon="folder.png" label="Utilities">
-@@ -120,7 +120,8 @@
+-        <Menu icon="folder.png" label="Utilities">
++        <Menu icon="folder.png" label="JWM eszközök">
++            <Program icon="uhu-64x64.png" label="Magyar menügenerátor">jwmuhumenu</Program>
+             <Program icon="font.png" label="Fonts">xfontsel</Program>
+             <Program icon="window.png" label="Window Properties">
+                 xprop | xmessage -file -
+@@ -120,7 +121,8 @@
           for icons in multiple paths.
        -->
      <IconPath>
@@ -27,7 +32,7 @@ diff -Naur orig/example.jwmrc mod/example.jwmrc
      </IconPath>
  
      <!-- Virtual Desktops -->
-@@ -130,7 +131,7 @@
+@@ -130,7 +132,7 @@
                contained within a Desktop tag to give a specific background
                for that desktop.
           -->
