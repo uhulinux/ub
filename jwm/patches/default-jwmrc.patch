@@ -1,49 +1,69 @@
 diff -Naur orig/example.jwmrc mod/example.jwmrc
 --- orig/example.jwmrc	2014-03-15 20:00:14.000000000 +0100
-+++ mod/example.jwmrc	2015-03-28 22:11:39.704165238 +0100
-@@ -4,15 +4,18 @@
++++ mod/example.jwmrc	2015-03-29 17:17:47.000000000 +0200
+@@ -4,17 +4,18 @@
  
      <!-- The root menu. -->
      <RootMenu onroot="12">
 -        <Program icon="terminal.png" label="Terminal">xterm</Program>
 -        <Menu icon="folder.png" label="Applications">
+-            <Program icon="music.png" label="Audacious">audacious</Program>
+-            <Program icon="calculator.png" label="Calculator">xcalc</Program>
 +      <Include>$HOME/.jwmrc-mjwm</Include>
-+      <Program icon="uhu-64x64.png" label="Magyar menügenerátor">jwmuhumenu</Program>
-+        <Program icon="xterm_48x48.xpm" label="xterm">xterm</Program>
-+        <Menu icon="folder.png" label="Alkalmazások">
-             <Program icon="music.png" label="Audacious">audacious</Program>
-             <Program icon="calculator.png" label="Calculator">xcalc</Program>
++        <Program icon="xterm-color_48x48.xpm" label="xterm">xterm</Program>
++        <Menu icon="folder.png" label="Alapok">
++            <Program icon="calc.png" label="Calculator">xcalc</Program>
              <Program icon="gimp.png" label="Gimp">gimp</Program>
 -            <Program icon="www.png" label="Iceweasel">iceweasel</Program>
-+            <Program icon="www.png" label="Firefox">firefox</Program>
-             <Program icon="editor.png" label="XEdit">xedit</Program>
+-            <Program icon="editor.png" label="XEdit">xedit</Program>
++            <Program icon="firefox.png" label="Firefox">firefox</Program>
++            <Program icon="MidnightCommander.png" label="mc">xterm -e mc</Program>
          </Menu>
 -        <Menu icon="folder.png" label="Utilities">
+-            <Program icon="font.png" label="Fonts">xfontsel</Program>
+-            <Program icon="window.png" label="Window Properties">
 +        <Menu icon="folder.png" label="JWM eszközök">
-+            <Program icon="uhu-64x64.png" label="Magyar menügenerátor">jwmuhumenu</Program>
-             <Program icon="font.png" label="Fonts">xfontsel</Program>
-             <Program icon="window.png" label="Window Properties">
++            <Program icon="uhu-64x64.png" label="Menügenerátor">jwmuhumenu</Program>
++            <Program icon="fonts.png" label="Fonts">xfontsel</Program>
++            <Program icon="preferences-system-windows.png" label="Window Properties">
                  xprop | xmessage -file -
-@@ -24,7 +27,7 @@
+             </Program>
+         </Menu>
+@@ -23,8 +24,10 @@
+             xscreensaver-command -lock
          </Program>
          <Separator/>
-         <Restart label="Restart" icon="restart.png"/>
+-        <Restart label="Restart" icon="restart.png"/>
 -        <Exit label="Exit" confirm="true" icon="quit.png"/>
-+        <Exit label="Exit" confirm="true" icon="system-log-out.png"/>
++        <Restart label="JWM restart" icon="stock_refresh.png"/>
++        <Program icon="stock_stop.png" label="Kikapcsolás">systemctl poweroff</Program>
++        <Program icon="system-shutdown.png" label="Újraindítás">systemctl reboot</Program>
++        <Exit label="Kilépés" confirm="true" icon="system-log-out.png"/>
      </RootMenu>
  
      <!-- Options for program groups. -->
-@@ -120,7 +123,8 @@
+@@ -120,7 +123,19 @@
           for icons in multiple paths.
        -->
      <IconPath>
 -        /usr/share/icons/wm-icons/32x32-gant
-+        /usr/share/icons/hicolor/48x48/
 +	/usr/share/pixmaps
++    </IconPath>
++    <IconPath>
++	/usr/share/icons/Tango/32x32/actions
++    </IconPath>
++    <IconPath>
++	/usr/share/icons/Tango/32x32/places
++    </IconPath>
++    <IconPath>
++	/usr/share/icons/Tango/32x32/apps
++    </IconPath>
++    <IconPath>
++	/usr/share/icons/hicolor/48x48/apps
      </IconPath>
  
      <!-- Virtual Desktops -->
-@@ -130,7 +134,7 @@
+@@ -130,7 +145,7 @@
                contained within a Desktop tag to give a specific background
                for that desktop.
           -->
