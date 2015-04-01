@@ -1,6 +1,13 @@
 diff -Naur orig/fluxbox-xdg-menu.py mod/fluxbox-xdg-menu.py
---- orig/fluxbox-xdg-menu.py	2014-12-22 21:14:13.000000000 +0100
-+++ mod/fluxbox-xdg-menu.py	2014-12-23 20:17:14.030439463 +0100
+--- orig/fluxbox-xdg-menu.py	2015-02-07 19:20:00.000000000 +0100
++++ mod/fluxbox-xdg-menu.py	2015-04-01 16:51:23.624828381 +0200
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python
+-# vim: noexpandtab:ts=4:sts=4
++# vim: noexpandtab:ts=4:sts=4: set fileencoding=UTF-8
+ 
+ """Menu Generator for Fluxbox
+ 
 @@ -29,12 +29,14 @@
  """
  
@@ -18,7 +25,7 @@ diff -Naur orig/fluxbox-xdg-menu.py mod/fluxbox-xdg-menu.py
  import xdg.Menu,xdg.DesktopEntry,xdg.IconTheme
  from os.path import isfile
  
-@@ -44,10 +46,7 @@
+@@ -44,42 +46,42 @@
  def header(wm="fluxbox"):
  	return """
  [begin] (Fluxbox)
@@ -30,16 +37,56 @@ diff -Naur orig/fluxbox-xdg-menu.py mod/fluxbox-xdg-menu.py
  	[separator]\n"""
  
  def footer(wm="fluxbox"):
-@@ -67,7 +66,7 @@
+ 	return """
+-	[submenu] (Fluxbox Menu)
+-		[config] (Configure)
+-		[submenu] (System Styles) {Choose a style...}
++	[submenu] (Fluxbox Menü) </usr/share/icons/gnome/48x48/categories/applications-system.png> 
++		[config] (Beállítás) </usr/share/icons/gnome/48x48/categories/preferences-desktop.png>
++		[submenu] (Rendszer stílusok) {Choose a style...} </usr/share/icons/gnome/48x48/actions/gtk-about.png>
+ 			[stylesdir] (/usr/share/fluxbox/styles)
+ 			[stylesdir] (/usr/share/commonbox/styles/)
+ 		[end]
+-		[submenu] (User Styles) {Choose a style...}
++		[submenu] (Saját stílusok) {Choose a style...} </usr/share/icons/gnome/48x48/actions/gtk-about.png>
+ 			[stylesdir] (~/.fluxbox/styles)
+ 		[end]
+-		[workspaces]   (Workspace List)
+-		[submenu] (Tools)
++		[workspaces]   (Munkaterületek) </usr/share/icons/gnome/48x48/status/dialog-question.png>
++		[submenu] (Eszközök) </usr/share/icons/gnome/48x48/categories/applications-utilities.png>
+ 			[exec] (Window name) {xprop WM_CLASS|cut -d \" -f 2|xmessage -file - -center}
  			[exec] (Screenshot - JPG) {import screenshot.jpg && display -resize 50% screenshot.jpg}
  			[exec] (Screenshot - PNG) {import screenshot.png && display -resize 50% screenshot.png}
- 			[exec] (Run) {fbrun }
+-			[exec] (Run) {fbrun }
 -			[exec] (Regen Menu) {fluxbox-generate_menu --with-icons}
-+			[exec] (Regen Menu) {fluxbox-xdg-menu --with-icons}
++			[exec] (Parancs) {fbrun }
++			[exec] (Menügenerátor) {fluxbox-xdg-menu --with-icons}
  		[end]
- 		[submenu] (Window)
+-		[submenu] (Window)
++		[submenu] (Kezelőváltás) </usr/share/icons/gnome/48x48/status/gtk-dialog-info.png>
  			[restart] (kde) {startkde}
-@@ -98,7 +97,7 @@
+ 			[restart] (openbox) {openbox}
+ 			[restart] (gnome) {gnome-session}
+ 		[end]
+-		[exec] (Lock screen) {xscreensaver-command -lock}
+-		[commanddialog] (Fluxbox Command)
+-		[reconfig] (Reload config)
+-		[restart] (Restart)
++		[exec] (Képernyőzár) {xscreensaver-command -lock} </usr/share/icons/gnome/48x48/actions/lock.png>
++		[commanddialog] (Fluxbox parancs) </usr/share/icons/gnome/48x48/actions/gtk-add.png>
++		[reconfig] (Beállítás frissítés) </usr/share/icons/gnome/48x48/actions/go-home.png>
+ 		[separator]
+-		[exit] (Exit)
++		[restart] (Fluxbox újratöltés) </usr/share/icons/gnome/48x48/actions/reload.png>
++		[separator]
++		[exec] (Újraindítás) {systemctl reboot} </usr/share/icons/gnome/48x48/actions/redo.png>
++		[exec] (Kikapcsolás) {systemctl poweroff} </usr/share/icons/gnome/48x48/actions/system-shutdown.png>
++		[exit] (Kilépés) </usr/share/icons/gnome/48x48/actions/system-log-out.png>
+ 	[end]
+ [end]\n"""	
+ 
+@@ -98,7 +100,7 @@
  		e.g. gaim --> /usr/share/pixmaps/gaim.png
  		e.g. fart.png --> /usr/share/pixmaps/fart.png
  	"""
@@ -48,7 +95,7 @@ diff -Naur orig/fluxbox-xdg-menu.py mod/fluxbox-xdg-menu.py
  	if retval == "None":
  		retval=""
  
-@@ -236,8 +235,8 @@
+@@ -236,8 +238,8 @@
  		fsock = open(file,'w')
  		saveout = sys.stdout
  		sys.stdout = fsock
