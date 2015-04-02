@@ -1,3 +1,2 @@
--         users      664  /etc/vdr/conf.d/50-epgfixer.conf
 -         users      664  /etc/vdr/plugins/epgfixer/*.conf
 -         users      775  /etc/vdr/plugins/epgfixer

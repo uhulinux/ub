@@ -1,4 +1,2 @@
--         users      664  /etc/vdr/conf.d/05-skinsoppalusikka.conf
 -         users      664  /etc/vdr/themes/*
--         users      775  /etc/vdr/conf.d
 -         users      775  /etc/vdr/themes

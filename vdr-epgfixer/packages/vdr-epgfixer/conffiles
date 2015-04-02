@@ -1,4 +1,4 @@
-/etc/vdr/conf.d/50-epgfixer.conf
+/etc/vdr/conf.avail/50-epgfixer.conf
 /etc/vdr/plugins/epgfixer/blacklist.conf
 /etc/vdr/plugins/epgfixer/charset.conf
 /etc/vdr/plugins/epgfixer/epgclone.conf

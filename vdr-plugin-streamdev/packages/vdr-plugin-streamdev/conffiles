@@ -1,2 +1,2 @@
-/etc/vdr/conf.d/50-streamdev-server.conf
+/etc/vdr/conf.avail/50-streamdev-server.conf
 /etc/vdr/plugins/streamdev-server/streamdevhosts.conf

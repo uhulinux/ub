@@ -1,3 +1,2 @@
--         users      664  /etc/vdr/conf.d/02-sc.conf
 -         users      664  /etc/vdr/plugins/sc/*
 -         users      775  /etc/vdr/plugins/sc
