@@ -1,3 +1,4 @@
 #!/usr/bin/env dl
+
 pinball-${UB_VERSION}.tar.gz pinball-${UB_VERSION}/
-	http://downloads.sourceforge.net/pinball/
+	http://download.sourceforge.net/pinball/

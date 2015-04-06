@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 simupak64-${UB_VERSION/./-}.zip .
-  http://downloads.sourceforge.net/project/simutrans/pak64/${UB_VERSION/./-}/
+  http://download.sourceforge.net/simutrans/pak64/${UB_VERSION/./-}/

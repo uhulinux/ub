@@ -1,7 +1,7 @@
 #!/usr/bin/env dl
 
 dangerdeep-${UB_VERSION}.tar.gz dangerdeep-${UB_VERSION}/
-  http://downloads.sourceforge.net/sourceforge/dangerdeep/
+  http://download.sourceforge.net/sourceforge/dangerdeep/
 
 dangerdeep-data-${UB_VERSION}.zip .
-  http://downloads.sourceforge.net/dangerdeep/
+  http://download.sourceforge.net/dangerdeep/

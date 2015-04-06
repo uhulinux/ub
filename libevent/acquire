@@ -4,4 +4,4 @@
 #	https://github.com/downloads/libevent/libevent/
 	
 libevent-${UB_VERSION}-stable.tar.gz libevent-${UB_VERSION}-stable/
-	https://sourceforge.net/projects/levent/files/libevent/libevent-${UB_VERSION_HEAD2}/
+	https://download.sourceforge.net/levent/files/libevent/libevent-${UB_VERSION_HEAD2}/

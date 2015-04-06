@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 lxde-common-$UB_VERSION.tar.xz lxde-common-$UB_VERSION/
-	http://downloads.sourceforge.net/lxde/
+	http://download.sourceforge.net/lxde/
