@@ -13,6 +13,7 @@ libxml2-dev
 libxscrnsaver-dev
 libxslt-dev
 libxtst-dev
+ninja
 nspr-dev
 nss-dev
 pciutils-dev

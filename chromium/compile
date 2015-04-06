@@ -1,21 +1,10 @@
 #!/bin/sh -eux
 
-# ninja.
-# a 34-től a make nem támogatott
 # clang opciók:
 #	-Dmake_clang_dir=/usr \
 #	-Dclang_use_chrome_plugins=0 \
-# viszont a clang++ nem kompatíbilis a g++-vel:
-# fatal error: 'string' file not found
-# #include <string>
 
-unzip ninja.zip
-cd ninja-1.4.0
-./bootstrap.py --verbose
-cd ..
-rm -f ninja.zip
-
-# ok, chromium
+# chromium
 
 export LDFLAGS+="-Wl,-rpath,/usr/lib/chromium/ -Wl,--no-keep-memory"
 
@@ -53,5 +42,7 @@ build/gyp_chromium -f ninja build/all.gyp --no-parallel --depth=. \
 	-Duse_system_sqlite=0 \
 	-Duse_system_yasm=1
 
-ninja-1.4.0/ninja -C out/Release chrome chrome_sandbox
+# ninja, a 34-től a make nem támogatott
+
+ninja -C out/Release chrome chrome_sandbox
 

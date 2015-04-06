@@ -5,4 +5,4 @@ chromium-${UB_VERSION}.tar.xz chromium-${UB_VERSION}/
 	http://gsdview.appspot.com/chromium-browser-official/
 
 ninja.zip
-	https://github.com/martine/ninja/archive/v1.4.0.zip
+	https://github.com/martine/ninja/archive/v1.5.3.zip
