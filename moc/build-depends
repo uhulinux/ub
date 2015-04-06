@@ -5,7 +5,6 @@ db4-dev
 ffmpeg-dev
 file-dev
 flac-dev
-jack-dev
 libfaad2-dev
 libid3tag-dev
 libmad-dev
@@ -16,5 +15,8 @@ libvorbis-dev
 musepack-dev
 ncurses-dev
 popt-dev
+pulseaudio-dev
+systemd-dev
+taglib-dev
 util-linux-dev
 wavpack-dev
