@@ -1,0 +1,7 @@
+dbus-glib-dev
+gconf2-dev
+gmtk-dev
+gtk2-dev
+libnotify-dev
+libxscrnsaver-dev
+pulseaudio-dev

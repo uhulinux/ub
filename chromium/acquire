@@ -4,5 +4,5 @@ chromium-${UB_VERSION}.tar.xz chromium-${UB_VERSION}/
 	http://commondatastorage.googleapis.com/chromium-browser-official/
 	http://gsdview.appspot.com/chromium-browser-official/
 
-ninja.zip
-	https://github.com/martine/ninja/archive/v1.5.3.zip
+#ninja.zip
+#	https://github.com/martine/ninja/archive/v1.5.3.zip

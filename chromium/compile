@@ -35,6 +35,7 @@ build/gyp_chromium -f ninja build/all.gyp --no-parallel --depth=. \
 	-Duse_gconf=0 \
 	-Duse_gio=1 \
 	-Duse_system_ffmpeg=0 \
+	-Duse_system_icu=0 \
 	-Duse_system_libjpeg=1 \
 	-Duse_system_libxml=1 \
 	-Duse_system_libxslt=1 \
