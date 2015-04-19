@@ -1,0 +1,10 @@
+gobject-introspection-dev
+gtk2-dev
+lcms2-dev
+libjpeg-dev
+libxi-dev
+libxml2-dev
+openjpeg1-dev
+qt4-dev
+qt5-dev
+zlib-dev
