@@ -72,7 +72,7 @@ diff -Naur orig/example.jwmrc mod/example.jwmrc
  
 +    <!-- AUTOSTART -->
 +    <StartupCommand>nm-applet</StartupCommand>
-+    <StartupCommand>pasystray</StartupCommand>
++    <StartupCommand>retrovol -hide</StartupCommand>
 +    <StartupCommand>synclient MaxTapTime=0</StartupCommand>
 +
  </JWM>
