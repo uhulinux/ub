@@ -1,6 +1,164 @@
+diff -Naur orig/data/themes/Ambiance/Ambiance mod/data/themes/Ambiance/Ambiance
+--- orig/data/themes/Ambiance/Ambiance	2014-12-28 03:56:53.000000000 +0100
++++ mod/data/themes/Ambiance/Ambiance	2015-03-31 11:26:42.000000000 +0200
+@@ -1,30 +1,39 @@
+ <?xml version="1.0"?>
+ <JWM>
+-
+-<!-- MENUS -->
+-
++    <!-- MENUS -->
+     <!-- Main Menu -->
+-    <Include>$HOME/.config/torimenu</Include>
++    <RootMenu height="0" onroot="5">
++        <Include>$HOME/.jwmrc-mjwm</Include>
++        <Program icon="uhu-64x64.png" label="Menügenerátor">jwmuhumenu</Program>
++    </RootMenu>
+     <!--Shudown Menu-->
+     <RootMenu height="0" onroot="9">
+-        <Program icon="preferences-system-session.svg" label="Shutdown Menu">jwm-settings-manager --halt</Program>
+-        <Program icon="system-restart.svg" label="Restart Computer">dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart</Program>
+-        <Restart label="Reload Desktop" icon="system-restart.svg"/>
+-        <Exit label="Logout" confirm="true" icon="system-logout.svg"/>
++        <Restart label="JWM restart" icon="reload.png"/>
++        <Exit label="Kilépés" confirm="true" icon="system-log-out.png"/>
++        <Program icon="redo.png" label="Újraindítás">systemctl reboot</Program>
++        <Program icon="system-shutdown.png" label="Kikapcsolás">systemctl poweroff</Program>
++    </RootMenu>
++    <!--Places Menu-->
++    <RootMenu height="0" onroot="7">
++        <Program icon="application-x-gnome-saved-search.png" label="Applications">xdg-open /usr/share/applications</Program>
++        <Program icon="folder_home.png" label="Home">xdg-open ~/</Program>
++        <Program icon="folder-documents.png" label="Dokumentumok">xdg-open ~/Dokumentumok</Program>
++        <Program icon="folder-download.png" label="Letöltések">xdg-open ~/Letöltések</Program>
++        <Program icon="folder-music.png" label="Zenék">xdg-open -n ~/Zenék</Program>
++        <Program icon="folder-pictures.png" label="Képek">xdg-open ~/Képek</Program>
++        <Program icon="folder-videos.png" label="Videók">xdg-open ~/Videók</Program>
++        <Program icon="user-trash.png" label="Trash">xdg-open ~/.local/share/Trash/files</Program>
++        <Program icon="file-manager.png" label="Connected Devices">xdg-open /media</Program>
+     </RootMenu>
+-        <!--Places Menu-->
+-    <Include>$HOME/.config/placesmenu</Include>
+     <!-- Mouse Menu-->
+     <RootMenu height="16" onroot="23">
+-        <Program icon="application-default-icon.svg" label="Applications">xdg-open /usr/share/applications</Program>
+-        <Program icon="folder-home.svg" label="Home">xdg-open ~/</Program>
++        <Include>$HOME/.jwmrc-mjwm</Include>
++        <Program icon="uhu-64x64.png" label="Menügenerátor">jwmuhumenu</Program>
++        <Program icon="folder_home.png" label="Home">xdg-open ~/</Program>
+         <Program icon="jwm-settings-manager.svg" label="Settings">jwm-settings-manager</Program>
+-        <Program icon="preferences-desktop-wallpaper.svg" label="Change Desktop Background">jwm-settings-manager --desktop</Program>
+     </RootMenu>
+     <!-- END MENUS -->
+-
+-
+-<!-- GROUP -->
++    <!-- GROUP -->
+     <Group>
+         <Class>Pidgin</Class>
+         <Option>sticky</Option>
+@@ -43,22 +52,17 @@
+         <Name>jwm-settings-manager</Name>
+         <Option>icon:jwm-settings-manager.png</Option>
+     </Group>
+-
+-
+-<!-- PANEL -->
++    <!-- PANEL -->
+     <Tray x="0" y="-1" height="34" autohide="false" valign="top" width="0" halign="fixed" layout="horizontal">
+-        <TrayButton label="Apps" icon="/usr/share/pixmaps/distributor-logo.png" border="false">root:5</TrayButton>
+-        <TrayButton label="Places" icon="folder.svg" border="false">root:7</TrayButton>
+-        <TrayButton icon="browser.svg" border="false">exec:xdg-open /usr/share/doc/ToriOS/startpage.html</TrayButton>
++        <TrayButton label="Programok" icon="distributor-logo.png" border="false">root:5</TrayButton>
++        <TrayButton label="Helyek" icon="folder.png" border="false">root:7</TrayButton>
+         <Pager labeled="true"/>
+         <TaskList maxwidth="256"/>
+         <Dock/>
+         <Swallow name="xload" width="64">xload -nolabel -bg DimGrey -fg Grey -hl DarkGrey</Swallow>
+         <Clock format="%a, %e %b %l:%M %p">xclock</Clock>
+-        <TrayButton label="Shutdown" icon="system-shutdown.svg" border="false">root:9</TrayButton>
++        <TrayButton label="Kikapcsolás" icon="system-shutdown.png" border="false">root:9</TrayButton>
+     </Tray>
+-
+-
+     <!-- Panel Style -->
+     <TaskListStyle>
+         <ActiveBackground>#5A584F</ActiveBackground>
+@@ -69,11 +73,11 @@
+     <TrayStyle>
+         <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
+         <Foreground>#ffffff</Foreground>
+-        <Background>#484741</Background>
++        <Background>#5e5d55</Background>
+         <Opacity>0.75</Opacity>
+     </TrayStyle>
+     <TrayButtonStyle>
+-	    <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
++        <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
+         <Foreground>#ffffff</Foreground>
+         <Background>#484741</Background>
+     </TrayButtonStyle>
+@@ -91,8 +95,7 @@
+         <ActiveBackground>#E45C2D</ActiveBackground>
+         <Opacity>0.85</Opacity>
+     </MenuStyle>
+-
+-<!-- WINDOW -->
++    <!-- WINDOW -->
+     <WindowStyle>
+         <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
+         <Width>4</Width>
+@@ -118,8 +121,7 @@
+     <SnapMode distance="10">border</SnapMode>
+     <MoveMode>opaque</MoveMode>
+     <ResizeMode>opaque</ResizeMode>
+-
+-<Key key="Up">up</Key>
++    <Key key="Up">up</Key>
+     <Key key="Down">down</Key>
+     <Key key="Right">right</Key>
+     <Key key="Left">left</Key>
+@@ -156,27 +158,23 @@
+     <DoubleClickDelta>2</DoubleClickDelta>
+     <!-- ICONS -->
+     <IconPath>/usr/share/pixmaps</IconPath>
+-    <IconPath>/usr/share/icons/Numix/48x48/actions/</IconPath>
+-    <IconPath>/usr/share/icons/Numix/48x48/categories/</IconPath>
+-    <IconPath>/usr/share/icons/Numix/48x48/places/</IconPath>
+-    <IconPath>/usr/share/icons/Numix/48x48/status/</IconPath>
+-    <IconPath>/usr/share/icons/Numix-Circle/48x48/apps</IconPath>
+-<!-- DESKTOP -->
++    <IconPath>/usr/share/icons/gnome/48x48/actions</IconPath>
++    <IconPath>/usr/share/icons/gnome/48x48/places</IconPath>
++    <IconPath>/usr/share/icons/gnome/48x48/apps</IconPath>
++    <IconPath>/usr/share/icons/gnome/48x48/devices</IconPath>
++    <!-- DESKTOP -->
+     <Desktops width="2" height="1">
+         <Background type="image">/usr/share/backgrounds/default.png</Background>
+     </Desktops>
+-
+-<!-- AUTOSTART -->
+-   <StartupCommand>nm-applet</StartupCommand>
+-   <StartupCommand>volumeicon</StartupCommand>
+-   <StartupCommand>synclient MaxTapTime=0</StartupCommand>
+-
+-<!--POP UP -->
++    <!-- AUTOSTART -->
++    <StartupCommand>nm-applet</StartupCommand>
++    <StartupCommand>pasystray</StartupCommand>
++    <StartupCommand>synclient MaxTapTime=0</StartupCommand>
++    <!--POP UP -->
+     <PopupStyle>
+         <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
+         <Outline>#000000</Outline>
+         <Foreground>#ffffff</Foreground>
+         <Background>#484741</Background>
+     </PopupStyle>
+-
+ </JWM>
 diff -Naur orig/data/themes/Bassem/Bassem mod/data/themes/Bassem/Bassem
 --- orig/data/themes/Bassem/Bassem	2014-12-28 03:56:53.000000000 +0100
-+++ mod/data/themes/Bassem/Bassem	2015-03-30 21:56:31.000000000 +0200
++++ mod/data/themes/Bassem/Bassem	2015-04-22 21:20:25.000000000 +0200
 @@ -4,32 +4,41 @@
  Israel <israel@torios.org>
  MIT license copyright 2014
@@ -47,7 +205,7 @@ diff -Naur orig/data/themes/Bassem/Bassem mod/data/themes/Bassem/Bassem
 -        <Program icon="folder-home.svg" label="Home">xdg-open ~/</Program>
 +        <Include>$HOME/.jwmrc-mjwm</Include>
 +        <Program icon="uhu-64x64.png" label="Menügenerátor">jwmuhumenu</Program>
-+        <Program icon="folder_home.png" label="Home">xdg-open ~/</Program>
++        <Program icon="folder_home.svg" label="Home">xdg-open ~/</Program>
          <Program icon="jwm-settings-manager.svg" label="Settings">jwm-settings-manager</Program>
 -        <Program icon="preferences-desktop-wallpaper.svg" label="Change Desktop Background">jwm-settings-manager --desktop</Program>
      </RootMenu>
@@ -59,7 +217,7 @@ diff -Naur orig/data/themes/Bassem/Bassem mod/data/themes/Bassem/Bassem
      <Group>
          <Class>Pidgin</Class>
          <Option>sticky</Option>
-@@ -48,25 +57,22 @@
+@@ -48,28 +57,25 @@
          <Name>jwm-settings-manager</Name>
          <Option>icon:jwm-settings-manager.png</Option>
      </Group>
@@ -74,14 +232,14 @@ diff -Naur orig/data/themes/Bassem/Bassem mod/data/themes/Bassem/Bassem
 +        <Clock format="%a, %e %b %l:%M %p"/>
          <Spacer/>
 -        <TrayButton label="Shutdown" icon="system-shutdown.svg" border="false">root:9</TrayButton>
-+        <TrayButton label="Kikapcsolás" icon="system-shutdown.png" border="false">root:9</TrayButton>
++        <TrayButton label="Kikapcsolás" icon="system-shutdown.svg" border="false">root:9</TrayButton>
      </Tray>
      <Tray x="0" y="-1" height="34" autohide="false" valign="bottom" width="0" halign="fixed" layout="horizontal">
          <Pager labeled="true"/>
          <TaskList maxwidth="256"/>
          <Swallow name="xload" width="64">xload -nolabel -bg DimGrey -fg Grey -hl DarkGrey</Swallow>
 -        <TrayButton label="Places" icon="folder.svg" border="false">root:7</TrayButton>
-+        <TrayButton label="Helyek" icon="folder.png" border="false">root:7</TrayButton>
++        <TrayButton label="Helyek" icon="folder.svg" border="false">root:7</TrayButton>
          <Dock/>
      </Tray>
 -
@@ -89,7 +247,11 @@ diff -Naur orig/data/themes/Bassem/Bassem mod/data/themes/Bassem/Bassem
 +    <!-- Panel Style -->
      <TaskListStyle>
          <ActiveBackground>#4A24AB</ActiveBackground>
-         <Background>#353535</Background>
+-        <Background>#353535</Background>
++        <Background>#353535</Background>444444
+         <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
+         <Foreground>#ffffff</Foreground>
+     </TaskListStyle>
 @@ -98,8 +104,7 @@
          <ActiveBackground>#4A24AB</ActiveBackground>
          <Opacity>0.85</Opacity>
@@ -138,7 +300,7 @@ diff -Naur orig/data/themes/Bassem/Bassem mod/data/themes/Bassem/Bassem
 -<!--POP UP -->
 +    <!-- AUTOSTART -->
 +    <StartupCommand>nm-applet</StartupCommand>
-+    <StartupCommand>volumeicon</StartupCommand>
++    <StartupCommand>retrovol -hide</StartupCommand>
 +    <StartupCommand>synclient MaxTapTime=0</StartupCommand>
 +    <!--POP UP -->
      <PopupStyle>
@@ -151,7 +313,7 @@ diff -Naur orig/data/themes/Bassem/Bassem mod/data/themes/Bassem/Bassem
  </JWM>
 diff -Naur orig/data/themes/DarkGnome2/DarkGnome2 mod/data/themes/DarkGnome2/DarkGnome2
 --- orig/data/themes/DarkGnome2/DarkGnome2	2014-12-28 03:56:53.000000000 +0100
-+++ mod/data/themes/DarkGnome2/DarkGnome2	2015-03-30 21:35:52.992180399 +0200
++++ mod/data/themes/DarkGnome2/DarkGnome2	2015-04-22 21:18:19.000000000 +0200
 @@ -4,31 +4,41 @@
  Israel <israel@torios.org>
  MIT license copyright 2014
@@ -198,7 +360,7 @@ diff -Naur orig/data/themes/DarkGnome2/DarkGnome2 mod/data/themes/DarkGnome2/Dar
 -        <Program icon="folder-home.svg" label="Home">xdg-open ~/</Program>
 +        <Include>$HOME/.jwmrc-mjwm</Include>
 +        <Program icon="uhu-64x64.png" label="Menügenerátor">jwmuhumenu</Program>
-+        <Program icon="folder_home.png" label="Home">xdg-open ~/</Program>
++        <Program icon="folder_home.svg" label="Home">xdg-open ~/</Program>
          <Program icon="jwm-settings-manager.svg" label="Settings">jwm-settings-manager</Program>
 -        <Program icon="preferences-desktop-wallpaper.svg" label="Change Desktop Background">jwm-settings-manager --desktop</Program>
      </RootMenu>
@@ -209,7 +371,7 @@ diff -Naur orig/data/themes/DarkGnome2/DarkGnome2 mod/data/themes/DarkGnome2/Dar
      <Group>
          <Class>Pidgin</Class>
          <Option>sticky</Option>
-@@ -47,25 +57,21 @@
+@@ -47,29 +57,25 @@
          <Name>jwm-settings-manager</Name>
          <Option>icon:jwm-settings-manager.png</Option>
      </Group>
@@ -228,7 +390,7 @@ diff -Naur orig/data/themes/DarkGnome2/DarkGnome2 mod/data/themes/DarkGnome2/Dar
          <Swallow name="xload" width="64">xload -nolabel -bg DimGrey -fg Grey -hl DarkGrey</Swallow>
          <Clock format="%a, %e %b %l:%M %p">xclock</Clock>
 -        <TrayButton label="Shutdown" icon="system-shutdown.svg" border="false">root:9</TrayButton>
-+        <TrayButton label="Kikapcsolás" icon="system-shutdown.png" border="false">root:9</TrayButton>
++        <TrayButton label="Kikapcsolás" icon="system-shutdown.svg" border="false">root:9</TrayButton>
      </Tray>
      <Tray x="0" y="-1" height="34" autohide="false" valign="bottom" width="0" halign="fixed" layout="horizontal">
 -	<TrayButton icon="preferences-system-hotcorners.png" border="false">showdesktop</TrayButton>
@@ -239,17 +401,32 @@ diff -Naur orig/data/themes/DarkGnome2/DarkGnome2 mod/data/themes/DarkGnome2/Dar
 -
      <!-- Panel Style -->
      <TaskListStyle>
-         <ActiveBackground>#A5A5A5</ActiveBackground>
-@@ -81,7 +87,7 @@
+-        <ActiveBackground>#A5A5A5</ActiveBackground>
+-        <Background>#595959</Background>
++        <ActiveBackground>#BBBBBB:#000000</ActiveBackground>
++        <Background>#666666:#000000</Background>
+         <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
+         <ActiveForeground>#ffffff</ActiveForeground>
+         <Foreground>#BFBFBF</Foreground>
+@@ -77,13 +83,14 @@
+     <TrayStyle>
+         <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
+         <Foreground>#ffffff</Foreground>
+-        <Background>#464646</Background>
++        <Background>#58564D</Background>
          <Opacity>0.75</Opacity>
      </TrayStyle>
      <TrayButtonStyle>
 -	    <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
 +        <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
          <Foreground>#ffffff</Foreground>
-         <Background>#2F2F2F</Background>
+-        <Background>#2F2F2F</Background>
++        <ActiveBackground>#AAAAAA:#000000</ActiveBackground>
++        <Background>#333333</Background>
      </TrayButtonStyle>
-@@ -99,8 +105,7 @@
+     <PagerStyle>
+         <Outline>#000000</Outline>
+@@ -99,21 +106,20 @@
          <ActiveBackground>#406477</ActiveBackground>
          <Opacity>0.85</Opacity>
      </MenuStyle>
@@ -259,7 +436,22 @@ diff -Naur orig/data/themes/DarkGnome2/DarkGnome2 mod/data/themes/DarkGnome2/Dar
      <WindowStyle>
          <Font>ubuntu-12:antialias=true:encoding=utf8</Font>
          <Width>4</Width>
-@@ -122,8 +127,7 @@
+         <Height>20</Height>
+         <Active>
+             <Text>#ffffff</Text>
+-            <Title>#58564D:#46443F</Title>
++            <Title>#BBBBBB:#000000</Title>
+             <Outline>#353535</Outline>
+             <Opacity>1.0</Opacity>
+         </Active>
+         <Inactive>
+             <Text>#A1A1A1</Text>
+-            <Title>#58564D:#46443F</Title>
++            <Title>#888888:#555555</Title>
+             <Outline>#353535</Outline>
+             <Opacity>0.7</Opacity>
+         </Inactive>
+@@ -122,8 +128,7 @@
      <SnapMode distance="10">border</SnapMode>
      <MoveMode>opaque</MoveMode>
      <ResizeMode>opaque</ResizeMode>
@@ -269,7 +461,7 @@ diff -Naur orig/data/themes/DarkGnome2/DarkGnome2 mod/data/themes/DarkGnome2/Dar
      <Key key="Down">down</Key>
      <Key key="Right">right</Key>
      <Key key="Left">left</Key>
-@@ -160,27 +164,23 @@
+@@ -160,27 +165,23 @@
      <DoubleClickDelta>2</DoubleClickDelta>
      <!-- ICONS -->
      <IconPath>/usr/share/pixmaps</IconPath>
@@ -296,7 +488,7 @@ diff -Naur orig/data/themes/DarkGnome2/DarkGnome2 mod/data/themes/DarkGnome2/Dar
 -<!--POP UP -->
 +    <!-- AUTOSTART -->
 +    <StartupCommand>nm-applet</StartupCommand>
-+    <StartupCommand>volumeicon</StartupCommand>
++    <StartupCommand>retrovol -hide</StartupCommand>
 +    <StartupCommand>synclient MaxTapTime=0</StartupCommand>
 +    <!--POP UP -->
      <PopupStyle>
@@ -309,8 +501,8 @@ diff -Naur orig/data/themes/DarkGnome2/DarkGnome2 mod/data/themes/DarkGnome2/Dar
  </JWM>
 diff -Naur orig/data/themes/Default/Default mod/data/themes/Default/Default
 --- orig/data/themes/Default/Default	2014-12-28 03:56:53.000000000 +0100
-+++ mod/data/themes/Default/Default	2015-03-30 20:55:00.074126182 +0200
-@@ -1,172 +1,182 @@
++++ mod/data/themes/Default/Default	2015-04-22 21:28:29.000000000 +0200
+@@ -1,172 +1,186 @@
  <?xml version="1.0"?>
 +
  <JWM>
@@ -485,9 +677,9 @@ diff -Naur orig/data/themes/Default/Default mod/data/themes/Default/Default
 +    <TaskListStyle>
 +        <Font>FreeSans-12:bold</Font>
 +        <ActiveForeground>#FFFFFF</ActiveForeground>
-+        <ActiveBackground>#111111:#333333</ActiveBackground>
++        <ActiveBackground>#CC7700:#884400</ActiveBackground>
 +        <Foreground>#FFFFFF</Foreground>
-+        <Background>#333333:#111111</Background>
++        <Background>#777777:#111111</Background>
 +    </TaskListStyle>
 +    <PagerStyle>
 +        <Outline>#000000</Outline>
@@ -549,6 +741,10 @@ diff -Naur orig/data/themes/Default/Default mod/data/themes/Default/Default
 +
 +    <!-- The resize mode (outline or opaque) -->
      <ResizeMode>opaque</ResizeMode>
++
++    <StartupCommand>nm-applet</StartupCommand>
++    <StartupCommand>retrovol -hide</StartupCommand>
++    <StartupCommand>synclient MaxTapTime=0</StartupCommand>
 +
 +    <!-- Key bindings -->
      <Key key="Up">up</Key>
@@ -624,7 +820,7 @@ diff -Naur orig/data/themes/Default/Default mod/data/themes/Default/Default
  </JWM>
 diff -Naur orig/data/themes/LightGnome2/LightGnome2 mod/data/themes/LightGnome2/LightGnome2
 --- orig/data/themes/LightGnome2/LightGnome2	2014-12-28 03:56:53.000000000 +0100
-+++ mod/data/themes/LightGnome2/LightGnome2	2015-03-30 20:29:46.000000000 +0200
++++ mod/data/themes/LightGnome2/LightGnome2	2015-04-22 22:11:25.606188993 +0200
 @@ -4,32 +4,41 @@
  Israel <israel@torios.org>
  MIT license copyright 2014
@@ -774,7 +970,7 @@ diff -Naur orig/data/themes/LightGnome2/LightGnome2 mod/data/themes/LightGnome2/
 -<!--POP UP -->
 +    <!-- AUTOSTART -->
 +    <StartupCommand>nm-applet</StartupCommand>
-+    <StartupCommand>volumeicon</StartupCommand>
++    <StartupCommand>retrovol -hide</StartupCommand>
 +    <StartupCommand>synclient MaxTapTime=0</StartupCommand>
 +    <!--POP UP -->
      <PopupStyle>
