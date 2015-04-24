@@ -1,5 +1,7 @@
 #!/bin/sh -eux
 
+sed -i 's/@selected_bg_color;/@theme_selected_bg_color;/' \
+	 files/usr/lib/cinnamon-settings/cinnamon-settings.py
 ub_compile \
 	--enable-compile-warnings=yes \
 	--with-session-tracking=systemd
