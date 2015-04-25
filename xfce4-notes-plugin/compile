@@ -1,4 +1,4 @@
 #!/bin/sh -eux
 
-xdt-autogen
+# xdt-autogen
 ub_compile
