@@ -1,7 +1,0 @@
-diff -Naur orig/bin/lightdm-gtk-greeter-settings-pkexec mod/bin/lightdm-gtk-greeter-settings-pkexec
---- orig/bin/lightdm-gtk-greeter-settings-pkexec	2014-03-20 03:46:57.000000000 +0100
-+++ mod/bin/lightdm-gtk-greeter-settings-pkexec	2014-12-13 15:12:53.155975376 +0100
-@@ -1,2 +1,2 @@
- #!/bin/sh
--pkexec "/usr/bin/lightdm-gtk-greeter-settings" "$@"
-+gksu "/usr/bin/lightdm-gtk-greeter-settings" "$@"
