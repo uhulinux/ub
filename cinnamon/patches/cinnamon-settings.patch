@@ -10,6 +10,15 @@ diff -Naur orig/files/usr/bin/cinnamon-settings mod/files/usr/bin/cinnamon-setti
  		print "Unknown module %s, using cinnamon-control-center" % module
  		os.execvp("/usr/lib/cinnamon-settings/cinnamon-settings.py", ("",) + tuple(sys.argv[1:]))
  	elif os.path.exists("/usr/bin/gnome-control-center"):
+diff -Naur orig/files/usr/bin/cinnamon-settings-users mod/files/usr/bin/cinnamon-settings-users
+--- orig/files/usr/bin/cinnamon-settings-users	2014-10-31 23:21:43.000000000 +0100
++++ mod/files/usr/bin/cinnamon-settings-users	2014-11-08 19:17:09.000000000 +0100
+@@ -2,5 +2,5 @@
+ 
+ import os
+ 
+-os.system("gksu /usr/lib/cinnamon-settings-users/cinnamon-settings-users.py")
++os.system("pkexec /usr/lib/cinnamon-settings-users/cinnamon-settings-users.py")
  
 diff -Naur orig/files/usr/lib/cinnamon-settings/modules/cs_backgrounds.py mod/files/usr/lib/cinnamon-settings/modules/cs_backgrounds.py
 --- orig/files/usr/lib/cinnamon-settings/modules/cs_backgrounds.py	2014-11-10 11:01:15.000000000 +0100
