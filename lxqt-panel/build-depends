@@ -1,5 +1,6 @@
 alsa-lib-dev
 cmake
+kguiaddons-dev
 liblxqt-dev
 liblxqt-mount-dev
 libqtxdg-dev

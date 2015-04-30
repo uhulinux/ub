@@ -61,24 +61,6 @@ diff -Naur orig/lxqt-config-monitor/lxqt-config-monitor.desktop.in mod/lxqt-conf
  OnlyShowIn=LXQt;
  
  #TRANSLATIONS_DIR=translations
-diff -Naur orig/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in mod/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in
---- orig/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in	2014-10-10 21:29:18.000000000 +0200
-+++ mod/lxqt-config-qtconfig/lxqt-config-qtconfig.desktop.in	2014-12-02 09:56:05.343258261 +0100
-@@ -1,12 +1,13 @@
- [Desktop Entry]
- Type=Application
- Name=Qt Configuration
-+Name[hu]=LXQT Qt beállítás
- GenericName=Qt Configuration
- Comment=Configure Qt
- Exec=qtconfig
- TryExec=qtconfig
- Icon=preferences-system
--Categories=Settings;DesktopSettings;Qt;LXQt;
-+Categories=Settings;DesktopSettings;Qt;
- OnlyShowIn=LXQt;
- 
- #TRANSLATIONS_DIR=translations
 diff -Naur orig/src/lxqt-config.desktop.in mod/src/lxqt-config.desktop.in
 --- orig/src/lxqt-config.desktop.in	2014-10-10 21:29:18.000000000 +0200
 +++ mod/src/lxqt-config.desktop.in	2014-12-02 09:56:36.699162109 +0100
