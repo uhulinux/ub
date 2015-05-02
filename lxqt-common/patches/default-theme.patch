@@ -1,0 +1,10 @@
+diff -Naur orig/config/lxqt.conf mod/config/lxqt.conf
+--- orig/config/lxqt.conf	2015-02-14 14:42:58.000000000 +0100
++++ mod/config/lxqt.conf	2015-05-02 20:03:24.945102042 +0200
+@@ -1,5 +1,5 @@
+ [General]
+-theme=frost
++theme=Frost
+ icon_theme=oxygen
+ single_click_activate=false
+ tool_button_style=ToolButtonTextBesideIcon
