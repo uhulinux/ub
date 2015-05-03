@@ -1,5 +1,6 @@
 cmake
 dbus-dev
+kwindowsystem-dev
 libX11-dev
 libXcomposite-dev
 libXcursor-dev
