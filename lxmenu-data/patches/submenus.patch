@@ -1,9 +1,9 @@
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in patched/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in	2015-02-23 18:46:54.417709638 +0100
++++ patched/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in	2015-05-03 20:03:29.236060803 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
-+_Name=Sound & Video editing
++_Name=Sound Video editing
 +Name[hu]=Hang és videó szerkesztés
 +_Comment=Applications to edit audio/video files
 +Comment[hu]=Hang/videó fájlokat szerkesztő alkalmazások
@@ -11,7 +11,7 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-audiovideoediting.direc
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-discburning.directory.in patched/desktop-directories/lxde-audio-video-sub-discburning.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-discburning.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-discburning.directory.in	2015-02-23 18:38:47.987297560 +0100
++++ patched/desktop-directories/lxde-audio-video-sub-discburning.directory.in	2015-05-03 20:03:29.236060803 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Disc burning
@@ -22,7 +22,7 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-discburning.directory.i
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-midi.directory.in patched/desktop-directories/lxde-audio-video-sub-midi.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-midi.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-midi.directory.in	2015-02-23 18:39:33.107521299 +0100
++++ patched/desktop-directories/lxde-audio-video-sub-midi.directory.in	2015-05-03 20:03:29.236060803 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=MIDI
@@ -33,7 +33,7 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-midi.directory.in patch
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-mixer.directory.in patched/desktop-directories/lxde-audio-video-sub-mixer.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-mixer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-mixer.directory.in	2015-02-23 18:40:20.111754381 +0100
++++ patched/desktop-directories/lxde-audio-video-sub-mixer.directory.in	2015-05-03 20:03:29.236060803 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Mixer
@@ -42,7 +42,7 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-mixer.directory.in patc
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-music.directory.in patched/desktop-directories/lxde-audio-video-sub-music.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-music.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-music.directory.in	2015-02-23 18:47:18.677829938 +0100
++++ patched/desktop-directories/lxde-audio-video-sub-music.directory.in	2015-05-03 20:03:29.236060803 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Music
@@ -53,7 +53,7 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-music.directory.in patc
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-player.directory.in patched/desktop-directories/lxde-audio-video-sub-player.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-player.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-player.directory.in	2015-02-23 18:42:39.772446921 +0100
++++ patched/desktop-directories/lxde-audio-video-sub-player.directory.in	2015-05-03 20:03:29.236060803 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Player
@@ -64,7 +64,7 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-player.directory.in pat
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-recorder.directory.in patched/desktop-directories/lxde-audio-video-sub-recorder.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-recorder.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-recorder.directory.in	2015-02-23 18:44:01.280851099 +0100
++++ patched/desktop-directories/lxde-audio-video-sub-recorder.directory.in	2015-05-03 20:03:29.236060803 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Recorder
@@ -75,7 +75,7 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-recorder.directory.in p
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-sequencer.directory.in patched/desktop-directories/lxde-audio-video-sub-sequencer.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-sequencer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-sequencer.directory.in	2015-02-23 18:44:37.569031042 +0100
++++ patched/desktop-directories/lxde-audio-video-sub-sequencer.directory.in	2015-05-03 20:03:29.236060803 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Sequencer
@@ -84,7 +84,7 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-sequencer.directory.in 
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-tuner.directory.in patched/desktop-directories/lxde-audio-video-sub-tuner.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-tuner.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-tuner.directory.in	2015-02-23 18:44:55.401119467 +0100
++++ patched/desktop-directories/lxde-audio-video-sub-tuner.directory.in	2015-05-03 20:03:29.236060803 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Tuner
@@ -93,7 +93,7 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-tuner.directory.in patc
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-audio-video-sub-tv.directory.in patched/desktop-directories/lxde-audio-video-sub-tv.directory.in
 --- orig/desktop-directories/lxde-audio-video-sub-tv.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-tv.directory.in	2015-02-23 18:45:39.769339477 +0100
++++ patched/desktop-directories/lxde-audio-video-sub-tv.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=TV
@@ -104,7 +104,7 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-tv.directory.in patched
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-action.directory.in patched/desktop-directories/lxde-game-sub-action.directory.in
 --- orig/desktop-directories/lxde-game-sub-action.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-action.directory.in	2015-02-23 18:50:19.438726283 +0100
++++ patched/desktop-directories/lxde-game-sub-action.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Action
@@ -115,7 +115,7 @@ diff -Naur orig/desktop-directories/lxde-game-sub-action.directory.in patched/de
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-adventure.directory.in patched/desktop-directories/lxde-game-sub-adventure.directory.in
 --- orig/desktop-directories/lxde-game-sub-adventure.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-adventure.directory.in	2015-02-23 18:53:44.527743264 +0100
++++ patched/desktop-directories/lxde-game-sub-adventure.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Adventure
@@ -126,7 +126,7 @@ diff -Naur orig/desktop-directories/lxde-game-sub-adventure.directory.in patched
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-arcade.directory.in patched/desktop-directories/lxde-game-sub-arcade.directory.in
 --- orig/desktop-directories/lxde-game-sub-arcade.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-arcade.directory.in	2015-02-23 18:54:13.807888457 +0100
++++ patched/desktop-directories/lxde-game-sub-arcade.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Arcade
@@ -137,18 +137,18 @@ diff -Naur orig/desktop-directories/lxde-game-sub-arcade.directory.in patched/de
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-blocks.directory.in patched/desktop-directories/lxde-game-sub-blocks.directory.in
 --- orig/desktop-directories/lxde-game-sub-blocks.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-blocks.directory.in	2015-02-23 18:55:01.972127290 +0100
++++ patched/desktop-directories/lxde-game-sub-blocks.directory.in	2015-05-03 20:13:56.007168793 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Blocks
 +Name[hu]=Blokkok
-+_Comment=Potyogó blokkok játék (pl. tetris)
-+Comment[hu]=Akciójáték
++_Comment=Falling blocks game
++Comment[hu]=Potyogó blokkok játék (pl. tetris)
 +Icon=gnome-gnometris
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-board.directory.in patched/desktop-directories/lxde-game-sub-board.directory.in
 --- orig/desktop-directories/lxde-game-sub-board.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-board.directory.in	2015-02-23 19:15:08.734111300 +0100
++++ patched/desktop-directories/lxde-game-sub-board.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Board
@@ -159,7 +159,7 @@ diff -Naur orig/desktop-directories/lxde-game-sub-board.directory.in patched/des
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-card.directory.in patched/desktop-directories/lxde-game-sub-card.directory.in
 --- orig/desktop-directories/lxde-game-sub-card.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-card.directory.in	2015-02-23 19:15:26.714200458 +0100
++++ patched/desktop-directories/lxde-game-sub-card.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Card
@@ -170,7 +170,7 @@ diff -Naur orig/desktop-directories/lxde-game-sub-card.directory.in patched/desk
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-kids.directory.in patched/desktop-directories/lxde-game-sub-kids.directory.in
 --- orig/desktop-directories/lxde-game-sub-kids.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-kids.directory.in	2015-02-23 19:16:05.514392858 +0100
++++ patched/desktop-directories/lxde-game-sub-kids.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Kids
@@ -181,7 +181,7 @@ diff -Naur orig/desktop-directories/lxde-game-sub-kids.directory.in patched/desk
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-logic.directory.in patched/desktop-directories/lxde-game-sub-logic.directory.in
 --- orig/desktop-directories/lxde-game-sub-logic.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-logic.directory.in	2015-02-23 19:16:26.594497388 +0100
++++ patched/desktop-directories/lxde-game-sub-logic.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Logic
@@ -192,7 +192,7 @@ diff -Naur orig/desktop-directories/lxde-game-sub-logic.directory.in patched/des
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-roleplaying.directory.in patched/desktop-directories/lxde-game-sub-roleplaying.directory.in
 --- orig/desktop-directories/lxde-game-sub-roleplaying.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-roleplaying.directory.in	2015-02-23 19:20:08.599598252 +0100
++++ patched/desktop-directories/lxde-game-sub-roleplaying.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Role playing
@@ -201,7 +201,7 @@ diff -Naur orig/desktop-directories/lxde-game-sub-roleplaying.directory.in patch
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-simulation.directory.in patched/desktop-directories/lxde-game-sub-simulation.directory.in
 --- orig/desktop-directories/lxde-game-sub-simulation.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-simulation.directory.in	2015-02-23 19:16:56.690646627 +0100
++++ patched/desktop-directories/lxde-game-sub-simulation.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Simulation
@@ -212,7 +212,7 @@ diff -Naur orig/desktop-directories/lxde-game-sub-simulation.directory.in patche
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-sports.directory.in patched/desktop-directories/lxde-game-sub-sports.directory.in
 --- orig/desktop-directories/lxde-game-sub-sports.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-sports.directory.in	2015-02-23 19:17:16.106742906 +0100
++++ patched/desktop-directories/lxde-game-sub-sports.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Sports
@@ -223,7 +223,7 @@ diff -Naur orig/desktop-directories/lxde-game-sub-sports.directory.in patched/de
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-game-sub-strategy.directory.in patched/desktop-directories/lxde-game-sub-strategy.directory.in
 --- orig/desktop-directories/lxde-game-sub-strategy.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-strategy.directory.in	2015-02-23 19:17:40.290862829 +0100
++++ patched/desktop-directories/lxde-game-sub-strategy.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Strategy
@@ -232,9 +232,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-strategy.directory.in patched/
 +Comment[hu]=Stratégiai játék
 +Icon=applications-games
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-chat.directory.in patched/desktop-directories/lxde-internet-and-network-sub-chat.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-chat.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-chat.directory.in	2015-02-23 19:22:11.300206692 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-chat.directory.in patched/desktop-directories/lxde-network-sub-chat.directory.in
+--- orig/desktop-directories/lxde-network-sub-chat.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-chat.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Chat
@@ -243,9 +243,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-chat.directory
 +Comment[hu]=Chat kliens
 +Icon=user-available
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-dialup.directory.in patched/desktop-directories/lxde-internet-and-network-sub-dialup.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-dialup.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-dialup.directory.in	2015-02-23 20:33:21.313380544 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-dialup.directory.in patched/desktop-directories/lxde-network-sub-dialup.directory.in
+--- orig/desktop-directories/lxde-network-sub-dialup.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-dialup.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Dial-up
@@ -254,9 +254,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-dialup.directo
 +Comment[hu]=Tárcsázó program
 +Icon=modem
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-email.directory.in patched/desktop-directories/lxde-internet-and-network-sub-email.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-email.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-email.directory.in	2015-02-23 20:33:49.413519885 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-email.directory.in patched/desktop-directories/lxde-network-sub-email.directory.in
+--- orig/desktop-directories/lxde-network-sub-email.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-email.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Email
@@ -265,9 +265,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-email.director
 +Comment[hu]=Email kliens
 +Icon=mail-send
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-feed.directory.in patched/desktop-directories/lxde-internet-and-network-sub-feed.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-feed.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-feed.directory.in	2015-02-23 20:34:26.101701812 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-feed.directory.in patched/desktop-directories/lxde-network-sub-feed.directory.in
+--- orig/desktop-directories/lxde-network-sub-feed.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-feed.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Feed
@@ -276,9 +276,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-feed.directory
 +Comment[hu]=RSS, podcast és más, feliratkozás-alapú tartalom
 +Icon=applications-internet
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in patched/desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in	2015-02-23 20:35:01.037875051 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-filetransfer.directory.in patched/desktop-directories/lxde-network-sub-filetransfer.directory.in
+--- orig/desktop-directories/lxde-network-sub-filetransfer.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-filetransfer.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=File transfer
@@ -287,9 +287,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-filetransfer.d
 +Comment[hu]=Eszköz fájlátvitelhez (pl. FTP)
 +Icon=emblem-downloads
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in patched/desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in	2015-02-23 20:39:43.755276971 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-hamradio.directory.in patched/desktop-directories/lxde-network-sub-hamradio.directory.in
+--- orig/desktop-directories/lxde-network-sub-hamradio.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-hamradio.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=HAM radio
@@ -298,9 +298,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-hamradio.direc
 +Comment[hu]=Programok amatőr rádiózáshoz
 +Icon=applications-internet
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in patched/desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in	2015-02-23 20:36:49.666413711 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-instantmessaging.directory.in patched/desktop-directories/lxde-network-sub-instantmessaging.directory.in
+--- orig/desktop-directories/lxde-network-sub-instantmessaging.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-instantmessaging.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Instant messaging
@@ -309,9 +309,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-instantmessagi
 +Comment[hu]=Azonnali üzenetküldő kliens
 +Icon=user-available
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in patched/desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in	2015-02-23 20:37:22.194575009 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-ircclient.directory.in patched/desktop-directories/lxde-network-sub-ircclient.directory.in
+--- orig/desktop-directories/lxde-network-sub-ircclient.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-ircclient.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=IRC client
@@ -320,9 +320,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-ircclient.dire
 +Comment[hu]=IRC kliens program
 +Icon=user-available
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-news.directory.in patched/desktop-directories/lxde-internet-and-network-sub-news.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-news.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-news.directory.in	2015-02-23 20:37:59.070757868 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-news.directory.in patched/desktop-directories/lxde-network-sub-news.directory.in
+--- orig/desktop-directories/lxde-network-sub-news.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-news.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=News
@@ -331,9 +331,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-news.directory
 +Comment[hu]=Hírolvasó
 +Icon=internet-news-reader
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-p2p.directory.in patched/desktop-directories/lxde-internet-and-network-sub-p2p.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-p2p.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-p2p.directory.in	2015-02-23 20:32:59.869274208 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-p2p.directory.in patched/desktop-directories/lxde-network-sub-p2p.directory.in
+--- orig/desktop-directories/lxde-network-sub-p2p.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-p2p.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=P2P
@@ -342,9 +342,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-p2p.directory.
 +Comment[hu]=P2P program
 +Icon=emblem-downloads
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in patched/desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in	2015-02-23 20:38:52.943025006 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-remoteaccess.directory.in patched/desktop-directories/lxde-network-sub-remoteaccess.directory.in
+--- orig/desktop-directories/lxde-network-sub-remoteaccess.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-remoteaccess.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Remote access
@@ -353,9 +353,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-remoteaccess.d
 +Comment[hu]=A számítógép távoli elérése
 +Icon=preferences-desktop-remote-desktop
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-telephony.directory.in patched/desktop-directories/lxde-internet-and-network-sub-telephony.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-telephony.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-telephony.directory.in	2015-02-23 20:39:34.463230894 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-telephony.directory.in patched/desktop-directories/lxde-network-sub-telephony.directory.in
+--- orig/desktop-directories/lxde-network-sub-telephony.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-telephony.directory.in	2015-05-03 20:03:29.240060823 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Telephony
@@ -364,9 +364,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-telephony.dire
 +Comment[hu]=Telefonálás számítógépen keresztül
 +Icon=call-start
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in patched/desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in	2015-02-23 20:40:08.831401316 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-videoconference.directory.in patched/desktop-directories/lxde-network-sub-videoconference.directory.in
+--- orig/desktop-directories/lxde-network-sub-videoconference.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-videoconference.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Video conference
@@ -375,9 +375,9 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-videoconferenc
 +Comment[hu]=Videókonferencia program
 +Icon=camera-web
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in patched/desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in
---- orig/desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in	2015-02-23 20:40:40.679559243 +0100
+diff -Naur orig/desktop-directories/lxde-network-sub-webbrowser.directory.in patched/desktop-directories/lxde-network-sub-webbrowser.directory.in
+--- orig/desktop-directories/lxde-network-sub-webbrowser.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/desktop-directories/lxde-network-sub-webbrowser.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Web browser
@@ -386,7 +386,7 @@ diff -Naur orig/desktop-directories/lxde-internet-and-network-sub-webbrowser.dir
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-system-tools-sub-emulator.directory.in patched/desktop-directories/lxde-system-tools-sub-emulator.directory.in
 --- orig/desktop-directories/lxde-system-tools-sub-emulator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-emulator.directory.in	2015-02-23 20:56:35.740295133 +0100
++++ patched/desktop-directories/lxde-system-tools-sub-emulator.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Emulator
@@ -397,7 +397,7 @@ diff -Naur orig/desktop-directories/lxde-system-tools-sub-emulator.directory.in 
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-system-tools-sub-filemanager.directory.in patched/desktop-directories/lxde-system-tools-sub-filemanager.directory.in
 --- orig/desktop-directories/lxde-system-tools-sub-filemanager.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-filemanager.directory.in	2015-02-23 20:58:38.120901986 +0100
++++ patched/desktop-directories/lxde-system-tools-sub-filemanager.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=File manager
@@ -406,7 +406,7 @@ diff -Naur orig/desktop-directories/lxde-system-tools-sub-filemanager.directory.
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-system-tools-sub-filesystem.directory.in patched/desktop-directories/lxde-system-tools-sub-filesystem.directory.in
 --- orig/desktop-directories/lxde-system-tools-sub-filesystem.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-filesystem.directory.in	2015-02-23 21:06:40.331293138 +0100
++++ patched/desktop-directories/lxde-system-tools-sub-filesystem.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Filesystem
@@ -417,7 +417,7 @@ diff -Naur orig/desktop-directories/lxde-system-tools-sub-filesystem.directory.i
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-system-tools-sub-monitor.directory.in patched/desktop-directories/lxde-system-tools-sub-monitor.directory.in
 --- orig/desktop-directories/lxde-system-tools-sub-monitor.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-monitor.directory.in	2015-02-23 20:59:54.093278713 +0100
++++ patched/desktop-directories/lxde-system-tools-sub-monitor.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Monitor
@@ -428,7 +428,7 @@ diff -Naur orig/desktop-directories/lxde-system-tools-sub-monitor.directory.in p
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in patched/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in
 --- orig/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in	2015-02-23 21:00:21.513414682 +0100
++++ patched/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Terminal emulator
@@ -439,7 +439,7 @@ diff -Naur orig/desktop-directories/lxde-system-tools-sub-terminalemulator.direc
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-archiving.directory.in patched/desktop-directories/lxde-utility-sub-archiving.directory.in
 --- orig/desktop-directories/lxde-utility-sub-archiving.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-archiving.directory.in	2015-02-23 21:01:11.625663175 +0100
++++ patched/desktop-directories/lxde-utility-sub-archiving.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Archiving
@@ -450,7 +450,7 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-archiving.directory.in patc
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-calculator.directory.in patched/desktop-directories/lxde-utility-sub-calculator.directory.in
 --- orig/desktop-directories/lxde-utility-sub-calculator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-calculator.directory.in	2015-02-23 20:58:11.412769548 +0100
++++ patched/desktop-directories/lxde-utility-sub-calculator.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Calculator
@@ -459,7 +459,7 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-calculator.directory.in pat
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-clock.directory.in patched/desktop-directories/lxde-utility-sub-clock.directory.in
 --- orig/desktop-directories/lxde-utility-sub-clock.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-clock.directory.in	2015-02-23 20:57:53.428680369 +0100
++++ patched/desktop-directories/lxde-utility-sub-clock.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Clock
@@ -468,7 +468,7 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-clock.directory.in patched/
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-compression.directory.in patched/desktop-directories/lxde-utility-sub-compression.directory.in
 --- orig/desktop-directories/lxde-utility-sub-compression.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-compression.directory.in	2015-02-23 21:01:55.961883026 +0100
++++ patched/desktop-directories/lxde-utility-sub-compression.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Compression
@@ -479,7 +479,7 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-compression.directory.in pa
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-filetool.directory.in patched/desktop-directories/lxde-utility-sub-filetool.directory.in
 --- orig/desktop-directories/lxde-utility-sub-filetool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-filetool.directory.in	2015-02-23 21:02:24.050022308 +0100
++++ patched/desktop-directories/lxde-utility-sub-filetool.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=File tool
@@ -490,7 +490,7 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-filetool.directory.in patch
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-telephonytool.directory.in patched/desktop-directories/lxde-utility-sub-telephonytool.directory.in
 --- orig/desktop-directories/lxde-utility-sub-telephonytool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-telephonytool.directory.in	2015-02-23 21:03:20.242300950 +0100
++++ patched/desktop-directories/lxde-utility-sub-telephonytool.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Telephony tool
@@ -501,7 +501,7 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-telephonytool.directory.in 
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-texteditor.directory.in patched/desktop-directories/lxde-utility-sub-texteditor.directory.in
 --- orig/desktop-directories/lxde-utility-sub-texteditor.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-texteditor.directory.in	2015-02-23 21:03:48.906443088 +0100
++++ patched/desktop-directories/lxde-utility-sub-texteditor.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Text editor
@@ -512,7 +512,7 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-texteditor.directory.in pat
 +Type=Directory
 diff -Naur orig/desktop-directories/lxde-utility-sub-texttool.directory.in patched/desktop-directories/lxde-utility-sub-texttool.directory.in
 --- orig/desktop-directories/lxde-utility-sub-texttool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-texttool.directory.in	2015-02-23 21:04:20.146598000 +0100
++++ patched/desktop-directories/lxde-utility-sub-texttool.directory.in	2015-05-03 20:03:29.244060842 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Text tool
@@ -522,9 +522,9 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-texttool.directory.in patch
 +Icon=accessories-text-editor
 +Type=Directory
 diff -Naur orig/desktop-directories/Makefile.am patched/desktop-directories/Makefile.am
---- orig/desktop-directories/Makefile.am	2011-07-23 22:05:34.000000000 +0200
-+++ patched/desktop-directories/Makefile.am	2015-02-23 18:34:14.857943185 +0100
-@@ -4,12 +4,48 @@
+--- orig/desktop-directories/Makefile.am	2014-09-12 13:41:16.000000000 +0200
++++ patched/desktop-directories/Makefile.am	2015-05-03 20:41:22.111331383 +0200
+@@ -4,9 +4,31 @@
  directorydir = $(datadir)/desktop-directories
  directory_in_files =				\
  	lxde-audio-video.directory.in		\
@@ -556,98 +556,28 @@ diff -Naur orig/desktop-directories/Makefile.am patched/desktop-directories/Make
  	lxde-graphics.directory.in		\
  	lxde-hardware.directory.in		\
  	lxde-internet-and-network.directory.in	\
-+	lxde-internet-and-network-sub-chat.directory.in \
-+	lxde-internet-and-network-sub-dialup.directory.in \
-+	lxde-internet-and-network-sub-email.directory.in \
-+	lxde-internet-and-network-sub-feed.directory.in \
-+	lxde-internet-and-network-sub-filetransfer.directory.in \
-+	lxde-internet-and-network-sub-hamradio.directory.in \
-+	lxde-internet-and-network-sub-instantmessaging.directory.in \
-+	lxde-internet-and-network-sub-ircclient.directory.in \
-+	lxde-internet-and-network-sub-news.directory.in \
-+	lxde-internet-and-network-sub-p2p.directory.in \
-+	lxde-internet-and-network-sub-remoteaccess.directory.in \
-+	lxde-internet-and-network-sub-telephony.directory.in \
-+	lxde-internet-and-network-sub-videoconference.directory.in \
-+	lxde-internet-and-network-sub-webbrowser.directory.in \
- 	lxde-look-and-feel.directory.in		\
+@@ -14,6 +36,20 @@
  	lxde-menu-applications.directory.in	\
  	lxde-menu-system.directory.in		\
-@@ -21,8 +57,21 @@
- 	lxde-settings-system.directory.in	\
- 	lxde-system.directory.in		\
- 	lxde-system-tools.directory.in		\
-+	lxde-system-tools-sub-emulator.directory.in \
-+	lxde-system-tools-sub-filemanager.directory.in \
-+	lxde-system-tools-sub-filesystem.directory.in \
-+	lxde-system-tools-sub-monitor.directory.in \
-+	lxde-system-tools-sub-terminalemulator.directory.in \
- 	lxde-utility-accessibility.directory.in	\
- 	lxde-utility.directory.in		\
-+	lxde-utility-sub-archiving.directory.in \
-+	lxde-utility-sub-calculator.directory.in \
-+	lxde-utility-sub-clock.directory.in \
-+	lxde-utility-sub-compression.directory.in \
-+	lxde-utility-sub-filetool.directory.in \
-+	lxde-utility-sub-telephonytool.directory.in \
-+	lxde-utility-sub-texteditor.directory.in \
-+	lxde-utility-sub-texttool.directory.in \
- 	$(NULL)
- 
- directory_DATA = $(directory_in_files:.directory.in=.directory)
-diff -Naur orig/desktop-directories/Makefile.in patched/desktop-directories/Makefile.in
---- orig/desktop-directories/Makefile.in	2011-07-23 22:05:51.000000000 +0200
-+++ patched/desktop-directories/Makefile.in	2015-02-23 18:34:14.857943185 +0100
-@@ -180,12 +180,48 @@
- directorydir = $(datadir)/desktop-directories
- directory_in_files = \
- 	lxde-audio-video.directory.in		\
-+	lxde-audio-video-sub-audiovideoediting.directory.in \
-+	lxde-audio-video-sub-discburning.directory.in \
-+	lxde-audio-video-sub-midi.directory.in \
-+	lxde-audio-video-sub-mixer.directory.in \
-+	lxde-audio-video-sub-music.directory.in \
-+	lxde-audio-video-sub-player.directory.in \
-+	lxde-audio-video-sub-recorder.directory.in \
-+	lxde-audio-video-sub-sequencer.directory.in \
-+	lxde-audio-video-sub-tuner.directory.in \
-+	lxde-audio-video-sub-tv.directory.in \
- 	lxde-development.directory.in		\
- 	lxde-education.directory.in		\
- 	lxde-game.directory.in			\
-+	lxde-game-sub-action.directory.in \
-+	lxde-game-sub-adventure.directory.in \
-+	lxde-game-sub-arcade.directory.in \
-+	lxde-game-sub-blocks.directory.in \
-+	lxde-game-sub-board.directory.in \
-+	lxde-game-sub-card.directory.in \
-+	lxde-game-sub-kids.directory.in \
-+	lxde-game-sub-logic.directory.in \
-+	lxde-game-sub-roleplaying.directory.in \
-+	lxde-game-sub-simulation.directory.in \
-+	lxde-game-sub-sports.directory.in \
-+	lxde-game-sub-strategy.directory.in \
- 	lxde-graphics.directory.in		\
- 	lxde-hardware.directory.in		\
- 	lxde-internet-and-network.directory.in	\
-+	lxde-internet-and-network-sub-chat.directory.in \
-+	lxde-internet-and-network-sub-dialup.directory.in \
-+	lxde-internet-and-network-sub-email.directory.in \
-+	lxde-internet-and-network-sub-feed.directory.in \
-+	lxde-internet-and-network-sub-filetransfer.directory.in \
-+	lxde-internet-and-network-sub-hamradio.directory.in \
-+	lxde-internet-and-network-sub-instantmessaging.directory.in \
-+	lxde-internet-and-network-sub-ircclient.directory.in \
-+	lxde-internet-and-network-sub-news.directory.in \
-+	lxde-internet-and-network-sub-p2p.directory.in \
-+	lxde-internet-and-network-sub-remoteaccess.directory.in \
-+	lxde-internet-and-network-sub-telephony.directory.in \
-+	lxde-internet-and-network-sub-videoconference.directory.in \
-+	lxde-internet-and-network-sub-webbrowser.directory.in \
- 	lxde-look-and-feel.directory.in		\
- 	lxde-menu-applications.directory.in	\
- 	lxde-menu-system.directory.in		\
-@@ -197,8 +233,21 @@
+ 	lxde-network.directory.in		\
++	lxde-network-sub-chat.directory.in \
++	lxde-network-sub-dialup.directory.in \
++	lxde-network-sub-email.directory.in \
++	lxde-network-sub-feed.directory.in \
++	lxde-network-sub-filetransfer.directory.in \
++	lxde-network-sub-hamradio.directory.in \
++	lxde-network-sub-instantmessaging.directory.in \
++	lxde-network-sub-ircclient.directory.in \
++	lxde-network-sub-news.directory.in \
++	lxde-network-sub-p2p.directory.in \
++	lxde-network-sub-remoteaccess.directory.in \
++	lxde-network-sub-telephony.directory.in \
++	lxde-network-sub-videoconference.directory.in \
++	lxde-network-sub-webbrowser.directory.in \
+ 	lxde-office.directory.in		\
+ 	lxde-other.directory.in			\
+ 	lxde-personal.directory.in		\
+@@ -22,8 +58,21 @@
  	lxde-settings-system.directory.in	\
  	lxde-system.directory.in		\
  	lxde-system-tools.directory.in		\
@@ -670,23 +600,22 @@ diff -Naur orig/desktop-directories/Makefile.in patched/desktop-directories/Make
  
  directory_DATA = $(directory_in_files:.directory.in=.directory)
 diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.menu
---- orig/layout/lxde-applications.menu	2011-07-23 22:05:34.000000000 +0200
-+++ patched/layout/lxde-applications.menu	2015-02-23 18:34:14.857943185 +0100
-@@ -26,8 +26,73 @@
- 			 applications here -->
- 				<Not><Category>Accessibility</Category></Not>
+--- orig/layout/lxde-applications.menu	2014-09-12 13:41:16.000000000 +0200
++++ patched/layout/lxde-applications.menu	2015-05-03 20:43:35.279991730 +0200
+@@ -28,6 +28,72 @@
  				<Not><Category>System</Category></Not>
-+				<!-- Exclude helyett -->
-+				<Not><Category>Archiving</Category></Not>
-+        		<Not><Category>Calculator</Category></Not>
-+        		<Not><Category>Clock</Category></Not>
-+        		<Not><Category>Compression</Category></Not>
-+        		<Not><Category>FileTools</Category></Not>
-+        		<Not><Category>TelephonyTools</Category></Not>
-+        		<Not><Category>TextEditor</Category></Not>
-+        		<Not><Category>TextTools</Category></Not>
  			</And>
  		</Include>
++		<Exclude>
++			<Category>Archiving</Category>
++        	<Category>Calculator</Category>
++        	<Category>Clock</Category>
++        	<Category>Compression</Category>
++        	<Category>FileTools</Category>
++        	<Category>TelephonyTools</Category>
++        	<Category>TextEditor</Category>
++        	<Category>TextTools</Category>
++        </Exclude>
 +    	<Menu>
 +      		<Name>Archiving</Name>
 +      		<Directory>lxde-utility-sub-archiving.directory</Directory>
@@ -746,25 +675,24 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
  	</Menu> <!-- End Accessories -->
  
  	<!-- Accessibility submenu -->
-@@ -72,8 +137,105 @@
- 		<Include>
- 			<And>
+@@ -74,6 +140,104 @@
  				<Category>Game</Category>
-+				<!-- Exclude helyett -->
-+				<Not><Category>ActionGame</Category></Not>
-+				<Not><Category>AdventureGame</Category></Not>
-+				<Not><Category>ArcadeGame</Category></Not>
-+				<Not><Category>BoardGame</Category></Not>
-+				<Not><Category>BlocksGame</Category></Not>
-+				<Not><Category>CardGame</Category></Not>
-+				<Not><Category>KidsGame</Category></Not>
-+				<Not><Category>LogicGame</Category></Not>
-+				<Not><Category>RolePlaying</Category></Not>
-+				<Not><Category>Simulation</Category></Not>
-+				<Not><Category>SportsGame</Category></Not>
-+				<Not><Category>StrategyGame</Category></Not>
  			</And>
  		</Include>
++		<Exclude>
++			<Category>ActionGame</Category>
++			<Category>AdventureGame</Category>
++			<Category>ArcadeGame</Category>
++			<Category>BoardGame</Category>
++			<Category>BlocksGame</Category>
++			<Category>CardGame</Category>
++			<Category>KidsGame</Category>
++			<Category>LogicGame</Category>
++			<Category>RolePlaying</Category>
++			<Category>Simulation</Category>
++			<Category>SportsGame</Category>
++			<Category>StrategyGame</Category>
++		</Exclude>
 +		<Menu>
 +			<Name>Action</Name>
 +			<Directory>lxde-game-sub-action.directory</Directory>
@@ -852,126 +780,120 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
  	</Menu> <!-- End Games -->
  
  	<!-- Graphics -->
-@@ -91,12 +253,125 @@
- 	<!-- Internet -->
- 	<Menu>
- 		<Name>Internet</Name>
--		<Directory>lxde-network.directory</Directory>
-+		<Directory>lxde-internet-and-network.directory</Directory>
- 		<Include>
- 			<And>
+@@ -97,6 +261,120 @@
  				<Category>Network</Category>
-+				<!-- Exclude helyett -->
-+				<Not><Category>Chat</Category></Not>
-+				<Not><Category>Dialup</Category></Not>
-+				<Not><Category>Email</Category></Not>
-+				<Not><Category>Feed</Category></Not>
-+				<Not><Category>FileTransfer</Category></Not>
-+				<Not><Category>HamRadio</Category></Not>
-+				<Not><Category>InstantMessaging</Category></Not>
-+				<Not><Category>IRCClient</Category></Not>
-+				<Not><Category>News</Category></Not>
-+				<Not><Category>P2P</Category></Not>
-+				<Not><Category>RemoteAccess</Category></Not>
-+				<Not><Category>Telephony</Category></Not>
-+				<Not><Category>VideoConference</Category></Not>
-+				<Not><Category>WebBrowser</Category></Not>
  			</And>
  		</Include>
++		<Exclude>
++			<Category>Chat</Category>
++			<Category>Dialup</Category>
++			<Category>Email</Category>
++			<Category>Feed</Category>
++			<Category>FileTransfer</Category>
++			<Category>HamRadio</Category>
++			<Category>InstantMessaging</Category>
++			<Category>IRCClient</Category>
++			<Category>News</Category>
++			<Category>P2P</Category>
++			<Category>RemoteAccess</Category>
++			<Category>Telephony</Category>
++			<Category>VideoConference</Category>
++			<Category>WebBrowser</Category>
++		</Exclude>
 +		<Menu>
 +			<Name>Chat</Name>
-+			<Directory>lxde-internet-and-network-sub-chat.directory</Directory>
++			<Directory>lxde-network-sub-chat.directory</Directory>
 +			<Include>
 +				<Category>Chat</Category>
 +			</Include>
 +		</Menu>    
 +		<Menu>
 +			<Name>Dial-up</Name>
-+			<Directory>lxde-internet-and-network-sub-dialup.directory</Directory>
++			<Directory>lxde-network-sub-dialup.directory</Directory>
 +			<Include>
 +				<Category>Dialup</Category>
 +			</Include>
 +		</Menu>   
 +		<Menu>
 +			<Name>Email</Name>
-+			<Directory>lxde-internet-and-network-sub-email.directory</Directory>
++			<Directory>lxde-network-sub-email.directory</Directory>
 +			<Include>
 +				<Category>Email</Category>
 +			</Include>
 +		</Menu>  
 +		<Menu>
 +			<Name>Feed</Name>
-+			<Directory>lxde-internet-and-network-sub-feed.directory</Directory>
++			<Directory>lxde-network-sub-feed.directory</Directory>
 +			<Include>
 +				<Category>Feed</Category>
 +			</Include>
 +		</Menu>   
 +		<Menu>
 +			<Name>File transfer</Name>
-+			<Directory>lxde-internet-and-network-sub-filetransfer.directory</Directory>
++			<Directory>lxde-network-sub-filetransfer.directory</Directory>
 +			<Include>
 +				<Category>FileTransfer</Category>
 +			</Include>
 +		</Menu>
 +		<Menu>
 +			<Name>Ham radio</Name>
-+			<Directory>lxde-internet-and-network-sub-hamradio.directory</Directory>
++			<Directory>lxde-network-sub-hamradio.directory</Directory>
 +			<Include>
 +				<Category>HamRadio</Category>
 +			</Include>
 +		</Menu>
 +		<Menu>
 +			<Name>Instant messaging</Name>
-+			<Directory>lxde-internet-and-network-sub-instantmessaging.directory</Directory>
++			<Directory>lxde-network-sub-instantmessaging.directory</Directory>
 +			<Include>
 +				<Category>InstantMessaging</Category>
 +			</Include>
 +		</Menu>
 +		<Menu>
 +			<Name>IRC client</Name>
-+			<Directory>lxde-internet-and-network-sub-ircclient.directory</Directory>
++			<Directory>lxde-network-sub-ircclient.directory</Directory>
 +			<Include>
 +				<Category>IRCClient</Category>
 +			</Include>
 +		</Menu>
 +		<Menu>
 +			<Name>News</Name>
-+			<Directory>lxde-internet-and-network-sub-news.directory</Directory>
++			<Directory>lxde-network-sub-news.directory</Directory>
 +			<Include>
 +				<Category>News</Category>
 +			</Include>
 +		</Menu>
 +		<Menu>
 +			<Name>P2P</Name>
-+			<Directory>lxde-internet-and-network-sub-p2p.directory</Directory>
++			<Directory>lxde-network-sub-p2p.directory</Directory>
 +			<Include>
 +				<Category>P2P</Category>
 +			</Include>
 +		</Menu>    
 +		<Menu>
 +			<Name>Remote access</Name>
-+			<Directory>lxde-internet-and-network-sub-remoteaccess.directory</Directory>
++			<Directory>lxde-network-sub-remoteaccess.directory</Directory>
 +			<Include>
 +				<Category>RemoteAccess</Category>
 +			</Include>
 +		</Menu>   
 +		<Menu>
 +			<Name>Telephony</Name>
-+			<Directory>lxde-internet-and-network-sub-telephony.directory</Directory>
++			<Directory>lxde-network-sub-telephony.directory</Directory>
 +			<Include>
 +				<Category>telephony</Category>
 +			</Include>
 +		</Menu>   
 +		<Menu>
 +			<Name>Video conference</Name>
-+			<Directory>lxde-internet-and-network-sub-videoconference.directory</Directory>
++			<Directory>lxde-network-sub-videoconference.directory</Directory>
 +			<Include>
 +				<Category>VideoConference</Category>
 +			</Include>
 +		</Menu>
 +		<Menu>
 +			<Name>Web browser</Name>
-+			<Directory>lxde-internet-and-network-sub-webbrowser.directory</Directory>
++			<Directory>lxde-network-sub-webbrowser.directory</Directory>
 +			<Include>
 +				<Category>WebBrowser</Category>
 +			</Include>
@@ -979,25 +901,24 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
  	</Menu>	 <!-- End Internet -->
  
  	<!-- Multimedia -->
-@@ -106,8 +381,89 @@
- 		<Include>
- 			<And>
+@@ -108,6 +386,88 @@
  				<Category>AudioVideo</Category>
-+				<!-- Exclude helyett -->
-+			<Not><Category>AudioVideoEditing</Category></Not>
-+			<Not><Category>DiscBurning</Category></Not>
-+			<Not><Category>Midi</Category></Not>
-+			<Not><Category>Mixer</Category></Not>
-+			<Not><Category>Music</Category></Not>
-+			<Not><Category>Player</Category></Not>
-+			<Not><Category>Recorder</Category></Not>
-+			<Not><Category>Sequencer</Category></Not>
-+			<Not><Category>Tuner</Category></Not>
-+			<Not><Category>TV</Category></Not>
  			</And>
  		</Include>
++		<Exclude>
++			<Category>AudioVideoEditing</Category>
++			<Category>DiscBurning</Category>
++			<Category>Midi</Category>
++			<Category>Mixer</Category>
++			<Category>Music</Category>
++			<Category>Player</Category>
++			<Category>Recorder</Category>
++			<Category>Sequencer</Category>
++			<Category>Tuner</Category>
++			<Category>TV</Category>
++		</Exclude>
 +		<Menu>
-+			<Name>Audio/Video editing</Name>
++			<Name>Audio Video editing</Name>
 +			<Directory>lxde-audio-video-sub-audiovideoediting.directory</Directory>
 +			<Include>
 +				<Category>AudioVideoEditing</Category>
@@ -1069,18 +990,17 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
  	</Menu>	 <!-- End Multimedia -->
  
  	<!-- Office -->
-@@ -130,8 +486,49 @@
- 				<Category>System</Category>
- 				<Not><Category>Settings</Category></Not>
+@@ -132,6 +492,48 @@
  				<Not><Category>PackageManager</Category></Not>
-+				<!-- Exclude helyett -->
-+				<Not><Category>Emulator</Category></Not>
-+				<Not><Category>FileManager</Category></Not>
-+				<Not><Category>Filesystem</Category></Not>
-+				<Not><Category>Monitor</Category></Not>
-+				<Not><Category>TerminalEmulator</Category></Not>
  			</And>
  		</Include>
++		<Exclude>
++			<Category>Emulator</Category>
++			<Category>FileManager</Category>
++			<Category>Filesystem</Category>
++			<Category>Monitor</Category>
++			<Category>TerminalEmulator</Category>
++		</Exclude>
 +		<Menu>
 +			<Name>Emulator</Name>
 +			<Directory>lxde-system-tools-sub-emulator.directory</Directory>
@@ -1119,169 +1039,3 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
  	</Menu>	 <!-- End System Tools -->
  
  	<!-- Other -->
-diff -Naur orig/po/hu.po patched/po/hu.po
---- orig/po/hu.po	2011-07-23 22:05:34.000000000 +0200
-+++ patched/po/hu.po	2015-02-23 21:19:00.002960972 +0100
-@@ -9,23 +9,24 @@
- msgstr ""
- "Project-Id-Version: lxmenu-data\n"
- "Report-Msgid-Bugs-To: \n"
--"POT-Creation-Date: 2011-07-23 11:59+0200\n"
--"PO-Revision-Date: 2010-01-27 16:56+0100\n"
--"Last-Translator: Laszlo Dvornik <dvornik@gnome.hu>\n"
-+"POT-Creation-Date: 2014-07-19 16:18+0200\n"
-+"PO-Revision-Date: 2014-07-19 16:31+0100\n"
-+"Last-Translator: rezso <rezso@rezso.net>\n"
- "Language-Team: Hungarian <hu@li.org>\n"
- "Language: hu\n"
- "MIME-Version: 1.0\n"
- "Content-Type: text/plain; charset=UTF-8\n"
- "Content-Transfer-Encoding: 8bit\n"
-+"X-Generator: Poedit 1.6.5\n"
- 
- #: ../desktop-directories/lxde-audio-video.directory.in.h:1
--msgid "Multimedia menu"
--msgstr "Multimédia menü"
--
--#: ../desktop-directories/lxde-audio-video.directory.in.h:2
- msgid "Sound & Video"
- msgstr "Hang és videó"
- 
-+#: ../desktop-directories/lxde-audio-video.directory.in.h:2
-+msgid "Multimedia menu"
-+msgstr "Multimédia menü"
-+
- #: ../desktop-directories/lxde-development.directory.in.h:1
- msgid "Programming"
- msgstr "Fejlesztés"
-@@ -83,14 +84,14 @@
- msgstr "Alkalmazások"
- 
- #: ../desktop-directories/lxde-menu-system.directory.in.h:1
--msgid "Personal preferences and administration settings"
--msgstr "Személyes és adminisztrációs beállítások"
--
--#: ../desktop-directories/lxde-menu-system.directory.in.h:2
- #: ../desktop-directories/lxde-system.directory.in.h:1
- msgid "System"
- msgstr "Rendszer"
- 
-+#: ../desktop-directories/lxde-menu-system.directory.in.h:2
-+msgid "Personal preferences and administration settings"
-+msgstr "Személyes és adminisztrációs beállítások"
-+
- #: ../desktop-directories/lxde-network.directory.in.h:1
- msgid "Internet"
- msgstr "Internet"
-@@ -108,13 +109,13 @@
- msgstr "Irodai alkalmazások"
- 
- #: ../desktop-directories/lxde-other.directory.in.h:1
--msgid "Applications that did not fit in other categories"
--msgstr "Más kategóriákba be nem sorolható alkalmazások"
--
--#: ../desktop-directories/lxde-other.directory.in.h:2
- msgid "Other"
- msgstr "Egyéb"
- 
-+#: ../desktop-directories/lxde-other.directory.in.h:2
-+msgid "Applications that did not fit in other categories"
-+msgstr "Más kategóriákba be nem sorolható alkalmazások"
-+
- #: ../desktop-directories/lxde-personal.directory.in.h:1
- msgid "Personal"
- msgstr "Személyes"
-@@ -124,13 +125,13 @@
- msgstr "Személyes beállítások"
- 
- #: ../desktop-directories/lxde-settings.directory.in.h:1
--msgid "Personal preferences"
--msgstr "Személyes beállítások"
--
--#: ../desktop-directories/lxde-settings.directory.in.h:2
- msgid "Preferences"
- msgstr "Beállítások"
- 
-+#: ../desktop-directories/lxde-settings.directory.in.h:2
-+msgid "Personal preferences"
-+msgstr "Személyes beállítások"
-+
- #: ../desktop-directories/lxde-settings-system.directory.in.h:1
- msgid "Administration"
- msgstr "Adminisztráció"
-diff -Naur orig/po/POTFILES.in patched/po/POTFILES.in
---- orig/po/POTFILES.in	2011-07-23 22:05:34.000000000 +0200
-+++ patched/po/POTFILES.in	2015-02-23 18:34:14.861943205 +0100
-@@ -1,12 +1,48 @@
- # List of source files containing translatable strings.
- # Please keep this file sorted alphabetically.
- desktop-directories/lxde-audio-video.directory.in
-+desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in
-+desktop-directories/lxde-audio-video-sub-discburning.directory.in
-+desktop-directories/lxde-audio-video-sub-midi.directory.in
-+desktop-directories/lxde-audio-video-sub-mixer.directory.in
-+desktop-directories/lxde-audio-video-sub-music.directory.in
-+desktop-directories/lxde-audio-video-sub-player.directory.in
-+desktop-directories/lxde-audio-video-sub-recorder.directory.in
-+desktop-directories/lxde-audio-video-sub-sequencer.directory.in
-+desktop-directories/lxde-audio-video-sub-tuner.directory.in
-+desktop-directories/lxde-audio-video-sub-tv.directory.in
- desktop-directories/lxde-development.directory.in
- desktop-directories/lxde-education.directory.in
- desktop-directories/lxde-game.directory.in
-+desktop-directories/lxde-game-sub-action.directory.in
-+desktop-directories/lxde-game-sub-adventure.directory.in
-+desktop-directories/lxde-game-sub-arcade.directory.in
-+desktop-directories/lxde-game-sub-blocks.directory.in
-+desktop-directories/lxde-game-sub-board.directory.in
-+desktop-directories/lxde-game-sub-card.directory.in
-+desktop-directories/lxde-game-sub-kids.directory.in
-+desktop-directories/lxde-game-sub-logic.directory.in
-+desktop-directories/lxde-game-sub-roleplaying.directory.in
-+desktop-directories/lxde-game-sub-simulation.directory.in
-+desktop-directories/lxde-game-sub-sports.directory.in
-+desktop-directories/lxde-game-sub-strategy.directory.in
- desktop-directories/lxde-graphics.directory.in
- desktop-directories/lxde-hardware.directory.in
- desktop-directories/lxde-internet-and-network.directory.in
-+desktop-directories/lxde-internet-and-network-sub-chat.directory.in
-+desktop-directories/lxde-internet-and-network-sub-dialup.directory.in
-+desktop-directories/lxde-internet-and-network-sub-email.directory.in
-+desktop-directories/lxde-internet-and-network-sub-feed.directory.in
-+desktop-directories/lxde-internet-and-network-sub-filetransfer.directory.in
-+desktop-directories/lxde-internet-and-network-sub-hamradio.directory.in
-+desktop-directories/lxde-internet-and-network-sub-instantmessaging.directory.in
-+desktop-directories/lxde-internet-and-network-sub-ircclient.directory.in
-+desktop-directories/lxde-internet-and-network-sub-news.directory.in
-+desktop-directories/lxde-internet-and-network-sub-p2p.directory.in
-+desktop-directories/lxde-internet-and-network-sub-remoteaccess.directory.in
-+desktop-directories/lxde-internet-and-network-sub-telephony.directory.in
-+desktop-directories/lxde-internet-and-network-sub-videoconference.directory.in
-+desktop-directories/lxde-internet-and-network-sub-webbrowser.directory.in
- desktop-directories/lxde-look-and-feel.directory.in
- desktop-directories/lxde-menu-applications.directory.in
- desktop-directories/lxde-menu-system.directory.in
-@@ -14,10 +50,22 @@
- desktop-directories/lxde-office.directory.in
- desktop-directories/lxde-other.directory.in
- desktop-directories/lxde-personal.directory.in
--desktop-directories/lxde-science.directory.in
- desktop-directories/lxde-settings.directory.in
- desktop-directories/lxde-settings-system.directory.in
- desktop-directories/lxde-system.directory.in
- desktop-directories/lxde-system-tools.directory.in
-+desktop-directories/lxde-system-tools-sub-emulator.directory.in
-+desktop-directories/lxde-system-tools-sub-filemanager.directory.in
-+desktop-directories/lxde-system-tools-sub-filesystem.directory.in
-+desktop-directories/lxde-system-tools-sub-monitor.directory.in
-+desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in
- desktop-directories/lxde-utility-accessibility.directory.in
- desktop-directories/lxde-utility.directory.in
-+desktop-directories/lxde-utility-sub-archiving.directory.in
-+desktop-directories/lxde-utility-sub-calculator.directory.in
-+desktop-directories/lxde-utility-sub-clock.directory.in
-+desktop-directories/lxde-utility-sub-compression.directory.in
-+desktop-directories/lxde-utility-sub-filetool.directory.in
-+desktop-directories/lxde-utility-sub-telephonytool.directory.in
-+desktop-directories/lxde-utility-sub-texteditor.directory.in
-+desktop-directories/lxde-utility-sub-texttool.directory.in
