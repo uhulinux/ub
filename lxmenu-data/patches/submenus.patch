@@ -982,7 +982,7 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
 +		</Menu>
 +		<Menu>
 +			<Name>TV</Name>
-+			<Directory>lxde-audio-video-tv.directory</Directory>
++			<Directory>lxde-audio-video-sub-tv.directory</Directory>
 +			<Include>
 +				<Category>TV</Category>
 +			</Include>

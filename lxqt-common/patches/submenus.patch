@@ -384,7 +384,7 @@ diff -Naur orig/menu/lxqt-applications.menu mod/menu/lxqt-applications.menu
 +		</Menu>
 +		<Menu>
 +			<Name>TV</Name>
-+			<Directory>lxde-audio-video-tv.directory</Directory>
++			<Directory>lxde-audio-video-sub-tv.directory</Directory>
 +			<Include>
 +				<Category>TV</Category>
 +			</Include>
