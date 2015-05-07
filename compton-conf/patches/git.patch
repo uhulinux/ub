@@ -1,0 +1,429 @@
+diff -Naur compton-conf-0.1.0/cmake/LXQtTranslateDesktop.cmake compton-conf-master/cmake/LXQtTranslateDesktop.cmake
+--- compton-conf-0.1.0/cmake/LXQtTranslateDesktop.cmake	1970-01-01 01:00:00.000000000 +0100
++++ compton-conf-master/cmake/LXQtTranslateDesktop.cmake	2015-04-24 10:22:57.000000000 +0200
+@@ -0,0 +1,107 @@
++#=============================================================================
++# The lxqt_translate_desktop() function was copied from the the
++# LXQt LxQtTranste.cmake
++#
++# Original Author: Alexander Sokolov <sokoloff.a@gmail.com>
++#
++# funtion lxqt_translate_desktop(_RESULT
++#                           SOURCES <sources>
++#                           [TRANSLATION_DIR] translation_directory
++#                    )
++#     Output:
++#       _RESULT The generated .desktop (.desktop) files
++#
++#     Input:
++#
++#       SOURCES List of input desktop files (.destktop.in) to be translated
++#               (merged), relative to the CMakeList.txt.
++#
++#       TRANSLATION_DIR Optional path to the directory with the .ts files,
++#                        relative to the CMakeList.txt. Defaults to
++#                        "translations".
++#
++#=============================================================================
++
++function(lxqt_translate_desktop _RESULT)
++    # Parse arguments ***************************************
++    set(oneValueArgs TRANSLATION_DIR)
++    set(multiValueArgs SOURCES)
++
++    cmake_parse_arguments(_ARGS "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
++
++    # check for unknown arguments
++    set(_UNPARSED_ARGS ${_ARGS_UNPARSED_ARGUMENTS})
++    if (NOT ${_UNPARSED_ARGS} STREQUAL "")
++        MESSAGE(FATAL_ERROR
++          "Unknown arguments '${_UNPARSED_ARGS}'.\n"
++          "See lxqt_translate_desktop() documenation for more information.\n"
++        )
++    endif()
++
++    if (NOT DEFINED _ARGS_SOURCES)
++        set(${_RESULT} "" PARENT_SCOPE)
++        return()
++    else()
++        set(_sources ${_ARGS_SOURCES})
++    endif()
++
++    if (NOT DEFINED _ARGS_TRANSLATION_DIR)
++        set(_translationDir "translations")
++    else()
++        set(_translationDir ${_ARGS_TRANSLATION_DIR})
++    endif()
++
++
++    get_filename_component (_translationDir ${_translationDir} ABSOLUTE)
++
++    foreach (_inFile ${_sources})
++        get_filename_component(_inFile   ${_inFile} ABSOLUTE)
++        get_filename_component(_fileName ${_inFile} NAME_WE)
++        #Extract the real extension ............
++        get_filename_component(_fileExt  ${_inFile} EXT)
++        string(REPLACE ".in" "" _fileExt ${_fileExt})
++        #.......................................
++        set(_outFile "${CMAKE_CURRENT_BINARY_DIR}/${_fileName}${_fileExt}")
++
++        file(GLOB _translations
++            ${_translationDir}/${_fileName}_*${_fileExt}
++            ${_translationDir}/local/${_fileName}_*${_fileExt}
++        )
++
++        set(_pattern "'\\[.*]\\s*='")
++        if (_translations)
++            add_custom_command(OUTPUT ${_outFile}
++                COMMAND grep -v "'#TRANSLATIONS_DIR='" ${_inFile} > ${_outFile}
++                COMMAND grep -h ${_pattern} ${_translations} >> ${_outFile}
++                COMMENT "Generating ${_fileName}${_fileExt}"
++            )
++        else()
++            add_custom_command(OUTPUT ${_outFile}
++                COMMAND grep -v "'#TRANSLATIONS_DIR='" ${_inFile} > ${_outFile}
++                COMMENT "Generating ${_fileName}${_fileExt}"
++            )
++        endif()
++
++        set(__result ${__result} ${_outFile})
++
++
++        # TX file ***********************************************
++        set(_txFile "${CMAKE_BINARY_DIR}/tx/${_fileName}${_fileExt}.tx.sh")
++        string(REPLACE "${CMAKE_SOURCE_DIR}/" "" _tx_translationDir ${_translationDir})
++        string(REPLACE "${CMAKE_SOURCE_DIR}/" "" _tx_inFile ${_inFile})
++        string(REPLACE "." "" _fileType ${_fileExt})
++
++        file(WRITE ${_txFile}
++            "[ -f ${_inFile} ] || exit 0\n"
++            "echo '[lxde-qt.${_fileName}_${_fileType}]'\n"
++            "echo 'type = DESKTOP'\n"
++            "echo 'source_lang = en'\n"
++            "echo 'source_file = ${_tx_inFile}'\n"
++            "echo 'file_filter = ${_tx_translationDir}/${_fileName}_<lang>${_fileExt}'\n"
++            "echo ''\n"
++        )
++
++    endforeach()
++
++    set(${_RESULT} ${__result} PARENT_SCOPE)
++endfunction(lxqt_translate_desktop)
+diff -Naur compton-conf-0.1.0/cmake/LXQtTranslateTs.cmake compton-conf-master/cmake/LXQtTranslateTs.cmake
+--- compton-conf-0.1.0/cmake/LXQtTranslateTs.cmake	1970-01-01 01:00:00.000000000 +0100
++++ compton-conf-master/cmake/LXQtTranslateTs.cmake	2015-04-24 10:22:57.000000000 +0200
+@@ -0,0 +1,129 @@
++#=============================================================================
++# Copyright 2014 Luís Pereira <luis.artur.pereira@gmail.com>
++#
++# Redistribution and use in source and binary forms, with or without
++# modification, are permitted provided that the following conditions
++# are met:
++#
++# 1. Redistributions of source code must retain the copyright
++#    notice, this list of conditions and the following disclaimer.
++# 2. Redistributions in binary form must reproduce the copyright
++#    notice, this list of conditions and the following disclaimer in the
++#    documentation and/or other materials provided with the distribution.
++# 3. The name of the author may not be used to endorse or promote products
++#    derived from this software without specific prior written permission.
++#
++# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
++# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
++# OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
++# IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
++# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
++# NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
++# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++#=============================================================================
++#
++# funtion lxqt_translate_ts(qmFiles
++#                           [USE_QT4 [No | Yes]]
++#                           [UPDATE_TRANSLATIONS [Yes | No]]
++#                           SOURCES <sources>
++#                           [TEMPLATE] translation_template
++#                           [TRANSLATION_DIR] translation_directory
++#                           [INSTALL_DIR] install_directory
++#                    )
++#     Output:
++#       qmFiles The generated compiled translations (.qm) files
++#
++#     Input:
++#       USE_QT4 Optional flag to choose between Qt4 and Qt5. Defaults to Qt5
++#
++#       UPDATE_TRANSLATIONS Optional flag. Setting it to Yes, extracts and
++#                           compiles the translations. Setting it No, only
++#                           compiles them.
++#
++#       TEMPLATE Optional translations files base name. Defaults to
++#                ${PROJECT_NAME}. An .ts extensions is added.
++#
++#       TRANSLATION_DIR Optional path to the directory with the .ts files,
++#                        relative to the CMakeList.txt. Defaults to
++#                        "translations".
++#
++#       INSTALL_DIR Optional destination of the file compiled files (qmFiles).
++#                    If not present no installation is performed
++
++
++
++# CMake v2.8.3 needed to use the CMakeParseArguments module
++cmake_minimum_required(VERSION 2.8.3 FATAL_ERROR)
++
++
++function(lxqt_translate_ts qmFiles)
++    set(oneValueArgs USE_QT4 UPDATE_TRANSLATIONS TEMPLATE TRANSLATION_DIR INSTALL_DIR)
++    set(multiValueArgs SOURCES)
++    cmake_parse_arguments(TR "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
++
++    if (NOT DEFINED TR_UPDATE_TRANSLATIONS)
++        set(TR_UPDATE_TRANSLATIONS "No")
++    endif()
++
++    if (NOT DEFINED TR_USE_QT4)
++        set(TR_USE_QT4 "No")
++    endif()
++
++    if(NOT DEFINED TR_TEMPLATE)
++        set(TR_TEMPLATE "${PROJECT_NAME}")
++    endif()
++
++    if (NOT DEFINED TR_TRANSLATION_DIR)
++        set(TR_TRANSLATION_DIR "translations")
++    endif()
++
++    file(GLOB tsFiles "${TR_TRANSLATION_DIR}/${TR_TEMPLATE}_*.ts")
++    set(templateFile "${TR_TRANSLATION_DIR}/${TR_TEMPLATE}.ts")
++
++    if(TR_USE_QT4)
++        # Qt4
++        if(TR_UPDATE_TRANSLATIONS)
++            qt4_create_translation(QMS
++                ${TR_SOURCES}
++                ${templateFile}
++                OPTIONS -locations absolute
++            )
++            qt4_create_translation(QM
++                ${TR_SOURCES}
++                ${tsFiles}
++                OPTIONS -locations absolute
++            )
++        else()
++            qt4_add_translation(QM ${tsFiles})
++        endif()
++    else()
++        # Qt5
++        if (TR_UPDATE_TRANSLATIONS)
++            qt5_create_translation(QMS
++                ${TR_SOURCES}
++                ${templateFile}
++                OPTIONS -locations absolute
++            )
++            qt5_create_translation(QM
++                ${TR_SOURCES}
++                ${tsFiles}
++                OPTIONS -locations absolute
++            )
++        else()
++            qt5_add_translation(QM ${tsFiles})
++        endif()
++    endif()
++
++    if(TR_UPDATE_TRANSLATIONS)
++        add_custom_target("update_${TR_TEMPLATE}_ts" ALL DEPENDS ${QMS})
++    endif()
++
++    if(DEFINED TR_INSTALL_DIR)
++        install(FILES ${QM} DESTINATION ${TR_INSTALL_DIR})
++    endif()
++
++    set(${qmFiles} ${QM} PARENT_SCOPE)
++endfunction()
+diff -Naur compton-conf-0.1.0/CMakeLists.txt compton-conf-master/CMakeLists.txt
+--- compton-conf-0.1.0/CMakeLists.txt	2014-05-07 07:08:13.000000000 +0200
++++ compton-conf-master/CMakeLists.txt	2015-04-24 10:22:57.000000000 +0200
+@@ -2,8 +2,32 @@
+ 
+ cmake_minimum_required(VERSION 2.8.6)
+ 
+-# Qt
+-find_package(Qt4 REQUIRED QtCore QtGui QtDbus)
++option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
++
++list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
++
++# Although the names, LXQtTranslateTsa and LXQtTranslateDesktop, they don't
++#   bring any dependency on liblxqt.
++include(LXQtTranslateTs)
++include(LXQtTranslateDesktop)
++
++# Support Qt4
++option(USE_QT4 "Build with Qt4." $ENV{USE_QT4})
++set(CMAKE_INCLUDE_CURRENT_DIR ON)
++set(CMAKE_POSITION_INDEPENDENT_CODE ON)
++set(CMAKE_AUTOMOC ON)
++
++if(USE_QT4)
++  find_package(Qt4 REQUIRED QtCore QtGui QtDbus)
++  include(${QT_USE_FILE})
++  message(STATUS "Building with Qt${QTVERSION}")
++else()
++  cmake_minimum_required(VERSION 2.8.11)
++  find_package(Qt5Widgets REQUIRED)
++  find_package(Qt5DBus REQUIRED)
++  find_package(Qt5LinguistTools REQUIRED QUIET)
++  message(STATUS "Building with Qt${Qt5Core_VERSION_STRING}")
++endif()
+ 
+ # libconfig using pkg-config
+ find_package(PkgConfig REQUIRED)
+@@ -13,15 +37,27 @@
+ 
+ include(GNUInstallDirs REQUIRED)
+ 
+-set(CMAKE_CXX_FLAGS "-DQT_NO_KEYWORDS -fno-exceptions")
++set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DQT_NO_KEYWORDS -fno-exceptions")
++
++if(USE_QT4)
++  set(QTX_INCLUDE_DIRS ${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTDBUS_DIR})
++  set(QTX_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY})
++else()
++  set(QTX_INCLUDE_DIRS "")
++  set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus)
++endif()
+ 
+ include_directories(
+-  ${QT_INCLUDES}
++  ${QTX_INCLUDE_DIRS}
+   ${LIBCONFIG_INCLUDE_DIRS}
+   ${CMAKE_CURRENT_BINARY_DIR}
+ )
+ 
+-set(CMAKE_AUTOMOC TRUE)
++
++set(compton-conf_HS
++    compton-conf.h
++    maindialog.h
++)
+ 
+ set(compton-conf_SRCS
+   maindialog.cpp
+@@ -32,10 +68,29 @@
+   maindialog.ui
+ )
+ 
+-qt4_wrap_ui(compton-conf_UI_H
+-  ${compton-conf_UIS}
++set(compton-conf_DESKTOP_FILES_IN
++    compton-conf.desktop.in
+ )
+ 
++lxqt_translate_ts(compton-conf_QM_FILES
++    USE_QT4 ${USE_QT4}
++    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
++    SOURCES
++        ${compton-conf_HS}
++        ${compton-conf_SRCS}
++        ${compton-conf_UIS}
++    INSTALL_DIR
++        ${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/translations
++)
++
++lxqt_translate_desktop(compton-conf_DESKTOP_FILES SOURCES ${compton-conf_DESKTOP_FILES_IN})
++
++if(USE_QT4)
++  qt4_wrap_ui(compton-conf_UI_H ${compton-conf_UIS})
++else()
++  qt5_wrap_ui(compton-conf_UI_H ${compton-conf_UIS})
++endif()
++
+ add_definitions(
+   -DCOMPTON_CONF_DATA_DIR="${CMAKE_INSTALL_FULL_DATADIR}/compton-conf"
+ )
+@@ -43,25 +98,26 @@
+ add_executable(compton-conf
+   ${compton-conf_SRCS}
+   ${compton-conf_UI_H}
++  ${compton-conf_QM_FILES}
++  ${compton-conf_QM_LOADER}
++  ${compton-conf_DESKTOP_FILES}
+ )
+ 
+ target_link_libraries(compton-conf
+-  ${QT_QTCORE_LIBRARY}
+-  ${QT_QTGUI_LIBRARY}
+-  ${QT_QTDBUS_LIBRARY}
++  ${QTX_LIBRARIES}
+   ${LIBCONFIG_LIBRARIES}
+ )
+ 
+ install(TARGETS compton-conf RUNTIME DESTINATION bin)
+ install(FILES compton.conf.example DESTINATION ${CMAKE_INSTALL_DATADIR}/compton-conf)
+-install(FILES compton-conf.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications/)
++install(FILES ${compton-conf_DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_DATADIR}/applications/)
+ 
+ # building tarball with CPack -------------------------------------------------
+ # To create a source distribution, type:
+ # make package_source
+ include (InstallRequiredSystemLibraries)
+ set (CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/COPYING")
+-set (CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README")
++set (CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
+ set (CPACK_PACKAGE_VENDOR "")
+ set (CPACK_PACKAGE_VERSION_MAJOR "0")
+ set (CPACK_PACKAGE_VERSION_MINOR "1")
+diff -Naur compton-conf-0.1.0/compton-conf.desktop compton-conf-master/compton-conf.desktop
+--- compton-conf-0.1.0/compton-conf.desktop	2014-05-07 07:08:13.000000000 +0200
++++ compton-conf-master/compton-conf.desktop	1970-01-01 01:00:00.000000000 +0100
+@@ -1,9 +0,0 @@
+-[Desktop Entry]
+-Type=Application
+-Name=Window Effects
+-GenericName=Compton Configuration
+-Comment=Configure Compton window effects
+-TryExec=compton-conf
+-Exec=compton-conf
+-Icon=preferences-desktop-display
+-Categories=Settings;DesktopSettings;Qt;LXQt;
+diff -Naur compton-conf-0.1.0/compton-conf.desktop.in compton-conf-master/compton-conf.desktop.in
+--- compton-conf-0.1.0/compton-conf.desktop.in	1970-01-01 01:00:00.000000000 +0100
++++ compton-conf-master/compton-conf.desktop.in	2015-04-24 10:22:57.000000000 +0200
+@@ -0,0 +1,11 @@
++[Desktop Entry]
++Type=Application
++Name=Window Effects
++GenericName=Compton Configuration
++Comment=Configure Compton window effects
++TryExec=compton-conf
++Exec=compton-conf
++Icon=preferences-system-windows
++Categories=Settings;DesktopSettings;Qt;LXQt;
++
++#TRANSLATIONS_DIR=translations
+diff -Naur compton-conf-0.1.0/README compton-conf-master/README
+--- compton-conf-0.1.0/README	2014-05-07 07:08:13.000000000 +0200
++++ compton-conf-master/README	1970-01-01 01:00:00.000000000 +0100
+@@ -1,3 +0,0 @@
+-# compton-conf
+-
+-Qt configuration tool for X composite manager [Compton](https://github.com/chjj/compton).
+diff -Naur compton-conf-0.1.0/README.md compton-conf-master/README.md
+--- compton-conf-0.1.0/README.md	1970-01-01 01:00:00.000000000 +0100
++++ compton-conf-master/README.md	2015-04-24 10:22:57.000000000 +0200
+@@ -0,0 +1,13 @@
++# compton-conf
++
++Qt configuration tool for X composite manager [Compton](https://github.com/chjj/compton).
++
++![Screenshot of compton-conf running on awesome-wm](http://i.imgur.com/2fSiAx8.png)
++
++##Build instructions
++```
++git clone https://github.com/lxde/compton-conf;
++cd compton-conf;
++cmake CMakeLists.txt;
++make -j2;
++```
