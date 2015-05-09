@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+bmpanel2-${UB_VERSION/~/}.tar.gz bmpanel2-${UB_VERSION/~/}/
+	http://bmpanel2.googlecode.com/files/
