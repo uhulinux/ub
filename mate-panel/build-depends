@@ -1,7 +1,6 @@
 avahi-dev
 dconf-dev
 gobject-introspection-dev
-gtk-doc
 gtk2-dev
 intltool
 itstool

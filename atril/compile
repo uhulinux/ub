@@ -5,6 +5,5 @@ ub_compile \
 	--with-platform=mate \
 	--without-keyring \
 	--enable-pixbuf \
-	--disable-introspection \
+	--enable-introspection \
 	--enable-comics
-

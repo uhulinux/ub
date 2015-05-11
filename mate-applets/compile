@@ -1,6 +1,9 @@
 #!/bin/sh -eux
 
+# with-cpufreq-lib=cpupower
+
 ub_compile \
 	--with-gtk=2.0 \
 	--libexecdir=/usr/libexec/mate \
+	--with-cpufreq-lib=cpufreq \
 	--without-hal

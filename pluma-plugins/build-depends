@@ -1,4 +1,5 @@
 dbus-python-dev
+gtksourceview2-dev
 intltool
 mate-common
 pluma-dev

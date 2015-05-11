@@ -1,7 +1,6 @@
 dbus-glib-dev
 exempi-dev
 gobject-introspection-dev
-gtk-doc
 gtk2-dev
 intltool
 libexif-dev

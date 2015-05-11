@@ -1,6 +1,5 @@
 dbus-glib-dev
 gdk-pixbuf-dev
-gtk-doc
 intltool
 libcanberra-dev
 libnotify-dev
