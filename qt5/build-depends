@@ -34,6 +34,7 @@ openssl-dev
 pciutils-dev
 postgresql-dev
 pulseaudio-dev
+re2c
 ruby-dev
 sqlite-dev
 systemd-dev
