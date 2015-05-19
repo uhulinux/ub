@@ -14,6 +14,8 @@ yes yes | ./configure \
 	-no-qml-debug       \
 	-no-journald		\
 	\
+	-nomake examples    \
+	\
 	-accessibility      \
 	\
 	-plugin-sql-mysql -I/usr/include/mysql \
@@ -76,4 +78,3 @@ ub_make
 #some options we may want to use in the future
 #	-nomake tests       \
 #	-nomake examples    \
-#	-nomake docs

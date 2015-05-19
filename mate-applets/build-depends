@@ -1,5 +1,5 @@
 avahi-dev
-cpufrequtils
+cpupower
 gobject-introspection-dev
 gst-plugins-base-dev
 gtksourceview2-dev

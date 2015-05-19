@@ -1,0 +1,10 @@
+cups-dev
+desktop-file-utils
+glib-dev
+intltool
+libusb-dev
+pycups
+pysmbc
+python3-dev
+systemd-dev
+xmlto

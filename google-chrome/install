@@ -15,4 +15,4 @@ ln -s "$UB_INSTALLDIR"/usr/lib/google/chrome/chrome-sandbox "$UB_INSTALLDIR"/opt
 
 ln -s "$UB_INSTALLDIR"/usr/lib/PepperFlash "$UB_INSTALLDIR"/usr/lib/google/chrome/PepperFlash
 
-ln -snf /usr/lib/libudev.so.1 "$UB_INSTALLDIR"/usr/lib/google/chrome/libudev.so.0
+# ln -snf /usr/lib/libudev.so.1 "$UB_INSTALLDIR"/usr/lib/google/chrome/libudev.so.0
