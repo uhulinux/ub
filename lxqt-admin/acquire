@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-lxqt-admin-${UB_VERSION}.tar.xz lxqt-admin-${UB_VERSION}/
-	http://downloads.lxqt.org/lxqt/${UB_VERSION}/
+master.zip lxqt-admin-master/
+	https://github.com/attuska/lxqt-admin/archive/
