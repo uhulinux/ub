@@ -3,4 +3,3 @@
 ub_install
 
 find "$UB_INSTALLDIR"/usr/share/icons -type f -exec chmod 644 {} \;
-
