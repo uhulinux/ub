@@ -2,5 +2,5 @@
 
 #pcmanfm-qt-${UB_VERSION}.tar.xz pcmanfm-qt-${UB_VERSION}/
 #	http://downloads.lxqt.org/lxqt/${UB_VERSION}/
-master.zip pcmanfm-qt-master/
-	https://github.com/attuska/pcmanfm-qt/archive/
+643dcf6e059cc31ed3a2f2a5083aee46d185b1a2.zip pcmanfm-qt-643dcf6e059cc31ed3a2f2a5083aee46d185b1a2/
+	https://github.com/lxde/pcmanfm-qt/archive/
