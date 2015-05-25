@@ -1,0 +1,10 @@
+diff -Naur orig/panel/CMakeLists.txt patched/panel/CMakeLists.txt
+--- orig/panel/CMakeLists.txt	2015-05-23 13:31:43.000000000 +0200
++++ patched/panel/CMakeLists.txt	2015-05-26 00:44:33.575838316 +0200
+@@ -107,5 +107,5 @@
+ )
+ 
+ install(TARGETS ${PROJECT} RUNTIME DESTINATION bin)
+-install(FILES ${CONFIG_FILES} DESTINATION ${LXQT_ETC_XDG_DIR}/lxqt)
++install(FILES ${CONFIG_FILES} DESTINATION /etc/xdg/lxqt)
+ install(FILES ${PUB_HEADERS} DESTINATION include/lxqt)
