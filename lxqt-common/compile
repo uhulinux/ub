@@ -1,6 +1,4 @@
 #!/bin/sh -eux
 
-export LXQT_ETC_XDG_DIR=/etc/xdg
-
 ub_compile \
 	-DCMAKE_PREFIX_PATH=/usr/lib/qt5
