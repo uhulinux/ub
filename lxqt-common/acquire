@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-fa5e9509f06ad72f91c6b1c09bc47ff228ea752d.zip lxqt-common-fa5e9509f06ad72f91c6b1c09bc47ff228ea752d/
-	https://github.com/lxde/lxqt-common/archive/
+lxqt-common-${UB_VERSION}.tar.gz lxqt-common-fa5e95/
+    git://github.com/lxde/lxqt-common.git@fa5e95

@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-3f9712727657868226bad69f4bb5567145e67eb2.zip lxqt-about-3f9712727657868226bad69f4bb5567145e67eb2/
-	https://github.com/lxde/lxqt-about/archive/
+lxqt-about-${UB_VERSION}.tar.gz lxqt-about-3f9712/
+    git://github.com/lxde/lxqt-about.git@3f9712

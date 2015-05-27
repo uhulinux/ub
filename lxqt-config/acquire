@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-f55f739663b3a7626a94886683991d053450f077.zip lxqt-config-f55f739663b3a7626a94886683991d053450f077/
-	https://github.com/lxde/lxqt-config/archive/
+lxqt-config-${UB_VERSION}.tar.gz lxqt-config-f55f73/
+    git://github.com/lxde/lxqt-config.git@f55f73

@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-fa2a85bccaa47056782fa9c2bfed3c95cb93e0d7.zip lxqt-panel-fa2a85bccaa47056782fa9c2bfed3c95cb93e0d7/
-	https://github.com/lxde/lxqt-panel/archive/
+lxqt-panel-${UB_VERSION}.tar.gz lxqt-panel-fa2a85/
+    git://github.com/lxde/lxqt-panel.git@fa2a85
