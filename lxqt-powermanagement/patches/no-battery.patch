@@ -1,0 +1,17 @@
+diff -Naur orig/src/batterywatcher.cpp mod/src/batterywatcher.cpp
+--- orig/src/batterywatcher.cpp	2015-05-29 18:57:24.000000000 +0200
++++ mod/src/batterywatcher.cpp	2015-05-29 22:34:19.277052923 +0200
+@@ -41,6 +41,13 @@
+ BatteryWatcher::BatteryWatcher(QObject *parent) : Watcher(parent)
+ {
+     QList<Solid::Device> devices = Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString());
++    if (devices.isEmpty())
++    {
++        LxQt::Notification::notify(tr("No battery!"),
++                                   tr("LXQt could not find data about any battery - monitoring disabled"),
++                                   "lxqt-powermanagement");
++    }
++        
+ 
+     foreach (Solid::Device device, devices)
+     {
