@@ -1,18 +1,6 @@
 #!/bin/sh -eux
 
-export USE_QT5=YES
-export CMAKE_PREFIX_PATH=/usr/lib/qt5
-export BUILD_HTML_DOCS=OFF
-export BUILD_TESTING=OFF
-export BUILD_TYPE=Release
-ub_compile
-#mkdir build
-#cd build
-#cmake .. \
-#    -DCMAKE_INSTALL_PREFIX=/usr \
-#    -DCMAKE_BUILD_TYPE=Release \
-#    -DBUILD_HTML_DOCS=OFF \
-#    -DBUILD_TESTING=OFF \
-#    -DCMAKE_PREFIX_PATH=/usr/lib/qt5
-#make
-#ub_compile
+ub_compile \
+	-DCMAKE_PREFIX_PATH=/usr/lib/qt5 \
+	-DBUILD_HTML_DOCS=OFF \
+	-DBUILD_TESTING=OFF
