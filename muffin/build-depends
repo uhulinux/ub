@@ -1,9 +1,12 @@
 cinnamon-desktop-dev
 clutter-dev
+docbook-dtds
+docbook-xsl
 glu-dev
 gnome-common
 gnome-doc-utils
 gobject-introspection-dev
+gtk-doc
 intltool
 libcanberra-dev
 libsm-dev

@@ -1,6 +1,5 @@
 #!/bin/sh -eux
 
-./autogen.sh --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-	--disable-static --enable-systemd
-sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-ub_make
+./autogen.sh
+ub_compile \
+  --enable-systemd

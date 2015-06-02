@@ -1,7 +1,13 @@
 #!/bin/sh -eux
 
-sed -i 's/@selected_bg_color;/@theme_selected_bg_color;/' \
-	 files/usr/lib/cinnamon-settings/cinnamon-settings.py
+./autogen.sh
+
+sed -i -e 's@gksu@pkexec@g'  files/usr/bin/cinnamon-settings-users
+sed -i -e 's@blueberry@blueman-manager@g'  files/usr/lib/cinnamon-settings/cinnamon-settings.py
+
 ub_compile \
-	--enable-compile-warnings=yes \
-	--with-session-tracking=systemd
+  --disable-rpath \
+  --disable-schemas-compile \
+  --enable-introspection=yes \
+  --enable-compile-warnings=no \
+  --with-session-tracking=systemd

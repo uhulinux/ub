@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
 cd linuxmint-nemo*
-patch -p1 -i $UB_SRCDIR/patches/desktop-nautilus-name-fix.patch.skip
-patch -p1 -i $UB_SRCDIR/patches/disable-deprecated-fix.patch.skip
-ub_compile
+./autogen.sh
+ub_compile \
+	--enable-tracker=no
