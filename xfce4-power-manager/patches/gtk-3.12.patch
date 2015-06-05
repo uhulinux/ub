@@ -1,6 +1,6 @@
 diff -Naur orig/configure patched/configure
 --- orig/configure	2015-05-25 23:35:49.000000000 +0200
-+++ patched/configure	2015-05-27 19:33:11.923068229 +0200
++++ patched/configure	2015-06-05 20:24:54.670934403 +0200
 @@ -14284,9 +14284,9 @@
  
  
@@ -43,13 +43,16 @@ diff -Naur orig/configure patched/configure
        echo "*** pkg-config is able to find it."
 diff -Naur orig/settings/xfpm-settings.c patched/settings/xfpm-settings.c
 --- orig/settings/xfpm-settings.c	2015-04-24 00:59:49.000000000 +0200
-+++ patched/settings/xfpm-settings.c	2015-05-27 19:34:26.107436090 +0200
-@@ -1248,7 +1248,7 @@
++++ patched/settings/xfpm-settings.c	2015-06-05 20:26:28.895401637 +0200
+@@ -1248,7 +1248,11 @@
       * Global dpms settings (enable/disable)
       */
      val = xfconf_channel_get_bool (channel, PROPERTIES_PREFIX DPMS_ENABLED_CFG, TRUE);
--    gtk_switch_set_state (GTK_SWITCH (dpms), val);
-+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(dpms), val);
++#if GTK_CHECK_VERSION(3, 14, 0)
+     gtk_switch_set_state (GTK_SWITCH (dpms), val);
++#else
++	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(dpms), val);
++#endif
  
      /*
       * Power button
