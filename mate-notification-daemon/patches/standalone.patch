@@ -1,0 +1,103 @@
+diff -Naur orig/configure.ac patched/configure.ac
+--- orig/configure.ac	2015-05-04 14:37:08.000000000 +0200
++++ patched/configure.ac	2015-06-07 02:11:55.607165840 +0200
+@@ -180,7 +180,6 @@
+ AS_AC_EXPAND(LIBEXECDIR, $libexecdir)
+ 
+ AC_ARG_WITH(dbus-sys, [  --with-dbus-sys=<dir>   where D-BUS system.d directory is])
+-AC_ARG_WITH(dbus-services, [  --with-dbus-services=<dir>   where D-BUS services directory is])
+ 
+ if ! test -z "$with_dbus_sys" ; then
+ 	DBUS_SYS_DIR="$with_dbus_sys"
+@@ -188,16 +187,8 @@
+ 	DBUS_SYS_DIR="$SYSCONFDIR/dbus-1/system.d"
+ fi
+ 
+-if ! test -z "$with_dbus_services" ; then
+-	DBUS_SERVICES_DIR="$with_dbus_services"
+-else
+-	DBUS_SERVICES_DIR="$DATADIR/dbus-1/services"
+-fi
+-
+ AC_SUBST(DBUS_SYS_DIR)
+-AC_SUBST(DBUS_SERVICES_DIR)
+ AC_DEFINE_UNQUOTED(DBUS_SYSTEMD_DIR, "$DBUS_SYS_DIR", [Where system.d dir for DBUS is])
+-AC_DEFINE_UNQUOTED(DBUS_SERVICES_DIR, "$DBUS_SERVICES_DIR", [Where services dir for DBUS is])
+ 
+ dnl ---------------------------------------------------------------------------
+ dnl Turn on the additional warnings last
+@@ -262,7 +253,6 @@
+ AC_CONFIG_FILES([
+ Makefile
+ data/Makefile
+-data/org.freedesktop.mate.Notifications.service
+ po/Makefile.in
+ src/Makefile
+ src/daemon/Makefile
+@@ -288,6 +278,5 @@
+ 	cflags:		              ${AM_CFLAGS}
+ 
+ 	dbus-1 system.d           $DBUS_SYS_DIR
+-	dbus-1 services           $DBUS_SERVICES_DIR
+ 
+ "
+diff -Naur orig/data/Makefile.am patched/data/Makefile.am
+--- orig/data/Makefile.am	2014-07-02 16:52:54.000000000 +0200
++++ patched/data/Makefile.am	2015-06-07 01:43:09.190605003 +0200
+@@ -12,9 +12,10 @@
+ icon48_DATA = icons/48x48/mate-notification-properties.png
+ iconscalable_DATA = icons/scalable/mate-notification-properties.svg
+ 
+-
+-servicedir   = $(DBUS_SERVICES_DIR)
+-service_DATA = org.freedesktop.mate.Notifications.service
++desktopdir= $(sysconfdir)/xdg/autostart
++desktop_in_files = mate-notification-daemon.desktop.in
++desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
++@INTLTOOL_DESKTOP_RULE@
+ 
+ gsettings_SCHEMAS = org.mate.NotificationDaemon.gschema.xml
+ @INTLTOOL_XML_NOMERGE_RULE@
+@@ -29,7 +30,7 @@
+ EXTRA_DIST = \
+ 	$(gsettings_SCHEMAS).in.in \
+ 	$(convert_DATA) \
+-	$(service_DATA) \
++	$(desktop_DATA) \
+ 	$(icon16_DATA) \
+ 	$(icon22_DATA) \
+ 	$(icon24_DATA) \
+diff -Naur orig/data/mate-notification-daemon.desktop.in patched/data/mate-notification-daemon.desktop.in
+--- orig/data/mate-notification-daemon.desktop.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/data/mate-notification-daemon.desktop.in	2015-06-07 02:20:20.541669675 +0200
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++_Name=Popup Notifications
++Exec=mate-notification-daemon
++Terminal=false
++Type=Application
++StartupNotify=false
++OnlyShowIn=MATE;
+diff -Naur orig/data/org.freedesktop.mate.Notifications.service patched/data/org.freedesktop.mate.Notifications.service
+--- orig/data/org.freedesktop.mate.Notifications.service	2015-05-04 14:37:44.000000000 +0200
++++ patched/data/org.freedesktop.mate.Notifications.service	1970-01-01 01:00:00.000000000 +0100
+@@ -1,3 +0,0 @@
+-[D-BUS Service]
+-Name=org.freedesktop.Notifications
+-Exec=/usr/local/libexec/mate-notification-daemon
+diff -Naur orig/data/org.freedesktop.mate.Notifications.service.in patched/data/org.freedesktop.mate.Notifications.service.in
+--- orig/data/org.freedesktop.mate.Notifications.service.in	2014-07-02 16:52:54.000000000 +0200
++++ patched/data/org.freedesktop.mate.Notifications.service.in	1970-01-01 01:00:00.000000000 +0100
+@@ -1,3 +0,0 @@
+-[D-BUS Service]
+-Name=org.freedesktop.Notifications
+-Exec=@LIBEXECDIR@/mate-notification-daemon
+diff -Naur orig/src/daemon/Makefile.am patched/src/daemon/Makefile.am
+--- orig/src/daemon/Makefile.am	2014-07-02 16:52:54.000000000 +0200
++++ patched/src/daemon/Makefile.am	2015-06-07 02:15:41.496285964 +0200
+@@ -1,4 +1,4 @@
+-libexec_PROGRAMS = mate-notification-daemon
++bin_PROGRAMS = mate-notification-daemon
+ 
+ mate_notification_daemon_SOURCES = \
+ 	daemon.c \
