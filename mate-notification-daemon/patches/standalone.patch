@@ -1,6 +1,6 @@
 diff -Naur orig/configure.ac patched/configure.ac
 --- orig/configure.ac	2015-05-04 14:37:08.000000000 +0200
-+++ patched/configure.ac	2015-06-07 02:11:55.607165840 +0200
++++ patched/configure.ac	2015-06-07 07:32:48.244679233 +0200
 @@ -180,7 +180,6 @@
  AS_AC_EXPAND(LIBEXECDIR, $libexecdir)
  
@@ -26,15 +26,17 @@ diff -Naur orig/configure.ac patched/configure.ac
  
  dnl ---------------------------------------------------------------------------
  dnl Turn on the additional warnings last
-@@ -262,7 +253,6 @@
+@@ -262,7 +253,8 @@
  AC_CONFIG_FILES([
  Makefile
  data/Makefile
 -data/org.freedesktop.mate.Notifications.service
++data/mate-notification-daemon.desktop.in
++data/mate-notification-daemon-autostart.desktop.in
  po/Makefile.in
  src/Makefile
  src/daemon/Makefile
-@@ -288,6 +278,5 @@
+@@ -288,6 +280,5 @@
  	cflags:		              ${AM_CFLAGS}
  
  	dbus-1 system.d           $DBUS_SYS_DIR
@@ -43,41 +45,73 @@ diff -Naur orig/configure.ac patched/configure.ac
  "
 diff -Naur orig/data/Makefile.am patched/data/Makefile.am
 --- orig/data/Makefile.am	2014-07-02 16:52:54.000000000 +0200
-+++ patched/data/Makefile.am	2015-06-07 01:43:09.190605003 +0200
-@@ -12,9 +12,10 @@
++++ patched/data/Makefile.am	2015-06-07 08:00:03.532788189 +0200
+@@ -12,9 +12,16 @@
  icon48_DATA = icons/48x48/mate-notification-properties.png
  iconscalable_DATA = icons/scalable/mate-notification-properties.svg
  
 -
 -servicedir   = $(DBUS_SERVICES_DIR)
 -service_DATA = org.freedesktop.mate.Notifications.service
-+desktopdir= $(sysconfdir)/xdg/autostart
-+desktop_in_files = mate-notification-daemon.desktop.in
-+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 +@INTLTOOL_DESKTOP_RULE@
++autostartdir= $(sysconfdir)/xdg/autostart
++autostart_in_in_files = mate-notification-daemon-autostart.desktop.in.in
++autostart_in_files = mate-notification-daemon-autostart.desktop.in
++autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
++
++desktopdir          = $(datadir)/applications
++desktop_in_in_files = mate-notification-daemon.desktop.in.in
++desktop_in_files    = mate-notification-daemon.desktop.in
++desktop_DATA        = $(desktop_in_files:.desktop.in=.desktop)
  
  gsettings_SCHEMAS = org.mate.NotificationDaemon.gschema.xml
  @INTLTOOL_XML_NOMERGE_RULE@
-@@ -29,7 +30,7 @@
+@@ -28,8 +35,9 @@
+ 
  EXTRA_DIST = \
  	$(gsettings_SCHEMAS).in.in \
++	$(autostart_in_in_files) \
++	$(desktop_in_in_files) \
  	$(convert_DATA) \
 -	$(service_DATA) \
-+	$(desktop_DATA) \
  	$(icon16_DATA) \
  	$(icon22_DATA) \
  	$(icon24_DATA) \
-diff -Naur orig/data/mate-notification-daemon.desktop.in patched/data/mate-notification-daemon.desktop.in
---- orig/data/mate-notification-daemon.desktop.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/data/mate-notification-daemon.desktop.in	2015-06-07 02:20:20.541669675 +0200
-@@ -0,0 +1,7 @@
+@@ -37,7 +45,9 @@
+ 	$(icon48_DATA) \
+ 	$(iconscalable_DATA)
+ 
+-CLEANFILES = $(gsettings_SCHEMAS)
++CLEANFILES = $(gsettings_SCHEMAS) \
++	$(autostart_DATA) \
++	$(desktop_DATA)
+ 
+ gtk_update_icon_cache = $(UPDATE_ICON_CACHE) -f -t $(datadir)/icons/hicolor
+ 
+diff -Naur orig/data/mate-notification-daemon-autostart.desktop.in.in patched/data/mate-notification-daemon-autostart.desktop.in.in
+--- orig/data/mate-notification-daemon-autostart.desktop.in.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/data/mate-notification-daemon-autostart.desktop.in.in	2015-06-07 07:43:18.683805412 +0200
+@@ -0,0 +1,8 @@
 +[Desktop Entry]
-+_Name=Popup Notifications
-+Exec=mate-notification-daemon
++_Name=MATE Notification Daemon
++_Comment=Display notifications
++Exec=@LIBEXECDIR@/mate-notification-daemon
 +Terminal=false
 +Type=Application
-+StartupNotify=false
 +OnlyShowIn=MATE;
++NoDisplay=true
+diff -Naur orig/data/mate-notification-daemon.desktop.in.in patched/data/mate-notification-daemon.desktop.in.in
+--- orig/data/mate-notification-daemon.desktop.in.in	1970-01-01 01:00:00.000000000 +0100
++++ patched/data/mate-notification-daemon.desktop.in.in	2015-06-07 07:43:39.535908812 +0200
+@@ -0,0 +1,8 @@
++[Desktop Entry]
++_Name=MATE Notification Daemon
++_Comment=Display notifications
++Exec=@LIBEXECDIR@/mate-notification-daemon
++Terminal=false
++Type=Application
++OnlyShowIn=MATE;
++NoDisplay=true
 diff -Naur orig/data/org.freedesktop.mate.Notifications.service patched/data/org.freedesktop.mate.Notifications.service
 --- orig/data/org.freedesktop.mate.Notifications.service	2015-05-04 14:37:44.000000000 +0200
 +++ patched/data/org.freedesktop.mate.Notifications.service	1970-01-01 01:00:00.000000000 +0100
@@ -92,12 +126,18 @@ diff -Naur orig/data/org.freedesktop.mate.Notifications.service.in patched/data/
 -[D-BUS Service]
 -Name=org.freedesktop.Notifications
 -Exec=@LIBEXECDIR@/mate-notification-daemon
-diff -Naur orig/src/daemon/Makefile.am patched/src/daemon/Makefile.am
---- orig/src/daemon/Makefile.am	2014-07-02 16:52:54.000000000 +0200
-+++ patched/src/daemon/Makefile.am	2015-06-07 02:15:41.496285964 +0200
-@@ -1,4 +1,4 @@
--libexec_PROGRAMS = mate-notification-daemon
-+bin_PROGRAMS = mate-notification-daemon
- 
- mate_notification_daemon_SOURCES = \
- 	daemon.c \
+diff -Naur orig/po/POTFILES.in patched/po/POTFILES.in
+--- orig/po/POTFILES.in	2014-07-02 16:52:54.000000000 +0200
++++ patched/po/POTFILES.in	2015-06-07 07:50:11.261851276 +0200
+@@ -1,3 +1,5 @@
++data/mate-notification-daemon-autostart.desktop.in.in
++data/mate-notification-daemon.desktop.in.in
+ data/org.mate.NotificationDaemon.gschema.xml.in.in
+ src/capplet/mate-notification-properties.c
+ src/capplet/mate-notification-properties.desktop.in
+diff -Naur orig/po/POTFILES.skip patched/po/POTFILES.skip
+--- orig/po/POTFILES.skip	1970-01-01 01:00:00.000000000 +0100
++++ patched/po/POTFILES.skip	2015-06-07 07:50:32.585957016 +0200
+@@ -0,0 +1,2 @@
++data/mate-notification-daemon-autostart.desktop.in
++data/mate-notification-daemon.desktop.in
