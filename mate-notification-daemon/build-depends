@@ -5,4 +5,5 @@ libcanberra-dev
 libnotify-dev
 libsm-dev
 libwnck2-dev
+mate-common
 xcb-util-dev
