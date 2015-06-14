@@ -5,6 +5,8 @@ freeglut-dev
 fribidi-dev
 gettext
 glu-dev
+libjpeg-dev
+libpng-dev
 libvorbis-dev
 libxt-dev
 plib

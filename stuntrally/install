@@ -6,3 +6,4 @@ ub_install
 cd ..
 ub_install
 rm -rf ${UB_INSTALLDIR}/usr/include
+rm -rf ${UB_INSTALLDIR}/usr/share/games/stuntrally/tracks/build

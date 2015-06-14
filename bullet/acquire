@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-bullet-${UB_VERSION/~/-}.tgz bullet-${UB_VERSION/~/-}/
-	http://bullet.googlecode.com/files/
+${UB_VERSION}.tar.gz bullet3-${UB_VERSION}/
+	https://github.com/bulletphysics/bullet3/archive/

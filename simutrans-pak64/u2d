@@ -1,1 +1,1 @@
-sflist simutrans pak64 | grep -E '^([0-4])' | sort | tail -n 1 | sed s/-/\./
+sflist simutrans pak64 | grep -E '^([0-4])' | sort | tail -n 1 | sed 's/-/\./g'
