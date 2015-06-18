@@ -8,6 +8,7 @@ doxygen
 expat-dev
 fonts-x.org-ttf
 glew-dev
+glm-dev
 glu-dev
 gperf
 gst-plugins-base-dev

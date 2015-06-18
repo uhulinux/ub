@@ -35,7 +35,6 @@ export QT4DIR=/usr/lib/qt4
 	--without-system-altlinuxhyph \
 	--without-system-bluez \
 	--without-system-clucene \
-	--without-system-glm \
   	--without-system-graphite \
   	--without-system-libabw \
   	--without-system-libcdr \
