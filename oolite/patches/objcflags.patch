@@ -1,6 +1,6 @@
 diff -Naur orig/GNUmakefile mod/GNUmakefile
---- orig/GNUmakefile	2014-06-29 22:22:32.000000000 +0200
-+++ mod/GNUmakefile	2014-08-27 18:55:45.197621724 +0200
+--- orig/GNUmakefile	2015-05-24 14:54:45.000000000 +0200
++++ mod/GNUmakefile	2015-06-18 11:35:22.609435426 +0200
 @@ -27,7 +27,7 @@
      ADDITIONAL_OBJC_LIBS         = -lglu32 -lopengl32 -lopenal32.dll -lpng14.dll -lmingw32 -lSDLmain -lSDL -lvorbisfile.dll -lvorbis.dll -lz -lgnustep-base -l$(JS_IMPORT_LIBRARY) -lwinmm -mwindows
      ADDITIONAL_CFLAGS            = -DWIN32 -DNEED_STRLCPY `sdl-config --cflags` -mtune=generic
@@ -23,12 +23,12 @@ diff -Naur orig/GNUmakefile mod/GNUmakefile
      ADDITIONAL_INCLUDE_DIRS      = -I$(LIBJS_INC_DIR) -Isrc/SDL -Isrc/Core -Isrc/BSDCompat -Isrc/Core/Scripting -Isrc/Core/Materials -Isrc/Core/Entities -Isrc/Core/OXPVerifier -Isrc/Core/Debug -Isrc/Core/Tables -Isrc/Core/MiniZip
      ADDITIONAL_OBJC_LIBS         = -lGLU -lGL -lX11 -lSDL -lgnustep-base -l$(LIBJS) `nspr-config --libs` -lstdc++ -lopenal -lz -lvorbisfile
      ADDITIONAL_CFLAGS            = -Wall -DLINUX -DNEED_STRLCPY `sdl-config --cflags` `nspr-config --cflags`
--    ADDITIONAL_OBJCFLAGS         = -Wall -std=c99 -DLOADSAVEGUI -DLINUX -DXP_UNIX -Wno-import `sdl-config --cflags` `nspr-config --cflags`
-+    ADDITIONAL_OBJCFLAGS         = -fobjc-exceptions -Wall -std=c99 -DLOADSAVEGUI -DLINUX -DXP_UNIX -Wno-import `sdl-config --cflags` `nspr-config --cflags`
+-    ADDITIONAL_OBJCFLAGS         = -Wall -std=gnu99 -DLOADSAVEGUI -DLINUX -DXP_UNIX -Wno-import `sdl-config --cflags` `nspr-config --cflags`
++    ADDITIONAL_OBJCFLAGS         = -fobjc-exceptions -Wall -std=gnu99 -DLOADSAVEGUI -DLINUX -DXP_UNIX -Wno-import `sdl-config --cflags` `nspr-config --cflags`
      oolite_LIB_DIRS              += -L$(LIBJS_LIB_DIR) -L/usr/X11R6/lib/
  
      ifeq ($(use_deps),yes)
-@@ -64,81 +64,81 @@
+@@ -64,87 +64,87 @@
      endif
      ifeq ($(ESPEAK),yes)
          ADDITIONAL_OBJC_LIBS     += -lespeak
@@ -90,6 +90,9 @@ diff -Naur orig/GNUmakefile mod/GNUmakefile
      ADDITIONAL_CFLAGS            += -DDEBUG_GRAPHVIZ=0
 -    ADDITIONAL_OBJCFLAGS         += -DDEBUG_GRAPHVIZ=0
 +    ADDITIONAL_OBJCFLAGS         += -fobjc-exceptions -DDEBUG_GRAPHVIZ=0
+     ADDITIONAL_CFLAGS            += -DOO_FOV_INFLIGHT_CONTROL_ENABLED=0
+-    ADDITIONAL_OBJCFLAGS         += -DOO_FOV_INFLIGHT_CONTROL_ENABLEDD=0
++    ADDITIONAL_OBJCFLAGS         += -fobjc-exceptions -DOO_FOV_INFLIGHT_CONTROL_ENABLEDD=0
  else
      ifeq ($(BUILD_WITH_DEBUG_FUNCTIONALITY),no)
          ADDITIONAL_CFLAGS        += -DNDEBUG
@@ -120,6 +123,11 @@ diff -Naur orig/GNUmakefile mod/GNUmakefile
          ADDITIONAL_CFLAGS        += -DDEBUG_GRAPHVIZ=1
 -        ADDITIONAL_OBJCFLAGS     += -DDEBUG_GRAPHVIZ=1
 +        ADDITIONAL_OBJCFLAGS     += -fobjc-exceptions -DDEBUG_GRAPHVIZ=1
+     endif
+     ifeq ($(OO_FOV_INFLIGHT_CONTROL_ENABLED),yes)
+         ADDITIONAL_CFLAGS        += -DOO_FOV_INFLIGHT_CONTROL_ENABLED=1
+-        ADDITIONAL_OBJCFLAGS     += -DOO_FOV_INFLIGHT_CONTROL_ENABLED=1
++        ADDITIONAL_OBJCFLAGS     += -fobjc-exceptions -DOO_FOV_INFLIGHT_CONTROL_ENABLED=1
      endif
  endif
  
