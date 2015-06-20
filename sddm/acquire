@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+sddm-${UB_VERSION}.tar.gz sddm-cec201c/
+	git://github.com/sddm/sddm.git@cec201c
