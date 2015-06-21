@@ -10,15 +10,6 @@ diff -Naur orig/gui/disk_cfg.fl mod/gui/disk_cfg.fl
                code0 {o->cursor_color(Fl_Color(3));}
              }
              Fl_Value_Input floppyASidesValuator {
-@@ -118,7 +118,7 @@
-   gui.config.floppyAChanged = true;
-   o->value(double(gui.config.floppy.a.sectorsPerTrack));
- }}
--              xywh {215 92 40 23} align 8 when 4 minimum -1 maximum 240 step 1 value -1
-+              xywh {215 92 40 23} align 8 when 4 minimum -1 maximum 254 step 1 value -1
-               code0 {o->cursor_color(Fl_Color(3));}
-             }
-           }
 @@ -184,7 +184,7 @@
    gui.config.floppyBChanged = true;
    o->value(double(gui.config.floppy.b.tracks));
@@ -28,15 +19,6 @@ diff -Naur orig/gui/disk_cfg.fl mod/gui/disk_cfg.fl
                code0 {o->cursor_color(Fl_Color(3));}
              }
              Fl_Value_Input floppyBSidesValuator {
-@@ -204,7 +204,7 @@
-   gui.config.floppyBChanged = true;
-   o->value(double(gui.config.floppy.b.sectorsPerTrack));
- }}
--              xywh {215 182 40 23} align 8 when 4 minimum -1 maximum 240 step 1 value -1
-+              xywh {215 182 40 23} align 8 when 4 minimum -1 maximum 254 step 1 value -1
-               code0 {o->cursor_color(Fl_Color(3));}
-             }
-           }
 @@ -254,7 +254,7 @@
    gui.config.floppyCChanged = true;
    o->value(double(gui.config.floppy.c.tracks));
@@ -46,15 +28,6 @@ diff -Naur orig/gui/disk_cfg.fl mod/gui/disk_cfg.fl
                code0 {o->cursor_color(Fl_Color(3));}
              }
              Fl_Value_Input floppyCSidesValuator {
-@@ -274,7 +274,7 @@
-   gui.config.floppyCChanged = true;
-   o->value(double(gui.config.floppy.c.sectorsPerTrack));
- }}
--              xywh {215 272 40 23} align 8 when 4 minimum -1 maximum 240 step 1 value -1
-+              xywh {215 272 40 23} align 8 when 4 minimum -1 maximum 254 step 1 value -1
-               code0 {o->cursor_color(Fl_Color(3));}
-             }
-           }
 @@ -324,7 +324,7 @@
    gui.config.floppyDChanged = true;
    o->value(double(gui.config.floppy.d.tracks));
@@ -64,12 +37,3 @@ diff -Naur orig/gui/disk_cfg.fl mod/gui/disk_cfg.fl
                code0 {o->cursor_color(Fl_Color(3));}
              }
              Fl_Value_Input floppyDSidesValuator {
-@@ -344,7 +344,7 @@
-   gui.config.floppyDChanged = true;
-   o->value(double(gui.config.floppy.d.sectorsPerTrack));
- }}
--              xywh {215 362 40 23} align 8 when 4 minimum -1 maximum 240 step 1 value -1
-+              xywh {215 362 40 23} align 8 when 4 minimum -1 maximum 254 step 1 value -1
-               code0 {o->cursor_color(Fl_Color(3));}
-             }
-           }
