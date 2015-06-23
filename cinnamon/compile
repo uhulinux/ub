@@ -1,8 +1,5 @@
 #!/bin/sh -eux
 
-./autogen.sh
-
-sed -i -e 's@gksu@pkexec@g'  files/usr/bin/cinnamon-settings-users
 sed -i -e 's@blueberry@blueman-manager@g'  files/usr/lib/cinnamon-settings/cinnamon-settings.py
 
 ub_compile \

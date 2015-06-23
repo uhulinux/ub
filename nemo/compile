@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
 cd linuxmint-nemo*
-./autogen.sh
 ub_compile \
-	--enable-tracker=no
+	--disable-tracker \
+	--disable-gtk-doc-htlm

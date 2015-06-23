@@ -1,0 +1,10 @@
+diff -Naur orig/files/usr/bin/cinnamon-settings-users mod/files/usr/bin/cinnamon-settings-users
+--- orig/files/usr/bin/cinnamon-settings-users	2015-06-22 23:34:52.000000000 +0200
++++ mod/files/usr/bin/cinnamon-settings-users	2015-06-23 09:29:21.622329770 +0200
+@@ -2,5 +2,5 @@
+ 
+ import os
+ 
+-os.system("gksu /usr/lib/cinnamon-settings-users/cinnamon-settings-users.py")
++os.system("pkexec /usr/lib/cinnamon-settings-users/cinnamon-settings-users.py")
+ 
