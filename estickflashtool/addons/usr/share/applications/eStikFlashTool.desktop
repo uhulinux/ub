@@ -1,6 +1,6 @@
 [Desktop Entry]
 Categories=Science;Electricity;
-Exec=estickflash
+Exec=gksu estickflash
 Icon=eStickFlashTool
 StartupNotify=false
 Terminal=false
