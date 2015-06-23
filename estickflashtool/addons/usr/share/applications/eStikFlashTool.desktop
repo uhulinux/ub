@@ -1,0 +1,8 @@
+[Desktop Entry]
+Categories=Science;Electricity;
+Exec=estickflash
+Icon=eStickFlashTool
+StartupNotify=false
+Terminal=false
+Type=Application
+Name=eStickFlashTool
