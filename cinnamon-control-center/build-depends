@@ -19,6 +19,7 @@ libnotify-dev
 libwacom-dev
 libxft-dev
 libxslt-dev
+modemmanager-dev
 nm-applet-dev
 polkit-dev
 pulseaudio-dev
