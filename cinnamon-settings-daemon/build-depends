@@ -1,6 +1,7 @@
 cinnamon-desktop-dev
 colord-dev
 cups-dev
+dbus-glib-dev
 docbook-xsl
 gnome-common
 gsettings-desktop-schemas
@@ -8,6 +9,7 @@ intltool
 libcanberra-dev
 libgnomekbd-dev
 libnotify-dev
+librsvg-dev
 libwacom-dev
 libxslt-dev
 nss-dev
