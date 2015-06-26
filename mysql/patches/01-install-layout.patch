@@ -1,15 +1,15 @@
 diff -Naur orig/cmake/install_layout.cmake patched/cmake/install_layout.cmake
---- orig/cmake/install_layout.cmake	2015-02-25 16:40:53.000000000 +0100
-+++ patched/cmake/install_layout.cmake	2015-03-23 17:41:37.238303547 +0100
-@@ -168,22 +168,22 @@
+--- orig/cmake/install_layout.cmake	2015-06-17 16:54:11.000000000 +0200
++++ patched/cmake/install_layout.cmake	2015-06-26 19:04:21.988369499 +0200
+@@ -168,6 +168,7 @@
  SET(INSTALL_BINDIR_DEB                  "bin")
  SET(INSTALL_SBINDIR_DEB                 "sbin")
  SET(INSTALL_SCRIPTDIR_DEB               "bin")
--SET(INSTALL_SYSCONF2DIR_DEB             "/etc/mysql/conf.d")
-+# SET(INSTALL_SYSCONF2DIR_DEB             "/etc/mysql/conf.d")
++SET(INSTALL_SYSCONFDIR_DEB              "/etc")
+ SET(INSTALL_SYSCONF2DIR_DEB             "/etc/mysql/conf.d")
  #
  SET(INSTALL_LIBDIR_DEB                  "lib")
- SET(INSTALL_PLUGINDIR_DEB               "lib/mysql/plugin")
+@@ -175,15 +176,15 @@
  #
  SET(INSTALL_INCLUDEDIR_DEB              "include/mysql")
  #
@@ -29,3 +29,13 @@ diff -Naur orig/cmake/install_layout.cmake patched/cmake/install_layout.cmake
  SET(INSTALL_SUPPORTFILESDIR_DEB         "share/mysql")
  #
  SET(INSTALL_MYSQLDATADIR_DEB            "/var/lib/mysql")
+diff -Naur orig/support-files/rpm/my.cnf patched/support-files/rpm/my.cnf
+--- orig/support-files/rpm/my.cnf	2015-06-17 16:54:14.000000000 +0200
++++ patched/support-files/rpm/my.cnf	2015-06-26 19:05:11.112613093 +0200
+@@ -7,5 +7,5 @@
+ #
+ # include all files from the config directory
+ #
+-!includedir /etc/my.cnf.d
++!includedir /etc/mysql/conf.d
+ 

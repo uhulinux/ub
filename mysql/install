@@ -2,15 +2,19 @@
 
 ub_install
 
-# nincs teszt adatbázis
-rm -Rf "$UB_INSTALLDIR"/usr/data
-# nincs init
-rm -f "$UB_INSTALLDIR"/usr/share/mysql/{mysql.server,mysqld_multi.server}
-rm -f "$UB_INSTALLDIR"/usr/share/man/man1/mysql.server.1
+# nincs init -> install-fixes.patch
+# rm -Rf "$UB_INSTALLDIR"/etc/init.d
+# rm -f "$UB_INSTALLDIR"/usr/sbin/rcmysql
+# rm -f "$UB_INSTALLDIR"/usr/share/mysql/{mysql.server,mysqld_multi.server}
+# rm -f "$UB_INSTALLDIR"/usr/share/man/man1/mysql.server.1
+
+# tisztogatás -> install-fixes.patch
+# rm -f "$UB_INSTALLDIR"/usr/share/doc/mysql/INSTALL-BINARY
+# rm -Rf "$UB_INSTALLDIR"/usr/share/mysql/SELinux
 
 ln -sf libmysqlclient.so.18 "$UB_INSTALLDIR"/usr/lib/libmysqlclient_r.so.18
 ln -sf libmysqlclient.so.18.0.0 "$UB_INSTALLDIR"/usr/lib/libmysqlclient_r.so.18.0.0
 
 # systemd
-cp packaging/rpm-oel/mysqld.service "$UB_INSTALLDIR"/usr/lib/systemd/system/
-cp packaging/rpm-oel/mysql-systemd-start "$UB_INSTALLDIR"/usr/bin/mysqld-ping
+install -D -m644 packaging/rpm-oel/mysqld.service "$UB_INSTALLDIR"/usr/lib/systemd/system/
+install -D -m755 packaging/rpm-oel/mysql-systemd-start "$UB_INSTALLDIR"/usr/bin/mysqld-ping
