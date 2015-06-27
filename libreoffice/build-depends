@@ -36,6 +36,7 @@ libxmu-dev
 libxslt-dev
 libxt-dev
 libxtst-dev
+mdds-dev
 mesa-dev
 mysql-dev
 neon-dev

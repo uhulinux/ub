@@ -46,7 +46,6 @@ export QT4DIR=/usr/lib/qt4
   	--without-system-libmwaw \
   	--without-system-libpagemaker \
   	--without-system-lpsolve \
-  	--without-system-mdds \
   	--without-system-mysql-cppconn \
   	--without-system-mythes \
   	--without-system-orcus \
