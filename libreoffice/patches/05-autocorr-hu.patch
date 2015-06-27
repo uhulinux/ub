@@ -1,0 +1,13 @@
+diff -Naur orig/extras/source/autocorr/lang/hu/DocumentList.xml patched/extras/source/autocorr/lang/hu/DocumentList.xml
+--- orig/extras/source/autocorr/lang/hu/DocumentList.xml	2015-05-20 14:54:48.000000000 +0200
++++ patched/extras/source/autocorr/lang/hu/DocumentList.xml	2015-05-24 18:24:53.130482178 +0200
+@@ -1014,7 +1014,9 @@
+   <block-list:block block-list:abbreviated-name=":félhang:" block-list:name="𝅗𝅥"/>
+   <block-list:block block-list:abbreviated-name=":tizedhatod hang:" block-list:name="𝅘𝅥𝅯"/>
+   <block-list:block block-list:abbreviated-name=":madzsong:" block-list:name="🀄"/>
++  <block-list:block block-list:abbreviated-name=":mahjong:" block-list:name="🀄"/>
+   <block-list:block block-list:abbreviated-name=":fekete dzsóker:" block-list:name="🃏"/>
++  <block-list:block block-list:abbreviated-name=":fekete joker:" block-list:name="🃏"/>
+   <block-list:block block-list:abbreviated-name=":ciklon:" block-list:name="🌀"/>
+   <block-list:block block-list:abbreviated-name=":köd:" block-list:name="🌁"/>
+   <block-list:block block-list:abbreviated-name=":esernyő2:" block-list:name="🌂"/>

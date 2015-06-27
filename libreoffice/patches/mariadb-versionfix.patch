@@ -1,0 +1,27 @@
+diff -Naur orig/external/mysqlcppconn/patches/mariadb-versionfix.patch patched/external/mysqlcppconn/patches/mariadb-versionfix.patch
+--- orig/external/mysqlcppconn/patches/mariadb-versionfix.patch	1970-01-01 01:00:00.000000000 +0100
++++ patched/external/mysqlcppconn/patches/mariadb-versionfix.patch	2014-11-23 00:02:28.927749480 +0100
+@@ -0,0 +1,12 @@
++diff -Naur UnpackedTarball/mysqlcppconn/driver/nativeapi/libmysql_static_proxy.cpp UnpackedTarball/mysqlcppconn/driver/nativeapi/libmysql_static_proxy.cpp
++--- UnpackedTarball/mysqlcppconn/driver/nativeapi/libmysql_static_proxy.cpp	2014-07-30 13:41:37.000000000 +0200
+++++ UnpackedTarball/mysqlcppconn/driver/nativeapi/libmysql_static_proxy.cpp	2014-11-23 00:01:33.559474924 +0100
++@@ -293,7 +293,7 @@
++ int
++ LibmysqlStaticProxy::options(MYSQL * mysql, enum mysql_option option, const void *arg1, const void *arg2)
++ {
++-#if MYSQL_VERSION_ID >= 50606	
+++#if MYSQL_VERSION_ID >= 100014	
++ 	if ((::mysql_options4(mysql, option, static_cast<const char *>(arg1), static_cast<const char *>(arg2)))) {
++ 		throw sql::InvalidArgumentException("Unsupported option provided to mysql_options4()");
++ 	} else {
+diff -Naur orig/external/mysqlcppconn/UnpackedTarball_mysqlcppconn.mk patched/external/mysqlcppconn/UnpackedTarball_mysqlcppconn.mk
+--- orig/external/mysqlcppconn/UnpackedTarball_mysqlcppconn.mk	2014-11-20 19:13:29.000000000 +0100
++++ patched/external/mysqlcppconn/UnpackedTarball_mysqlcppconn.mk	2014-11-23 00:04:53.484466298 +0100
+@@ -20,6 +20,7 @@
+ 	external/mysqlcppconn/patches/mysql-connector-c++-1.1.0.patch \
+ 	external/mysqlcppconn/patches/warnings.patch.0 \
+         external/mysqlcppconn/patches/enable-libmysql-proxy.patch \
++        external/mysqlcppconn/patches/mariadb-versionfix.patch \
+ ))
+ 
+ # vim: set noet sw=4 ts=4:
