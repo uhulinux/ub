@@ -42,6 +42,7 @@ build/gyp_chromium -f ninja build/all.gyp --no-parallel --depth=. \
 	-Duse_system_ssl=0 \
 	-Duse_system_sqlite=0 \
 	-Duse_system_yasm=1
+#	-Denable_hotwording=0
 
 # ninja, a 34-től a make nem támogatott
 
