@@ -3,5 +3,3 @@
 ./autogen.sh
 ub_compile \
   --enable-systemd
-
-
