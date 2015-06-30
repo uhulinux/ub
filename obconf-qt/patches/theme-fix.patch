@@ -1,0 +1,12 @@
+diff -Naur orig/src/CMakeLists.txt mod/src/CMakeLists.txt
+--- orig/src/CMakeLists.txt	2015-06-07 14:18:52.000000000 +0200
++++ mod/src/CMakeLists.txt	2015-06-07 15:32:45.617003084 +0200
+@@ -119,7 +119,7 @@
+ add_definitions(
+   -DPACKAGE_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/obconf-qt"
+   -DPIXMAPS_DIR="${CMAKE_INSTALL_PREFIX}/share/pixmaps"
+-  -DTHEME_DIR="{CMAKE_INSTALL_PREFIX}/share/openbox/themes"
++  -DTHEME_DIR="{CMAKE_INSTALL_PREFIX}/share/themes"
+ )
+ 
+ target_link_libraries(obconf-qt

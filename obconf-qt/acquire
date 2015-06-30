@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+master.zip obconf-qt-master/
+	https://github.com/attuska/obconf-qt/archive/

@@ -12,4 +12,4 @@ lxqt-powermanagement >=
 lxqt-qtplugin >=
 lxqt-runner >=
 lxqt-session >=
-obconf >=
+obconf-qt >=
