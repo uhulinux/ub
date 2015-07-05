@@ -5,5 +5,5 @@ if [ -d "/usr/share/ca-certificates" ] ; then
 	# to include their stuff in the db.
 	# However it's too overzealous when the user has custom certs in place.
 	# --fresh is to clean up dangling symlinks
-	/usr/sbin/update-ca-certificates --root /
+	/usr/sbin/update-ca-certificates --fresh
 fi
