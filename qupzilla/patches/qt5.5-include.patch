@@ -1,0 +1,71 @@
+diff -Naur orig/src/lib/3rdparty/qtsingleapplication/qtlocalpeer.cpp patched/src/lib/3rdparty/qtsingleapplication/qtlocalpeer.cpp
+--- orig/src/lib/3rdparty/qtsingleapplication/qtlocalpeer.cpp	2015-01-26 15:26:15.000000000 +0100
++++ patched/src/lib/3rdparty/qtsingleapplication/qtlocalpeer.cpp	2015-07-05 01:32:27.505522775 +0200
+@@ -48,6 +48,7 @@
+ #include "qtlocalpeer.h"
+ #include <QtCore/QCoreApplication>
+ #include <QtCore/QTime>
++#include <QDataStream>
+ 
+ #if defined(Q_OS_WIN)
+ #include <QtCore/QLibrary>
+diff -Naur orig/src/plugins/TabManager/tabmanagerplugin.h patched/src/plugins/TabManager/tabmanagerplugin.h
+--- orig/src/plugins/TabManager/tabmanagerplugin.h	2015-01-26 15:26:15.000000000 +0100
++++ patched/src/plugins/TabManager/tabmanagerplugin.h	2015-07-05 01:38:12.423233129 +0200
+@@ -25,7 +25,6 @@
+ #include <QDebug>
+ #include <QLabel>
+ #include <QMessageBox>
+-#include <QWebElement>
+ #include <QVBoxLayout>
+ #include <QPointer>
+ 
+diff -Naur orig/src/plugins/TabManager/TabManager.pro patched/src/plugins/TabManager/TabManager.pro
+--- orig/src/plugins/TabManager/TabManager.pro	2015-01-26 15:26:15.000000000 +0100
++++ patched/src/plugins/TabManager/TabManager.pro	2015-07-05 01:37:26.759006692 +0200
+@@ -21,10 +21,4 @@
+ include(tldextractor/tldextractor.pri)
+ 
+ PLUGIN_DIR = $$PWD
+-srcdir = $$(QUPZILLA_SRCDIR)
+-equals(srcdir, "") {
+-    include(../../plugins.pri)
+-}
+-else {
+-    include($$srcdir/src/plugins.pri)
+-}
++include(../../plugins.pri)
+diff -Naur orig/src/plugins/TabManager/tabmanagerwidget.cpp patched/src/plugins/TabManager/tabmanagerwidget.cpp
+--- orig/src/plugins/TabManager/tabmanagerwidget.cpp	2015-01-26 15:26:15.000000000 +0100
++++ patched/src/plugins/TabManager/tabmanagerwidget.cpp	2015-07-05 01:39:11.063523911 +0200
+@@ -34,6 +34,7 @@
+ #include <QDesktopWidget>
+ #include <QDialogButtonBox>
+ #include <QStackedWidget>
++#include <QWebView>
+ #include <QDialog>
+ #include <QTimer>
+ #include <QLabel>
+diff -Naur orig/src/plugins/TabManager/tldextractor/tldextractor.h patched/src/plugins/TabManager/tldextractor/tldextractor.h
+--- orig/src/plugins/TabManager/tldextractor/tldextractor.h	2015-01-26 15:26:15.000000000 +0100
++++ patched/src/plugins/TabManager/tldextractor/tldextractor.h	2015-07-05 01:39:48.523709666 +0200
+@@ -21,6 +21,7 @@
+ #define TLDExtractor_Version "1.0"
+ 
+ #include <QHash>
++#include <QObject>
+ #include <QStringList>
+ 
+ class TLDExtractor : public QObject
+diff -Naur orig/src/plugins.pri patched/src/plugins.pri
+--- orig/src/plugins.pri	2015-01-26 15:26:15.000000000 +0100
++++ patched/src/plugins.pri	2015-07-05 01:36:24.358697266 +0200
+@@ -27,8 +27,6 @@
+ DEPENDPATH += $$INCLUDEPATH \
+               $$PWD/lib/data \
+ 
+-include(lib/3rdparty/qtsingleapplication/qtsingleapplication.pri)
+-
+ TEMPLATE = lib
+ CONFIG += plugin
+ DESTDIR = $$QZ_DESTDIR/plugins/

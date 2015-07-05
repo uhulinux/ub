@@ -40,14 +40,18 @@ export LD_LIBRARY_PATH="$(pwd)"/lib
 	-plugin-sql-psql -I/usr/include/postgresql -I/usr/include/postgresql/server \
 	-plugin-sql-odbc    \
 	-plugin-sql-sqlite  \
-	-system-sqlite      \
 	\
 	-audio-backend      \
+	-gstreamer 1.0		\
 	\
-	-system-zlib        \
-	-system-libpng      \
+	-system-freetype	\
 	-system-libjpeg     \
+	-system-libpng      \
+	-system-pcre		\
+	-system-sqlite		\
+	-system-zlib        \
 	-system-xcb         \
+	-system-xkbcommon-x11 \
 	\
 	-openssl-linked     \
 	\
@@ -87,4 +91,5 @@ ub_make
 
 #some options we may want to use in the future
 #	-nomake tests       \
-#	-gstreamer 1.0		\
+#	-system-harfbuzz	\ # requires harfbuzz >= 0.9.31
+

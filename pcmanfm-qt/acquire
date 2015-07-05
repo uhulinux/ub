@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-pcmanfm-qt-${UB_VERSION}.tar.gz pcmanfm-qt-643dcf/
-    git://github.com/lxde/pcmanfm-qt.git@643dcf
+pcmanfm-qt-${UB_VERSION}.tar.gz pcmanfm-qt-643dcf6/
+    git://github.com/lxde/pcmanfm-qt.git@643dcf6

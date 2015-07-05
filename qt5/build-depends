@@ -32,6 +32,7 @@ mysql-dev
 nss-dev
 openssl-dev
 pciutils-dev
+pcre-dev
 postgresql-dev
 pulseaudio-dev
 re2c

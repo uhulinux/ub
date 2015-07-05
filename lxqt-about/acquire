@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-lxqt-about-${UB_VERSION}.tar.gz lxqt-about-3f9712/
-    git://github.com/lxde/lxqt-about.git@3f9712
+lxqt-about-${UB_VERSION}.tar.gz lxqt-about-3f97127/
+    git://github.com/lxde/lxqt-about.git@3f97127

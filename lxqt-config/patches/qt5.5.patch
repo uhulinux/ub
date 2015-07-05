@@ -1,0 +1,18 @@
+diff -Naur orig/lxqt-config-monitor/monitor.h patched/lxqt-config-monitor/monitor.h
+--- orig/lxqt-config-monitor/monitor.h	2015-07-05 20:31:20.000000000 +0200
++++ patched/lxqt-config-monitor/monitor.h	2015-07-05 20:34:47.531518950 +0200
+@@ -20,6 +20,7 @@
+ #ifndef _MONITOR_H_
+ #define _MONITOR_H_
+ 
++#include <QObject>
+ #include <QStringList>
+ #include <QHash>
+ #include <QList>
+@@ -89,4 +90,4 @@
+ QSize sizeFromString(QString str);
+ 
+ 
+-#endif // _MONITOR_H_
+\ No newline at end of file
++#endif // _MONITOR_H_

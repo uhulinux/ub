@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-libqtxdg-${UB_VERSION}.tar.gz libqtxdg-ab0f65cd/
-    git://github.com/lxde/libqtxdg.git@ab0f65cd
+libqtxdg-${UB_VERSION}.tar.gz libqtxdg-ab0f65c/
+    git://github.com/lxde/libqtxdg.git@ab0f65c
