@@ -1,0 +1,16 @@
+#!/bin/sh -eux
+
+export RPM_PACKAGE_VERSION=no
+ub_compile \
+	--enable-locking \
+	--with-x-app-defaults=/usr/share/X11/app-defaults \
+	--without-readdisplay \
+	--without-shadow \
+	--with-setuid-hacks \
+	--with-pam \
+	--with-gtk \
+	--with-gl \
+	--without-gle \
+	--with-pixbuf \
+	--with-proc-interrupts \
+	--with-jpeg
