@@ -1,6 +1,7 @@
---- icewm-1.3.8/lib/menu.in
-+++ icewm-1.3.8/lib/menu.in
-@@ -4,15 +4,9 @@
+diff -Naur orig/lib/menu.in mod/lib/menu.in
+--- orig/lib/menu.in	2015-07-03 03:48:23.000000000 +0200
++++ mod/lib/menu.in	2015-07-07 17:56:51.933451848 +0200
+@@ -4,14 +4,11 @@
  # since modifications to this file will be discarded when you
  # (re)install icewm.
  #
@@ -13,9 +14,9 @@
 -prog Gimp gimp gimp
 +prog xterm /usr/share/icons/gnome/16x16/apps/terminal.png xterm
 +prog "Web böngésző" /usr/share/icons/gnome/16x16/apps/web-browser.png xdg-open about:blank
++
  separator
--menuprog Gnome folder icewm-menu-gnome2 --list @CONFIG_GNOME2_MENU_DIR@
--menuprog KDE folder icewm-menu-gnome@GNOME_VER@ --list @CONFIG_KDE_MENU_DIR@
+ menuprog "Desktop Apps" folder icewm-menu-fdo
 -menufile Programs folder programs
 -menufile Tool_bar folder toolbar
 +prog "Menü újraépítése" /usr/share/icons/gnome/16x16/actions/edit-find-replace.png /usr/share/icewm/startup
