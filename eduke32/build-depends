@@ -4,4 +4,4 @@ gtk2-dev
 libvorbis-dev
 libvpx-dev
 nasm
-sdl-mixer-dev
+sdl2-mixer-dev

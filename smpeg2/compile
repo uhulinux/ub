@@ -1,4 +1,5 @@
 #!/bin/sh -eux
 
-export SDL_TARGET=2
+./autogen.sh
 ub_compile
+
