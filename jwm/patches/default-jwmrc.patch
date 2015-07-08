@@ -1,7 +1,7 @@
 diff -Naur orig/example.jwmrc mod/example.jwmrc
---- orig/example.jwmrc	2014-03-15 20:00:14.000000000 +0100
-+++ mod/example.jwmrc	2015-03-31 11:29:49.000000000 +0200
-@@ -4,17 +4,18 @@
+--- orig/example.jwmrc	2015-06-29 00:21:20.000000000 +0200
++++ mod/example.jwmrc	2015-07-08 14:11:07.635250069 +0200
+@@ -3,17 +3,18 @@
  
      <!-- The root menu. -->
      <RootMenu onroot="12">
@@ -29,7 +29,7 @@ diff -Naur orig/example.jwmrc mod/example.jwmrc
                  xprop | xmessage -file -
              </Program>
          </Menu>
-@@ -23,8 +24,10 @@
+@@ -22,8 +23,10 @@
              xscreensaver-command -lock
          </Program>
          <Separator/>
@@ -42,7 +42,7 @@ diff -Naur orig/example.jwmrc mod/example.jwmrc
      </RootMenu>
  
      <!-- Options for program groups. -->
-@@ -119,9 +122,11 @@
+@@ -122,9 +125,11 @@
           IconPath can be listed multiple times to allow searching
           for icons in multiple paths.
        -->
@@ -57,16 +57,7 @@ diff -Naur orig/example.jwmrc mod/example.jwmrc
  
      <!-- Virtual Desktops -->
      <!-- Desktop tags can be contained within Desktops for desktop names. -->
-@@ -130,7 +135,7 @@
-               contained within a Desktop tag to give a specific background
-               for that desktop.
-          -->
--        <Background type="image">$HOME/images/bg.jpg</Background>
-+        <Background type="image">/usr/share/wallpapers/UHU/blur.jpg</Background>
-     </Desktops>
- 
-     <!-- Double click speed (in milliseconds) -->
-@@ -174,4 +179,9 @@
+@@ -177,4 +182,9 @@
      <Key mask="A" key="Up">udesktop</Key>
      <Key mask="A" key="Down">ddesktop</Key>
  
