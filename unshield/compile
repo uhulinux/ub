@@ -1,5 +1,4 @@
 #!/bin/sh -eux
 
-sed -i 's|-Werror||g' configure.ac.in
-./bootstrap
-ub_compile
+cmake -DCMAKE_INSTALL_PREFIX=/usr .
+make -j1
