@@ -3,4 +3,5 @@
 ub_compile \
 	--with-gtk=2.0 \
 	--enable-mpaste \
+	--disable-user-guide \
 	--enable-deprecation-flags
