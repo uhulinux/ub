@@ -1,5 +1,3 @@
-cmake
-fribidi-dev
 gettext
 imlib-dev
 intltool
