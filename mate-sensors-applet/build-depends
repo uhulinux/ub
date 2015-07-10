@@ -9,4 +9,5 @@ libxslt-dev
 lmsensors-dev
 mate-panel-dev
 openssl-dev
+systemd-dev
 yelp-tools
