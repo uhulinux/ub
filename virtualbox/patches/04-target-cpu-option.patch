@@ -1,7 +1,7 @@
 diff -Naur orig/configure patched/configure
---- orig/configure	2014-07-15 19:16:46.000000000 +0200
-+++ patched/configure	2014-08-30 15:10:54.449082053 +0200
-@@ -2383,6 +2383,9 @@
+--- orig/configure	2015-07-09 11:50:42.000000000 +0200
++++ patched/configure	2015-07-09 22:51:28.466619625 +0200
+@@ -2441,6 +2441,9 @@
      --target-arch=*)
        TARGET_MACHINE=`echo $option | cut -d'=' -f2`
        ;;
