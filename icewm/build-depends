@@ -1,12 +1,9 @@
 cmake
+gdk-pixbuf-dev
 gettext
-imlib-dev
-intltool
-libgnomeui2-dev
 libxft-dev
 libxinerama-dev
 libxrandr-dev
 libxt-dev
 linuxdoc-tools
-pyxdg
 x.org-font-utils
