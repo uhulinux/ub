@@ -1,5 +1,7 @@
 #!/bin/sh -eux
 
-./autogen.sh
-ub_configure
-ub_make
+ub_compile \
+	-DPREFIX=/usr
+build/genpref > preferences
+sed s@#" "IconPath.*@IconPath=/usr/share/pixmaps:/usr/share/icons/hicolor/48x48/apps:/usr/share/icons/gnome/48x48/apps:/usr/share/icons/gnome/48x48/actions:/usr/share/icons/gnome/48x48/devices:/usr/share/icons/default.kde4/48x48/apps@ -i \
+	preferences
