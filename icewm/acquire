@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-icewm-${UB_VERSION}.tar.gz icewm-6c3c08e/
-	git://github.com/bbidulock/icewm.git@6c3c08e
+icewm-${UB_VERSION}.tar.gz icewm-caf3dc7/
+	git://github.com/bbidulock/icewm.git@caf3dc7
