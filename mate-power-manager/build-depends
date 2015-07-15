@@ -12,5 +12,6 @@ mate-desktop-dev
 mate-panel-dev
 openssl-dev
 upower-dev
+xcb-util-dev
 xmlto
 yelp-tools
