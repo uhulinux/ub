@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-master.zip qterminal-master/
-	https://github.com/attuska/qterminal/archive/
+qterminal-${UB_VERSION}.tar.gz qterminal-3392ed7/
+	git://github.com/qterminal/qterminal.git@3392ed7
