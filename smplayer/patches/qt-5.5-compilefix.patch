@@ -1,0 +1,22 @@
+diff -Naur orig/src/qtsingleapplication/qtlocalpeer.cpp mod/src/qtsingleapplication/qtlocalpeer.cpp
+--- orig/src/qtsingleapplication/qtlocalpeer.cpp	2013-08-30 02:53:57.000000000 +0200
++++ mod/src/qtsingleapplication/qtlocalpeer.cpp	2015-07-15 16:02:04.478539349 +0200
+@@ -42,6 +42,7 @@
+ #include "qtlocalpeer.h"
+ #include <QCoreApplication>
+ #include <QTime>
++#include <QtCore/QDataStream>
+ 
+ #if defined(Q_OS_WIN)
+ #include <QLibrary>
+diff -Naur orig/src/qtsingleapplication/qtsingleapplication.cpp mod/src/qtsingleapplication/qtsingleapplication.cpp
+--- orig/src/qtsingleapplication/qtsingleapplication.cpp	2013-08-30 02:53:57.000000000 +0200
++++ mod/src/qtsingleapplication/qtsingleapplication.cpp	2015-07-15 15:58:50.502874644 +0200
+@@ -42,6 +42,7 @@
+ #include "qtsingleapplication.h"
+ #include "qtlocalpeer.h"
+ #include <QWidget>
++#include <QtCore/QDataStream>
+ 
+ 
+ /*!
