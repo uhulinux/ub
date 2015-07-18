@@ -1,7 +1,7 @@
 #!/usr/bin/env dl
 
 trigger-rally-${UB_VERSION}-src.tar.bz2 trigger-rally-${UB_VERSION}-src/
-	http://download.sourceforge.nettrigger-rally/files/trigger-rally/trigger-${UB_VERSION}/
-
+	http://netcologne.dl.sourceforge.net/project/trigger-rally/trigger-${UB_VERSION}/
+	
 trigger-rally-${UB_VERSION}-data.tar.bz2 .
-	http://download.sourceforge.nettrigger-rally/files/trigger-rally/trigger-${UB_VERSION}/
+	http://netcologne.dl.sourceforge.net/project/trigger-rally/trigger-${UB_VERSION}/
