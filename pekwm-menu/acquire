@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-pekwm-menu-$UB_VERSION.tar.gz pekwm-menu-$UB_VERSION/
-	https://bitbucket.org/nfisher1226/pekwm-menu/downloads/
+v$UB_VERSION.tar.bz2 .
+	https://bitbucket.org/nfisher1226/pekwm-menu/get/
