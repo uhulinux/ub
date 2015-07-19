@@ -1,0 +1,5 @@
+bison
+dbus-glib-dev
+gtk2-dev
+libgcrypt-dev
+libxml2-dev

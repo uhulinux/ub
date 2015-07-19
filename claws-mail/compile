@@ -1,9 +1,13 @@
 #!/bin/sh -eux
 
+if [ ! -f version ]; then
+	echo "echo $UB_VERSION" > version
+fi
+
 autoreconf -vif
 
-# GData:
-# http://www.thewildbeast.co.uk/claws-mail/bugzilla/show_bug.cgi?id=3432
+# GData: libgdata 0.17.1, inkább 0.17.2
+# Geolocation: régi libchamplain (0.8) kell
 
 ub_compile \
     --enable-crash-dialog \

@@ -13,7 +13,7 @@ icu-dev
 libarchive-dev
 libassuan-dev
 libcanberra-dev
-libchamplain-dev
+libchamplain0.8-dev
 libetpan-dev
 libgdata-dev
 libindicate-dev
