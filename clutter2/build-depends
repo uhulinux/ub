@@ -1,0 +1,6 @@
+cogl-dev
+gtk2-dev
+json-glib-dev
+libffi-dev
+libxi-dev
+mesa-dev

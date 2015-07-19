@@ -1,0 +1,1 @@
+urllist ftp://ftp.gnome.org/pub/GNOME/sources/libchamplain/0.8/ | splitver '^libchamplain-([0-9.]+).tar.bz2$' | sort -V | tail -n 1
