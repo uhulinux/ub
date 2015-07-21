@@ -8,4 +8,5 @@ mate-desktop-dev
 mate-panel-dev
 openssl-dev
 wireless-tools-dev
+xcb-util-dev
 yelp-tools
