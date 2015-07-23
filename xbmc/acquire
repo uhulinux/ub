@@ -1,8 +1,8 @@
 #!/usr/bin/env dl
 
-${UB_VERSION/~/-}-Helix.tar.gz xbmc-${UB_VERSION/~/-}-Helix/
+${UB_VERSION/~/-}-Isengard.tar.gz xbmc-${UB_VERSION/~/-}-Isengard/
 	http://mirrors.xbmc.org/releases/source/
 	https://github.com/xbmc/xbmc/archive/
 	
-ffmpeg-2.4.4-Helix.tar.gz :/tools/depends/target/ffmpeg/
-	https://github.com/xbmc/FFmpeg/archive/2.4.4-Helix.tar.gz
+ffmpeg-2.6.3-Isengard.tar.gz :/tools/depends/target/ffmpeg/
+	https://github.com/xbmc/FFmpeg/archive/2.6.3-Isengard.tar.gz
