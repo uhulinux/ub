@@ -17,8 +17,6 @@ CFLAGS="-O2 -march=i686 -mtune=generic -fomit-frame-pointer -I/usr/include/direc
 	--enable-mga \
 	--enable-xmga \
 	--enable-vdpau \
-	--disable-libdvdcss-internal \
-	--disable-dvdread-internal \
 	--enable-libgsm \
 	--enable-radio \
 	--enable-radio-capture \
@@ -26,3 +24,5 @@ CFLAGS="-O2 -march=i686 -mtune=generic -fomit-frame-pointer -I/usr/include/direc
 	--enable-directfb \
 	--extra-ldflags="-lfribidi"
 ub_make
+
+# 	--disable-libdvdcss-internal, --disable-dvdread-internal: unknown parameter
