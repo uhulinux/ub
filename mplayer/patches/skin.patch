@@ -1,0 +1,12 @@
+diff -Naur orig/skins/Blue/skin patched/skins/Blue/skin
+--- orig/skins/Blue/skin	2014-03-18 16:07:36.000000000 +0100
++++ patched/skins/Blue/skin	2015-07-25 19:48:20.230321314 +0200
+@@ -42,7 +42,7 @@
+ 
+   ;pimage=phasebitmaps,phases,default value,x,y,sx,sy,msg
+ ;  pimage = progres-long2c, 46, 0, 245, 67, 141, 5, evSetMoviePosition
+-  pimage = progres-long2d, 46, 0, 245, 67, 141, 5, evSetMoviePosition
++  potmeter = progres-long2d, 46, 0, 245, 67, 141, 5, evSetMoviePosition
+ 
+   ;font=fontfile
+   font =  symbols
