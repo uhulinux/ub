@@ -1,28 +1,19 @@
 diff -Naur orig/operations/external/ff-load.c patched/operations/external/ff-load.c
---- orig/operations/external/ff-load.c	2012-04-01 13:17:57.000000000 +0200
-+++ patched/operations/external/ff-load.c	2013-07-12 21:29:04.044184320 +0200
-@@ -271,7 +271,7 @@
-       gint err;
+--- orig/operations/external/ff-load.c	2015-05-17 02:32:23.000000000 +0200
++++ patched/operations/external/ff-load.c	2015-06-08 23:12:09.125947117 +0200
+@@ -325,7 +325,7 @@
+       p->width = p->enc->width;
+       p->height = p->enc->height;
+       p->frames = 10000000;
+-      p->lavc_frame = avcodec_alloc_frame ();
++      p->lavc_frame = av_frame_alloc ();
  
-       ff_cleanup (o);
--      err = av_open_input_file (&p->ic, o->path, NULL, 0, NULL);
-+      err = avformat_open_input (&p->ic, o->path, NULL, NULL);
-       if (err < 0)
-         {
-           print_error (o->path, err);
-@@ -312,7 +312,7 @@
-       if (p->codec->capabilities & CODEC_CAP_TRUNCATED)
-         p->enc->flags |= CODEC_FLAG_TRUNCATED;
- 
--      if (avcodec_open (p->enc, p->codec) < 0)
-+      if (avcodec_open2 (p->enc, p->codec, NULL) < 0)
-         {
-           g_warning ("error opening codec %s", p->enc->codec->name);
-           return;
+       if (p->fourcc)
+         g_free (p->fourcc);
 diff -Naur orig/operations/workshop/external/ff-save.c patched/operations/workshop/external/ff-save.c
---- orig/operations/workshop/external/ff-save.c	2012-03-29 22:05:50.000000000 +0200
-+++ patched/operations/workshop/external/ff-save.c	2013-07-12 22:06:20.960830310 +0200
-@@ -568,7 +568,7 @@
+--- orig/operations/workshop/external/ff-save.c	2015-05-24 20:22:08.000000000 +0200
++++ patched/operations/workshop/external/ff-save.c	2015-06-08 23:07:16.416495649 +0200
+@@ -573,7 +573,7 @@
      }
  
    /* open the codec */
@@ -31,7 +22,7 @@ diff -Naur orig/operations/workshop/external/ff-save.c patched/operations/worksh
      {
        fprintf (stderr, "could not open codec\n");
        exit (1);
-@@ -769,26 +769,20 @@
+@@ -774,26 +774,20 @@
       /*XXX: FOO p->audio_st = add_audio_stream (op, p->oc, p->fmt->audio_codec);*/
      }
  
@@ -61,7 +52,7 @@ diff -Naur orig/operations/workshop/external/ff-save.c patched/operations/worksh
  
    return 0;
  }
-@@ -858,7 +852,7 @@
+@@ -863,7 +857,7 @@
              av_freep (&p->oc->streams[i]);
            }
  
@@ -69,4 +60,4 @@ diff -Naur orig/operations/workshop/external/ff-save.c patched/operations/worksh
 +        avio_close (&p->oc->pb);
          free (p->oc);
        }
-       g_free (o->chant_data);
+       g_free (o->user_data);

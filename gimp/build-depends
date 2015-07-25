@@ -6,6 +6,7 @@ dbus-glib-dev
 gegl-dev
 ghostscript
 gpm-dev
+gtk-doc
 gtk2-dev
 intltool
 iso-codes
