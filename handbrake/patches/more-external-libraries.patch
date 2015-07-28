@@ -1,0 +1,13 @@
+diff -Naur orig/make/include/main.defs mod/make/include/main.defs
+--- orig/make/include/main.defs	2014-10-16 01:32:41.000000000 +0200
++++ mod/make/include/main.defs	2015-07-28 11:27:30.098494643 +0200
+@@ -63,9 +63,7 @@
+ 
+ MODULES += contrib/ffmpeg
+ MODULES += contrib/libvpx
+-MODULES += contrib/libdvdread
+ MODULES += contrib/libdvdnav
+-MODULES += contrib/libbluray
+ 
+ ifneq (,$(filter $(BUILD.system),mingw))
+ ifneq ($(HAS.pthread),1)
