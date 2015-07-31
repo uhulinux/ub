@@ -1,0 +1,12 @@
+[Unit]
+Description=Sauerbraten dedicated server
+After=syslog.target
+
+[Service]
+ExecStart=/usr/sbin/lsb-release-update
+Restart=on-abort
+StandardOutput=syslog
+
+[Install]
+WantedBy=multi-user.target
+
