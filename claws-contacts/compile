@@ -3,7 +3,6 @@
 # autoreconf -vif
 sed -i -e 's/--enable-maintainer-mode//' autogen.sh
 
-./autogen.sh --disable-ldap-plugin
+NOCONFIGURE=1 ./autogen.sh
 
-ub_compile \
-	--disable-ldap-plugin
+ub_compile
