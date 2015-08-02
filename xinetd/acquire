@@ -1,0 +1,5 @@
+#!/usr/bin/env dl
+
+xinetd-${UB_VERSION}.tar.gz xinetd-${UB_VERSION}/
+	ftp://anduin.linuxfromscratch.org/BLFS/svn/x/
+	http://fossies.org/linux/misc/

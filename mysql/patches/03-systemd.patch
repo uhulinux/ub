@@ -1,7 +1,15 @@
-diff -urN mariadb-10.0.11.orig/packaging/rpm-oel/mysqld.service mariadb-10.0.11/packaging/rpm-oel/mysqld.service
---- mariadb-10.0.11.orig/packaging/rpm-oel/mysqld.service	2014-05-11 00:36:18.000000000 +0200
-+++ mariadb-10.0.11/packaging/rpm-oel/mysqld.service	2014-05-27 10:46:42.000000000 +0200
-@@ -30,19 +30,14 @@
+diff -Naur orig/packaging/rpm-oel/mysqld.service patched/packaging/rpm-oel/mysqld.service
+--- orig/packaging/rpm-oel/mysqld.service	2015-06-17 16:54:12.000000000 +0200
++++ patched/packaging/rpm-oel/mysqld.service	2015-08-02 21:33:39.816801937 +0200
+@@ -17,7 +17,6 @@
+ [Unit]
+ Description=MySQL Community Server
+ After=network.target
+-After=syslog.target
+ 
+ [Install]
+ WantedBy=multi-user.target
+@@ -30,14 +29,11 @@
  # Execute pre and post scripts as root
  PermissionsStartOnly=true
  
@@ -17,8 +25,8 @@ diff -urN mariadb-10.0.11.orig/packaging/rpm-oel/mysqld.service mariadb-10.0.11/
  
  # Give up if ping don't get an answer
  TimeoutSec=600
- 
+@@ -45,4 +41,3 @@
  Restart=always
  PrivateTmp=false
--
+ 
 -
