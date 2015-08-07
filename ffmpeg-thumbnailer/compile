@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+./autogen.sh
+ub_compile \
+	--enable-gio \
+	--enable-thumbnailer
+
+
