@@ -15,4 +15,4 @@ ub_compile \
 	--enable-sftp \
 	--enable-matroska \
 	--disable-update-check \
-	--enable-qt=5
+	--enable-qt=4
