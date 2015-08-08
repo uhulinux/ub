@@ -2,6 +2,9 @@
 
 ub_install
 
+mkdir -p "$UB_INSTALLDIR"/usr/include/libavutil/x86  "$UB_INSTALLDIR"/usr/include/libavformat
+cp libavutil/x86/*.h "$UB_INSTALLDIR"/usr/include/libavutil/x86/
+cp libavformat/*.h "$UB_INSTALLDIR"/usr/include/libavformat/
 install -Dm755 tools/qt-faststart "$UB_INSTALLDIR"/usr/bin/qt-faststart
 ln -s libpostproc "$UB_INSTALLDIR"/usr/include/postproc
 ln -s postproc/postprocess.h "$UB_INSTALLDIR"/usr/include/
