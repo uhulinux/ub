@@ -22,7 +22,8 @@ CFLAGS="-O2 -march=i686 -mtune=generic -fomit-frame-pointer -I/usr/include/direc
 	--enable-radio-capture \
 	--enable-gui \
 	--enable-directfb \
-	--extra-ldflags="-lfribidi"
+	--extra-ldflags="-lfribidi" \
+#	--disable-ffmpeg_a
 ub_make
 
 # 	--disable-libdvdcss-internal, --disable-dvdread-internal: unknown parameter

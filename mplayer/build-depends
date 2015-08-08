@@ -27,6 +27,7 @@ liblame-dev
 liblzo-dev
 libmad-dev
 libmng-dev
+libmpeg2-dev
 libogg-dev
 libpng-dev
 libtheora-dev
@@ -48,10 +49,12 @@ mpg123-dev
 openal-dev
 opencore-amr-dev
 openjpeg1-dev
+opus-dev
 pulseaudio-dev
 samba-dev
 schroedinger-dev
 sdl-dev
+sdl-image-dev
 speex-dev
 toolame
 x264-dev
