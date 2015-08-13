@@ -1,5 +1,6 @@
 groff
 krb5-dev
+libedit
 libx11-dev
 net-tools
 openssl-dev
