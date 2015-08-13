@@ -1,1 +1,1 @@
-u2dpypi pexpect
+urllist https://github.com/pexpect/pexpect/releases.atom/ | splitver '^([0-9.]+)$' | sort -V | tail -n 1
