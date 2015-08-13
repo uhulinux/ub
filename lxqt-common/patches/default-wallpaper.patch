@@ -1,0 +1,12 @@
+diff -Naur orig/config/pcmanfm-qt/lxqt/settings.conf.in mod/config/pcmanfm-qt/lxqt/settings.conf.in
+--- orig/config/pcmanfm-qt/lxqt/settings.conf.in	2015-08-13 22:04:33.000000000 +0200
++++ mod/config/pcmanfm-qt/lxqt/settings.conf.in	2015-08-13 22:50:36.722526042 +0200
+@@ -15,7 +15,7 @@
+ 
+ [Desktop]
+ WallpaperMode=stretch
+-Wallpaper=@LXQT_SHARE_DIR@/themes/light/simple_blue_widescreen.png
++Wallpaper=@LXQT_SHARE_DIR@/themes/frost/numix.png
+ BgColor=#000000
+ FgColor=#ffffff
+ ShadowColor=#000000
