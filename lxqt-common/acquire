@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-lxqt-common-${UB_VERSION}.tar.gz lxqt-common-fa5e95/
-    git://github.com/lxde/lxqt-common.git@fa5e95
+lxqt-common-${UB_VERSION}.tar.gz lxqt-common-3b56bf2/
+    git://github.com/lxde/lxqt-common.git@3b56bf2
