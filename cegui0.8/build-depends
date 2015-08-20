@@ -8,6 +8,7 @@ fribidi-dev
 glew-dev
 glfw-dev
 glitz-dev
+glm-dev
 glu-dev
 graphviz-dev
 gtk2-dev
