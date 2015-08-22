@@ -1,0 +1,12 @@
+diff -Naur orig/Makefile patched/Makefile
+--- orig/Makefile	2015-08-10 00:40:00.000000000 +0200
++++ patched/Makefile	2015-08-22 12:20:29.721173450 +0200
+@@ -10,7 +10,7 @@
+ 	install -d -m 755 $(DESTDIR)/usr/share/desktop-directories
+ 	install -m 755 src/xdgmenumaker $(DESTDIR)/$(PREFIX)/bin/
+ 	install -m 644 desktop-directories/* $(DESTDIR)/usr/share/desktop-directories
+-	if [ -f man/xdgmenumaker.man ]; then \
++	if [ -f man/xdgmenumaker.1 ]; then \
+ 		install -d -m 755 $(DESTDIR)/$(PREFIX)/share/man/man1; \
+ 		install -m 644 man/xdgmenumaker.1 $(DESTDIR)/$(PREFIX)/share/man/man1/; \
+ 	fi

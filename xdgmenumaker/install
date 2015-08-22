@@ -1,4 +1,3 @@
 #!/bin/sh -eux
 
-export DESTDIR=$UB_INSTALLDIR
-sh install.sh
+ub_make install DESTDIR=$UB_INSTALLDIR PREFIX=/usr
