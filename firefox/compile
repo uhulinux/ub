@@ -12,6 +12,7 @@ ac_add_options --target='i686-uhu-linux'
 ac_add_options --prefix=/usr
 ac_add_options --enable-application=browser
 ac_add_options --enable-official-branding
+ac_add_options --enable-crashreporter
 ac_add_options --enable-optimize="-O2"
 ac_add_options --without-system-jpeg
 ac_add_options --with-system-zlib
@@ -34,7 +35,6 @@ ac_add_options --disable-gnomeui
 ac_add_options --disable-gnomevfs
 ac_add_options --disable-installer
 ac_add_options --disable-updater
-ac_add_options --disable-crashreporter
 ac_add_options --disable-tests
 ac_add_options --disable-mochitest
 ac_add_options --enable-default-toolkit=cairo-gtk2

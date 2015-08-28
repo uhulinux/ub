@@ -1,4 +1,5 @@
 #!/usr/bin/env dl
 
 nspr-"$UB_VERSION".tar.gz nspr-"$UB_VERSION"/nspr/
+	http://ftp.mozilla.org/pub/nspr/releases/v"$UB_VERSION"/src/
 	ftp://ftp.mozilla.org/pub/nspr/releases/v"$UB_VERSION"/src/
