@@ -1,0 +1,47 @@
+diff -Naur orig/util/grub.d/10_linux.in patched/util/grub.d/10_linux.in
+--- orig/util/grub.d/10_linux.in	2012-04-18 23:24:38.000000000 +0200
++++ patched/util/grub.d/10_linux.in	2015-08-31 19:48:45.221378106 +0200
+@@ -87,6 +87,8 @@
+       case $type in
+ 	  recovery)
+ 	      title="$(gettext_printf "%s, with Linux %s (recovery mode)" "${os}" "${version}")" ;;
++	  nomodeset)
++	      title="$(gettext_printf "%s, %s (nomodeset)" "${os}" "${bitmode}")" ;;
+ 	  *)
+ 	      title="$(gettext_printf "%s, with Linux %s" "${os}" "${version}")" ;;
+       esac
+@@ -153,11 +155,11 @@
+ machine=`uname -m`
+ case "x$machine" in
+     xi?86 | xx86_64)
+-	list=`for i in /boot/vmlinuz-* /vmlinuz-* /boot/kernel-* ; do
++	list=`for i in /boot/bzImage-* bzImage-* /boot/vmlinuz-* /vmlinuz-* /boot/kernel-* ; do
+                   if grub_file_is_not_garbage "$i" ; then echo -n "$i " ; fi
+               done` ;;
+     *) 
+-	list=`for i in /boot/vmlinuz-* /boot/vmlinux-* /vmlinuz-* /vmlinux-* /boot/kernel-* ; do
++	list=`for i in /boot/bzImage-* bzImage-* /boot/vmlinuz-* /boot/vmlinux-* /vmlinuz-* /vmlinux-* /boot/kernel-* ; do
+                   if grub_file_is_not_garbage "$i" ; then echo -n "$i " ; fi
+ 	     done` ;;
+ esac
+@@ -198,7 +200,9 @@
+ 	   "initramfs-genkernel-${version}" \
+ 	   "initramfs-genkernel-${alt_version}" \
+ 	   "initramfs-genkernel-${GENKERNEL_ARCH}-${version}" \
+-	   "initramfs-genkernel-${GENKERNEL_ARCH}-${alt_version}"; do
++	   "initramfs-genkernel-${GENKERNEL_ARCH}-${alt_version}" \
++	   "initramfs-${version}.cpio.gz" \
++	   "initramfs-${version}.${GENKERNEL_ARCH}.cpio.gz"; do
+     if test -e "${dirname}/${i}" ; then
+       initrd="$i"
+       break
+@@ -241,6 +245,9 @@
+ 
+   linux_entry "${OS}" "${version}" advanced \
+               "${GRUB_CMDLINE_LINUX} ${GRUB_CMDLINE_LINUX_DEFAULT}"
++  # nomodeset mód
++  linux_entry "${OS}" "${version}" nomodeset \
++                "nomodeset ${GRUB_CMDLINE_LINUX}"
+   if [ "x${GRUB_DISABLE_RECOVERY}" != "xtrue" ]; then
+     linux_entry "${OS}" "${version}" recovery \
+                 "single ${GRUB_CMDLINE_LINUX}"

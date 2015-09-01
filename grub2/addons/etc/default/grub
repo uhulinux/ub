@@ -3,5 +3,5 @@ GRUB_GFXMODE=auto
 GRUB_GFXPAYLOAD_LINUX=keep
 GRUB_SAVEDEFAULT=true
 GRUB_DEFAULT=saved
-#GRUB_THEME=/boot/grub2/themes/starfield/theme.txt
+#GRUB_THEME=/boot/grub2/themes/UHU/theme.txt
 GRUB_BACKGROUND=/usr/share/wallpapers/UHU/blur.jpg
