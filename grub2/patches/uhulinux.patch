@@ -1,15 +1,29 @@
 diff -Naur orig/util/grub.d/10_linux.in patched/util/grub.d/10_linux.in
 --- orig/util/grub.d/10_linux.in	2012-04-18 23:24:38.000000000 +0200
-+++ patched/util/grub.d/10_linux.in	2015-08-31 19:48:45.221378106 +0200
-@@ -87,6 +87,8 @@
++++ patched/util/grub.d/10_linux.in	2015-09-01 15:51:39.959870699 +0200
+@@ -31,7 +31,7 @@
+ if [ "x${GRUB_DISTRIBUTOR}" = "x" ] ; then
+   OS=GNU/Linux
+ else
+-  OS="${GRUB_DISTRIBUTOR} GNU/Linux"
++  OS="${GRUB_DISTRIBUTOR}"
+   CLASS="--class $(echo ${GRUB_DISTRIBUTOR} | tr 'A-Z' 'a-z' | cut -d' ' -f1) ${CLASS}"
+ fi
+ 
+@@ -86,9 +86,11 @@
+   if [ x$type != xsimple ] ; then
        case $type in
  	  recovery)
- 	      title="$(gettext_printf "%s, with Linux %s (recovery mode)" "${os}" "${version}")" ;;
+-	      title="$(gettext_printf "%s, with Linux %s (recovery mode)" "${os}" "${version}")" ;;
++	      title="$(gettext_printf "%s, kernel: %s (recovery mode)" "${os}" "${version}")" ;;
 +	  nomodeset)
-+	      title="$(gettext_printf "%s, %s (nomodeset)" "${os}" "${bitmode}")" ;;
++	      title="$(gettext_printf "%s, kernel: %s (nomodeset)" "${os}" "${version}")" ;;
  	  *)
- 	      title="$(gettext_printf "%s, with Linux %s" "${os}" "${version}")" ;;
+-	      title="$(gettext_printf "%s, with Linux %s" "${os}" "${version}")" ;;
++	      title="$(gettext_printf "%s, kernel: %s" "${os}" "${version}")" ;;
        esac
+       if [ x"$title" = x"$GRUB_ACTUAL_DEFAULT" ] || [ x"Previous Linux versions>$title" = x"$GRUB_ACTUAL_DEFAULT" ]; then
+ 	  replacement_title="$(echo "Advanced options for ${OS}" | sed 's,>,>>,g')>$(echo "$title" | sed 's,>,>>,g')"
 @@ -153,11 +155,11 @@
  machine=`uname -m`
  case "x$machine" in
