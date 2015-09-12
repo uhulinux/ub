@@ -194,5 +194,5 @@ diff -Naur orig/MenuMaker/__init__.py mod/MenuMaker/__init__.py
  
  class OfficeApps(Menu) :
 -	name = "Office"
-+	name = "Hivatal"
++	name = "Iroda"
  	keywords = KwS(Office, Calendar, ContactManagement, Database, Dictionary, Chart, Finance, FlowChart, PDA, ProjectManagement, Presentation, Spreadsheet, WordProcessor)
