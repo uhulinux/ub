@@ -2,3 +2,4 @@ gobject-introspection-dev
 gtk2-dev
 intltool
 polkit-dev
+systemd-dev
