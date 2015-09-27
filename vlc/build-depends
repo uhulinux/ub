@@ -8,6 +8,7 @@ flac-dev
 fribidi-dev
 gnome2-vfs-dev
 gnutls-dev
+gst-plugins-base-dev
 jack-dev
 lame
 liba52-dev
@@ -63,9 +64,11 @@ libxxf86vm-dev
 lirc-dev
 livemedia
 lua-dev
+musepack-dev
 opencv-dev
 openslp-dev
 openssl-dev
+opus-dev
 popt-dev
 portaudio-dev
 pulseaudio-dev
