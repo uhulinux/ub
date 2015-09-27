@@ -1,7 +1,7 @@
 diff -Naur orig/dpkg-deb/build.c patched/dpkg-deb/build.c
---- orig/dpkg-deb/build.c	2015-05-19 21:02:45.508877258 +0200
-+++ patched/dpkg-deb/build.c	2015-05-19 21:08:48.098675244 +0200
-@@ -502,7 +502,7 @@
+--- orig/dpkg-deb/build.c	2015-09-26 16:56:00.277219323 +0200
++++ patched/dpkg-deb/build.c	2015-09-26 16:57:08.833559276 +0200
+@@ -504,7 +504,7 @@
        ohshite(_("failed to chdir to '%.255s'"), dir);
      if (chdir(BUILDCONTROLDIR))
        ohshite(_("failed to chdir to '%.255s'"), ".../DEBIAN");

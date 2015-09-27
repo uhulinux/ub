@@ -1,7 +1,7 @@
 diff -Naur orig/lib/dpkg/parse.c patched/lib/dpkg/parse.c
---- orig/lib/dpkg/parse.c	2014-10-11 19:36:42.000000000 +0200
-+++ patched/lib/dpkg/parse.c	2014-10-18 22:10:27.917451525 +0200
-@@ -186,7 +186,7 @@
+--- orig/lib/dpkg/parse.c	2015-09-16 14:50:15.000000000 +0200
++++ patched/lib/dpkg/parse.c	2015-09-26 17:02:59.859299918 +0200
+@@ -188,7 +188,7 @@
        (pkg->status != PKG_STAT_NOTINSTALLED &&
         pkg->status != PKG_STAT_HALFINSTALLED)) {
      parse_ensure_have_field(ps, &pkgbin->description, "description");
