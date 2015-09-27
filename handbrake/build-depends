@@ -1,5 +1,6 @@
 cmake
 dbus-glib-dev
+ffmpeg-dev
 gst-plugins-base-dev
 gtk-dev
 intltool
@@ -7,11 +8,13 @@ libass-dev
 libbluray-dev
 libdrm-dev
 libdts-dev
+libdvdnav-dev
 libdvdread-dev
 liblame-dev
 libnotify-dev
 libtheora-dev
 libvorbis-dev
+libvpx-dev
 libxshmfence-dev
 libxslt-dev
 libxv-dev
