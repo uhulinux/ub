@@ -1,0 +1,298 @@
+diff -Naur orig/third_party/icu/icu.gyp patched/third_party/icu/icu.gyp
+--- orig/third_party/icu/icu.gyp	2015-09-01 22:10:49.000000000 +0200
++++ patched/third_party/icu/icu.gyp	2015-09-05 16:33:24.636547268 +0200
+@@ -75,294 +75,6 @@
+     'msvs_disabled_warnings': [4005, 4068, 4355, 4996, 4267],
+   },
+   'conditions': [
+-    ['use_system_icu==0 or want_separate_host_toolset==1', {
+-      'targets': [
+-        {
+-          'target_name': 'copy_icudtl_dat',
+-          'type': 'none',
+-          # icudtl.dat is the same for both host/target, so this only supports a
+-          # single toolset. If a target requires that the .dat file be copied
+-          # to the output directory, it should explicitly depend on this target
+-          # with the host toolset (like copy_icudtl_dat#host).
+-          'toolsets': [ 'host' ],
+-          'copies': [{
+-            'destination': '<(PRODUCT_DIR)',
+-            'conditions': [
+-              ['OS == "android"', {
+-                'files': [
+-                  'android/icudtl.dat',
+-                ],
+-              } , { # else: OS != android
+-                'files': [
+-                  'source/data/in/icudtl.dat',
+-                ],
+-              }],
+-            ],
+-          }],
+-        },
+-        {
+-          'target_name': 'icudata',
+-          'type': 'static_library',
+-          'defines': [
+-            'U_HIDE_DATA_SYMBOL',
+-          ],
+-          'sources': [
+-             # These are hand-generated, but will do for now.  The linux
+-             # version is an identical copy of the (mac) icudtl_dat.S file,
+-             # modulo removal of the .private_extern and .const directives and
+-             # with no leading underscore on the icudt52_dat symbol.
+-             'android/icudtl_dat.S',
+-             'linux/icudtl_dat.S',
+-             'mac/icudtl_dat.S',
+-          ],
+-          'conditions': [
+-            [ 'use_system_icu==1 and want_separate_host_toolset==1', {
+-              'toolsets': ['host'],
+-            }],
+-            [ 'use_system_icu==0 and want_separate_host_toolset==1', {
+-              'toolsets': ['host', 'target'],
+-            }],
+-            [ 'use_system_icu==0 and want_separate_host_toolset==0', {
+-              'toolsets': ['target'],
+-            }],
+-            [ 'OS == "win" and icu_use_data_file_flag==0', {
+-              'type': 'none',
+-              'copies': [
+-                {
+-                  'destination': '<(PRODUCT_DIR)',
+-                  'files': [
+-                    'windows/icudt.dll',
+-                  ],
+-                },
+-              ],
+-            }],
+-            [ 'icu_use_data_file_flag==1', {
+-              'type': 'none',
+-              # Remove any assembly data file.
+-              'sources/': [['exclude', 'icudtl_dat']],
+-
+-              # Make sure any binary depending on this gets the data file.
+-              'conditions': [
+-                ['OS != "ios"', {
+-                  'dependencies': [
+-                    'copy_icudtl_dat#host',
+-                  ],
+-                } , { # else: OS=="ios"
+-                  'link_settings': {
+-                    'mac_bundle_resources': [
+-                      'source/data/in/icudtl.dat',
+-                    ],
+-                  },
+-                }], # OS!=ios
+-              ], # conditions
+-            }], # icu_use_data_file_flag
+-          ], # conditions
+-          'target_conditions': [
+-            [ 'OS == "win" or OS == "mac" or OS == "ios" or '
+-              '(OS == "android" and (_toolset != "host" or host_os != "linux")) or '
+-              '(OS == "qnx" and (_toolset == "host" and host_os != "linux"))', {
+-              'sources!': ['linux/icudtl_dat.S'],
+-            }],
+-            [ 'OS != "android" or _toolset == "host"', {
+-              'sources!': ['android/icudtl_dat.S'],
+-            }],
+-            [ 'OS != "mac" and OS != "ios" and '
+-              '((OS != "android" and OS != "qnx") or '
+-              '_toolset != "host" or host_os != "mac")', {
+-              'sources!': ['mac/icudtl_dat.S'],
+-            }],
+-          ], # target_conditions
+-        },
+-        {
+-          'target_name': 'icui18n',
+-          'type': '<(component)',
+-          'sources': [
+-            '<@(icui18n_sources)',
+-          ],
+-          'defines': [
+-            'U_I18N_IMPLEMENTATION',
+-          ],
+-          'dependencies': [
+-            'icuuc',
+-          ],
+-          'direct_dependent_settings': {
+-            'include_dirs': [
+-              'source/i18n',
+-            ],
+-          },
+-          'variables': {
+-            'clang_warning_flags': [
+-              # ICU uses its own deprecated functions.
+-              '-Wno-deprecated-declarations',
+-              # ICU prefers `a && b || c` over `(a && b) || c`.
+-              '-Wno-logical-op-parentheses',
+-              # ICU has some `unsigned < 0` checks.
+-              '-Wno-tautological-compare',
+-              # ICU has some code with the pattern:
+-              #   if (found = uprv_getWindowsTimeZoneInfo(...))
+-              '-Wno-parentheses',
+-            ],
+-          },
+-          # Since ICU wants to internally use its own deprecated APIs, don't
+-          # complain about it.
+-          'cflags': [
+-            '-Wno-deprecated-declarations',
+-          ],
+-          'cflags_cc': [
+-            '-frtti',
+-          ],
+-          'xcode_settings': {
+-            'GCC_ENABLE_CPP_RTTI': 'YES',       # -frtti
+-          },
+-          'msvs_settings': {
+-            'VCCLCompilerTool': {
+-              'RuntimeTypeInfo': 'true',
+-            },
+-          },
+-          'conditions': [
+-            [ 'use_system_icu==1 and want_separate_host_toolset==1', {
+-              'toolsets': ['host'],
+-            }],
+-            [ 'use_system_icu==0 and want_separate_host_toolset==1', {
+-              'toolsets': ['host', 'target'],
+-            }],
+-            [ 'use_system_icu==0 and want_separate_host_toolset==0', {
+-              'toolsets': ['target'],
+-            }],
+-            ['OS == "android" and clang==0', {
+-                # Disable sincos() optimization to avoid a linker error since
+-                # Android's math library doesn't have sincos().  Either
+-                # -fno-builtin-sin or -fno-builtin-cos works.
+-                'cflags': [
+-                    '-fno-builtin-sin',
+-                ],
+-            }],
+-            [ 'OS == "win" and clang==1', {
+-              # Note: General clang warnings should go in the
+-              # clang_warning_flags block above.
+-              'msvs_settings': {
+-                'VCCLCompilerTool': {
+-                  'AdditionalOptions': [
+-                    # See http://bugs.icu-project.org/trac/ticket/11122
+-                    '-Wno-inline-new-delete',
+-                    '-Wno-implicit-exception-spec-mismatch',
+-                    # See http://bugs.icu-project.org/trac/ticket/11757.
+-                    '-Wno-reorder',
+-                  ],
+-                },
+-              },
+-            }],
+-          ], # conditions
+-        },
+-        {
+-          'target_name': 'icuuc',
+-          'type': '<(component)',
+-          'sources': [
+-            '<@(icuuc_sources)',
+-          ],
+-          'defines': [
+-            'U_COMMON_IMPLEMENTATION',
+-          ],
+-          'dependencies': [
+-            'icudata',
+-          ],
+-          'direct_dependent_settings': {
+-            'include_dirs': [
+-              'source/common',
+-            ],
+-            'conditions': [
+-              [ 'component=="static_library"', {
+-                'defines': [
+-                  'U_STATIC_IMPLEMENTATION',
+-                ],
+-              }],
+-            ],
+-          },
+-          'variables': {
+-            'clang_warning_flags': [
+-              # ICU uses its own deprecated functions.
+-              '-Wno-deprecated-declarations',
+-              # ICU prefers `a && b || c` over `(a && b) || c`.
+-              '-Wno-logical-op-parentheses',
+-              # ICU has some `unsigned < 0` checks.
+-              '-Wno-tautological-compare',
+-              # uresdata.c has switch(RES_GET_TYPE(x)) code. The
+-              # RES_GET_TYPE macro returns an UResType enum, but some switch
+-              # statement contains case values that aren't part of that
+-              # enum (e.g. URES_TABLE32 which is in UResInternalType). This
+-              # is on purpose.
+-              '-Wno-switch',
+-              # ICU has some code with the pattern:
+-              #   if (found = uprv_getWindowsTimeZoneInfo(...))
+-              '-Wno-parentheses',
+-              # ICU generally has no unused variables, but there are a few
+-              # places where this warning triggers.
+-              # See https://codereview.chromium.org/1222643002/ and
+-              # http://www.icu-project.org/trac/ticket/11759.
+-              "-Wno-unused-const-variable",
+-            ],
+-          },
+-          'cflags': [
+-            # Since ICU wants to internally use its own deprecated APIs,
+-            # don't complain about it.
+-            '-Wno-deprecated-declarations',
+-            '-Wno-unused-function',
+-          ],
+-          'cflags_cc': [
+-            '-frtti',
+-          ],
+-          'xcode_settings': {
+-            'GCC_ENABLE_CPP_RTTI': 'YES',       # -frtti
+-          },
+-          'msvs_settings': {
+-            'VCCLCompilerTool': {
+-              'RuntimeTypeInfo': 'true',
+-            },
+-          },
+-          'all_dependent_settings': {
+-            'msvs_settings': {
+-              'VCLinkerTool': {
+-                'AdditionalDependencies': [
+-                  'advapi32.lib',
+-                ],
+-              },
+-            },
+-          },
+-          'conditions': [
+-            [ 'use_system_icu==1 and want_separate_host_toolset==1', {
+-              'toolsets': ['host'],
+-            }],
+-            [ 'use_system_icu==0 and want_separate_host_toolset==1', {
+-              'toolsets': ['host', 'target'],
+-            }],
+-            [ 'use_system_icu==0 and want_separate_host_toolset==0', {
+-              'toolsets': ['target'],
+-            }],
+-            [ 'OS == "win" or icu_use_data_file_flag==1', {
+-              'sources': [
+-                'source/stubdata/stubdata.c',
+-              ],
+-              'defines': [
+-                'U_ICUDATAENTRY_IN_COMMON',
+-              ],
+-            }],
+-            [ 'OS == "win" and clang==1', {
+-              # Note: General clang warnings should go in the
+-              # clang_warning_flags block above.
+-              'msvs_settings': {
+-                'VCCLCompilerTool': {
+-                  'AdditionalOptions': [
+-                    # See http://bugs.icu-project.org/trac/ticket/11122
+-                    '-Wno-inline-new-delete',
+-                    '-Wno-implicit-exception-spec-mismatch',
+-                  ],
+-                },
+-              },
+-            }],
+-          ], # conditions
+-        },
+-      ], # targets
+-    }],
+     ['use_system_icu==1', {
+       'targets': [
+         {
