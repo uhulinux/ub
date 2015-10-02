@@ -1,6 +1,6 @@
 [Unit]
 Description=Network Time Service
-After=ntpdate.service sntp.service
+After=syslog.target ntpdate.service sntp.service
 
 [Service]
 Type=forking
