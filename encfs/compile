@@ -1,5 +1,4 @@
 #!/bin/sh -eux
 
+autoreconf -if
 ub_compile
-
-# ub_make -C po update-po

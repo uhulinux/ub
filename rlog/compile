@@ -1,5 +1,3 @@
 #!/bin/sh -eux
 
 ub_compile
-
-# ub_make -C po update-po
