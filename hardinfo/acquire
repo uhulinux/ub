@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+hardinfo-${UB_VERSION}.tar.bz2 hardinfo-${UB_VERSION}/
+	http://sourceforge.net/projects/hardinfo.berlios/files/
