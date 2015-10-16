@@ -16,7 +16,7 @@ mv out/Release/*.pak "$UB_INSTALLDIR/usr/lib/chromium/"
 mv out/Release/locales/ "$UB_INSTALLDIR/usr/lib/chromium/"
 mv out/Release/pseudo_locales/ "$UB_INSTALLDIR/usr/lib/chromium/"
 mv out/Release/pyproto/ "$UB_INSTALLDIR/usr/lib/chromium/"
-mv out/Release/remoting_locales/ "$UB_INSTALLDIR/usr/lib/chromium/"
+# mv out/Release/remoting_locales/ "$UB_INSTALLDIR/usr/lib/chromium/" (46-tól nincs ilyen)
 mv out/Release/resources/ "$UB_INSTALLDIR/usr/lib/chromium/"
 
 for size in 16 22 24 32 48 64 128 256; do
