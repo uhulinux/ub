@@ -2,6 +2,5 @@
 
 export PATH=/usr/lib/qt5/bin:"$PATH"
 export QTDIR=/usr/lib/qt5
-sed -i 's:qm:ts:g' resources.qrc
 qmake -recursive
 ub_make
