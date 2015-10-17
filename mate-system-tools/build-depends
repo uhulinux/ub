@@ -10,3 +10,4 @@ mate-polkit-dev
 system-tools-backends
 systemd-dev
 wireless-tools-dev
+mate-common
