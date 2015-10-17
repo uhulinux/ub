@@ -11,8 +11,8 @@ libnotify-dev
 libsm-dev
 libwnck2-dev
 libxslt-dev
+mate-common
 mate-desktop-dev
-mate-icon-theme
 mate-panel-dev
 mate-settings-daemon-dev
 networkmanager-dev

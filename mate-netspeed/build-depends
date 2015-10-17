@@ -4,6 +4,7 @@ itstool
 libgtop2-dev
 libsm-dev
 libxslt-dev
+mate-common
 mate-desktop-dev
 mate-panel-dev
 openssl-dev

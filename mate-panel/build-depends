@@ -9,9 +9,11 @@ libmateweather-dev
 librsvg-dev
 libsm-dev
 libwnck2-dev
+mate-common
 mate-desktop-dev
 mate-menus-dev
 networkmanager-dev
 openssl-dev
 python-dev
 xcb-util-dev
+yelp-tools

@@ -68,76 +68,6 @@ diff -Naur orig/desktop-directories/Makefile.am patched/desktop-directories/Make
  	mate-other.directory.in \
  	mate-menu-applications.directory.in \
  	mate-menu-system.directory.in \
-diff -Naur orig/desktop-directories/Makefile.in patched/desktop-directories/Makefile.in
---- orig/desktop-directories/Makefile.in	2014-03-01 11:38:08.000000000 +0100
-+++ patched/desktop-directories/Makefile.in	2014-10-20 19:08:40.385368390 +0200
-@@ -333,17 +333,66 @@
- 
- directory_in_files = \
- 	mate-audio-video.directory.in \
-+	mate-audio-video-sub-audiovideoediting.directory.in \
-+	mate-audio-video-sub-discburning.directory.in \
-+	mate-audio-video-sub-midi.directory.in \
-+	mate-audio-video-sub-mixer.directory.in \
-+	mate-audio-video-sub-music.directory.in \
-+	mate-audio-video-sub-player.directory.in \
-+	mate-audio-video-sub-recorder.directory.in \
-+	mate-audio-video-sub-sequencer.directory.in \
-+	mate-audio-video-sub-tuner.directory.in \
-+	mate-audio-video-sub-tv.directory.in \
- 	mate-development.directory.in \
- 	mate-education.directory.in \
- 	mate-game.directory.in \
-+	mate-game-sub-action.directory.in \
-+	mate-game-sub-adventure.directory.in \
-+	mate-game-sub-arcade.directory.in \
-+	mate-game-sub-board.directory.in \
-+	mate-game-sub-blocks.directory.in \
-+	mate-game-sub-card.directory.in \
-+	mate-game-sub-kids.directory.in \
-+	mate-game-sub-logic.directory.in \
-+	mate-game-sub-roleplaying.directory.in \
-+	mate-game-sub-simulation.directory.in \
-+	mate-game-sub-sports.directory.in \
-+	mate-game-sub-strategy.directory.in \
- 	mate-graphics.directory.in \
- 	mate-network.directory.in \
-+	mate-network-sub-chat.directory.in \
-+	mate-network-sub-dialup.directory.in \
-+	mate-network-sub-email.directory.in \
-+	mate-network-sub-feed.directory.in \
-+	mate-network-sub-filetransfer.directory.in \
-+	mate-network-sub-hamradio.directory.in \
-+	mate-network-sub-instantmessaging.directory.in \
-+	mate-network-sub-ircclient.directory.in \
-+	mate-network-sub-news.directory.in \
-+	mate-network-sub-p2p.directory.in \
-+	mate-network-sub-remoteaccess.directory.in \
-+	mate-network-sub-telephony.directory.in \
-+	mate-network-sub-videoconference.directory.in \
-+	mate-network-sub-webbrowser.directory.in \
- 	mate-office.directory.in \
- 	mate-settings.directory.in \
- 	mate-settings-system.directory.in \
- 	mate-system-tools.directory.in \
-+	mate-system-tools-sub-emulator.directory.in \
-+	mate-system-tools-sub-filemanager.directory.in \
-+	mate-system-tools-sub-filesystem.directory.in \
-+	mate-system-tools-sub-monitor.directory.in \
-+	mate-system-tools-sub-terminalemulator.directory.in \
- 	mate-utility.directory.in \
- 	mate-utility-accessibility.directory.in \
-+	mate-utility-sub-archiving.directory.in \
-+	mate-utility-sub-calculator.directory.in \
-+	mate-utility-sub-clock.directory.in \
-+	mate-utility-sub-compression.directory.in \
-+	mate-utility-sub-filetool.directory.in \
-+	mate-utility-sub-telephonytool.directory.in \
-+	mate-utility-sub-texteditor.directory.in \
-+	mate-utility-sub-texttool.directory.in \
- 	mate-other.directory.in \
- 	mate-menu-applications.directory.in \
- 	mate-menu-system.directory.in \
 diff -Naur orig/desktop-directories/mate-audio-video-sub-audiovideoediting.directory.in patched/desktop-directories/mate-audio-video-sub-audiovideoediting.directory.in
 --- orig/desktop-directories/mate-audio-video-sub-audiovideoediting.directory.in	1970-01-01 01:00:00.000000000 +0100
 +++ patched/desktop-directories/mate-audio-video-sub-audiovideoediting.directory.in	2014-10-20 19:10:05.405789983 +0200
@@ -281,7 +211,7 @@ diff -Naur orig/desktop-directories/mate-game-sub-blocks.directory.in patched/de
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Blocks
-+Name[hu]=Blokkok
++Name[hu]=Kirakós
 +_Comment=Falling blocks game
 +Comment[hu]=Potyogó blokkok játék (pl. tetris)
 +Icon=gnome-gnometris

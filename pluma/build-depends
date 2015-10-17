@@ -4,6 +4,7 @@ intltool
 iso-codes
 itstool
 libsm-dev
+mate-common
 mate-desktop-dev
 pygtk-dev
 pygtksourceview
