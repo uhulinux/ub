@@ -1,3 +1,2 @@
-pygobject
-pygtk
-wmctrl
+py3gobject
+python3-configobj
