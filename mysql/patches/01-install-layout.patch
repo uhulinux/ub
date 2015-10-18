@@ -1,7 +1,7 @@
 diff -Naur orig/cmake/install_layout.cmake patched/cmake/install_layout.cmake
---- orig/cmake/install_layout.cmake	2015-06-17 16:54:11.000000000 +0200
-+++ patched/cmake/install_layout.cmake	2015-06-26 19:04:21.988369499 +0200
-@@ -168,6 +168,7 @@
+--- orig/cmake/install_layout.cmake	2015-10-15 17:43:36.000000000 +0200
++++ patched/cmake/install_layout.cmake	2015-10-18 16:35:40.938838526 +0200
+@@ -169,6 +169,7 @@
  SET(INSTALL_BINDIR_DEB                  "bin")
  SET(INSTALL_SBINDIR_DEB                 "sbin")
  SET(INSTALL_SCRIPTDIR_DEB               "bin")
@@ -9,7 +9,7 @@ diff -Naur orig/cmake/install_layout.cmake patched/cmake/install_layout.cmake
  SET(INSTALL_SYSCONF2DIR_DEB             "/etc/mysql/conf.d")
  #
  SET(INSTALL_LIBDIR_DEB                  "lib")
-@@ -175,15 +176,15 @@
+@@ -176,21 +177,21 @@
  #
  SET(INSTALL_INCLUDEDIR_DEB              "include/mysql")
  #
@@ -29,9 +29,16 @@ diff -Naur orig/cmake/install_layout.cmake patched/cmake/install_layout.cmake
  SET(INSTALL_SUPPORTFILESDIR_DEB         "share/mysql")
  #
  SET(INSTALL_MYSQLDATADIR_DEB            "/var/lib/mysql")
+ 
+ SET(INSTALL_UNIX_ADDRDIR_DEB            "/var/run/mysqld/mysqld.sock")
+-SET(INSTALL_SYSTEMD_UNITDIR_DEB         "/lib/systemd/system")
++SET(INSTALL_SYSTEMD_UNITDIR_DEB         "/usr/lib/systemd/system")
+ 
+ #
+ # SVR4 layout
 diff -Naur orig/support-files/rpm/my.cnf patched/support-files/rpm/my.cnf
---- orig/support-files/rpm/my.cnf	2015-06-17 16:54:14.000000000 +0200
-+++ patched/support-files/rpm/my.cnf	2015-06-26 19:05:11.112613093 +0200
+--- orig/support-files/rpm/my.cnf	2015-10-15 17:44:19.000000000 +0200
++++ patched/support-files/rpm/my.cnf	2015-10-18 16:33:18.382131626 +0200
 @@ -7,5 +7,5 @@
  #
  # include all files from the config directory

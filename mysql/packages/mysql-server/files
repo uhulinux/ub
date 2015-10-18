@@ -19,5 +19,5 @@
 	/usr/bin/replace
 	/usr/bin/resolve_stack_dump
 	/usr/bin/resolveip
-	/usr/lib/systemd/system/mysqld.service
+	/usr/lib/systemd/system
 	/usr/sbin/mysqld
