@@ -1,0 +1,7 @@
+fltk-dev
+libjpeg-dev
+libxcursor-dev
+libxft-dev
+libxi-dev
+libxinerama-dev
+openssl-dev
