@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-sed -i -e 's@blueberry@blueman-manager@g'  files/usr/lib/cinnamon-settings/cinnamon-settings.py
+#sed -i -e 's@blueberry@blueman-manager@g'  files/usr/lib/cinnamon-settings/cinnamon-settings.py
 
 ub_compile \
   --disable-rpath \

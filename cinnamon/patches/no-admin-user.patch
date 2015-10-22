@@ -1,0 +1,102 @@
+diff -Naur orig/files/usr/share/cinnamon/cinnamon-settings-users/cinnamon-settings-users.py mod/files/usr/share/cinnamon/cinnamon-settings-users/cinnamon-settings-users.py
+--- orig/files/usr/share/cinnamon/cinnamon-settings-users/cinnamon-settings-users.py	2015-10-20 12:16:42.000000000 +0200
++++ mod/files/usr/share/cinnamon/cinnamon-settings-users/cinnamon-settings-users.py	2015-10-22 22:04:56.000000000 +0200
+@@ -147,12 +147,11 @@
+ 
+ class PasswordDialog(Gtk.Dialog):
+ 
+-    def __init__ (self, user, password_mask, group_mask):
++    def __init__ (self, user, password_mask):
+         super(PasswordDialog, self).__init__()
+ 
+         self.user = user
+         self.password_mask = password_mask
+-        self.group_mask = group_mask
+ 
+         self.set_modal(True)
+         self.set_skip_taskbar_hint(True)
+@@ -218,14 +217,7 @@
+     def change_password(self):
+         newpass = self.new_password.get_text()
+         self.user.set_password(newpass, "")
+-        mask = self.group_mask.get_text()
+-        if "nopasswdlogin" in mask:
+-            subprocess.call(["gpasswd", "-d", self.user.get_user_name(), "nopasswdlogin"])
+-            mask = mask.split(", ")
+-            mask.remove("nopasswdlogin")
+-            mask = ", ".join(mask)
+-            self.group_mask.set_text(mask)
+-            self.password_mask.set_text(u'\u2022\u2022\u2022\u2022\u2022\u2022')
++        self.password_mask.set_text(u'\u2022\u2022\u2022\u2022\u2022\u2022')
+         self.destroy()
+ 
+     def set_passwords_visibility(self):
+@@ -328,7 +320,7 @@
+ 
+             self.account_type_combo = Gtk.ComboBoxText()
+             self.account_type_combo.append_text(_("Standard"))
+-            self.account_type_combo.append_text(_("Administrator"))
++            self.account_type_combo.append_text(_("Standard"))
+             self.account_type_combo.set_active(0)
+ 
+             self.realname_entry = Gtk.Entry()
+@@ -513,7 +505,7 @@
+ 
+             self.account_type_combo = Gtk.ComboBoxText()
+             self.account_type_combo.append_text(_("Standard"))
+-            self.account_type_combo.append_text(_("Administrator"))
++            self.account_type_combo.append_text(_("Standard"))
+             self.account_type_combo.connect("changed", self._on_accounttype_changed)
+ 
+             self.realname_entry = EditableEntry()
+@@ -563,7 +555,7 @@
+         model, treeiter = self.users_treeview.get_selection().get_selected()
+         if treeiter != None:
+             user = model[treeiter][INDEX_USER_OBJECT]
+-            dialog = PasswordDialog(user, self.password_mask, self.groups_label)
++            dialog = PasswordDialog(user, self.password_mask)
+             response = dialog.run()
+ 
+     def _on_groups_button_clicked(self, widget):
+@@ -584,7 +576,7 @@
+         if treeiter != None:
+             user = model[treeiter][INDEX_USER_OBJECT]
+             if self.account_type_combo.get_active() == 1:
+-                user.set_account_type(AccountsService.UserAccountType.ADMINISTRATOR)
++                user.set_account_type(AccountsService.UserAccountType.STANDARD)
+             else:
+                 user.set_account_type(AccountsService.UserAccountType.STANDARD)
+ 
+@@ -739,7 +731,7 @@
+                 self.password_mask.set_text(_("Set at login"))
+ 
+             if user.get_account_type() == AccountsService.UserAccountType.ADMINISTRATOR:
+-                self.account_type_combo.set_active(1)
++                self.account_type_combo.set_active(0)
+             else:
+                 self.account_type_combo.set_active(0)
+ 
+@@ -797,7 +789,7 @@
+         response = dialog.run()
+         if response == Gtk.ResponseType.OK:
+             if dialog.account_type_combo.get_active() == 1:
+-                account_type = AccountsService.UserAccountType.ADMINISTRATOR
++                account_type = AccountsService.UserAccountType.STANDARD
+             else:
+                 account_type = AccountsService.UserAccountType.STANDARD
+             fullname = dialog.realname_entry.get_text()
+@@ -807,11 +799,11 @@
+             pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size("/usr/share/cinnamon/faces/user-generic.png", 48, 48)
+             description = "<b>%s</b>\n%s" % (fullname, username)
+             piter = self.users.append(None, [new_user, pixbuf, description])
+-            # Add the user to his/her own group and sudo if Administrator was selected
++            # Add the user to his/her own group and wheel if Administrator was selected
+             if dialog.account_type_combo.get_active() == 1:
+-                subprocess.call(["usermod", username, "-G", "%s,sudo,nopasswdlogin" % username])
++                subprocess.call(["usermod", username, "-G", "%s,wheel" % username])
+             else:
+-                subprocess.call(["usermod", username, "-G", "%s,nopasswdlogin" % username])
++                subprocess.call(["usermod", username, "-G", "%s" % username])
+             self.load_groups()
+         dialog.destroy()
+ 
