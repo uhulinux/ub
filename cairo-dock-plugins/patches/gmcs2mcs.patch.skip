@@ -1,0 +1,15 @@
+diff -Naur orig/CMakeLists.txt mod/CMakeLists.txt
+--- orig/CMakeLists.txt	2015-02-19 17:13:14.000000000 +0100
++++ mod/CMakeLists.txt	2015-10-30 15:53:03.965224363 +0100
+@@ -569,9 +569,9 @@
+ if (enable-mono-interface)
+ 	message (STATUS " * Mono:")
+ 	#find_package (Mono)
+-	find_program (GMCS_EXECUTABLE gmcs)
++	find_program (GMCS_EXECUTABLE mcs)
+ 	if (NOT GMCS_EXECUTABLE OR NOT EXISTS ${GMCS_EXECUTABLE})
+-		message (STATUS "Could not find Mono compiler gmcs, won't build Mono interface.")
++		message (STATUS "Could not find Mono compiler mcs, won't build Mono interface.")
+ 	else()
+ 		pkg_check_modules (MONO_PACKAGE glib-sharp-2.0 ndesk-dbus-1.0 ndesk-dbus-glib-1.0)
+ 		if (NOT MONO_PACKAGE_FOUND)
