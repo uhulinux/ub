@@ -1,1 +1,0 @@
-urllist ftp://ftp.gnome.org/pub/GNOME/sources/clutter/1.2/ | splitver '^clutter-([0-9.]+).tar.bz2$' | sort -V | tail -n 1
