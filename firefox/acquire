@@ -1,6 +1,6 @@
 #!/usr/bin/env dl
 
-firefox-${UB_VERSION/~/}.source.tar.xz mozilla-release/
+firefox-${UB_VERSION/~/}.source.tar.xz firefox-${UB_VERSION/~/}/
 	https://ftp.mozilla.org/pub/firefox/releases/${UB_VERSION/~/}/source/
 	
 hu-${UB_VERSION/~/}.xpi . :/langpack-hu
