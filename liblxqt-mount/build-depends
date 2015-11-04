@@ -1,5 +1,0 @@
-cmake
-libX11-dev
-liblxqt-dev
-systemd-dev
-udisks2-dev

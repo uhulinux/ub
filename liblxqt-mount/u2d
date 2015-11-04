@@ -1,1 +1,0 @@
-urllist https://github.com/lxde/liblxqt-mount/releases | splitver '^([0-9.]+)$' | sort -V | tail -n 1

@@ -1,5 +1,0 @@
-#!/usr/bin/env dl
-
-liblxqt-mount-${UB_VERSION}.tar.xz liblxqt-mount-${UB_VERSION}/
-	http://downloads.lxqt.org/lxqt/${UB_VERSION}/
-	
