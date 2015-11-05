@@ -3,7 +3,6 @@ cmake
 kguiaddons-dev
 libdbusmenu-qt5-dev
 liblxqt-dev
-liblxqt-mount-dev
 libqtxdg-dev
 libstatgrab-dev
 libsysstat-dev
