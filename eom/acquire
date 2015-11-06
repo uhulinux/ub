@@ -1,6 +1,6 @@
 #!/usr/bin/env dl
 
-eom-${UB_VERSION}.tar.gz eom-eom-${UB_VERSION}/
+v${UB_VERSION}.tar.gz eom-${UB_VERSION}/
 	https://github.com/mate-desktop/eom/archive/
 
 #eom-${UB_VERSION}.tar.xz eom-${UB_VERSION}/

@@ -1,6 +1,6 @@
 #!/usr/bin/env dl
 
-pluma-${UB_VERSION}.tar.gz pluma-pluma-${UB_VERSION}/
+v${UB_VERSION}.tar.gz pluma-${UB_VERSION}/
 	https://github.com/mate-desktop/pluma/archive/
 
 #pluma-${UB_VERSION}.tar.xz pluma-${UB_VERSION}/

@@ -1,6 +1,6 @@
 #!/usr/bin/env dl
 
-libmateweather-${UB_VERSION}.tar.gz libmateweather-libmateweather-${UB_VERSION}/
+v${UB_VERSION}.tar.gz libmateweather-${UB_VERSION}/
 	https://github.com/mate-desktop/libmateweather/archive/
 
 #libmateweather-${UB_VERSION}.tar.xz	libmateweather-${UB_VERSION}/

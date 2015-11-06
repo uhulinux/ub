@@ -1,6 +1,6 @@
 #!/usr/bin/env dl
 
-mate-media-${UB_VERSION}.tar.gz mate-media-mate-media-${UB_VERSION}/
+v${UB_VERSION}.tar.gz mate-media-${UB_VERSION}/
 	https://github.com/mate-desktop/mate-media/archive/
 
 #mate-media-${UB_VERSION}.tar.xz	mate-media-${UB_VERSION}/

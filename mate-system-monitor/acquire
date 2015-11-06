@@ -1,6 +1,6 @@
 #!/usr/bin/env dl
 
-mate-system-monitor-${UB_VERSION}.tar.gz mate-system-monitor-mate-system-monitor-${UB_VERSION}/
+v${UB_VERSION}.tar.gz mate-system-monitor-${UB_VERSION}/
 	https://github.com/mate-desktop/mate-system-monitor/archive/
 
 #mate-system-monitor-${UB_VERSION}.tar.xz mate-system-monitor-${UB_VERSION}/

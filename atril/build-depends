@@ -5,6 +5,7 @@ gobject-introspection-dev
 gtk2-dev
 intltool
 itstool
+libsecret-dev
 libsm-dev
 libspectre-dev
 libtiff-dev

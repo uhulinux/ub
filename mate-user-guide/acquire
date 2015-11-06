@@ -1,6 +1,6 @@
 #!/usr/bin/env dl
 
-mate-user-guide-${UB_VERSION}.tar.gz mate-user-guide-mate-user-guide-${UB_VERSION}/
+v${UB_VERSION}.tar.gz mate-user-guide-${UB_VERSION}/
 	https://github.com/mate-desktop/mate-user-guide/archive/
 
 #mate-user-guide-${UB_VERSION}.tar.xz mate-user-guide-${UB_VERSION}/
