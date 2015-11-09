@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-lxqt-config-${UB_VERSION}.tar.xz lxqt-config-${UB_VERSION}/
-	http://downloads.lxqt.org/lxqt/${UB_VERSION}/
+lxqt-config-${UB_VERSION}.tar.gz lxqt-config-da7400d/
+	git://github.com/lxde/lxqt-config.git@da7400d
