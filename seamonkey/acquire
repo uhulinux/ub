@@ -1,6 +1,6 @@
 #!/usr/bin/env dl
 
-seamonkey-${UB_VERSION}.source.tar.xz comm-release/
+seamonkey-${UB_VERSION}.source.tar.xz seamonkey-${UB_VERSION}/
 	http://ftp.mozilla.org/pub/seamonkey/releases/${UB_VERSION}/source/
 
 seamonkey-${UB_VERSION}.hu.langpack.xpi . :/langpack-hu
