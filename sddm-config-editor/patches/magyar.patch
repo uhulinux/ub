@@ -215,23 +215,23 @@ diff -Naur orig/cpp/sddm-config-editor_hu.ts mod/cpp/sddm-config-editor_hu.ts
 +</TS>
 diff -Naur orig/cpp/sddm-config-editor.pro mod/cpp/sddm-config-editor.pro
 --- orig/cpp/sddm-config-editor.pro	2015-11-12 22:24:11.000000000 +0100
-+++ mod/cpp/sddm-config-editor.pro	2015-11-13 10:24:28.310694323 +0100
++++ mod/cpp/sddm-config-editor.pro	2015-11-13 12:33:47.477353472 +0100
 @@ -9,7 +9,7 @@
  lupdate_only {
    SOURCES += ui/*.qml config-strings.qml
  }
 -TRANSLATIONS = sddm-config-editor_zh_CN.ts
-+TRANSLATIONS = sddm-config-editor_hu.ts
++TRANSLATIONS = sddm-config-editor_zh_CN.ts sddm-config-editor_hu.ts
  QMAKE_EXTRA_COMPILERS += lrelease
  lrelease.input         = TRANSLATIONS
  lrelease.output        = ${QMAKE_FILE_BASE}.qm
 diff -Naur orig/cpp/translations.qrc mod/cpp/translations.qrc
 --- orig/cpp/translations.qrc	2015-11-13 10:05:58.000000000 +0100
-+++ mod/cpp/translations.qrc	2015-11-13 10:28:07.106325038 +0100
-@@ -1,5 +1,5 @@
++++ mod/cpp/translations.qrc	2015-11-13 12:34:32.899803297 +0100
+@@ -1,5 +1,6 @@
  <RCC>
      <qresource prefix="/">
--        <file>sddm-config-editor_zh_CN.qm</file>
+         <file>sddm-config-editor_zh_CN.qm</file>
 +        <file>sddm-config-editor_hu.qm</file>
      </qresource>
  </RCC>
