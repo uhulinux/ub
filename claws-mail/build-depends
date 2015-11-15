@@ -10,6 +10,7 @@ gpg
 gpgme-dev
 gtk2-dev
 icu-dev
+intltool
 libarchive-dev
 libassuan-dev
 libcanberra-dev
