@@ -13,7 +13,6 @@ libvpx-dev
 libwebp-dev
 libxi-dev
 libxml2-dev
-libxnvctrl
 libxscrnsaver-dev
 libxslt-dev
 libxtst-dev
@@ -22,7 +21,6 @@ nspr-dev
 nss-dev
 opus-dev
 pciutils-dev
-protobuf-dev
 pulseaudio-dev
 python-dev
 speex-dev
