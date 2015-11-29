@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+kde-workspace-${UB_VERSION}.tar.xz kde-workspace-${UB_VERSION}/
+	http://download.kde.org/stable/4.13.2/src/
