@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-# LDFLAGS+=-lrt
-# export LDFLAGS
-ub_compile \
-	--disable-debian-menu
-
