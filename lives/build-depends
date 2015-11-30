@@ -13,5 +13,6 @@ liboil-dev
 libunicap-dev
 libvisual-dev
 mjpegtools-dev
+opencv-dev
 procps
 sox-dev
