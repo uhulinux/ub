@@ -7,7 +7,6 @@ cd build/workspaces
 ./update-workspaces.sh \
       --bindir=/usr/bin \
       --libdir=/usr/lib/0ad \
-      --datadir=/usr/share/0ad/data \
-      --sdl2
+      --datadir=/usr/share/0ad/data
 cd gcc
 ub_make
