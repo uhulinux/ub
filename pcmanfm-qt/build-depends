@@ -1,5 +1,4 @@
 cmake
 dbus-dev
-libfm-dev
+libfm-qt-dev
 menu-cache-dev
-qt5-dev
