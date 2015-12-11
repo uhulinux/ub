@@ -15,6 +15,7 @@ gupnp-dev
 intltool
 libcryptui-dev
 libmusicbrainz-dev
+libnotify-dev
 libsm-dev
 nemo-dev
 pygobject2-dev

@@ -1,0 +1,5 @@
+cmake
+gtest
+icu-dev
+java-jre
+protobuf-dev

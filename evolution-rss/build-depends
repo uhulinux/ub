@@ -1,0 +1,10 @@
+db4-dev
+evolution-dev
+gconf2-dev
+gst-plugins-base-dev
+gtkhtml-dev
+gtkspell-dev
+intltool
+libcanberra-dev
+systemd-dev
+webkitgtk-dev

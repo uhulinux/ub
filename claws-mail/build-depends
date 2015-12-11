@@ -1,6 +1,8 @@
 bogofilter
+claws-contacts-dev
 compface
 curl-dev
+cyrus-sasl2-dev
 db4-dev
 dbus-glib-dev
 enchant-dev
@@ -15,7 +17,6 @@ libarchive-dev
 libassuan-dev
 libcanberra-dev
 libetpan-dev
-libgdata-dev
 libindicate-dev
 libjpeg-dev
 libnotify-dev
