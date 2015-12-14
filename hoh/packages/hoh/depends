@@ -1,5 +1,5 @@
-allegro >=
-libogg >=
-mesa >=
-pulseaudio >=
-sdl >=
+allegro
+libogg
+mesa
+pulseaudio
+sdl

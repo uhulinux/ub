@@ -1,5 +1,1 @@
-allegro
-libogg
-mesa
-pulseaudio
-sdl
+libX11
