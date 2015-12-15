@@ -18,7 +18,6 @@ nspr-dev
 nss-dev
 pulseaudio-dev
 python-dev
-qt5-dev
 sqlite-dev
 startup-notification-dev
 yasm
