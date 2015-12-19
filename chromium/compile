@@ -46,14 +46,14 @@ _conf=(
 	-Duse_system_fontconfig=1
 	-Duse_system_harfbuzz=1
 	-Duse_system_hunspell=1
-	-Duse_system_icu=0 # icu >= 54
+	-Duse_system_icu=0
 	-Duse_system_libevent=1
 	-Duse_system_libexif=1
 	-Duse_system_libjpeg=1
 	-Duse_system_libpng=1
 	-Duse_system_libsrtp=0
 	-Duse_system_libusb=0 # patkolt
-	-Duse_system_libvpx=0 # 1.4.0 + VP9E_GET_ACTIVE_MAP kell
+	-Duse_system_libvpx=0 
 	-Duse_system_libwebp=1
 	-Duse_system_libxml=1
 	-Duse_system_libxnvctrl=0 # sharednél linker hiba

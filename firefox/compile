@@ -18,6 +18,7 @@ ac_add_options --enable-official-branding
 ac_add_options --enable-crashreporter
 ac_add_options --enable-optimize="-O2"
 ac_add_options --with-pthreads
+ac_add_options --with-qtdir="/usr/lib/qt5"
 ac_add_options --with-system-bz2
 ac_add_options --with-system-icu
 ac_add_options --with-system-libevent
