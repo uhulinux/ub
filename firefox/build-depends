@@ -2,7 +2,7 @@ alsa-lib-dev
 curl-dev
 dbus-glib-dev
 gst-plugins-base-dev
-gtk-dev
+gtk2-dev
 hunspell-dev
 libevent-dev
 libidl2-dev
