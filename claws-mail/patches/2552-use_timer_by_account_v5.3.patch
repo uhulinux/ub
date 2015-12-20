@@ -1,6 +1,6 @@
 diff -Naur orig/src/account.c patched/src/account.c
---- orig/src/account.c	2015-06-23 17:34:46.000000000 +0200
-+++ patched/src/account.c	2015-07-18 23:55:22.027766674 +0200
+--- orig/src/account.c	2015-11-18 14:40:05.000000000 +0100
++++ patched/src/account.c	2015-12-19 06:15:25.074033546 +0100
 @@ -952,6 +952,11 @@
  
  	ACP_FASSIGN(imap_auth_type);
@@ -13,7 +13,7 @@ diff -Naur orig/src/account.c patched/src/account.c
  	/* send */
  	ACP_FASSIGN(gen_msgid);
  	ACP_FASSIGN(gen_xmailer);
-@@ -1758,6 +1763,9 @@
+@@ -1768,6 +1773,9 @@
  
  	/* set value in account */
  	ac->recv_at_getall ^= TRUE;
@@ -24,8 +24,8 @@ diff -Naur orig/src/account.c patched/src/account.c
  
  static void account_double_clicked(GtkTreeView		*list_view,
 diff -Naur orig/src/inc.c patched/src/inc.c
---- orig/src/inc.c	2015-06-23 17:34:46.000000000 +0200
-+++ patched/src/inc.c	2015-07-18 23:55:22.031766694 +0200
+--- orig/src/inc.c	2015-11-18 14:40:05.000000000 +0100
++++ patched/src/inc.c	2015-12-19 06:15:25.074033546 +0100
 @@ -135,10 +135,13 @@
  static gint inc_all_spool(void);
  static void inc_autocheck_timer_set_interval	(guint		 interval);
@@ -187,8 +187,8 @@ diff -Naur orig/src/inc.c patched/src/inc.c
  	return FALSE;
  }
 diff -Naur orig/src/inc.h patched/src/inc.h
---- orig/src/inc.h	2015-06-23 17:34:46.000000000 +0200
-+++ patched/src/inc.h	2015-07-18 23:55:22.031766694 +0200
+--- orig/src/inc.h	2015-11-18 14:40:05.000000000 +0100
++++ patched/src/inc.h	2015-12-19 06:15:25.074033546 +0100
 @@ -109,6 +109,8 @@
  void inc_autocheck_timer_init	(MainWindow	*mainwin);
  void inc_autocheck_timer_set	(void);
@@ -199,9 +199,9 @@ diff -Naur orig/src/inc.h patched/src/inc.h
  
  #endif /* __INC_H__ */
 diff -Naur orig/src/prefs_account.c patched/src/prefs_account.c
---- orig/src/prefs_account.c	2015-06-23 17:34:46.000000000 +0200
-+++ patched/src/prefs_account.c	2015-07-18 23:55:22.031766694 +0200
-@@ -140,6 +140,10 @@
+--- orig/src/prefs_account.c	2015-11-18 14:40:05.000000000 +0100
++++ patched/src/prefs_account.c	2015-12-19 06:15:25.078033566 +0100
+@@ -139,6 +139,10 @@
  	GtkWidget *inbox_entry;
  	GtkWidget *inbox_btn;
  
@@ -212,7 +212,7 @@ diff -Naur orig/src/prefs_account.c patched/src/prefs_account.c
  	GtkWidget *local_frame;
  	GtkWidget *local_inbox_label;
  	GtkWidget *local_inbox_entry;
-@@ -467,6 +471,16 @@
+@@ -466,6 +470,16 @@
  	 &receive_page.size_limit_spinbtn,
  	 prefs_set_data_from_spinbtn, prefs_set_spinbtn},
  
@@ -437,8 +437,8 @@ diff -Naur orig/src/prefs_account.c patched/src/prefs_account.c
  
  	return ac_prefs;
 diff -Naur orig/src/prefs_account.h patched/src/prefs_account.h
---- orig/src/prefs_account.h	2015-06-23 17:34:46.000000000 +0200
-+++ patched/src/prefs_account.h	2015-07-18 23:55:22.031766694 +0200
+--- orig/src/prefs_account.h	2015-11-18 14:40:05.000000000 +0100
++++ patched/src/prefs_account.h	2015-12-19 06:15:25.078033566 +0100
 @@ -43,6 +43,11 @@
  	SIG_DIRECT
  } SigType;
@@ -463,8 +463,8 @@ diff -Naur orig/src/prefs_account.h patched/src/prefs_account.h
  	gboolean enable_size_limit;
  	gint size_limit;
 diff -Naur orig/src/prefs_gtk.c patched/src/prefs_gtk.c
---- orig/src/prefs_gtk.c	2015-06-23 17:34:46.000000000 +0200
-+++ patched/src/prefs_gtk.c	2015-07-18 23:55:22.031766694 +0200
+--- orig/src/prefs_gtk.c	2015-11-18 14:40:05.000000000 +0100
++++ patched/src/prefs_gtk.c	2015-12-19 06:15:25.078033566 +0100
 @@ -195,6 +195,10 @@
  			*((gint *)param[i].data) =
  				(gint)atoi(value);
@@ -547,8 +547,8 @@ diff -Naur orig/src/prefs_gtk.c patched/src/prefs_gtk.c
  		gtk_spin_button_set_value(GTK_SPIN_BUTTON(*pparam->widget),
  					  (gfloat)*((gushort *)pparam->data));
 diff -Naur orig/src/prefs_gtk.h patched/src/prefs_gtk.h
---- orig/src/prefs_gtk.h	2015-06-23 17:34:46.000000000 +0200
-+++ patched/src/prefs_gtk.h	2015-07-18 23:55:22.035766714 +0200
+--- orig/src/prefs_gtk.h	2015-11-18 14:40:05.000000000 +0100
++++ patched/src/prefs_gtk.h	2015-12-19 06:15:25.078033566 +0100
 @@ -36,6 +36,7 @@
  {
  	P_STRING,

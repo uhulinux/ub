@@ -1,7 +1,7 @@
 diff -Naur orig/comphelper/source/misc/stillreadwriteinteraction.cxx patched/comphelper/source/misc/stillreadwriteinteraction.cxx
---- orig/comphelper/source/misc/stillreadwriteinteraction.cxx	2014-05-21 19:10:22.000000000 +0200
-+++ patched/comphelper/source/misc/stillreadwriteinteraction.cxx	2014-05-25 20:05:31.164424388 +0200
-@@ -85,6 +85,7 @@
+--- orig/comphelper/source/misc/stillreadwriteinteraction.cxx	2015-10-18 18:46:34.000000000 +0200
++++ patched/comphelper/source/misc/stillreadwriteinteraction.cxx	2015-11-15 00:46:30.062264876 +0100
+@@ -93,6 +93,7 @@
              bAbort = (
                  (exIO.Code == css::ucb::IOErrorCode_ACCESS_DENIED     )
                  || (exIO.Code == css::ucb::IOErrorCode_LOCKING_VIOLATION )
@@ -10,17 +10,17 @@ diff -Naur orig/comphelper/source/misc/stillreadwriteinteraction.cxx patched/com
  #ifdef MACOSX
                  // this is a workaround for MAC, on this platform if the file is locked
 diff -Naur orig/ucbhelper/source/client/content.cxx patched/ucbhelper/source/client/content.cxx
---- orig/ucbhelper/source/client/content.cxx	2014-05-21 19:10:22.000000000 +0200
-+++ patched/ucbhelper/source/client/content.cxx	2014-05-25 20:18:43.153989066 +0200
-@@ -27,6 +27,7 @@
+--- orig/ucbhelper/source/client/content.cxx	2015-10-18 18:46:34.000000000 +0200
++++ patched/ucbhelper/source/client/content.cxx	2015-11-15 00:48:21.762818769 +0100
+@@ -28,6 +28,7 @@
  #include <cppuhelper/weak.hxx>
  
- #include <cppuhelper/implbase1.hxx>
+ #include <cppuhelper/implbase.hxx>
 +#include <com/sun/star/beans/PropertyValue.hpp>
  #include <com/sun/star/ucb/CheckinArgument.hpp>
  #include <com/sun/star/ucb/ContentCreationError.hpp>
  #include <com/sun/star/ucb/XCommandEnvironment.hpp>
-@@ -37,6 +38,8 @@
+@@ -38,6 +39,8 @@
  #include <com/sun/star/ucb/ContentAction.hpp>
  #include <com/sun/star/ucb/OpenCommandArgument2.hpp>
  #include <com/sun/star/ucb/InsertCommandArgument.hpp>
@@ -29,7 +29,7 @@ diff -Naur orig/ucbhelper/source/client/content.cxx patched/ucbhelper/source/cli
  #include <com/sun/star/ucb/GlobalTransferCommandArgument2.hpp>
  #include <com/sun/star/ucb/NameClash.hpp>
  #include <com/sun/star/ucb/OpenMode.hpp>
-@@ -56,12 +59,18 @@
+@@ -57,12 +60,18 @@
  #include <com/sun/star/sdbc/XRow.hpp>
  #include <com/sun/star/lang/IllegalArgumentException.hpp>
  #include <com/sun/star/beans/UnknownPropertyException.hpp>
@@ -48,7 +48,7 @@ diff -Naur orig/ucbhelper/source/client/content.cxx patched/ucbhelper/source/cli
  
  using namespace com::sun::star::container;
  using namespace com::sun::star::beans;
-@@ -305,6 +314,53 @@
+@@ -306,6 +315,53 @@
  }
  
  
@@ -102,7 +102,7 @@ diff -Naur orig/ucbhelper/source/client/content.cxx patched/ucbhelper/source/cli
  
  
  // Content Implementation.
-@@ -718,7 +774,10 @@
+@@ -719,7 +775,10 @@
      throw( CommandAbortedException, RuntimeException, Exception )
  {
      if ( !isDocument() )
@@ -113,7 +113,7 @@ diff -Naur orig/ucbhelper/source/client/content.cxx patched/ucbhelper/source/cli
  
      Reference< XActiveDataSink > xSink = new ActiveDataSink;
  
-@@ -743,7 +802,10 @@
+@@ -744,7 +803,10 @@
      throw( CommandAbortedException, RuntimeException, Exception )
  {
      if ( !isDocument() )
@@ -124,7 +124,7 @@ diff -Naur orig/ucbhelper/source/client/content.cxx patched/ucbhelper/source/cli
  
      Reference< XActiveDataSink > xSink = new ActiveDataSink;
  
-@@ -768,7 +830,10 @@
+@@ -769,7 +831,10 @@
      throw( CommandAbortedException, RuntimeException, Exception )
  {
      if ( !isDocument() )
@@ -135,7 +135,7 @@ diff -Naur orig/ucbhelper/source/client/content.cxx patched/ucbhelper/source/cli
  
      Reference< XActiveDataStreamer > xStreamer = new ActiveDataStreamer;
  
-@@ -793,7 +858,10 @@
+@@ -794,7 +859,10 @@
      throw( CommandAbortedException, RuntimeException, Exception )
  {
      if ( !isDocument() )
@@ -146,7 +146,7 @@ diff -Naur orig/ucbhelper/source/client/content.cxx patched/ucbhelper/source/cli
  
      Reference< XActiveDataStreamer > xStreamer = new ActiveDataStreamer;
  
-@@ -818,7 +886,10 @@
+@@ -819,7 +887,10 @@
      throw( CommandAbortedException, RuntimeException, Exception )
  {
      if ( !isDocument() )
@@ -157,7 +157,7 @@ diff -Naur orig/ucbhelper/source/client/content.cxx patched/ucbhelper/source/cli
  
      OpenCommandArgument2 aArg;
      aArg.Mode       = OpenMode::DOCUMENT;
-@@ -841,7 +912,10 @@
+@@ -842,7 +913,10 @@
      throw( CommandAbortedException, RuntimeException, Exception )
  {
      if ( !isDocument() )
