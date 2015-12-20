@@ -1,21 +1,12 @@
 diff -Naur orig/usr/sbin/update-ca-certificates patched/usr/sbin/update-ca-certificates
---- orig/usr/sbin/update-ca-certificates	2015-05-28 18:08:00.000000000 +0200
-+++ patched/usr/sbin/update-ca-certificates	2015-07-05 17:38:03.038934111 +0200
+--- orig/usr/sbin/update-ca-certificates	2015-12-20 10:50:00.000000000 +0100
++++ patched/usr/sbin/update-ca-certificates	2015-12-21 00:09:47.864321545 +0100
 @@ -117,7 +117,7 @@
    find . -type l -print | while read symlink
    do
      case $(readlink "$symlink") in
--      $CERTSDIR*) rm -f "$symlink";;
-+      "$CERTSDIR"*) rm -f "$symlink";;
+-      $CERTSDIR*|$LOCALCERTSDIR*) rm -f $symlink;;
++      "$CERTSDIR"*|"$LOCALCERTSDIR"*) rm -f $symlink;;
      esac
    done
    find . -type l -print | while read symlink
-@@ -196,7 +196,7 @@
-   eval run-parts "$VERBOSE_ARG" --test -- "$HOOKSDIR" | while read hook
-   do
-     ( cat "$ADDED"
--      cat "$REMOVED" ) | "$hook" || echo "E: $hook exited with code $?."
-+      cat "$REMOVED" ) | "$hook" || echo "E: "$hook" exited with code $?."
-   done
-   echo "done."
- 

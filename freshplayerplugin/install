@@ -7,5 +7,5 @@ ln -s ../../firefox/plugins/libfreshwrapper-flashplayer.so "$UB_INSTALLDIR"/usr/
 
 install -Dm644 data/freshwrapper.conf.example \
     "$UB_INSTALLDIR"/usr/share/freshplayerplugin/freshwrapper.conf.example
-    
+
 install -Dm644 data/freshwrapper.conf.example "$UB_INSTALLDIR"/etc/freshwrapper.conf
