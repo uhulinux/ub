@@ -2,5 +2,6 @@
 
 ub_compile \
 	-DWITH_LIBPDF=0 \
-	-DWITH_PEPPERFLASH=1
+	-DWITH_PEPPERFLASH=1 \
+	-DMOZPLUGIN_INSTALL_DIR="lib/firefox/plugins/"
 #	-DWITH_HWDEC=0
