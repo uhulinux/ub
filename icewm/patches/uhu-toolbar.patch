@@ -1,12 +1,12 @@
 diff -Naur orig/lib/toolbar.in mod/lib/toolbar.in
---- orig/lib/toolbar.in	2015-07-13 08:16:00.000000000 +0200
-+++ mod/lib/toolbar.in	2015-07-14 13:18:43.625580507 +0200
+--- orig/lib/toolbar.in	2015-11-03 21:58:58.000000000 +0100
++++ mod/lib/toolbar.in	2015-12-22 18:18:48.010718298 +0100
 @@ -4,6 +4,6 @@
  # since modifications to this file will be discarded when you
  # (re)install icewm.
  #
--prog xterm /usr/share/icons/gnome/16x16/apps/terminal.png xterm
--prog "Web browser" /usr/share/icons/gnome/16x16/apps/web-browser.png xdg-open about:blank
+-prog xterm utilities-terminal xterm
+-prog "Web browser" web-browser xdg-open about:blank
 -
 +prog xterm terminal xterm
 +prog "Web böngésző" web-browser xdg-open about:blank
