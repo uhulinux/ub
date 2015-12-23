@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 keepassx-${UB_VERSION}.tar.gz keepassx-${UB_VERSION}/
-      http://downloads.sourceforge.net/keepassx/
+      https://www.keepassx.org/releases/${UB_VERSION}/
