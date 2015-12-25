@@ -1,9 +1,9 @@
 diff -Naur orig/cmake/systemd.cmake patched/cmake/systemd.cmake
---- orig/cmake/systemd.cmake	2015-10-15 17:43:36.000000000 +0200
-+++ patched/cmake/systemd.cmake	2015-10-18 16:49:03.654818980 +0200
-@@ -61,8 +61,7 @@
+--- orig/cmake/systemd.cmake	2015-12-23 16:33:29.000000000 +0100
++++ patched/cmake/systemd.cmake	2015-12-25 04:11:04.834818850 +0100
+@@ -62,8 +62,7 @@
                                 ${INSTALL_SYSTEMD_UNITDIR}/mariadb@.service
-                                ${INSTALL_SYSTEMD_UNITDIR}/mariadb@bootstrap.service.d/wsrep-new-cluster.conf")
+                                ${INSTALL_SYSTEMD_UNITDIR}/mariadb@bootstrap.service.d/use_galera_new_cluster.conf")
          IF(DEB)
 -          SET(SYSTEMD_EXECSTARTPRE "ExecStartPre=/usr/bin/install -m 755 -o mysql -g root -d /var/run/mysqld")
 -          SET(SYSTEMD_EXECSTARTPOST "ExecStartPost=/etc/mysql/debian-start")
@@ -12,8 +12,8 @@ diff -Naur orig/cmake/systemd.cmake patched/cmake/systemd.cmake
          MESSAGE(STATUS "Systemd features enabled")
        ELSE()
 diff -Naur orig/support-files/mariadb.service.in patched/support-files/mariadb.service.in
---- orig/support-files/mariadb.service.in	2015-10-15 17:44:16.000000000 +0200
-+++ patched/support-files/mariadb.service.in	2015-10-18 16:49:17.154885923 +0200
+--- orig/support-files/mariadb.service.in	2015-12-23 16:33:33.000000000 +0100
++++ patched/support-files/mariadb.service.in	2015-12-25 04:12:11.495149400 +0100
 @@ -15,7 +15,6 @@
  [Unit]
  Description=MariaDB database server
@@ -22,17 +22,17 @@ diff -Naur orig/support-files/mariadb.service.in patched/support-files/mariadb.s
  
  [Install]
  WantedBy=multi-user.target
-@@ -52,7 +51,6 @@
- # MYSQLD_OPTS here is for users to set in /etc/systemd/system/mariadb.service.d/MY_SPECIAL.conf
+@@ -56,7 +55,6 @@
  # Use the [service] section and Environment="MYSQLD_OPTS=...".
  # This isn't a replacement for my.cnf.
+ # _WSREP_NEW_CLUSTER is for the exclusive use of the script galera_new_cluster
 -@SYSTEMD_EXECSTARTPRE@
- ExecStart=/usr/sbin/mysqld $MYSQLD_OPTS
+ ExecStart=/usr/sbin/mysqld $MYSQLD_OPTS $_WSREP_NEW_CLUSTER
  @SYSTEMD_EXECSTARTPOST@
  
 diff -Naur orig/support-files/mariadb@.service.in patched/support-files/mariadb@.service.in
---- orig/support-files/mariadb@.service.in	2015-10-15 17:44:16.000000000 +0200
-+++ patched/support-files/mariadb@.service.in	2015-10-18 16:41:06.756454169 +0200
+--- orig/support-files/mariadb@.service.in	2015-12-23 16:33:33.000000000 +0100
++++ patched/support-files/mariadb@.service.in	2015-12-25 04:12:59.751388690 +0100
 @@ -20,7 +20,6 @@
  [Unit]
  Description=MariaDB database server
