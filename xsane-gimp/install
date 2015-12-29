@@ -1,0 +1,5 @@
+#!/bin/sh -eux
+
+cp src/xsane ${UB_INSTALLDIR}/usr/bin/xsane-gimp
+mkdir -p ${UB_INSTALLDIR}/usr/lib/gimp/2.0/plug-ins
+ln -sf /usr/bin/xsane-gimp ${UB_INSTALLDIR}/usr/lib/gimp/2.0/plug-ins/xsane
