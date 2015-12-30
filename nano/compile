@@ -4,4 +4,7 @@ ub_compile \
 	--enable-color \
 	--enable-utf8 \
 	--enable-nls \
-	--disable-wrapping-as-root
+	--disable-wrapping-as-root \
+	--enable-nanorc \
+	--enable-multibuffer
+
