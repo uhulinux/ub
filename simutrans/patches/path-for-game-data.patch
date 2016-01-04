@@ -1,10 +1,7 @@
-look in /usr/share/games/simutrans for game data
-
-@DPATCH@
-
---- simutrans.orig/simmain.cc
-+++ simutrans/simmain.cc
-@@ -437,8 +437,9 @@
+diff -Naur orig/simmain.cc mod/simmain.cc
+--- orig/simmain.cc	2015-11-01 00:01:14.000000000 +0100
++++ mod/simmain.cc	2016-01-04 17:37:16.380075256 +0100
+@@ -486,8 +486,9 @@
  		strcat( env_t::program_dir, path_sep );
  	}
  	else {
