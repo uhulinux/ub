@@ -17,4 +17,4 @@ mkdir -p $UB_INSTALLDIR/etc/ssl/certs
 	find * -name '*.crt' | LC_ALL=C sort
 	) > "${UB_INSTALLDIR}"/etc/ca-certificates.conf
 
-	sh "${UB_INSTALLDIR}"/usr/sbin/update-ca-certificates --root "${UB_INSTALLDIR}"
+#	sh "${UB_INSTALLDIR}"/usr/sbin/update-ca-certificates --root "${UB_INSTALLDIR}"
