@@ -1,5 +1,6 @@
 #!/bin/sh -eux
 
+autoreconf -vif
 ub_compile \
 	--enable-multibyte \
 	--enable-nls \
@@ -9,7 +10,5 @@ ub_compile \
 	--enable-rsvg \
 	--enable-xft \
 	--enable-bidi \
-	--with-stroke-library \
-	--enable-package-subdirs \
-	--without-gnome \
-	--with-png-library
+	--with-stroke-library
+

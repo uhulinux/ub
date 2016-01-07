@@ -1,5 +1,4 @@
-fvwm << 2.7
-fvwm >= 2.6.5
+fvwm
 hsetroot
 imagemagick
 python
