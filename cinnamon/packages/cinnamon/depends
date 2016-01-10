@@ -6,12 +6,14 @@ cinnamon-menus
 cinnamon-screensaver
 cinnamon-session
 cinnamon-settings-daemon
+cinnamon-sound-effects
 cinnamon-translations
 cjs
 gnome-backgrounds
 gnome-keyring
 gnome-power-manager
 gnome-python
+gnome-themes-standard
 icon-theme-gnome-symbolic
 keybinder3
 mousetweaks
