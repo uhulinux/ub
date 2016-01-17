@@ -28,14 +28,6 @@ diff -Naur orig/bin/distro-install-desktop-integration patched/bin/distro-instal
  }
  
  
-@@ -111,6 +109,7 @@
-     export PREFIX=$INSTALLDIRNAME
-     export ICON_PREFIX=$INSTALLDIRNAME
-     export ICON_SOURCE_DIR=$builddir/sysui/desktop/icons
-+    export APPDATA_SOURCE_DIR=$SRC_ROOT/sysui/desktop/appstream-appdata
-     export PRODUCTVERSION=
-     export KDEMAINDIR=$PREFIXDIR
-     export PREFIXDIR=${PREFIXDIR}
 diff -Naur orig/solenv/bin/modules/installer/worker.pm patched/solenv/bin/modules/installer/worker.pm
 --- orig/solenv/bin/modules/installer/worker.pm	2015-10-10 21:45:34.860542834 +0200
 +++ patched/solenv/bin/modules/installer/worker.pm	2015-10-10 19:36:23.000000000 +0200
