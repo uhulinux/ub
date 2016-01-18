@@ -15,4 +15,5 @@ llvm
 python-dev
 systemd-dev
 talloc-dev
+wayland-dev
 x.org-server-dev
