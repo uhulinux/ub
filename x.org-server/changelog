@@ -1,4 +1,9 @@
 ------------
+Kiss Attila 2016-01-20
+build-depends fix: libunwind-dev, tslib-dev
+liblx.so átnevezve libglx.so.xorg-ra és rá postinstből
+link libglx.so névvel
+------------
 Kiss Attila 2015-12-11
 rebuild
 ------------------------------------------------------------------------
