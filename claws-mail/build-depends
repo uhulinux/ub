@@ -17,6 +17,7 @@ libarchive-dev
 libassuan-dev
 libcanberra-dev
 libetpan-dev
+libgdata-dev
 libindicate-dev
 libjpeg-dev
 libnotify-dev
