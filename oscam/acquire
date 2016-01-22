@@ -2,3 +2,4 @@
 
 oscam-${UB_VERSION}.tar.gz trunk-${UB_VERSION_TAIL1/*~/}/
 	svn://streamboard.de.vu/svn/oscam/trunk@${UB_VERSION_TAIL1/*~r/}
+	svn://streamboard.tv/svn/oscam/trunk@${UB_VERSION_TAIL1/*~r/}
