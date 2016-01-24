@@ -1,6 +1,6 @@
 diff -Naur orig/doc/uhubuild.sgml patched/doc/uhubuild.sgml
 --- orig/doc/uhubuild.sgml	2013-10-02 14:37:35.000000000 +0200
-+++ patched/doc/uhubuild.sgml	2014-04-13 14:07:14.244915252 +0200
++++ patched/doc/uhubuild.sgml	2015-12-29 04:54:25.160365608 +0100
 @@ -637,6 +637,17 @@
  
  	Konfig fájlok, soronként egy. A bevezető / jel opcionális.
@@ -37,10 +37,21 @@ diff -Naur orig/doc/uhubuild.sgml patched/doc/uhubuild.sgml
    <tag/options [?]/
  
  	A konkrét csomag tartalmát befolyásoló kulcsszavakat írhatunk ide,
-@@ -750,6 +772,30 @@
+@@ -750,6 +772,41 @@
  	Ha required, akkor automatikusan Essential is lesz a csomag.
  	Ezen értékek jelentéséről a dokumentáció során még szólunk.
  
++  <tag/predepends [?]/
++
++	A csomag control fájljának Pre-Depends opciója készül el az itt
++	felsorolt értékekkel. Soronként egy csomagnév. A szokásos operátorok
++	használhatók, melyeknek ha üres a jobb oldala, akkor az adott csomag
++	éppen telepített verziója kerül oda. Például:
++	<itemize>
++		<item><tt>coreutils</tt>
++		<item><tt>qt &gt;=</tt>
++	</itemize>
++
 +  <tag/provides [?]/
 +
 +	A csomag control fájljának Provides opciója készül el az itt
@@ -51,7 +62,7 @@ diff -Naur orig/doc/uhubuild.sgml patched/doc/uhubuild.sgml
 +		<item><tt>coreutils</tt>
 +		<item><tt>qt &gt;=</tt>
 +	</itemize>
-+	
++
 +  <tag/replaces [?]/
 +
 +	A csomag control fájljának Replaces opciója készül el az itt
@@ -69,12 +80,21 @@ diff -Naur orig/doc/uhubuild.sgml patched/doc/uhubuild.sgml
  
  	A csomag section mezője.
 diff -Naur orig/src/steps/control patched/src/steps/control
---- orig/src/steps/control	2010-09-07 17:13:50.000000000 +0200
-+++ patched/src/steps/control	2014-04-13 14:07:14.244915252 +0200
-@@ -34,6 +34,50 @@
+--- orig/src/steps/control	2014-07-09 10:44:59.000000000 +0200
++++ patched/src/steps/control	2015-12-29 04:55:25.548665048 +0100
+@@ -34,6 +34,59 @@
  			echo
  		fi
  
++		if [ -s "$UB_SRCDIR/packages/$pkg/predepends" ]; then
++			sep=''
++			echo -n "Pre-Depends:"
++			while read -r line; do
++				echo -n "$sep" "$line"
++				sep=','
++			done < "$UB_SRCDIR/packages/$pkg/predepends"
++			echo
++		fi
 +		if [ -s "$UB_SRCDIR/packages/$pkg/conflicts" ]; then
 +			sep=''
 +			echo -n "Conflicts:"
@@ -118,13 +138,13 @@ diff -Naur orig/src/steps/control patched/src/steps/control
 +			done < "$UB_SRCDIR/packages/$pkg/provides"
 +			echo
 +		fi
-+		
++
  		echo "Distribution: ${UB_DISTRIBUTION/ dev/ 3}"
  		if [ -f "$UB_SRCDIR/vendor" ]; then
  			echo "Vendor: $(cat "$UB_SRCDIR/vendor")"
 diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 --- orig/src/uhubuild-check	2013-04-05 18:33:38.000000000 +0200
-+++ patched/src/uhubuild-check	2014-04-13 14:07:14.244915252 +0200
++++ patched/src/uhubuild-check	2015-12-29 04:53:35.612119911 +0100
 @@ -240,10 +240,10 @@
  
  for file in packages/*/*; do
@@ -135,12 +155,12 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 -	  section  |users  |\
 +	  categories|conffiles|conflicts|depends|dirs |\
 +	  excludes|files|groups|obsoletes|options|perms|\
-+	  postinst |postrm |prerm  |priority|provides|\
-+	  replaces|section  |users  |\
++	  postinst |postrm |prerm  |priority|predepends|\
++	  provides|replaces|section  |users  |\
  	  keep-old-timestamps|suid_wrapper|libpath)
  		must_be_file "$file"
  		;;
-@@ -592,6 +592,19 @@
+@@ -592,6 +592,28 @@
  		fi
  	fi
  
@@ -153,6 +173,15 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 +	if ! has_macro $UHUBUILD_SRC2DIR/$pkg/conflicts.tmp; then
 +		reformat 0 < $UHUBUILD_SRC2DIR/$pkg/conflicts.tmp | sort -u > $UHUBUILD_SRC2DIR/$pkg/conflicts
 +		rm $UHUBUILD_SRC2DIR/$pkg/conflicts.tmp
++		while read package op version; do
++			case "$op" in
++				""|"<"|"<<"|"<="|"="|">="|">>"|">")
++					;;
++				*)
++					error "Ismeretlen verzió-operátor ($op) a $pkg/conflicts fájlban."
++					;;
++			esac
++		done < $UHUBUILD_SRC2DIR/$pkg/conflicts
 +	else
 +		mv $UHUBUILD_SRC2DIR/$pkg/conflicts.tmp $UHUBUILD_SRC2DIR/$pkg/conflicts
 +	fi
@@ -160,7 +189,7 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
  	##########################
  	### packages/*/depends ###
  	##########################
-@@ -697,6 +710,19 @@
+@@ -697,6 +719,28 @@
  		mv $UHUBUILD_SRC2DIR/$pkg/libpath.tmp $UHUBUILD_SRC2DIR/$pkg/libpath
  	fi
  
@@ -173,6 +202,15 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 +	if ! has_macro $UHUBUILD_SRC2DIR/$pkg/obsoletes.tmp; then
 +		reformat 0 < $UHUBUILD_SRC2DIR/$pkg/obsoletes.tmp | sort -u > $UHUBUILD_SRC2DIR/$pkg/obsoletes
 +		rm $UHUBUILD_SRC2DIR/$pkg/obsoletes.tmp
++		while read package op version; do
++			case "$op" in
++				""|"<"|"<<"|"<="|"="|">="|">>"|">")
++					;;
++				*)
++					error "Ismeretlen verzió-operátor ($op) a $pkg/obsoletes fájlban."
++					;;
++			esac
++		done < $UHUBUILD_SRC2DIR/$pkg/obsoletes
 +	else
 +		mv $UHUBUILD_SRC2DIR/$pkg/obsoletes.tmp $UHUBUILD_SRC2DIR/$pkg/obsoletes
 +	fi
@@ -180,10 +218,32 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
  	##########################
  	### packages/*/options ###
  	##########################
-@@ -789,6 +815,32 @@
+@@ -789,6 +833,72 @@
  		echo "optional" >"$UHUBUILD_SRC2DIR"/"$pkg"/priority
  	fi
  
++	##############################
++	### packages/*/predepends ###
++	##############################
++	if [ -f $pkg/predepends ]; then
++		pp < $pkg/predepends
++	fi > $UHUBUILD_SRC2DIR/$pkg/predepends.tmp
++	if ! has_macro $UHUBUILD_SRC2DIR/$pkg/predepends.tmp; then
++		reformat 0 < $UHUBUILD_SRC2DIR/$pkg/predepends.tmp | sort -u > $UHUBUILD_SRC2DIR/$pkg/predepends
++		rm $UHUBUILD_SRC2DIR/$pkg/predepends.tmp
++		while read package op version; do
++			case "$op" in
++				""|"<"|"<<"|"<="|"="|">="|">>"|">")
++					;;
++				*)
++					error "Ismeretlen verzió-operátor ($op) a $pkg/predepends fájlban."
++					;;
++			esac
++		done < $UHUBUILD_SRC2DIR/$pkg/predepends
++	else
++		mv $UHUBUILD_SRC2DIR/$pkg/predepends.tmp $UHUBUILD_SRC2DIR/$pkg/predepends
++	fi
++
 +	#############################
 +	### packages/*/provides ###
 +	#############################
@@ -193,6 +253,15 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 +	if ! has_macro $UHUBUILD_SRC2DIR/$pkg/provides.tmp; then
 +		reformat 0 < $UHUBUILD_SRC2DIR/$pkg/provides.tmp | sort -u > $UHUBUILD_SRC2DIR/$pkg/provides
 +		rm $UHUBUILD_SRC2DIR/$pkg/provides.tmp
++		while read package op version; do
++			case "$op" in
++				""|"<"|"<<"|"<="|"="|">="|">>"|">")
++					;;
++				*)
++					error "Ismeretlen verzió-operátor ($op) a $pkg/provides fájlban."
++					;;
++			esac
++		done < $UHUBUILD_SRC2DIR/$pkg/provides
 +	else
 +		mv $UHUBUILD_SRC2DIR/$pkg/provides.tmp $UHUBUILD_SRC2DIR/$pkg/provides
 +	fi
@@ -206,6 +275,15 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 +	if ! has_macro $UHUBUILD_SRC2DIR/$pkg/replaces.tmp; then
 +		reformat 0 < $UHUBUILD_SRC2DIR/$pkg/replaces.tmp | sort -u > $UHUBUILD_SRC2DIR/$pkg/replaces
 +		rm $UHUBUILD_SRC2DIR/$pkg/replaces.tmp
++		while read package op version; do
++			case "$op" in
++				""|"<"|"<<"|"<="|"="|">="|">>"|">")
++					;;
++				*)
++					error "Ismeretlen verzió-operátor ($op) a $pkg/replaces fájlban."
++					;;
++			esac
++		done < $UHUBUILD_SRC2DIR/$pkg/replaces
 +	else
 +		mv $UHUBUILD_SRC2DIR/$pkg/replaces.tmp $UHUBUILD_SRC2DIR/$pkg/replaces
 +	fi
@@ -213,12 +291,13 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
  	##########################
  	### packages/*/section ###
  	##########################
-@@ -973,7 +1025,7 @@
+@@ -973,7 +1083,8 @@
  
  	# Esetleges fölösleges (0 méretű) fájlok törlése
  	for f in acquire build-depends compile doc install options \
 -	  packages/*/{{description,words}/hu,depends,perms,conffiles,categories,options,suid_wrapper,users,groups}; do
-+	  packages/*/{{description,words}/hu,depends,perms,conffiles,categories,options,suid_wrapper,users,groups,conflicts,obsoletes,provides,replaces}; do
++	  packages/*/{{description,words}/hu,depends,perms,conffiles,categories,options,suid_wrapper,users,groups \
++					conflicts,obsoletes,predepends,provides,replaces}; do
  		if [ -f "$f" -a ! -s "$f" ]; then
  			rm -f "$f"
  		fi

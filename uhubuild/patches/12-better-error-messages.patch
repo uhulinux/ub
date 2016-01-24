@@ -1,6 +1,6 @@
 diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
---- orig/src/uhubuild-check	2013-08-13 18:36:35.000000000 +0200
-+++ patched/src/uhubuild-check	2013-08-13 18:52:59.467634811 +0200
+--- orig/src/uhubuild-check	2015-12-29 01:47:08.415005833 +0100
++++ patched/src/uhubuild-check	2015-12-29 01:50:18.591948869 +0100
 @@ -287,7 +287,7 @@
  if check distribution; then
  reformat 0 < distribution > $UHUBUILD_SRC2DIR/distribution
@@ -88,7 +88,7 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
  		fi
  	else
  		mv $UHUBUILD_SRC2DIR/vendor.tmp $UHUBUILD_SRC2DIR/vendor
-@@ -620,7 +627,7 @@
+@@ -629,7 +636,7 @@
  				""|"<"|"<<"|"<="|"="|">="|">>"|">")
  					;;
  				*)
