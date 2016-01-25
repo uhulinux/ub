@@ -175,7 +175,7 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 +		rm $UHUBUILD_SRC2DIR/$pkg/conflicts.tmp
 +		while read package op version; do
 +			case "$op" in
-+				""|"<"|"<<"|"<="|"="|">="|">>"|">")
++				""|"(<"|"(<<"|"(<="|"(="|"(>="|"(>>"|"(>")
 +					;;
 +				*)
 +					error "Ismeretlen verzió-operátor ($op) a $pkg/conflicts fájlban."
@@ -204,7 +204,7 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 +		rm $UHUBUILD_SRC2DIR/$pkg/obsoletes.tmp
 +		while read package op version; do
 +			case "$op" in
-+				""|"<"|"<<"|"<="|"="|">="|">>"|">")
++				""|"(<"|"(<<"|"(<="|"(="|"(>="|"(>>"|"(>")
 +					;;
 +				*)
 +					error "Ismeretlen verzió-operátor ($op) a $pkg/obsoletes fájlban."
@@ -233,7 +233,7 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 +		rm $UHUBUILD_SRC2DIR/$pkg/predepends.tmp
 +		while read package op version; do
 +			case "$op" in
-+				""|"<"|"<<"|"<="|"="|">="|">>"|">")
++				""|"(<"|"(<<"|"(<="|"(="|"(>="|"(>>"|"(>")
 +					;;
 +				*)
 +					error "Ismeretlen verzió-operátor ($op) a $pkg/predepends fájlban."
@@ -255,7 +255,7 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 +		rm $UHUBUILD_SRC2DIR/$pkg/provides.tmp
 +		while read package op version; do
 +			case "$op" in
-+				""|"<"|"<<"|"<="|"="|">="|">>"|">")
++				""|"(<"|"(<<"|"(<="|"(="|"(>="|"(>>"|"(>")
 +					;;
 +				*)
 +					error "Ismeretlen verzió-operátor ($op) a $pkg/provides fájlban."
@@ -277,7 +277,7 @@ diff -Naur orig/src/uhubuild-check patched/src/uhubuild-check
 +		rm $UHUBUILD_SRC2DIR/$pkg/replaces.tmp
 +		while read package op version; do
 +			case "$op" in
-+				""|"<"|"<<"|"<="|"="|">="|">>"|">")
++				""|"(<"|"(<<"|"(<="|"(="|"(>="|"(>>"|"(>")
 +					;;
 +				*)
 +					error "Ismeretlen verzió-operátor ($op) a $pkg/replaces fájlban."
