@@ -12,6 +12,7 @@ libdv-dev
 liboil-dev
 libunicap-dev
 libvisual-dev
+libxshmfence-dev
 mjpegtools-dev
 opencv-dev
 procps

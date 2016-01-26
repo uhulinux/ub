@@ -17,6 +17,7 @@ libcryptui-dev
 libmusicbrainz-dev
 libnotify-dev
 libsm-dev
+libxshmfence-dev
 nemo-dev
 pygobject2-dev
 webkitgtk-dev
