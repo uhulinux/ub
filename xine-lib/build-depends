@@ -32,6 +32,7 @@ libva-dev
 libvdpau-dev
 libvorbis-dev
 libxml2-dev
+libxshmfence-dev
 libxv-dev
 libxvmc-dev
 musepack-dev

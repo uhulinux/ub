@@ -6,6 +6,7 @@ libunwind-dev
 libva-dev
 libxcursor-dev
 libxkbcommon-dev
+libxshmfence-dev
 mtdev-dev
 pango-dev
 poppler-glib-dev

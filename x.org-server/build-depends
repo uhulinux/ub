@@ -1,14 +1,15 @@
 doxygen
+expat-dev
 libdmx-dev
 libgcrypt-dev
 libpciaccess-dev
 libpng-dev
-libunwind-dev
 libxaw-dev
 libxfont-dev
 libxkbfile-dev
 libxrender-dev
 libxres-dev
+libxshmfence-dev
 libxtst-dev
 libxv-dev
 mesa-dev
@@ -16,7 +17,6 @@ openssl-dev
 pixman-dev
 sdl-dev
 systemd-dev
-tslib-dev
 x.org-proto-dev
 x.org-xtrans-dev
 xcb-util-dev

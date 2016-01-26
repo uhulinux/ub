@@ -29,6 +29,7 @@ libsysfs-dev
 libupnp-dev
 libvdpau-dev
 libxpm-dev
+libxshmfence-dev
 libxt-dev
 libxvmc-dev
 libxxf86vm-dev
