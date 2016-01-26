@@ -10,5 +10,4 @@ diff -Naur orig/nvidia-settings.desktop mod/nvidia-settings.desktop
 -Categories=Application;Settings;
 +Exec=nvidia-settings
 +Icon=nvidia-settings
-+Categories=Settings;
- 
++Categories=Settings;HardwareSettings;
