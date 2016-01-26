@@ -8,6 +8,7 @@ libpng-dev
 libx11-dev
 libxinerama-dev
 libxml2-dev
+libxshmfence-dev
 libxxf86vm-dev
 pcre-dev
 silly-dev

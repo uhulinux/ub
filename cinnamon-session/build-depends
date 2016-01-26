@@ -6,5 +6,6 @@ intltool
 json-glib-dev
 libcanberra-dev
 libsm-dev
+libxshmfence-dev
 systemd-dev
 x.org-xtrans-dev

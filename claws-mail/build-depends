@@ -24,6 +24,7 @@ libnotify-dev
 liboauth-dev
 libqrencode-dev
 libsm-dev
+libxshmfence-dev
 libxslt-dev
 networkmanager-dev
 poppler-glib-dev
