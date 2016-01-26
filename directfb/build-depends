@@ -19,6 +19,7 @@ libvorbis-dev
 libwebp-dev
 libx11-dev
 libxext-dev
+libxshmfence-dev
 mesa-dev
 sdl-dev
 tslib-dev

@@ -23,6 +23,7 @@ libsm-dev
 libtiff-dev
 libwmf-dev
 libxpm-dev
+libxshmfence-dev
 libxslt
 poppler-dev
 poppler-glib-dev
