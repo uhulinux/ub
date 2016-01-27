@@ -1,5 +1,7 @@
+clang
 expat-dev
 imake
+libclc-dev
 libdrm-dev
 libelf-dev
 libomxil-bellagio-dev

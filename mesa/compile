@@ -25,5 +25,7 @@ ub_compile \
 	--enable-r600-llvm-compiler \
 	--enable-omx \
 	--enable-nine \
+	--enable-opencl \
+	--enable-opencl-icd
 
 #ub_make
