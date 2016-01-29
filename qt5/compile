@@ -30,7 +30,6 @@ export LD_LIBRARY_PATH="$(pwd)"/lib
 	-no-journald		\
 	-reduce-relocations \
 	-no-separate-debug-info \
-	-no-sse2			\
 	\
 	-nomake examples    \
 	-skip qtwebengine	\
