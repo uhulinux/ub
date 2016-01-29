@@ -7,13 +7,13 @@ engrampa
 eom
 eom-plugins
 marco
-mate-applet-lockkeys
 mate-applet-uptime
 mate-applets
 mate-backgrounds
 mate-control-center
 mate-desktop
 mate-icon-theme
+mate-icon-theme-faenza
 mate-indicator-applet
 mate-main-menu
 mate-media
@@ -32,6 +32,7 @@ mate-system-monitor
 mate-terminal
 mate-themes
 mate-tweak
+mate-user-guide
 mate-user-share
 mate-utils
 pluma

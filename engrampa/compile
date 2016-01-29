@@ -4,4 +4,3 @@ ub_compile \
 	--with-gtk=2.0 \
 	--enable-magic \
 	--disable-run-in-place
-

@@ -12,7 +12,6 @@ libsm-dev
 mate-common
 mate-desktop-dev
 mate-icon-theme
-pygtk-dev
 util-linux-dev
 xcb-util-dev
 yelp-tools

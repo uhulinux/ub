@@ -5,4 +5,3 @@ ub_compile \
 	--with-default-wm=marco \
 	--enable-ipv6 \
 	--enable-deprecations
-	
