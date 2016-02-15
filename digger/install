@@ -1,0 +1,3 @@
+#!/bin/sh -eux
+
+install -m 755 digger "$UB_INSTALLDIR"/usr/bin/

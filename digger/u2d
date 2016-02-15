@@ -1,0 +1,1 @@
+urllist http://digger.org/download.html | splitver '^digger-([0-9.]+).tar.gz$'
