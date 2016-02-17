@@ -1,0 +1,5 @@
+polkit
+pygtk
+python-netifaces
+ufw
+webkitgtk
