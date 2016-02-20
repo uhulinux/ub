@@ -1,0 +1,11 @@
+diff -Naur orig/etc/mplayer.desktop patched/etc/mplayer.desktop
+--- orig/etc/mplayer.desktop	2015-11-18 16:44:54.000000000 +0100
++++ patched/etc/mplayer.desktop	2016-02-20 02:15:56.731591150 +0100
+@@ -6,6 +6,7 @@
+ GenericName[de]=Medienwiedergabe
+ GenericName[es]=Reproductor multimedia
+ GenericName[fr]=Lecteur multimédia
++GenericName[hu]=Médialejátszó
+ GenericName[it]=Lettore multimediale
+ GenericName[ja]=メディアプレーヤー
+ X-GNOME-FullName=MPlayer Media Player
