@@ -1,0 +1,7 @@
+#!/usr/bin/env dl
+
+#${UB_VERSION}.tar.gz youtube-dl-gui-${UB_VERSION}/
+#	https://github.com/MrS0m30n3/youtube-dl-gui/archive/
+
+youtube-dl-gui-${UB_VERSION}.tar.gz youtube-dl-gui-aa74cc2/
+	git://github.com/MrS0m30n3/youtube-dl-gui.git@aa74cc2

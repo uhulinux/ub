@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Youtube-dl GUI
+Name[hu]=Youtube letöltő
+Exec=youtube-dl-gui
+Icon=youtube-dl-gui_48x48
+Categories=Network;
+Comment=GUI for youtube-dl downloader
+Comment[hu]=A youtube-dl grafikus felülete

@@ -1,0 +1,1 @@
+urllist https://github.com/MrS0m30n3/youtube-dl-gui/releases/  | splitver '^([0-9.]+).tar.gz$' | sort -V | tail -n 1
