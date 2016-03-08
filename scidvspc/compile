@@ -1,0 +1,12 @@
+#!/bin/sh -eux
+
+sed -i 's/8.5/8.6/g' ./configure
+./configure \
+    BINDIR=/usr/bin/ \
+    SHAREDIR=/usr/share/scid/ \
+    TCL_VERSION="8.6" \
+    OPTIMIZE="-O2 -funroll-loops"
+make
+
+
+

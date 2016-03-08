@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Scid vs PC
+GenericName=Chess Database
+GenericName[hu]=Sakk adatbázis
+Exec=scid
+Icon=scid
+Categories=Game;BoardGame;

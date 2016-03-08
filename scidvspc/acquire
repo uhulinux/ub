@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+scid_vs_pc-${UB_VERSION}.tgz scid_vs_pc-${UB_VERSION}/
+	http://sourceforge.net/projects/scidvspc/files/

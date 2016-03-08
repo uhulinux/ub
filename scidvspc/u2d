@@ -1,0 +1,1 @@
+sflist scidvspc source | splitver '^scid_vs_pc-([0-9.]+).tgz$' | sort -V | tail -n 1
