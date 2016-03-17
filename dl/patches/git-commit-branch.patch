@@ -1,10 +1,22 @@
 diff -Naur orig/src/get patched/src/get
---- orig/src/get	2014-07-03 12:33:14.000000000 +0200
-+++ patched/src/get	2015-05-31 00:44:16.078774653 +0200
-@@ -205,6 +205,19 @@
+--- orig/src/get	2016-03-17 09:51:31.191186537 +0100
++++ patched/src/get	2016-03-17 09:53:43.015840220 +0100
+@@ -205,6 +205,31 @@
  			
  			cd ..
  			tar -zcv --force-local -f "$filename" "$tmpsub" || return
++		elif [[ "${revarray[0]}" = "branch" ]]; then  ## branch:branchname
++			tmpsub="$(basename "$url")"
++			tmpsub=${tmpsub/.git/}
++			tmpsub=${tmpsub}"-"${revarray[1]}
++			mkdir -p "$tmpdir/$tmpsub"
++			cd "$tmpdir/$tmpsub"
++
++			git init
++			git pull "git://$url" "refs/heads/${revarray[1]}"
++
++ 			cd ..
++ 			tar -zcv --force-local -f "$filename" "$tmpsub" || return
 +		elif [[ "${revarray[0]}" = *[[:alnum:]]* ]]; then  ## commit
 +			tmpsub="$(basename "$url")"
 +			tmpsub=${tmpsub/.git/}
