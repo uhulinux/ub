@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-uhu-revdep-rebuild-${UB_VERSION}.tar.gz uhu-revdep-rebuild-26929fb/
-	git://github.com/attuska/uhu-revdep-rebuild.git@26929fb
