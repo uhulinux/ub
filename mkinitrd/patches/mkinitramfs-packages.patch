@@ -1,0 +1,11 @@
+diff -Naur orig/mkinitramfs patched/mkinitramfs
+--- orig/mkinitramfs	2014-08-18 13:55:06.000000000 +0200
++++ patched/mkinitramfs	2016-03-28 18:38:54.893497506 +0200
+@@ -362,6 +362,7 @@
+ copypkg attr
+ copypkg polkit
+ copypkg cryptsetup
++copypkg btrfs-progs
+ 
+ # cleanup
+ rm -rf "$dir"/usr/share/doc
