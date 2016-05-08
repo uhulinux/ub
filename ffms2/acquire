@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz ffms2-${UB_VERSION}/
+	https://github.com/FFMS/ffms2/archive/

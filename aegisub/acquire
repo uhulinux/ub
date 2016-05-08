@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+aegisub-${UB_VERSION}.tar.xz aegisub-${UB_VERSION}/
+	http://ftp.aegisub.org/pub/archives/releases/source/
