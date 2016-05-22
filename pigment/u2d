@@ -1,1 +1,1 @@
-urllist https://code.fluendo.com/pigment/trac/ | splitver '^pigment-([0-9.]+).tar.gz$'
+urllist http://pkgs.fedoraproject.org/repo/pkgs/pigment/ | parsever | sort -V | tail -n 1
