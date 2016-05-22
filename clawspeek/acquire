@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+clawspeek-${UB_VERSION}.tar.gz clawspeek-881c15a/
+	git://github.com/mones/clawspeek.git@881c15a
