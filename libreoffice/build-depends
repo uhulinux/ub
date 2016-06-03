@@ -1,4 +1,7 @@
+audit
+avahi-dev
 boost-dev
+clucene-core-dev
 cppunit-dev
 cups-dev
 curl-dev
@@ -50,5 +53,4 @@ redland-dev
 sane-backends-dev
 startup-notification-dev
 unixodbc-dev
-vigra-dev
 zip
