@@ -1,12 +1,12 @@
-diff -Naur orig/configure mod/configure
---- orig/configure	2014-01-05 03:08:48.000000000 +0100
-+++ mod/configure	2015-01-23 18:14:15.525754415 +0100
-@@ -3052,7 +3052,7 @@
- 
- 
- # Define the identity of the package.
-- PACKAGE='AlephOne'
-+ PACKAGE='alephone'
-  VERSION='20140104'
- 
- 
+diff -Naur orig/configure.ac mod/configure.ac
+--- orig/configure.ac	2015-09-08 02:08:14.000000000 +0200
++++ mod/configure.ac	2016-02-20 23:18:21.173365438 +0100
+@@ -4,7 +4,7 @@
+ AC_INIT([Aleph One],
+         m4_esyscmd([ grep '^#define A1_DATE_VERSION' Source_Files/Misc/alephversion.h | sed -e 's/\(.*\"\)\(.*\)\(\"\)/\2/g' | tr -d '\n']),
+         [https://github.com/Aleph-One-Marathon/alephone/issues],
+-        [AlephOne],
++        [alephone],
+         [https://alephone.lhowon.org/])
+ AC_CONFIG_SRCDIR([Source_Files/shell.cpp])
+ AC_CONFIG_MACRO_DIR([m4])

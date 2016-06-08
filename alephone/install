@@ -2,5 +2,12 @@
 
 ub_install
 
+icondir=$UB_INSTALLDIR/usr/share/icons
 mkdir -p $UB_INSTALLDIR/usr/share/doc/alephone
+mkdir -p $icondir
 cp docs/*.html $UB_INSTALLDIR/usr/share/doc/alephone/
+
+icotool -x -w 48 Resources/Windows/alephone.ico -o $icondir/alephone.png
+icotool -x -w 48 Resources/Windows/marathon.ico -o $icondir/alephone-marathon.png
+icotool -x -w 48 Resources/Windows/marathon2.ico -o $icondir/alephone-marathon2.png
+icotool -x -w 48 Resources/Windows/marathon-infinity.ico -o $icondir/alephone-infinity.png
