@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+Marathon2-${UB_VERSION}-Data.zip . :/usr/share/alephone/scenarios/
+	https://github.com/Aleph-One-Marathon/alephone/releases/download/release-${UB_VERSION}/
