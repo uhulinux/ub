@@ -1,0 +1,1 @@
+urllist https://github.com/Aleph-One-Marathon/alephone/releases/ | splitver '^MarathonInfinity-([0-9.]+)-Data.zip$' | sort -V | tail -n 1
