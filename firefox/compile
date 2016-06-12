@@ -4,7 +4,7 @@ CC="ccache gcc -m32"
 CXX="ccache g++ -m32"
 export SHELL=/bin/bash
 
-export LDFLAGS="-Wl,-rpath,/usr/lib/firefox/ -Wl,--no-keep-memory -Wl,-z,now"
+export LDFLAGS="-Wl,-rpath,/usr/lib/firefox/ -Wl,--no-keep-memory -Wl,-z,relro -Wl,-z,now"
 
 # jpeg: jpeg-turbo, png: >= 1.6.17 + APNG support
 
