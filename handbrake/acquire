@@ -2,6 +2,7 @@
 
 HandBrake-${UB_VERSION}.tar.bz2 HandBrake-${UB_VERSION}/
 	https://handbrake.fr/mirror/
+	ftp://ftp.tw.freebsd.org/pub/branches/-current/ports/distfiles/handbrake/
 
 #libvpx-v1.3.0.tar.bz2
 #	http://download.handbrake.fr/contrib/
@@ -11,9 +12,11 @@ HandBrake-${UB_VERSION}.tar.bz2 HandBrake-${UB_VERSION}/
 
 fdk-aac-v0.1.1-6-gbae4553.tar.bz2
 	http://download.handbrake.fr/handbrake/contrib/
+	ftp://ftp.tw.freebsd.org/pub/FreeBSD/ports/distfiles/handbrake/
 	
 x265-9329-0d30d2641875-1.5.tar.bz2
 	http://download.handbrake.fr/contrib/
+	ftp://ftp.tw.freebsd.org/pub/ports/distfiles/handbrake/
 	
 #libdvdnav-5.0.1-0-gaa3659d.tar.gz
 #	http://download.handbrake.fr/handbrake/contrib/
