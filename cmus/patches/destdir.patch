@@ -1,0 +1,14 @@
+diff -Naur orig/Makefile patched/Makefile
+--- orig/Makefile	2015-07-13 12:00:56.000000000 +0200
++++ patched/Makefile	2015-12-25 16:14:34.828272855 +0100
+@@ -270,8 +270,8 @@
+ 
+ install-data: man
+ 	$(INSTALL) -m644 $(datadir)/cmus $(data)
+-	$(INSTALL) -m644 $(mandir)/man1 $(man1)
+-	$(INSTALL) -m644 $(mandir)/man7 $(man7)
++#	$(INSTALL) -m644 $(mandir)/man1 $(man1)
++#	$(INSTALL) -m644 $(mandir)/man7 $(man7)
+ 	$(INSTALL) -m755 $(exampledir) cmus-status-display
+ 
+ install: all install-main install-plugins install-data

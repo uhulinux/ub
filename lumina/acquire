@@ -1,0 +1,10 @@
+#!/usr/bin/env dl
+
+#lumina-${UB_VERSION}.tar.gz lumina-aedadeb/
+#	git://github.com/pcbsd/lumina.git@aedadeb
+
+v${UB_VERSION}-Release-p1.tar.gz lumina-${UB_VERSION}-Release-p1/
+	https://github.com/pcbsd/lumina/archive/
+	
+lumina-i18n.tar.gz lumina-i18n-4b864f5/ :lumina-i18n
+	git://github.com/pcbsd/lumina-i18n.git@4b864f5

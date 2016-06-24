@@ -1,0 +1,37 @@
+diff -Naur orig/src-qt5/core/lumina-desktop/defaults/luminaDesktop.conf patched/src-qt5/core/lumina-desktop/defaults/luminaDesktop.conf
+--- orig/src-qt5/core/lumina-desktop/defaults/luminaDesktop.conf	2016-05-03 18:03:16.000000000 +0200
++++ patched/src-qt5/core/lumina-desktop/defaults/luminaDesktop.conf	2016-06-18 02:14:45.365732860 +0200
+@@ -24,8 +24,8 @@
+ # *.desktop files provide better support for input formats, and are recommended
+ #session_default_terminal=xterm 
+ #session_default_filemanager=lumina-fm 
+-#session_default_webbrowser=/usr/local/share/applications/firefox.desktop
+-#session_default_email=/usr/local/share/applications/thunderbird.desktop
++#session_default_webbrowser=firefox.desktop
++#session_default_email=thunderbird.desktop
+ 
+ #THEME SETTINGS
+ #theme.themefile=<file path> #Absolute path to the theme template file to use (disable for Lumina-Default)
+diff -Naur orig/src-qt5/core/lumina-desktop/defaults/luminaDesktop.pcbsd.conf patched/src-qt5/core/lumina-desktop/defaults/luminaDesktop.pcbsd.conf
+--- orig/src-qt5/core/lumina-desktop/defaults/luminaDesktop.pcbsd.conf	2016-06-18 02:12:13.995267355 +0200
++++ patched/src-qt5/core/lumina-desktop/defaults/luminaDesktop.pcbsd.conf	2016-06-18 02:14:45.365732860 +0200
+@@ -1,6 +1,6 @@
+ #PC-BSD configuration file for the Lumina Desktop Environment (0.8.7+)
+ 
+-# See the /usr/local/share/LuminaDE/luminaDesktop.conf file for all the possible values/details
++# See the /usr/share/LuminaDE/luminaDesktop.conf file for all the possible values/details
+ 
+ #GENERAL SESSION SETTINGS 
+ session_enablenumlock=false #[true/false] Enable numlock on login using "numlockx"
+diff -Naur orig/src-qt5/core/lumina-desktop/fluxboxconf/fluxbox-init-rc patched/src-qt5/core/lumina-desktop/fluxboxconf/fluxbox-init-rc
+--- orig/src-qt5/core/lumina-desktop/fluxboxconf/fluxbox-init-rc	2016-05-03 18:03:16.000000000 +0200
++++ patched/src-qt5/core/lumina-desktop/fluxboxconf/fluxbox-init-rc	2016-06-18 02:14:45.369732920 +0200
+@@ -66,7 +66,7 @@
+ session.titlebar.right:	Minimize Maximize Close
+ session.colorsPerChannel:	4
+ session.opaqueMove:	False
+-session.styleFile:	/usr/local/share/fluxbox/styles/bora_black
++session.styleFile:	/usr/share/fluxbox/styles/bora_black
+ session.doubleClickInterval:	250
+ session.iconbar:	false
+ session.cacheLife:	5

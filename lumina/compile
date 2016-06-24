@@ -1,0 +1,36 @@
+#!/bin/sh -eux
+
+CURDIR="${PWD}"
+LNGDIR="${PWD}/lumina-i18n/ts"
+
+[[ ! -d "${LNGDIR}" ]] && (echo "something went wrong!" && exit 1)
+
+LANGS=("${LNGDIR}"/*)
+LANGS=(${LANGS[@]/*\/ts\/})
+
+UTILS=(config desktop fileinfo fm info open screenshot search textedit xconfig)
+UTILSDIRS=(core core-utils desktop-utils)
+# UTILS=(config desktop fileinfo fm info open screenshot search terminal textedit xconfig)
+
+for lng in ${LANGS[@]}; do
+if [ $lng != "hi" ]; then
+	for utl in ${UTILS[@]}; do
+		for utldir in ${UTILSDIRS[@]}; do
+			if [[ -e "${LNGDIR}"/${lng}/lumina-${utl}.ts ]]; then
+				if [[ -d "${CURDIR}"/src-qt5/${utldir}/lumina-${utl} ]]; then
+					cp "${LNGDIR}"/${lng}/lumina-${utl}.ts \
+						"${CURDIR}"/src-qt5/${utldir}/lumina-${utl}/i18n/lumina-${utl}_${lng}.ts
+				fi
+			fi
+		done
+	done
+fi
+done
+
+qmake-qt5 \
+	PREFIX="/usr" \
+	INSTALL_ROOT="$UB_INSTALLDIR" \
+	QMAKE_LFLAGS="-Wl,--as-needed" \
+	lumina.pro
+
+ub_compile

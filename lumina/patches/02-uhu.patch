@@ -1,0 +1,110 @@
+diff -Naur orig/src-qt5/core/libLumina/LuminaOS-Linux.cpp patched/src-qt5/core/libLumina/LuminaOS-Linux.cpp
+--- orig/src-qt5/core/libLumina/LuminaOS-Linux.cpp	2016-05-03 18:03:16.000000000 +0200
++++ patched/src-qt5/core/libLumina/LuminaOS-Linux.cpp	2016-06-18 02:44:59.811158192 +0200
+@@ -23,7 +23,7 @@
+ 
+ //OS-specific application shortcuts (*.desktop files)
+ QString LOS::ControlPanelShortcut(){ return ""; } //system control panel
+-QString LOS::AppStoreShortcut(){ return ""; } //graphical app/pkg manager
++QString LOS::AppStoreShortcut(){ return LOS::SysPrefix() + "/share/applications/synaptic.desktop"; } //graphical app/pkg manager
+ 
+ // ==== ExternalDevicePaths() ====
+ QStringList LOS::ExternalDevicePaths(){
+@@ -134,7 +134,9 @@
+ 
+ //Check for user system permission (shutdown/restart)
+ bool LOS::userHasShutdownAccess(){
+-  return true; //not implemented yet
++  return QProcess::startDetached("dbus-send --system --print-reply=literal \
++  --type=method_call --dest=org.freedesktop.login1 \
++  /org/freedesktop/login1 org.freedesktop.login1.Manager.CanPowerOff");
+ }
+ 
+ //Check for whether the system is safe to power off (no updates being perfomed)
+@@ -144,22 +146,30 @@
+ 
+ //System Shutdown
+ void LOS::systemShutdown(){ //start poweroff sequence
+-  QProcess::startDetached("shutdown -P -h now");
++  QProcess::startDetached("dbus-send --system --print-reply \
++  --dest=org.freedesktop.login1 /org/freedesktop/login1 \
++  org.freedesktop.login1.Manager.PowerOff boolean:true");
+ }
+ 
+ //System Restart
+ void LOS::systemRestart(){ //start reboot sequence
+-  QProcess::startDetached("shutdown -r now");
++  QProcess::startDetached("dbus-send --system --print-reply \
++  --dest=org.freedesktop.login1 /org/freedesktop/login1 \
++  org.freedesktop.login1.Manager.Reboot boolean:true");
+ }
+ 
+ //Check for suspend support
+ bool LOS::systemCanSuspend(){
+-  return false;
++  return QProcess::startDetached("dbus-send --system --print-reply=literal \
++  --type=method_call --dest=org.freedesktop.login1 \
++  /org/freedesktop/login1 org.freedesktop.login1.Manager.CanSuspend");
+ }
+ 
+ //Put the system into the suspend state
+ void LOS::systemSuspend(){
+-
++  QProcess::startDetached("dbus-send --system --print-reply \
++  --dest=org.freedesktop.login1 /org/freedesktop/login1 \
++  org.freedesktop.login1.Manager.Suspend boolean:true");
+ }
+ 
+ //Battery Availability
+@@ -219,23 +229,45 @@
+ 
+ //file system capacity
+ QString LOS::FileSystemCapacity(QString dir) { //Return: percentage capacity as give by the df command
+-  QStringList mountInfo = LUtils::getCmdOutput("df \"" + dir+"\"");
++  QStringList mountInfo = LUtils::getCmdOutput("df -h \"" + dir + "\"");
+   QString::SectionFlag skipEmpty = QString::SectionSkipEmpty;
+-  //we take the 5th word on the 2 line
+-  QString capacity = mountInfo[1].section(" ",4,4, skipEmpty) + " used";
++  //output: 200G of 400G available on /mount/point
++  QString capacity = mountInfo[1].section(" ",3,3, skipEmpty) + " of " + mountInfo[1].section(" ",1,1, skipEmpty) + " available on " +  mountInfo[1].section(" ",5,5, skipEmpty);
+   return capacity;
+ }
+ 
+ QStringList LOS::CPUTemperatures(){ //Returns: List containing the temperature of any CPU's ("50C" for example)
+-  return QStringList(); //not implemented yet
++  QStringList temp = LUtils::getCmdOutput("acpi -t").filter("degrees");
++  for(int i=0; i<temp.length(); i++){
++    if(temp[i].startsWith("Thermal")){
++      temp[i] = temp[i].section(" ", 4, 6);
++    }else{
++      temp.removeAt(i); i--;
++    }
++  }
++  qDebug() << "teperatures" << temp;
++  return temp;
+ }
+ 
+ int LOS::CPUUsagePercent(){ //Returns: Overall percentage of the amount of CPU cycles in use (-1 for errors)
+-  return -1; //not implemented yet
++  QStringList info = LUtils::getCmdOutput("top -bn1").filter("Cpu(s)");
++  if(info.isEmpty()){ return -1; }
++  QString idle = info.first().section(" ", 7, 7, QString::SectionSkipEmpty);
++  if(idle.isEmpty()){ return -1; }
++  else{
++    return (100 - idle.toDouble());
++  }
+ }
+ 
+ int LOS::MemoryUsagePercent(){
+-  return -1; //not implemented yet
++  QStringList mem = LUtils::getCmdOutput("top -bn1").filter("Mem:");
++  if(mem.isEmpty()){ return -1; }
++  double fB = 0; //Free Bytes
++  double uB = 0; //Used Bytes
++  fB = mem.first().section(" ", 6, 6, QString::SectionSkipEmpty).toDouble();
++  uB = mem.first().section(" ", 4, 4, QString::SectionSkipEmpty).toDouble();
++  double per = (uB/(fB+uB)) * 100.0;
++  return qRound(per);
+ }
+ 
+ QStringList LOS::DiskUsage(){ //Returns: List of current read/write stats for each device

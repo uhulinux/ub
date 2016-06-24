@@ -1,0 +1,42 @@
+diff -Naur orig/src-qt5/core/lumina-desktop/lumina-desktop.pro patched/src-qt5/core/lumina-desktop/lumina-desktop.pro
+--- orig/src-qt5/core/lumina-desktop/lumina-desktop.pro	2016-05-03 18:03:16.000000000 +0200
++++ patched/src-qt5/core/lumina-desktop/lumina-desktop.pro	2016-06-18 02:11:16.942338085 +0200
+@@ -75,7 +75,7 @@
+ 			wallpapers/Lumina_Wispy_blue-grey-zoom.jpg \
+ 			wallpapers/Lumina_Wispy_grey-blue.jpg \
+ 			wallpapers/Lumina_Wispy_grey-blue-zoom.jpg 
+-wallpapers.path = $${L_SHAREDIR}/wallpapers/Lumina-DE
++wallpapers.path = $${L_SHAREDIR}/backgrounds/Lumina-DE
+ 
+ 
+ defaults.files = defaults/luminaDesktop.conf \
+diff -Naur orig/src-qt5/core-utils/lumina-config/mainUI.cpp patched/src-qt5/core-utils/lumina-config/mainUI.cpp
+--- orig/src-qt5/core-utils/lumina-config/mainUI.cpp	2016-05-03 18:03:16.000000000 +0200
++++ patched/src-qt5/core-utils/lumina-config/mainUI.cpp	2016-06-18 02:11:16.946338147 +0200
+@@ -710,7 +710,7 @@
+ 
+ void MainUI::deskbgadded(){
+   //Prompt the user to find an image file to use for a background
+-  QString dir = LOS::LuminaShare().section("/Lumina-DE",0,0)+"/wallpapers/Lumina-DE";
++  QString dir = LOS::LuminaShare().section("/Lumina-DE",0,0)+"/backgrounds/Lumina-DE";
+   qDebug() << "Looking for wallpaper dir:" << dir;
+   if( !QFile::exists(dir) ){ dir = QDir::homePath(); }
+   QStringList imgs = LUtils::imageExtensions();
+@@ -745,7 +745,7 @@
+ 
+ void MainUI::deskbgdiradded(){
+   //Add the files from a single directory
+- QString dir = LOS::LuminaShare().section("/Lumina-DE",0,0)+"/wallpapers/Lumina-DE";
++ QString dir = LOS::LuminaShare().section("/Lumina-DE",0,0)+"/backgrounds/Lumina-DE";
+   qDebug() << "Looking for wallpaper dir:" << dir;
+   if( !QFile::exists(dir) ){ dir = QDir::homePath(); }
+   dir = QFileDialog::getExistingDirectory(this, tr("Find Background Image Directory"), dir, QFileDialog::ReadOnly);
+@@ -771,7 +771,7 @@
+ 
+ void MainUI::deskbgdirradded(){
+   //Recursively add files from a directory
+- QString dir = LOS::LuminaShare().section("/Lumina-DE",0,0)+"/wallpapers/Lumina-DE";
++ QString dir = LOS::LuminaShare().section("/Lumina-DE",0,0)+"/backgrounds/Lumina-DE";
+   qDebug() << "Looking for wallpaper dir:" << dir;
+   if( !QFile::exists(dir) ){ dir = QDir::homePath(); }
+   dir = QFileDialog::getExistingDirectory(this, tr("Find Background Image Directory"), dir, QFileDialog::ReadOnly);
