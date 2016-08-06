@@ -1,0 +1,39 @@
+#!/bin/sh -eux
+
+IPREFIX="$UB_INSTALLDIR"/usr
+BINDIR="$IPREFIX"/bin
+DATADIR="$IPREFIX"/share/plus4emu
+PIXMAPDIR="$IPREFIX"/share/pixmaps
+DESKTOPDIR="$IPREFIX"/share/applications
+
+#célkönyvtárak
+mkdir -p "$BINDIR" "$PIXMAPDIR" "$DESKTOPDIR" "$DATADIR"/{roms,disk,config}
+
+#ico fájlok konverziója
+for i in `ls -1 resource/*.ico`;do
+ikonfile=$(basename $i .ico)
+convert $i $PIXMAPDIR/$(basename $i .ico).png
+done
+
+cp plus4emu "$BINDIR"/plus4emu.bin
+cp tapconv "$BINDIR"/
+cp makecfg "$BINDIR"/plus4makecfg
+cp plus4emu "$BINDIR"/plus4emu.bin
+cp tapconv  "$BINDIR"/
+cp -r roms config disk "$DATADIR"/
+
+wrapperstring='#!/bin/bash
+if test ! -d ~/.plus4emu/roms
+then
+mkdir -p ~/.plus4emu/roms
+cp /usr/share/plus4emu/roms/* ~/.ep128emu/roms/
+plus4makecfg
+fi
+plus4emu.bin $@
+'
+# bash indító
+for sorok in "$wrapperstring"
+	do
+	echo "$sorok" >> $BINDIR/plus4emu
+	done
+chmod +x $BINDIR/plus4emu

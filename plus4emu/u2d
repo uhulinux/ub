@@ -1,0 +1,1 @@
+sflist plus4emu plus4emu | splitver 'plus4emu-([0-9.]+)$' | sort -V | tail -n 1
