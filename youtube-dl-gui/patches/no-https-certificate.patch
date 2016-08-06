@@ -1,0 +1,13 @@
+diff -Nur orig/youtube_dl_gui/__main__.py mod/youtube_dl_gui/__main__.py
+--- orig/youtube_dl_gui/__main__.py	2016-08-06 12:41:13.000000000 +0200
++++ mod/youtube_dl_gui/__main__.py	2016-08-06 12:49:01.162466306 +0200
+@@ -25,6 +25,9 @@
+ from __future__ import unicode_literals
+ 
+ import sys
++import ssl
++ 
++ssl._create_default_https_context = ssl._create_unverified_context
+ 
+ if __package__ is None and not hasattr(sys, "frozen"):
+     # direct call of __main__.py
