@@ -1,0 +1,54 @@
+diff -Nur orig/SConstruct mod/SConstruct
+--- orig/SConstruct	2016-08-11 07:54:40.000000000 +0200
++++ mod/SConstruct	2016-08-11 13:52:34.045771863 +0200
+@@ -4,7 +4,7 @@
+ 
+ win32CrossCompile = 0
+ linux32CrossCompile = 0
+-disableSDL = 0          # set this to 1 on Linux with SDL version >= 1.2.10
++disableSDL = 1          # set this to 1 on Linux with SDL version >= 1.2.10
+ disableLua = 0
+ enableGLShaders = 1
+ enableDebug = 0
+@@ -28,13 +28,15 @@
+ 
+ programNamePrefix = ""
+ if not win32CrossCompile:
+-    instPrefix = os.environ["HOME"]
++    instPrefix = "/var/uhubuild/work/install/usr"
+     instBinDir = instPrefix + "/bin"
+-    instShareDir = instPrefix + "/.local/share"
++    instShareDir = instPrefix + "/share"
+     instDataDir = instShareDir + "/plus4emu"
+     instPixmapDir = instShareDir + "/pixmaps"
+     instDesktopDir = instShareDir + "/applications"
+     instROMDir = instDataDir + "/roms"
++    instConfDir = instDataDir + "/config"
++    instDiskDir = instDataDir + "/disk"
+     programNamePrefix = "p4"
+ 
+ plus4emuLibEnvironment = Environment()
+@@ -628,9 +630,6 @@
+                                      ["resource/Cbm4.png"])
+     plus4emuGLGUIEnvironment.Install(instDesktopDir,
+                                      ["resource/plus4emu.desktop"])
+-    makecfgEnvironment.Command(
+-        instDataDir, makecfg,
+-        ['./' + programNamePrefix + 'makecfg -f "' + instDataDir + '"'])
+     plus4emuGLGUIEnvironment.Install(instROMDir,
+                                      ["roms/1526_07c.rom", "roms/3plus1.rom",
+                                       "roms/dos15412.rom", "roms/dos1541.rom",
+@@ -638,7 +637,12 @@
+                                       "roms/mps801.rom", "roms/p4_basic.rom",
+                                       "roms/p4fileio.rom", "roms/p4kernal.rom",
+                                       "roms/p4_ntsc.rom"])
++    plus4emuGLGUIEnvironment.Install(instConfDir,
++                                     ["config/clearkbd.cfg", "config/p4_keys.cfg",
++                                      "config/p4keyshu.cfg"])
++    plus4emuGLGUIEnvironment.Install(instDiskDir,
++                                     ["disk/disk.zip"])
+     plus4emuGLGUIEnvironment.Alias("install",
+                                    [instBinDir, instPixmapDir, instDesktopDir,
+-                                    instDataDir, instROMDir])
++                                    instDataDir, instROMDir, instConfDir, instDiskDir])
+ 

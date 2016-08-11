@@ -1,17 +1,4 @@
 #!/bin/sh -eux
 
-DESTDIR="$UB_INSTALLDIR"
-BINDIR="$DESTDIR"/usr/bin
-DATADIR="$DESTDIR"/usr/share/plus4emu
-PIXMAPDIR="$DESTDIR"/usr/share/pixmaps
-DESKTOPDIR="$DESTDIR"/usr/share/applications
-
-#célkönyvtárak
-mkdir -p "$BINDIR" "$PIXMAPDIR" "$DESKTOPDIR" "$DATADIR"
-
-cp p4makecfg p4compress p4tapconv p4sconv p4fliconv "$BINDIR"/
-cp plus4emu "$BINDIR"/plus4emu.bin
-cp -r roms config disk "$DATADIR"/
-cp resource/*.png $PIXMAPDIR/
-cp resource/*.desktop "$DESKTOPDIR"/
-
+scons install
+mv "$UB_INSTALLDIR"/usr/bin/plus4emu "$UB_INSTALLDIR"/usr/bin/plus4emu.bin
