@@ -6,4 +6,4 @@ mkdir -p ~/.plus4emu/roms
 cp /usr/share/plus4emu/roms/* ~/.plus4emu/roms/
 p4makecfg
 fi
-plus4emu.bin
+plus4emu.bin $@
