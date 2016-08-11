@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-ep128emu-${UB_VERSION}.tar.gz ep128emu-6b20af0/
-	git://github.com/lgblgblgb/ep128emu.git@6b20af0
+ep128emu-${UB_VERSION}.tar.gz ep128emu-b9ffefe/
+	git://github.com/lgblgblgb/ep128emu.git@b9ffefe
