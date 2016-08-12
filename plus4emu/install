@@ -1,4 +1,4 @@
 #!/bin/sh -eux
 
 scons install
-mv "$UB_INSTALLDIR"/usr/bin/plus4emu "$UB_INSTALLDIR"/usr/bin/plus4emu.bin
+

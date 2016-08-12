@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-plus4emu-${UB_VERSION}.tar.gz plus4emu-82cdec9/
-	git://github.com/lgblgblgb/plus4emu.git@82cdec9
+plus4emu-${UB_VERSION}.tar.gz plus4emu-24f935b/
+	git://github.com/lgblgblgb/plus4emu.git@24f935b

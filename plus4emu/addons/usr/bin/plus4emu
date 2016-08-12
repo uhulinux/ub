@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if test ! -d ~/.plus4emu/roms
-then
-mkdir -p ~/.plus4emu/roms
-cp /usr/share/plus4emu/roms/* ~/.plus4emu/roms/
-p4makecfg
-fi
-plus4emu.bin $@
