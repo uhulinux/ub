@@ -1,4 +1,4 @@
 #!/bin/sh -eux
 
-make IPREFIX=${UB_INSTALLDIR}/usr install
-mv ${UB_INSTALLDIR}/usr/bin/ep128emu ${UB_INSTALLDIR}/usr/bin/ep128emu.bin
+scons install
+
