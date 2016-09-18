@@ -5,10 +5,12 @@ gobject-introspection-dev
 gtk-dev
 intltool
 iso-codes
+jansson
 libgnome-keyring-dev
 libnotify-dev
 libsecret-dev
 libsm-dev
+modemmanager-dev
 networkmanager-dev
 polkit-dev
 systemd-dev

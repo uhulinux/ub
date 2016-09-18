@@ -5,7 +5,8 @@ export CFLAGS+="-Wno-error"
 ub_configure \
 	--enable-64-bit-bfd \
 	--enable-ld \
-	--enable-gold
+	--enable-gold \
+	--enable-plugins
 
 make -e \
 	tooldir=/usr
