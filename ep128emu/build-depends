@@ -1,4 +1,3 @@
-dotconf-dev
 fltk-dev
 fontconfig-dev
 glu-dev
@@ -10,3 +9,4 @@ libxinerama-dev
 lua-dev
 portaudio-dev
 scons
+sdl-dev
