@@ -1,0 +1,10 @@
+#!/bin/sh -eux
+
+rm -rf etc usr/share/{xfce4,menu} opt/vivaldi/cron
+cp -a opt usr ${UB_INSTALLDIR}/
+chmod 4755 "${UB_INSTALLDIR}/opt/vivaldi/vivaldi-sandbox"
+for res in 16 22 24 32 48 64 128 256; do
+  install -Dm644 "${UB_INSTALLDIR}/opt/vivaldi/product_logo_${res}.png" \
+  "${UB_INSTALLDIR}/usr/share/icons/hicolor/${res}x${res}/apps/vivaldi.png"
+  rm -f "${UB_INSTALLDIR}/opt/vivaldi/product_logo_${res}.png"
+done

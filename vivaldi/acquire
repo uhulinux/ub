@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+vivaldi-stable_${UB_VERSION}-1_i386.deb .
+	https://downloads.vivaldi.com/stable/

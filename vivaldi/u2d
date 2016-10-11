@@ -1,0 +1,1 @@
+_geturl https://vivaldi.com/download/ | grep i386.deb | sed s/.*stable_// | sed s/-.*//
