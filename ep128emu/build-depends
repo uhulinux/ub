@@ -1,8 +1,10 @@
+curl-dev
 fltk-dev
 fontconfig-dev
 glu-dev
 jack-dev
 libjpeg-dev
+libpng-dev
 libsndfile-dev
 libxft-dev
 libxinerama-dev
