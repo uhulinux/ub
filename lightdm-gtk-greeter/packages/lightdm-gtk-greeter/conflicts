@@ -1,3 +1,2 @@
+lightdm-gtk2-greeter
 lightdm-gtk3-greeter
-polkit
-py3gobject
