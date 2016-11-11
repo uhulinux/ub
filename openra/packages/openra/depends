@@ -1,0 +1,8 @@
+curl
+jack
+libgdiplus >=
+lua
+mono >=
+openal
+sdl2
+zenity

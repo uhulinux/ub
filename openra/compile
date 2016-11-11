@@ -1,0 +1,4 @@
+#!/bin/sh -eux
+
+make dependencies
+make core

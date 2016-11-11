@@ -1,0 +1,12 @@
+#!/bin/sh -eux
+
+make \
+    prefix=/usr \
+    DESTDIR=${UB_INSTALLDIR} \
+    install
+make \
+    prefix=/usr \
+    DESTDIR=${UB_INSTALLDIR} \
+    install-linux-shortcuts
+
+rm -f ${UB_INSTALLDIR}/usr/share/applications/openra-editor.desktop

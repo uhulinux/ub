@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+ub_install
+# openra debian igénye
+mkdir -p ${UB_INSTALLDIR}/usr/lib
+ln -s liblua-5.1.so ${UB_INSTALLDIR}/usr/lib/liblua32.5.1.5.so
