@@ -1,1 +1,1 @@
-urllist 'http://ftp.debian.org/debian/pool/main/c/ca-certificates/' | splitver '^ca-certificates_([0-9.]+)_all.deb' | sort -V | tail -n 1
+urllist http://ftp.mozilla.org/pub/security/nss/releases/ | grep -E '^NSS_[0-9_]+_RTM$' | sed -r -e 's/NSS_(.*)_RTM/\1/' -e 's/_/./g' | sort -V | tail -n1
