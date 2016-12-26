@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 pexpect-${UB_VERSION}.tar.gz pexpect-${UB_VERSION}/
-	http://pypi.python.org/packages/source/p/pexpect/
+	https://pypi.python.org/packages/e8/13/d0b0599099d6cd23663043a2a0bb7c61e58c6ba359b2656e6fb000ef5b98/
