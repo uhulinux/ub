@@ -7,4 +7,5 @@ ub_compile \
   --disable-schemas-compile \
   --enable-introspection=yes \
   --enable-compile-warnings=no \
-  --with-session-tracking=systemd
+  --with-session-tracking=systemd \
+  --with-ca-certificates=/usr/share/ca-certificates/
