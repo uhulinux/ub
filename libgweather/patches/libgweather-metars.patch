@@ -1,0 +1,40 @@
+diff -Nur orig/libgweather/weather-metar.c mod/libgweather/weather-metar.c
+--- orig/libgweather/weather-metar.c	2014-03-08 19:38:42.000000000 +0100
++++ mod/libgweather/weather-metar.c	2017-01-06 17:23:06.387912852 +0100
+@@ -581,7 +581,7 @@
+ 
+     loc = &priv->location;
+ 
+-    searchkey = g_strdup_printf ("\n%s", loc->code);
++    searchkey = g_strdup_printf ("<raw_text>%s", loc->code);
+     p = strstr (msg->response_body->data, searchkey);
+     g_free (searchkey);
+     if (p) {
+@@ -593,7 +593,9 @@
+ 	    metar = g_strdup (p);
+ 	success = metar_parse (metar, info);
+ 	g_free (metar);
+-    } else if (!strstr (msg->response_body->data, "National Weather Service")) {
++    } else if (!strstr (msg->response_body->data, "aviationweather.gov")) {
++	/* The response doesn't even seem to have come from NOAA...
++
+ 	/* The response doesn't even seem to have come from NWS...
+ 	 * most likely it is a wifi hotspot login page. Call that a
+ 	 * network error.
+@@ -621,8 +623,14 @@
+     loc = &priv->location;
+ 
+     msg = soup_form_request_new (
+-	"GET", "http://weather.noaa.gov/cgi-bin/mgetmetar.pl",
+-	"cccc", loc->code,
++	"GET", "https://www.aviationweather.gov/adds/dataserver_current/httpparam",
++	"dataSource", "metars",
++	"requestType", "retrieve",
++	"format", "xml",
++	"hoursBeforeNow", "3",
++	"mostRecent", "true",
++	"fields", "raw_text",
++	"stationString", loc->code,
+ 	NULL);
+     _gweather_info_begin_request (info, msg);
+     soup_session_queue_message (priv->session, msg, metar_finish, info);
