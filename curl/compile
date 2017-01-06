@@ -6,4 +6,4 @@ ub_compile \
 	--with-ssl \
 	--enable-ldaps \
 	--with-gssapi \
-	--with-ca-bundle=/usr/lib/ssl/certs/ca-cert.pem
+	--with-ca-bundle=/etc/ssl/certs/ca-certificates.crt
