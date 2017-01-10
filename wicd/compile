@@ -1,0 +1,11 @@
+#!/bin/sh -eux
+
+python setup.py configure \
+      --no-install-init \
+      --resume=/usr/share/wicd/scripts/ \
+      --suspend=/usr/share/wicd/scripts/ \
+      --verbose \
+      --lib=/usr/lib \
+      --sbin=/usr/sbin \
+      --systemd=/usr/lib/systemd/system
+python setup.py build
