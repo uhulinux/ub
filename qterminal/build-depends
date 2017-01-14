@@ -1,2 +1,4 @@
 cmake
+liblxqt-dev
+lxqt-build-tools
 qtermwidget-dev

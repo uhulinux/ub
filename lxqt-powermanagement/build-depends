@@ -1,6 +1,8 @@
 cmake
+kidletime-dev
 liblxqt-dev
 libqtxdg-dev
 libx11-dev
 libxcb-dev
+lxqt-build-tools
 solid-dev

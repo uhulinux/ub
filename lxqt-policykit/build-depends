@@ -1,5 +1,6 @@
 cmake
 liblxqt-dev
 libqtxdg-dev
+lxqt-build-tools
 polkit-dev
 polkit-qt5-dev
