@@ -1,4 +1,4 @@
 #!/bin/sh -eux
 
-export RCC="/usr/lib/qt4/bin/rcc"
+export RCC="/usr/lib/qt5/bin/rcc"
 ub_compile

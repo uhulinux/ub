@@ -4,5 +4,3 @@
 ub_compile \
 	--enable-gio \
 	--enable-thumbnailer
-
-

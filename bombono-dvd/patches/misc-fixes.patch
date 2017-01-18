@@ -1,0 +1,32 @@
+Description: miscellaneous compile fixes
+Origin: backport, https://github.com/muravjov/bombono-dvd/commit/11f8b5a9cb2fc36c42103ddc6866836b4bf57f58
+Last-Update: 2016-05-04
+
+Index: b/src/mgui/stream_utils.h
+===================================================================
+--- a/src/mgui/stream_utils.h
++++ b/src/mgui/stream_utils.h
+@@ -42,8 +42,8 @@
+                 stream(std::iostream& strm): io_strm(strm) {}
+ 
+  std::iostream& strm() { return io_strm; }
+-                operator void*() const { return (void*)io_strm; }
+-          bool  operator!() const { return !operator void*(); }
++                //operator void*() const { return (void*)io_strm; }
++          //bool  operator!() const { return !operator void*(); }
+         stream& seekg(streamoff off, ios_base::seekdir dir)
+                 { io_strm.seekg(off, dir); return *this; }
+         stream& seekp(streamoff off, ios_base::seekdir dir)
+Index: b/src/mgui/tests/test_compile.cpp
+===================================================================
+--- a/src/mgui/tests/test_compile.cpp
++++ b/src/mgui/tests/test_compile.cpp
+@@ -44,7 +44,7 @@
+     std::for_each(r_lst.begin(), r_lst.end(), (
+         lambda::var(cut_rct) = lambda::bind(Intersection<int>, lambda::_1, ref(plc_rct)),
+         lambda::if_then( !lambda::bind(&RectT<int>::IsNull, lambda::var(cut_rct)),
+-            lambda::bind(&DrwFunctor::operator(), ref(drw_fnr), lambda::var(cut_rct)) )
++            lambda::bind(&DrwFunctor::operator(), drw_fnr, lambda::var(cut_rct)) )
+                                               ) );
+ }
+ 

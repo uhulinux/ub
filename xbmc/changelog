@@ -74,7 +74,6 @@ add libpng patch to compile with png 1.5
 add skip-optipng to fix segfault on start
 remove some textures to fix disappearing cursor problem
 
-
 ------------------------------------------------------------------------
 r25374 | galamb15@kabelszat2002.hu | 2011-04-11 20:53:51 +0200 (Mon, 11 Apr 2011) | 6 lines
 
@@ -82,7 +81,6 @@ r25374 | galamb15@kabelszat2002.hu | 2011-04-11 20:53:51 +0200 (Mon, 11 Apr 2011
 acquire fix
 build-depends fix - build with external ffmpeg
 add patch from fedora to work with python 2.7
-
 
 ------------------------------------------------------------------------
 r23241 | galamb15@kabelszat2002.hu | 2010-04-18 11:35:10 +0200 (Sun, 18 Apr 2010) | 1 line

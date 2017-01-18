@@ -3,6 +3,7 @@ cmake
 db4-dev
 ffmpeg-dev
 flac-dev
+gstreamer-dev
 gtk-dev
 jack-dev
 libid3tag-dev

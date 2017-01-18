@@ -2,7 +2,7 @@
 
 # openexr: nincs ImfMultiPartInputFile.h
 # az openimageio függ az openexr-től, így az is letiltva
-# a cycles pedig az openimageio-tól 
+# a cycles pedig az openimageio-tól
 
 ub_compile \
 	-DCMAKE_SKIP_RPATH=ON \
@@ -23,4 +23,7 @@ ub_compile \
 	-DWITH_PYTHON_INSTALL=OFF \
 	-DWITH_PYTHON_SAFETY=ON \
 	-DWITH_SYSTEM_GLEW=ON \
-	-DWITH_SYSTEM_OPENJPEG=ON
+	-DWITH_SYSTEM_OPENJPEG=ON \
+	-DPYTHON_VERSION=3.4 \
+	-DPYTHON_LIBPATH=/usr/lib/python3.4 \
+	-DPYTHON_INCLUDE_DIRS=/usr/include/python3.4m

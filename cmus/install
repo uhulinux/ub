@@ -6,4 +6,3 @@ ub_install DESTDIR="$UB_INSTALLDIR"
 cp Doc/cmus.1 "$UB_INSTALLDIR"/usr/share/man/man1/
 cp Doc/cmus-remote.1 "$UB_INSTALLDIR"/usr/share/man/man1/
 cp Doc/cmus-tutorial.7 "$UB_INSTALLDIR"/usr/share/man/man7/
-

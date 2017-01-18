@@ -1,4 +1,5 @@
 exiv2-dev
 ffmpeg-dev
 qt5-dev
+sdl-dev
 shared-mime-info
