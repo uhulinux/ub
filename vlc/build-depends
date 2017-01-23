@@ -49,7 +49,7 @@ opus-dev
 pango-dev
 popt-dev
 portaudio-dev
-qt5-dev
+qt4-dev
 samba-dev
 sdl-image-dev
 speex-dev

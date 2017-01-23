@@ -13,5 +13,4 @@ ub_compile \
 	--enable-libva \
 	--enable-nls \
 	--enable-sftp \
-	--disable-update-check \
-	--enable-qt=5
+	--disable-update-check
