@@ -30,5 +30,5 @@ done
 ln -s "$UB_INSTALLDIR"/usr/bin/build \
 	"$UB_INSTALLDIR"/usr/bin/build-ubk1
 
-mkdir -p "$UB_INSTALLDIR"/usr/share/doc/Packages
-cp "$UB_SRCDIR"/changelog "$UB_INSTALLDIR"/usr/share/doc/Packages
+# mkdir -p "$UB_INSTALLDIR"/usr/share/doc/Packages
+# cp "$UB_SRCDIR"/changelog "$UB_INSTALLDIR"/usr/share/doc/Packages
